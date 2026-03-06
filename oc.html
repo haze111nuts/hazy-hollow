@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Hazy's Clutter | OC設定倉庫</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="" />
+
+  <link rel="stylesheet" type="text/css" href="styles/common.css" />
+  <link rel="stylesheet" type="text/css" href="styles/oc.css" />
+
+  <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+
+  <style>
+  </style>
+
+</head>
+
+<body>
+  <iframe class="page_frame" name="iframe" src="oc_au/overview.html"></iframe>
+  <div class="au_list">
+    <div class="inner">
+      <ul>
+        <li class="active"><a target="iframe" href="oc_au/overview.html">全角色總覽</a></li>
+        <li><a target="iframe" href="oc_au/modern.html">現代​</a></li>
+        <li><a target="iframe" href="oc_au/modern.html">寄生​貴族​</a>​</li>
+        <li><a target="iframe" href="oc_au/overview.html">西洋​棋手​</a></li>
+        <li><a target="iframe" href="oc_au/overview.html">逆轉裁​判​</a></li>
+        <li><a target="iframe" href="oc_au/overview.html">寶​可​夢訓練家​</a>​</li>
+        <li><a target="iframe" href="oc_au/overview.html">寶​可​夢​警探隊​</a></li>
+        <li><a target="iframe" href="oc_au/overview.html">霍格​華茲​</a></li>
+        <li><a target="iframe" href="oc_au/overview.html">海龍​</a></li>
+        <li><a target="iframe" href="oc_au/overview.html">龍​公會​​</a></li>
+        <li><a target="iframe" href="oc_au/overview.html">屠龍​</a></li>
+        <li><a target="iframe" href="oc_au/modern.html">轉生邪龍​</a></li>        
+        <li><a target="iframe" href="oc_au/overview.html">特務​​</a></li>
+        <li><a target="iframe" href="oc_au/overview.html">網友​</a></li>
+        <li><a target="iframe" href="oc_au/overview.html">貓少女​</a></li>
+        <li><a target="iframe" href="oc_au/overview.html">​殺手​</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function updateOpacity() {
+      let container = $('.inner');
+      let center = container.height() / 2;
+      let closestItem = null;
+      let closestDistance = Infinity;
+
+      $('.au_list ul li').each(function () {
+        let item = $(this);
+        let itemCenter =
+          item.position().top +
+          item.outerHeight() / 2;
+
+        let distance = Math.abs(center - itemCenter);
+
+        // 記錄最靠近中心的
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestItem = item;
+        }
+
+        let maxDistance = container.height() / 2;
+        let opacity = 1 - (distance / maxDistance)-0.2;
+        opacity = Math.max(0.05, opacity);
+        item.css('opacity', opacity);
+      });
+
+      // 中心連結透明度1
+      if (closestItem)
+        closestItem.css('opacity', 1)
+    }
+
+    $(document).ready(function () {
+      $('.au_list ul li a').click(function (e) {
+        // e.preventDefault();
+        let li = $(this).parent();
+        $('.au_list ul li').removeClass('active');
+        li.addClass('active');
+
+        let container = $('.inner');
+        let itemTop = li.position().top;
+        let containerHeight = container.height();
+        let itemHeight = li.outerHeight();
+        li[0].scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+      });
+
+      $('.inner').on('scroll', updateOpacity);
+      updateOpacity();
+    });
+
+    const container = $('.inner');
+    let isDown = false;
+    let startY;
+    let startScroll;
+
+    container.on('mousedown', function (e) {
+      isDown = true;
+      startY = e.pageY;
+      startScroll = container.scrollTop();
+      container.css({
+        'cursor':'grabbing',
+        'scroll-snap-type':'none'   // 關閉 snap
+      });
+
+    });
+
+    $(document).on('mousemove', function (e) {
+      if (!isDown) return;
+      let dy = e.pageY - startY;
+      container.scrollTop(startScroll - dy);
+
+    });
+
+    $(document).on('mouseup', function () {
+      isDown = false;
+      container.css({
+        'cursor':'grab',
+        'scroll-snap-type':'y mandatory'  // 恢復 snap
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>

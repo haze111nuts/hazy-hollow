@@ -1,0 +1,15 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  text-align: center;
+}
+
+
+.main{
+  margin:0 auto;
+  width: 1000px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
