@@ -13,3 +13,8 @@ html {
   width: 1000px;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+.banner{
+  border: 1px solid rgba(255, 0, 0, 0.123);
+  padding: 15vh 0;
+}
