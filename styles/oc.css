@@ -22,14 +22,21 @@ body{
   list-style: none;
   height: 100vh;
   width: 250px;
-  background: rgba(0, 0, 0, 0.445);
+  background: rgba(0, 0, 0, 0);
   position:fixed;
-  left:0;
-  top:0;
+  left: 0;
+  top: 0;
   padding:20px;
   box-sizing:border-box;
   overflow: hidden;
+  transition: all 0.2s;
+  /* opacity: 0.3; */
 }
+
+/* .au_list:hover{
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.445);  
+} */
 
 .au_list .inner{
   width: 100%;

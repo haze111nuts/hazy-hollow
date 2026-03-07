@@ -1,5 +1,11 @@
-*{
+/* *{
   color: antiquewhite;
+} */
+
+.side-banner{
+  background-color: antiquewhite;
+  height: 576px;
+  max-width: 250px;
 }
 
 .grid {
@@ -9,16 +15,16 @@
   align-content: flex-start;
   align-items: self-start;
   justify-content: center;
-  height: 100%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   list-style: none;
-  /* border: 1px solid red; */
+  border: 1px solid rgba(255, 0, 0, 0.123);
+  width: 700px;
 }
 
 .grid>div {
   margin: 10px;
   width: 200px;
-  height: 120px;
+  height: 90px;
   font-size: 30px;
   text-align: center;
   background-position: 50% 50%;

@@ -7,14 +7,38 @@ html {
   text-align: center;
 }
 
-
 .main{
   margin:0 auto;
   width: 1000px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0);
 }
 
 .banner{
-  border: 1px solid rgba(255, 0, 0, 0.123);
-  padding: 15vh 0;
+  padding: 30px 16px;
+}
+
+h1{
+  margin: 8px auto;
+}
+
+.center-vh {
+  /* border: 1px solid red;   */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 99vh;
+}
+
+.center-v {
+  /* border: 1px solid red;   */
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+
+.center{
+  margin: 0 auto;
 }
