@@ -9,17 +9,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="" />
 
+  <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+  <script type="text/javascript" src="../scripts/modal.js"></script>
+
   <link rel="stylesheet" type="text/css" href="../styles/common.css" />
   <link rel="stylesheet" type="text/css" href="../styles/overview.css" />
-
-  <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
-  <script type="text/javascript" src="script.js"></script>
-
-  <style>
-    body {
-      background-color: rgb(55, 68, 64);
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="../styles/modal.css" />
 
 </head>
 
@@ -32,11 +27,14 @@
           <div class="desc">
             Hazy家常駐OC總覽<br>這裡的介紹是精簡版，全AU通用！另外有收錄一些創作筆記。<br>
             可以從左側列表選擇不同AU，內有不同世界觀下的詳細角色介紹。
+            <br>
+            <br>
+            海產版的OC設定請看分站。
           </div>
         </div>
       </div>
       <div class="grid">
-        <div>
+        <div class="trigger">
           <div class="chara_pf"></div>
           <div class="chara_label"></div>
           <div class="chara_name subName">安潔</div>
@@ -164,8 +162,17 @@
         </div>              
       </div>
   </div>
-    <script>
-    </script>
+
+
+  <!-- Model -->
+  <div class="modal hide">
+    <div class="modal_overlay"></div>
+    <div class="modal_content"></div>
+  </div>
+
+
+  <script>
+  </script>
 
 </body>
 
