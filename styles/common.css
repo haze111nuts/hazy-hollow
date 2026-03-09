@@ -7,10 +7,17 @@ html {
   text-align: center;
 }
 
-.main{
-  margin:0 auto;
+.center-wrapper{
+  margin: 0 auto;
+}
+
+.main-wrapper{
   width: 1000px;
-  border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.profile-wrapper{
+  position: relative;
+  width: 1200px;
 }
 
 .banner{
@@ -21,7 +28,7 @@ h1{
   margin: 8px auto;
 }
 
-.center-vh {
+.align-vh {
   /* border: 1px solid red;   */
   display: flex;
   justify-content: center;
@@ -29,7 +36,7 @@ h1{
   height: 99vh;
 }
 
-.center-v {
+.align-v {
   /* border: 1px solid red;   */
   height:100%;
   display:flex;

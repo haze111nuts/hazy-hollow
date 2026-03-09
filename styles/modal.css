@@ -12,14 +12,14 @@
   left: 0;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   transition: all 0.2s ease-in;
+  /* border: 1px solid red; */
 }
+
 .modal .modal_overlay {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .close {

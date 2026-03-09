@@ -17,7 +17,7 @@ function setUpModelHTMLContent() {
 //==========================//
 
 function setUpItemModalClickEvents() {
-    $(".trigger").each(function () {
+    $(".modal_trigger").each(function () {
         $(this).click(function () {
             $(".modal_content").html(
                 setUpModelHTMLContent()
@@ -61,7 +61,6 @@ function resetScrollBar() {
         }, 250);
 }
 
-
 //======================//
 //                      //
 //    Ready Function    //
@@ -70,5 +69,4 @@ function resetScrollBar() {
 
 $(document).ready(function () {
     setUpItemModalClickEvents();
-    console.log("???")
 });
