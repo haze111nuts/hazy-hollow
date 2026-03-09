@@ -34,6 +34,23 @@ function setUpOverviewBackButtonEvents() {
     })
 }
 
+function getCharacterCardHtml(nickName, mainName) {
+    return `<div class="trigger">
+                <div class="chara_pf"></div>
+                <div class="chara_label"></div>
+                <div class="chara_name subName">${nickName}</div>
+                <div class="chara_name mainName">${mainName}</div>
+            </div>`
+}
+
+function loadcharacterCard() {
+    var gridHtml = "";
+    for (let key in charaData_ZH) {
+        gridHtml += getCharacterCardHtml(charaData_ZH[key].nickName ? charaData_ZH[key].nickName : charaData_ZH[key].name, key);
+    }
+    $(".grid").html(gridHtml);
+}
+
 //======================//
 //                      //
 //    Ready Function    //
@@ -41,6 +58,7 @@ function setUpOverviewBackButtonEvents() {
 //======================//
 
 $(document).ready(function () {
+    loadcharacterCard()
     setUpProfileOpenEvents();
     setUpOverviewBackButtonEvents();
 });
