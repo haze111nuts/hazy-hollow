@@ -220,6 +220,35 @@ body{
   filter: none;
 } */
 
+/* collab / npc corner ribbon — a diagonal tag across the thumbnail's
+   top-right corner. Change the label text in `content`, and the
+   colors with --ribbon-bg / --ribbon-ink. */
+.splat-card--collab { --ribbon-bg: #f2c66d; --ribbon-ink: #3d3d3d; }
+.splat-card--npc    { --ribbon-bg: #ffffff; --ribbon-ink: #3d3d3d; }
+
+.splat-card--collab .splat-thumb::after,
+.splat-card--npc .splat-thumb::after {
+  position: absolute;
+  top: 14px;
+  right: -34px;
+  width: 120px;
+  padding: 3px 0;
+  transform: rotate(45deg);
+  background: var(--ribbon-bg);
+  color: var(--ribbon-ink);
+  font-family: "Nunito", sans-serif;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+  pointer-events: none;
+}
+
+.splat-card--collab .splat-thumb::after { content: "Collab"; }
+.splat-card--npc .splat-thumb::after    { content: "NPC"; }
+
 /* ---------- modal ---------- */
 
 .splat-modal-backdrop {
