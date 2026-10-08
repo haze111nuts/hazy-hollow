@@ -133,7 +133,7 @@ body{
   border-radius: 14px;
   overflow: hidden;
   background:
-    radial-gradient(circle at 30% 25%, rgba(255,255,255,0.35), transparent 55%),
+    /* radial-gradient(circle at 30% 25%, rgba(255,255,255,0.35), transparent 55%), */
     var(--chara);
   display: grid;
   place-items: center;
@@ -186,8 +186,9 @@ body{
 
 /* collab (friends' characters) and npc (made by someone else):
    muted thumbnail with a dashed ring — the ring color tells them apart */
-.splat-card--collab { --ring: #e8c27a; }
-.splat-card--npc    { --ring: #8fb8d6; }
+   
+/* .splat-card--collab { --ring: #888; --border: dashed }
+.splat-card--npc    { --ring: #fff; --border: dotted }
 
 .splat-card--collab,
 .splat-card--npc {
@@ -196,9 +197,14 @@ body{
 
 .splat-card--collab .splat-thumb,
 .splat-card--npc .splat-thumb {
-  outline: 2px dashed var(--ring);
+  outline: 2px var(--border) var(--ring);
   outline-offset: 3px;
-  filter: saturate(0.55) brightness(0.9);
+}
+
+.splat-card--npc .splat-thumb {
+  outline: 2px var(--border) var(--ring);
+  outline-offset: 3px;  
+  filter: saturate(0.8) brightness(0.5);
   transition: filter 0.2s ease;
 }
 
@@ -212,7 +218,7 @@ body{
 .splat-card--collab:focus-visible .splat-thumb,
 .splat-card--npc:focus-visible .splat-thumb {
   filter: none;
-}
+} */
 
 /* ---------- modal ---------- */
 

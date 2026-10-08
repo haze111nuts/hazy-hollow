@@ -2,11 +2,11 @@
 const SPLAT_CHARA_ROSTER = {
         "Blade" : {
             name_ch: "小布",
-            color: "#55c44b"
+            color: "#79db37"
         },
         "Axel" : { 
             name_ch: "亞克",
-            color: "#fabf7c"
+            color: "#ec8f24"
         },
         "Yoni" : { 
             name_ch: "尤尼",
@@ -22,7 +22,7 @@ const SPLAT_CHARA_ROSTER = {
         },
         "Wade" : { 
             name_ch: "偉德",
-            color: "#582fb9"
+            color: "#6135b3"
         },
         "Hannah" : { 
             name_ch: "黑娜",
@@ -112,17 +112,13 @@ const SPLAT_CHARA_ROSTER = {
             name_ch: "保羅",
             color: "#325340"
         },
-        "Father Chelon" : { 
-            name_ch: "龜教父",
-            color: "#887e23"
-        },
         "Leon" : { 
             name_ch: "里昂",
             color: "#99b41f"
         },        
         "Scratch" : { 
             name_ch: "小刻",
-            color: "#55c44b"
+            color: "#79db37"
         },
         "Dorothy" : { 
             name_ch: "多蘿西",
@@ -144,12 +140,12 @@ const SPLAT_CHARA_ROSTER = {
         },
         "Callie" : { 
             name_ch: "小擬",
-            color: "#d12eb6",
+            color: "#e944cd",
             type: "npc"
         },
         "Marie" : { 
             name_ch: "螢",
-            color: "#5cd34d",
+            color: "#9ddd4a",
             type: "npc"
         },
         "Captain Cuttlefish" : { 
@@ -164,8 +160,12 @@ const SPLAT_CHARA_ROSTER = {
         },
         "Marina" : { 
             name_ch: "飯田",
-            color: "#11a041",
+            color: "#29ca87",
             type: "npc"
+        },
+        "Father Chelon" : { 
+            name_ch: "龜教父",
+            color: "#887e23"
         }
     };
 
@@ -175,14 +175,14 @@ const SPLATEAM = {
             teamName: "BBB",
             teamName_ch: "按鈕少年隊",
             members: [
-                "Blade","Axel","Yoni","Xiu","Edd","Wade","Elise"
+                "Blade","Axel","Yoni","Xiu","Edd","Wade"
             ]
         },
         "RF" : { 
             teamName: "Royal Flush",
             teamName_ch: "皇家同花順",
             members: [
-                "Hannah","Lance","Minerva","Roy","Angel"
+                "Hannah","Lance","Minerva","Roy","Amy"
             ]            
         },
         "Splatter Club" : { 
