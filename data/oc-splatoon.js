@@ -108,7 +108,7 @@ const SPLAT_CHARA_ROSTER = {
             name_ch: "達米",
             color: "#ad3b3b"
         },
-        "Pual" : { 
+        "Paul" : { 
             name_ch: "保羅",
             color: "#325340"
         },

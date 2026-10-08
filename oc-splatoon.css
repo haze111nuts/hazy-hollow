@@ -3,3 +3,305 @@ body{
   background: var(--c2);
   min-height: 100vh;
 }
+
+/* ===========================================================
+   Splatoon OC browser
+   --chara is set per card/modal from the character's color
+   =========================================================== */
+
+.splat-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+  color: #fff;
+}
+
+/* ---------- header ---------- */
+
+.splat-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.splat-page > .back-link {
+  display: inline-block;
+  margin: 0 0 1rem;
+}
+
+.splat-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-right: auto;
+}
+
+.splat-view-toggle {
+  display: inline-flex;
+  background: rgba(255,255,255,0.08);
+  border-radius: 999px;
+  padding: 4px;
+}
+
+.splat-view-btn {
+  font: inherit;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+  background: none;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.45rem 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.splat-view-btn:hover { color: #fff; }
+
+.splat-view-btn.is-active {
+  background: #fff;
+  color: var(--c2);
+}
+
+/* ---------- team sections ---------- */
+
+.splat-team + .splat-team {
+  margin-top: 2.75rem;
+}
+
+.splat-team-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.1rem;
+  border-bottom: 2px dashed rgba(255,255,255,0.15);
+}
+
+.splat-team-name {
+  font-size: 1.5rem;
+}
+
+.splat-team-name-ch {
+  color: rgba(255,255,255,0.55);
+  font-size: 0.95rem;
+}
+
+
+/* ---------- character grid ---------- */
+
+.splat-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 1.1rem;
+}
+
+.splat-card {
+  font: inherit;
+  color: inherit;
+  background: rgba(255,255,255,0.05);
+  border: 0;
+  border-radius: 18px;
+  padding: 0.6rem 0.6rem 0.8rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.6rem;
+  transition: transform 0.2s cubic-bezier(.34,1.4,.64,1), background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.splat-card:hover,
+.splat-card:focus-visible {
+  transform: translateY(-4px) rotate(-1.5deg);
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 0 0 2px var(--chara), 0 10px 24px rgba(0,0,0,0.25);
+  outline: none;
+}
+
+.splat-card-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* thumbnail — image if `thumb` is set, colored initial otherwise */
+.splat-thumb {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 14px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 30% 25%, rgba(255,255,255,0.35), transparent 55%),
+    var(--chara);
+  display: grid;
+  place-items: center;
+}
+
+.splat-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.splat-thumb-initial {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 700;
+  font-size: 2.6rem;
+  color: rgba(255,255,255,0.9);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+/* ---------- card variants ---------- */
+
+/* reserved slot — a blank "" entry in a team's members list */
+.splat-card--reserved {
+  cursor: default;
+  background: transparent;
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,0.08);
+}
+.splat-card--reserved:hover {
+  transform: none;
+  background: transparent;
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,0.08);
+}
+.splat-card--reserved .splat-thumb {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(255,255,255,0.05) 0 8px,
+    rgba(255,255,255,0.02) 8px 16px
+  );
+}
+.splat-card--reserved .splat-thumb-initial {
+  color: rgba(255,255,255,0.25);
+  text-shadow: none;
+}
+.splat-card--reserved .splat-card-name {
+  color: rgba(255,255,255,0.3);
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* collab (friends' characters) and npc (made by someone else):
+   muted thumbnail with a dashed ring — the ring color tells them apart */
+.splat-card--collab { --ring: #e8c27a; }
+.splat-card--npc    { --ring: #8fb8d6; }
+
+.splat-card--collab,
+.splat-card--npc {
+  background: rgba(255,255,255,0.03);
+}
+
+.splat-card--collab .splat-thumb,
+.splat-card--npc .splat-thumb {
+  outline: 2px dashed var(--ring);
+  outline-offset: 3px;
+  filter: saturate(0.55) brightness(0.9);
+  transition: filter 0.2s ease;
+}
+
+.splat-card--collab .splat-card-name,
+.splat-card--npc .splat-card-name {
+  color: rgba(255,255,255,0.75);
+}
+
+.splat-card--collab:hover .splat-thumb,
+.splat-card--npc:hover .splat-thumb,
+.splat-card--collab:focus-visible .splat-thumb,
+.splat-card--npc:focus-visible .splat-thumb {
+  filter: none;
+}
+
+/* ---------- modal ---------- */
+
+.splat-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: rgba(20,20,20,0.6);
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  animation: splat-fade 0.2s ease;
+}
+
+@keyframes splat-fade {
+  from { opacity: 0; }
+}
+
+.splat-modal {
+  position: relative;
+  width: min(420px, 100%);
+  max-height: 85vh;
+  overflow-y: auto;
+  background: var(--bg);
+  color: var(--ink);
+  border-radius: 22px;
+  box-shadow: inset 0 8px 0 var(--chara), 0 20px 50px rgba(0,0,0,0.35);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  animation: splat-pop 0.3s cubic-bezier(.34,1.4,.64,1);
+}
+
+@keyframes splat-pop {
+  from { opacity: 0; transform: scale(0.9); }
+}
+
+.splat-modal-thumb {
+  width: 140px;
+}
+
+.splat-modal-name {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.7rem;
+  margin: 0;
+}
+
+.splat-modal-name-ch {
+  color: var(--ink-soft);
+  margin-top: 0.2rem;
+}
+
+
+.splat-modal-text {
+  color: var(--ink-soft);
+  margin: 1rem 0 0;
+}
+
+.splat-modal-close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.8rem;
+  font-size: 1.6rem;
+  line-height: 1;
+  background: none;
+  border: 0;
+  color: var(--ink-soft);
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.splat-modal-close:hover { color: var(--ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  .splat-card,
+  .splat-modal,
+  .splat-modal-backdrop {
+    animation: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .splat-card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0.8rem;
+  }
+  .splat-thumb-initial { font-size: 2rem; }
+}

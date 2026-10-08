@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Link One — AU Browser</title>
+<title>Splatoon OCs</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -29,14 +29,23 @@
   })();
 </script>
 
-<div class="page">
-  <h2>Link Two</h2>
-  <p>This is a separate page — style it however you like. The background color matches the box you clicked so the transition lands seamlessly.</p>
+<main class="splat-page">
   <a class="back-link" href="index.html">&larr; back to index</a>
-</div>
+
+  <header class="splat-header">
+    <h1 class="splat-title">Splatoon OCs</h1>
+    <div class="splat-view-toggle" role="group" aria-label="View">
+      <button class="splat-view-btn is-active" type="button" data-view="team">By team</button>
+      <button class="splat-view-btn" type="button" data-view="all">All</button>
+    </div>
+  </header>
+
+  <div id="splat-grid" class="splat-grid"></div>
+</main>
 
 
 <script src="common.js"></script>
 <script src="data/oc-splatoon.js"></script>
+<script src="oc-splatoon.js"></script>
 </body>
 </html>
