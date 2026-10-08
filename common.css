@@ -10,7 +10,7 @@
 
   /* one accent per link — change freely, everything else follows */
   --c1: #7c9473; /* moss */
-  --c2: #a3b18a; /* sage */
+  --c2: #3d3d3d; /* sage */
   --c3: #588157; /* fern */
   --c4: #6c584c; /* wood brown */
   --c5: #b08968; /* clay */
@@ -19,7 +19,7 @@
   --c8: #9c8a5e; /* brass */
   --c9: #3f6659; /* deep teal-green */
   --c10: #a4643c; /* burnt terracotta */
-
+  --c11: #a3b18a; /* sage */
   /* global scrollbar theme — change these to restyle every scrollbar site-wide */
   --scrollbar-width: 9px;
   --scrollbar-track: transparent;
