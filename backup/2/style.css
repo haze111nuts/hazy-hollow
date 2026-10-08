@@ -1,0 +1,740 @@
+/* ===========================================================
+   Shared styles — index + target pages
+   Restyle freely: colors are all CSS variables below.
+   =========================================================== */
+
+:root {
+  --bg: #f4f1e8;
+  --ink: #33361f;
+  --ink-soft: #6b6f4f;
+
+  /* one accent per link — change freely, everything else follows */
+  --c1: #7c9473; /* moss */
+  --c2: #a3b18a; /* sage */
+  --c3: #588157; /* fern */
+  --c4: #6c584c; /* wood brown */
+  --c5: #b08968; /* clay */
+  --c6: #4a5a40; /* pine */
+  --c7: #8a7156; /* umber */
+  --c8: #9c8a5e; /* brass */
+  --c9: #3f6659; /* deep teal-green */
+  --c10: #a4643c; /* burnt terracotta */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ---------- index page ---------- */
+
+.wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5vh 6vw;
+  gap: 3rem;
+}
+
+.wrap h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-align: center;
+}
+
+.link-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 560px;
+}
+
+.link-box {
+  --accent: var(--c1);
+  position: relative;
+  height: 90px;
+  border-radius: 16px;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  isolation: isolate;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.link-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.14);
+}
+
+.link-box:nth-child(1) { --accent: var(--c1); }
+.link-box:nth-child(2) { --accent: var(--c2); }
+.link-box:nth-child(3) { --accent: var(--c3); }
+.link-box:nth-child(4) { --accent: var(--c4); }
+.link-box:nth-child(5) { --accent: var(--c5); }
+
+/* ---------- target pages ---------- */
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 6vh 6vw;
+  text-align: center;
+}
+
+.page > * {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: oc-fade-in 0.6s ease forwards;
+}
+
+.page > h2 { animation-delay: 0.15s; }
+.page > p { animation-delay: 0.3s; }
+.page > .back-link { animation-delay: 0.45s; }
+
+@keyframes oc-fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page > * {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.page h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: #fff;
+}
+
+.page p {
+  color: rgba(255,255,255,0.85);
+  max-width: 40ch;
+}
+
+.back-link {
+  margin-top: 1rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  padding-bottom: 2px;
+}
+
+.back-link:hover {
+  border-color: #fff;
+}
+
+/* ---------- transition overlay ---------- */
+
+.transition-overlay {
+  position: fixed;
+  z-index: 999;
+  background: var(--accent, var(--c1));
+  border-radius: 20px;
+  pointer-events: none;
+  will-change: top, left, width, height, border-radius;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .transition-overlay {
+    transition: none !important;
+  }
+}
+
+/* ===========================================================
+   page-1 — AU browser
+   =========================================================== */
+
+body.au-page-body {
+  margin: 0;
+  background: var(--c1);
+  min-height: 100vh;
+}
+
+.au-page-wrap {
+  max-width: 1140px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.au-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 1.6rem;
+  background: var(--c1);
+}
+
+.au-page-header .back-link {
+  animation: none;
+  opacity: 1;
+  transform: none;
+}
+
+.au-page-header .site-title {
+  color: #fff;
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.app-shell {
+  display: flex;
+  align-items: stretch;
+  flex: 1;
+  background: var(--bg);
+}
+
+/* ---------- left: AU ticket menu ---------- */
+
+.au-menu {
+  flex: 0 0 260px;
+  max-width: 260px;
+  background: #eae5d6;
+  border-right: 1px solid rgba(51, 54, 31, 0.08);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 1.1rem 0.9rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(51, 54, 31, 0.25) transparent;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.au-menu.dragging {
+  cursor: grabbing;
+}
+
+.au-menu::-webkit-scrollbar {
+  width: 6px;
+}
+.au-menu::-webkit-scrollbar-thumb {
+  background: rgba(51, 54, 31, 0.2);
+  border-radius: 6px;
+}
+.au-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.au-menu-heading {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0.4rem 1rem;
+}
+
+.au-ticket-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.au-ticket {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  background: var(--accent, var(--c1));
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.au-ticket:hover {
+  transform: translateX(2px);
+  box-shadow: 0 5px 14px rgba(0,0,0,0.14);
+}
+
+.au-ticket.active {
+  transform: translateX(4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+
+.au-ticket.active::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  border: 2px solid rgba(255,255,255,0.85);
+  pointer-events: none;
+}
+
+.au-ticket-overview {
+  border: 2px dashed rgba(255,255,255,0.55);
+}
+
+.au-menu-divider {
+  height: 1px;
+  background: rgba(51, 54, 31, 0.12);
+  margin: 0.9rem 0.2rem;
+}
+
+/* punch-out notches, colored to match the menu's own background */
+.au-ticket-notch-top,
+.au-ticket-notch-bottom {
+  position: absolute;
+  right: 66px;
+  width: 14px;
+  height: 14px;
+  background: #eae5d6;
+  border-radius: 50%;
+  z-index: 1;
+}
+.au-ticket-notch-top { top: -7px; }
+.au-ticket-notch-bottom { bottom: -7px; }
+
+.au-ticket-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.85rem 0.9rem;
+  min-width: 0;
+}
+
+.au-ticket-name {
+  color: #fff;
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25;
+  overflow-wrap: break-word;
+}
+
+.au-ticket-subtitle {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.au-ticket-stub {
+  flex: 0 0 58px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-left: 2px dashed rgba(255,255,255,0.4);
+  color: #fff;
+}
+
+.au-ticket-stub-count {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.au-ticket-stub-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-top: 0.2rem;
+}
+
+/* ---------- right: main panel ---------- */
+
+.au-main {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.8rem 2rem 2.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(51, 54, 31, 0.25) transparent;
+}
+
+.au-main::-webkit-scrollbar {
+  width: 8px;
+}
+.au-main::-webkit-scrollbar-thumb {
+  background: rgba(51, 54, 31, 0.2);
+  border-radius: 6px;
+}
+.au-main::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.au-section {
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: oc-fade-in 0.5s ease forwards;
+}
+
+.au-section-title {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(51, 54, 31, 0.12);
+}
+
+/* summary */
+.au-summary-panel {
+  background: #fff;
+  border-left: 5px solid var(--au-accent, var(--c1));
+  border-radius: 10px;
+  padding: 1.4rem 1.6rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.au-summary-panel p {
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+/* character grid */
+.au-character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1.1rem;
+}
+
+.au-character-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  padding: 0;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+}
+
+.au-character-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.au-character-avatar {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--au-accent, var(--c1));
+  color: #fff;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.au-character-info {
+  padding: 0.7rem 0.8rem;
+}
+
+.au-character-name {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* artwork grid */
+.au-artwork-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.au-artwork-tile {
+  aspect-ratio: 4 / 3;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--au-accent, var(--c1)), rgba(255,255,255,0.35));
+  display: flex;
+  align-items: flex-end;
+  padding: 0.7rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.au-artwork-caption {
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* story bits / generic cards */
+.au-card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.au-story-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  border-top: 3px solid var(--au-accent, var(--c1));
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.au-story-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+}
+
+.au-story-thumb {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--au-accent, var(--c1)), rgba(255,255,255,0.45));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.15rem;
+}
+
+.au-story-thumb::before {
+  content: "🖼";
+  opacity: 0.9;
+}
+
+.au-story-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.au-story-heading {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.au-story-text {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+/* character modal */
+.au-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(30, 32, 20, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  animation: oc-modal-fade 0.25s ease forwards;
+  padding: 2rem;
+}
+
+@keyframes oc-modal-fade {
+  to { opacity: 1; }
+}
+
+.au-modal {
+  background: #fff;
+  border-radius: 18px;
+  max-width: 420px;
+  width: 100%;
+  overflow: hidden;
+  transform: scale(0.94) translateY(10px);
+  opacity: 0;
+  animation: oc-modal-pop 0.3s cubic-bezier(.34,1.4,.64,1) 0.05s forwards;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+@keyframes oc-modal-pop {
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.au-modal-avatar {
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--au-accent, var(--c1));
+  color: #fff;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
+.au-modal-thumb-large {
+  background: linear-gradient(135deg, var(--au-accent, var(--c1)), rgba(255,255,255,0.45));
+  font-size: 2.4rem;
+}
+
+.au-modal-thumb-large::before {
+  content: "🖼";
+  opacity: 0.9;
+}
+
+.au-modal-body {
+  padding: 1.4rem 1.6rem 1.6rem;
+}
+
+.au-modal-name {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.au-modal-role {
+  color: var(--au-accent, var(--c1));
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 0.2rem;
+}
+
+.au-modal-bio {
+  margin-top: 0.9rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  font-size: 0.92rem;
+}
+
+.au-modal-appearances {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.au-modal-appearance {
+  border-left: 3px solid var(--au-accent, var(--c1));
+  padding: 0.4rem 0 0.4rem 0.7rem;
+}
+
+.au-modal-appearance-au {
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--au-accent, var(--c1));
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.au-modal-appearance p {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+.au-modal-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.9rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.au-modal-close:hover {
+  background: rgba(0,0,0,0.55);
+}
+
+@media (max-width: 760px) {
+  .au-page-header {
+    padding: 1rem 1.1rem;
+  }
+  .app-shell {
+    flex-direction: column;
+    height: auto;
+  }
+  .au-menu {
+    flex: none;
+    max-width: none;
+    max-height: 220px;
+  }
+  .au-ticket-list {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  .au-menu-divider {
+    width: 1px;
+    height: auto;
+    align-self: stretch;
+    margin: 0 0.6rem;
+  }
+  .au-ticket {
+    flex: 0 0 220px;
+  }
+  .au-main {
+    overflow-y: visible;
+  }
+}

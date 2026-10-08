@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Link One — AU Browser</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="au-page-body">
+
+<script>
+  (function () {
+    if (sessionStorage.getItem("oc_returning")) {
+      var color = sessionStorage.getItem("oc_returnColor") || "#7c9473";
+      var overlay = document.createElement("div");
+      overlay.id = "oc-return-overlay";
+      overlay.style.position = "fixed";
+      overlay.style.top = "0";
+      overlay.style.left = "0";
+      overlay.style.width = "100vw";
+      overlay.style.height = "100vh";
+      overlay.style.background = color;
+      overlay.style.zIndex = "999";
+      overlay.style.borderRadius = "0px";
+      document.documentElement.appendChild(overlay);
+    }
+  })();
+</script>
+
+<div class="au-page-wrap">
+  <header class="au-page-header">
+    <a class="back-link" href="index.html">&larr; back to index</a>
+    <span class="site-title">Link One</span>
+  </header>
+
+  <div class="app-shell">
+    <aside class="au-menu">
+      <div class="au-ticket-list" id="au-ticket-list"></div>
+    </aside>
+
+    <main class="au-main" id="au-main"></main>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script src="transition.js"></script>
+</body>
+</html>

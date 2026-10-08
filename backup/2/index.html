@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Index Prototype</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+  // Runs immediately, before the rest of the page paints, so a
+  // returning visitor sees the matching color right away instead
+  // of a flash of the index page's default background.
+  (function () {
+    if (sessionStorage.getItem("oc_returning")) {
+      var color = sessionStorage.getItem("oc_returnColor") || "#7c9473";
+      var overlay = document.createElement("div");
+      overlay.id = "oc-return-overlay";
+      overlay.style.position = "fixed";
+      overlay.style.top = "0";
+      overlay.style.left = "0";
+      overlay.style.width = "100vw";
+      overlay.style.height = "100vh";
+      overlay.style.background = color;
+      overlay.style.zIndex = "999";
+      overlay.style.borderRadius = "0px";
+      document.documentElement.appendChild(overlay);
+    }
+  })();
+</script>
+
+<div class="wrap">
+  <h1>Index Prototype</h1>
+
+  <div class="link-grid">
+    <a class="link-box" href="page-1.html">Link One</a>
+    <a class="link-box" href="page-2.html">Link Two</a>
+    <a class="link-box" href="page-3.html">Link Three</a>
+    <a class="link-box" href="page-4.html">Link Four</a>
+    <a class="link-box" href="page-5.html">Link Five</a>
+  </div>
+</div>
+
+<script src="transition.js"></script>
+</body>
+</html>

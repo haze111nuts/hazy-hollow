@@ -1,0 +1,218 @@
+/* ===========================================================
+   Shared styles — index + target pages
+   Restyle freely: colors are all CSS variables below.
+   =========================================================== */
+
+:root {
+  --bg: #f4f1e8;
+  --ink: #33361f;
+  --ink-soft: #6b6f4f;
+
+  /* one accent per link — change freely, everything else follows */
+  --c1: #7c9473; /* moss */
+  --c2: #a3b18a; /* sage */
+  --c3: #588157; /* fern */
+  --c4: #6c584c; /* wood brown */
+  --c5: #b08968; /* clay */
+  --c6: #4a5a40; /* pine */
+  --c7: #8a7156; /* umber */
+  --c8: #9c8a5e; /* brass */
+  --c9: #3f6659; /* deep teal-green */
+  --c10: #a4643c; /* burnt terracotta */
+
+  /* global scrollbar theme — change these to restyle every scrollbar site-wide */
+  --scrollbar-width: 9px;
+  --scrollbar-track: transparent;
+  --scrollbar-thumb: rgba(51, 54, 31, 0.25);
+  --scrollbar-thumb-hover: rgba(51, 54, 31, 0.42);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* ---------- global scrollbar (applies to the whole site — any
+   scrollable element inherits this unless it sets its own) ---------- */
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  scrollbar-gutter: stable;
+}
+
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+  height: var(--scrollbar-width);
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+  background-clip: padding-box;
+}
+
+/* toggled on <html> while a modal/overlay is open, to stop the page
+   underneath from scrolling. scrollbar-gutter: stable above keeps the
+   layout from jumping sideways when the scrollbar disappears. */
+html.no-scroll {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ---------- index page ---------- */
+
+.wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5vh 6vw;
+  gap: 3rem;
+}
+
+.wrap h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-align: center;
+}
+
+.link-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 560px;
+}
+
+.link-box {
+  --accent: var(--c1);
+  position: relative;
+  height: 90px;
+  border-radius: 16px;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  isolation: isolate;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.link-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.14);
+}
+
+.link-box:nth-child(1) { --accent: var(--c1); }
+.link-box:nth-child(2) { --accent: var(--c2); }
+.link-box:nth-child(3) { --accent: var(--c3); }
+.link-box:nth-child(4) { --accent: var(--c4); }
+.link-box:nth-child(5) { --accent: var(--c5); }
+
+/* ---------- target pages ---------- */
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 6vh 6vw;
+  text-align: center;
+}
+
+.page > * {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: oc-fade-in 0.6s ease forwards;
+}
+
+.page > h2 { animation-delay: 0.15s; }
+.page > p { animation-delay: 0.3s; }
+.page > .back-link { animation-delay: 0.45s; }
+
+@keyframes oc-fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page > * {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.page h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: #fff;
+}
+
+.page p {
+  color: rgba(255,255,255,0.85);
+  max-width: 40ch;
+}
+
+.back-link {
+  margin-top: 1rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  padding-bottom: 2px;
+}
+
+.back-link:hover {
+  border-color: #fff;
+}
+
+/* ---------- transition overlay ---------- */
+
+.transition-overlay {
+  position: fixed;
+  z-index: 999;
+  background: var(--accent, var(--c1));
+  border-radius: 20px;
+  pointer-events: none;
+  will-change: top, left, width, height, border-radius;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .transition-overlay {
+    transition: none !important;
+  }
+}
