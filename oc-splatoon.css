@@ -37,6 +37,13 @@ body{
   margin-right: auto;
 }
 
+.splat-header-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
 .splat-view-toggle {
   display: inline-flex;
   background: rgba(255,255,255,0.08);
@@ -218,8 +225,8 @@ body{
   z-index: 1;
 }
 
-.splat-card--collab::after { content: "Collab"; }
-.splat-card--npc::after    { content: "NPC"; }
+.splat-card--collab::after,
+.splat-card--npc::after    { content: attr(data-ribbon); } /* text comes from data/lang.js */
 
 /* ---------- modal ---------- */
 
@@ -502,18 +509,6 @@ button.splat-rel-swatch:focus-visible {
 
 .splat-modal-portrait.has-img .splat-portrait-placeholder { display: none; }
 
-.splat-portrait-tag {
-  position: absolute;
-  left: 0.6rem;
-  bottom: 0.6rem;
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  background: rgba(0,0,0,0.35);
-  color: #fff;
-  padding: 0.2rem 0.55rem;
-  border-radius: 999px;
-}
 
 .splat-variants {
   display: flex;

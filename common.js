@@ -132,3 +132,98 @@ document.addEventListener("DOMContentLoaded", () => {
     }, EXPAND_DURATION + 30);
   }
 });
+
+// ===========================================================
+// Site language (i18n) — shared by every page.
+//
+// Interface text lives in data/lang.js (load it BEFORE this file).
+//   siteText(key)       -> text for the current language
+//   getSiteLang()       -> "en", "zh", ...
+//   setSiteLang(code)   -> switch language (remembered per visitor)
+//
+// In HTML:
+//   data-i18n="key"        fills the element's text
+//   data-i18n-aria="key"   fills its aria-label
+//   <div data-lang-switch></div>   becomes the language buttons
+//
+// Pages that build content in JS listen for the "sitelangchange"
+// event on document and re-render themselves.
+// ===========================================================
+
+const SITE_LANG_STORAGE_KEY = "hazy_lang";
+
+function siteLangs() {
+  return typeof SITE_LANGS !== "undefined" ? SITE_LANGS : { en: "EN" };
+}
+
+function siteDefaultLang() {
+  return typeof SITE_DEFAULT_LANG !== "undefined" ? SITE_DEFAULT_LANG : "en";
+}
+
+function getSiteLang() {
+  const langs = siteLangs();
+  let saved = null;
+  try { saved = localStorage.getItem(SITE_LANG_STORAGE_KEY); } catch (e) {}
+  if (saved && langs[saved]) return saved;
+
+  // first visit: follow the browser if it's one of our languages
+  const browser = (navigator.language || "").toLowerCase();
+  const match = Object.keys(langs).find((code) => browser.startsWith(code));
+  return match || siteDefaultLang();
+}
+
+function siteText(key, vars) {
+  const strings = typeof SITE_STRINGS !== "undefined" ? SITE_STRINGS : {};
+  const lang = getSiteLang();
+  let text = (strings[lang] && strings[lang][key]) ??
+             (strings[siteDefaultLang()] && strings[siteDefaultLang()][key]) ??
+             key;
+  if (vars) {
+    Object.keys(vars).forEach((k) => { text = text.replace(`{${k}}`, vars[k]); });
+  }
+  return text;
+}
+
+// fill every data-i18n / data-i18n-aria element inside `root`
+function applySiteText(root) {
+  (root || document).querySelectorAll("[data-i18n]").forEach((el) => {
+    el.textContent = siteText(el.dataset.i18n);
+  });
+  (root || document).querySelectorAll("[data-i18n-aria]").forEach((el) => {
+    el.setAttribute("aria-label", siteText(el.dataset.i18nAria));
+  });
+  document.documentElement.lang = getSiteLang() === "zh" ? "zh-Hant" : getSiteLang();
+}
+
+function renderLangSwitches() {
+  const current = getSiteLang();
+  document.querySelectorAll("[data-lang-switch]").forEach((box) => {
+    box.classList.add("lang-switch");
+    box.setAttribute("role", "group");
+    box.setAttribute("aria-label", siteText("lang.label"));
+    box.innerHTML = Object.keys(siteLangs()).map((code) => `
+      <button type="button" class="lang-btn${code === current ? " is-active" : ""}"
+              data-lang="${code}" aria-pressed="${code === current}">${siteLangs()[code]}</button>
+    `).join("");
+  });
+}
+
+function setSiteLang(code) {
+  if (!siteLangs()[code]) return;
+  try { localStorage.setItem(SITE_LANG_STORAGE_KEY, code); } catch (e) {}
+  applySiteText();
+  renderLangSwitches();
+  document.dispatchEvent(new CustomEvent("sitelangchange", { detail: { lang: code } }));
+}
+
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest && e.target.closest("[data-lang-switch] .lang-btn");
+  if (btn) setSiteLang(btn.dataset.lang);
+});
+
+// set the language before the page's own scripts render anything
+applySiteText();
+document.addEventListener("DOMContentLoaded", () => {
+  applySiteText();
+  renderLangSwitches();
+});

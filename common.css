@@ -213,3 +213,41 @@ h1, h2 {
     transition: none !important;
   }
 }
+
+/* ---------- language switch (filled in by common.js) ----------
+   Works on light and dark pages: it inherits the text color. */
+
+.lang-switch {
+  display: inline-flex;
+  gap: 2px;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(127,127,127,0.18);
+}
+
+.lang-btn {
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: inherit;
+  opacity: 0.75;
+  background: none;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.4rem 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+
+.lang-btn:hover { opacity: 1; }
+
+.lang-btn.is-active {
+  opacity: 1;
+  background: #fff;
+  color: var(--ink);
+}
+
+.lang-btn:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}

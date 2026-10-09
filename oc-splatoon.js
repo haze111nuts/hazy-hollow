@@ -1,7 +1,8 @@
 // ===========================================================
 // Splatoon OC browser — character grid + modal.
 //
-// Reads SPLAT_CHARA_ROSTER and SPLATEAM from data/oc-splatoon.js.
+// Reads SPLAT_CHARA_ROSTER and SPLATEAM from data/oc-splatoon.js,
+// and interface text from data/lang.js (via siteText() in common.js).
 //
 // Thumbnails: add an optional `thumb` field to any character in
 // SPLAT_CHARA_ROSTER (e.g. thumb: "img/splatoon/blade.png") and
@@ -31,6 +32,52 @@ document.addEventListener("DOMContentLoaded", () => {
   const grid = document.getElementById("splat-grid");
   const viewButtons = document.querySelectorAll(".splat-view-btn");
   if (!grid || typeof SPLAT_CHARA_ROSTER === "undefined") return;
+
+  // ---------------- language helpers ----------------
+  //
+  // Character content is written once at the top level (currently in
+  // Chinese). A language block on the character overrides any field
+  // for that language, e.g.
+  //   "Blade": { summary: "中文…", en: { summary: "English…" } }
+  // Anything missing from the block falls back to the top level.
+
+  function lang() {
+    return getSiteLang();
+  }
+
+  // a character field in the current language
+  function local(chara, field) {
+    const block = chara[lang()];
+    if (block && block[field] !== undefined) return block[field];
+    return chara[field];
+  }
+
+  // display name of a character in the current language
+  function charaName(id) {
+    const chara = SPLAT_CHARA_ROSTER[id];
+    if (!chara) return id;
+    const block = chara[lang()];
+    if (block && block.name) return block.name;
+    if (lang() === "zh" && chara.name_ch) return chara.name_ch;
+    return id;
+  }
+
+  // the name in the *other* language, shown small next to the main one
+  function charaSubName(id) {
+    const chara = SPLAT_CHARA_ROSTER[id];
+    if (!chara) return "";
+    const sub = lang() === "zh" ? id : chara.name_ch;
+    return sub && sub !== charaName(id) ? sub : "";
+  }
+
+  function teamName(team) {
+    return lang() === "zh" ? (team.teamName_ch || team.teamName) : team.teamName;
+  }
+
+  function teamSubName(team) {
+    const sub = lang() === "zh" ? team.teamName : team.teamName_ch;
+    return sub && sub !== teamName(team) ? sub : "";
+  }
 
   // ---------------- data helpers ----------------
 
@@ -64,7 +111,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }[c]));
   }
 
-  // ---------------- rendering ----------------
+  // pasted text can carry invisible zero-width characters — strip them
+  function clean(text) {
+    return String(text || "").replace(/[​‌‍﻿]/g, "");
+  }
+
+  // ---------------- grid ----------------
 
   function thumbHtml(name, extraClass) {
     const chara = SPLAT_CHARA_ROSTER[name];
@@ -75,24 +127,28 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // type "collab" (a friend's character) and "npc" (already created by
-  // someone else) get their own card style via a modifier class
+  // someone else) get their own card style and a corner ribbon
   function typeClass(chara) {
     return chara.type ? ` splat-card--${chara.type}` : "";
+  }
+  function ribbonAttr(chara) {
+    return chara.type ? ` data-ribbon="${escapeHtml(siteText("ribbon." + chara.type))}"` : "";
   }
 
   function cardHtml(name) {
     if (!name) {
       return `
-        <div class="splat-card splat-card--reserved" aria-label="Reserved slot">
+        <div class="splat-card splat-card--reserved" aria-label="${escapeHtml(siteText("card.reservedLabel"))}">
           <div class="splat-thumb"><span class="splat-thumb-initial">?</span></div>
-          <span class="splat-card-name">TBD</span>
+          <span class="splat-card-name">${escapeHtml(siteText("card.reserved"))}</span>
         </div>
       `;
     }
+    const chara = SPLAT_CHARA_ROSTER[name];
     return `
-      <button class="splat-card${typeClass(SPLAT_CHARA_ROSTER[name])}" type="button" data-name="${escapeHtml(name)}" style="--chara:${SPLAT_CHARA_ROSTER[name].color}">
+      <button class="splat-card${typeClass(chara)}"${ribbonAttr(chara)} type="button" data-name="${escapeHtml(name)}" style="--chara:${chara.color}">
         ${thumbHtml(name)}
-        <span class="splat-card-name">${escapeHtml(name)}</span>
+        <span class="splat-card-name">${escapeHtml(charaName(name))}</span>
       </button>
     `;
   }
@@ -120,25 +176,27 @@ document.addEventListener("DOMContentLoaded", () => {
     let html = Object.keys(SPLATEAM)
       .map((key) => {
         const team = SPLATEAM[key];
-        return sectionHtml(team.teamName, team.teamName_ch, membersOf(key));
+        return sectionHtml(teamName(team), teamSubName(team), membersOf(key));
       })
       .join("");
-    html += sectionHtml("Unaffiliated", "", unaffiliated());
+    html += sectionHtml(siteText("team.unaffiliated"), "", unaffiliated());
     grid.innerHTML = html;
   }
 
   function renderAll() {
     const names = Object.keys(SPLAT_CHARA_ROSTER);
-    grid.innerHTML = sectionHtml("All Characters", "", names);
+    grid.innerHTML = sectionHtml(siteText("team.all"), "", names);
   }
 
   const VIEWS = { team: renderByTeam, all: renderAll };
+  let currentView = "team";
 
   function setView(view) {
+    currentView = VIEWS[view] ? view : "team";
     sectionIndex = 0;
-    (VIEWS[view] || renderByTeam)();
+    VIEWS[currentView]();
     viewButtons.forEach((btn) => {
-      btn.classList.toggle("is-active", btn.dataset.view === view);
+      btn.classList.toggle("is-active", btn.dataset.view === currentView);
     });
   }
 
@@ -148,7 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // one listener for every card, so re-rendering needs no rebinding
   grid.addEventListener("click", (e) => {
-    const card = e.target.closest(".splat-card");
+    const card = e.target.closest(".splat-card[data-name]");
     if (card) openCharaModal(card.dataset.name);
   });
 
@@ -180,47 +238,43 @@ document.addEventListener("DOMContentLoaded", () => {
     window.removeEventListener("keydown", preventScrollKeys, { passive: false });
   }
 
-  // ---------------- modal ----------------
-
-  // pasted text can carry invisible zero-width characters — strip them
-  function clean(text) {
-    return String(text || "").replace(/[\u200B\u200C\u200D\uFEFF]/g, "");
-  }
+  // ---------------- modal content ----------------
 
   // relationships are stored as [{ Name: "text" }, ...]
   function relationsOf(chara) {
-    return (chara.relationships || []).map((obj) => {
+    return (local(chara, "relationships") || []).map((obj) => {
       const who = Object.keys(obj)[0];
       return { who, text: clean(obj[who]) };
     });
   }
 
+  // variants are stored as [{ id: "label" }, ...]
+  function variantsOf(chara) {
+    return (local(chara, "variant") || []).map((obj) => {
+      const id = Object.keys(obj)[0];
+      return { id, label: clean(obj[id]) };
+    });
+  }
+
   function relHtml(rel) {
     const other = SPLAT_CHARA_ROSTER[rel.who];
+    const name = charaName(rel.who);
     const swatch = other
-      ? `<button type="button" class="splat-rel-swatch" style="--rel:${other.color}" data-goto="${escapeHtml(rel.who)}" aria-label="Open ${escapeHtml(rel.who)}">${escapeHtml(rel.who[0])}</button>`
-      : `<span class="splat-rel-swatch">${escapeHtml(rel.who[0])}</span>`;
+      ? `<button type="button" class="splat-rel-swatch" style="--rel:${other.color}" data-goto="${escapeHtml(rel.who)}" aria-label="${escapeHtml(siteText("modal.open", { name }))}">${escapeHtml(name[0])}</button>`
+      : `<span class="splat-rel-swatch">${escapeHtml(name[0])}</span>`;
     return `
       <div class="splat-rel">
         ${swatch}
         <div>
-          <span class="splat-rel-who">${escapeHtml(rel.who)}${other && other.name_ch ? `<small>${escapeHtml(other.name_ch)}</small>` : ""}</span>
+          <span class="splat-rel-who">${escapeHtml(name)}</span>
           <p>${escapeHtml(rel.text)}</p>
         </div>
       </div>
     `;
   }
 
-  // variants are stored as [{ id: "label" }, ...]
-  function variantsOf(chara) {
-    return (chara.variant || []).map((obj) => {
-      const id = Object.keys(obj)[0];
-      return { id, label: clean(obj[id]) };
-    });
-  }
-
   // the big portrait. With variants it shows the variant's image, or a
-  // placeholder (striped, with the variant label) if the file isn't there yet
+  // striped placeholder if the file isn't there yet
   function portraitHtml(name, chara, variant) {
     if (!variant) return thumbHtml(name, "splat-modal-thumb");
     return `
@@ -228,9 +282,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <!-- placeholder, shown until the image below loads -->
         <div class="splat-portrait-placeholder">
           <span class="splat-thumb-initial">${escapeHtml(name[0])}</span>
-          <span class="splat-portrait-tag">${escapeHtml(variant.label || variant.id)}</span>
         </div>
-        <img src="${escapeHtml(splatVariantSrc(name, variant.id))}" alt="${escapeHtml(name)} — ${escapeHtml(variant.label)}"
+        <img src="${escapeHtml(splatVariantSrc(name, variant.id))}" alt="${escapeHtml(charaName(name))} — ${escapeHtml(variant.label)}"
              onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
       </div>
     `;
@@ -239,7 +292,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function variantButtonsHtml(variants, activeId) {
     if (variants.length < 2) return "";
     return `
-      <div class="splat-variants" role="group" aria-label="Variants">
+      <div class="splat-variants" role="group" aria-label="${escapeHtml(siteText("modal.variants"))}">
         ${variants.map((v) => `
           <button type="button" class="splat-variant-btn" data-variant="${escapeHtml(v.id)}" aria-pressed="${v.id === activeId}">${escapeHtml(v.label || v.id)}</button>
         `).join("")}
@@ -249,25 +302,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function modalContentHtml(name, chara) {
     // summary is your own text and may contain <br>, so it goes in as HTML
-    const summary = chara.summary
-      ? `<p class="splat-modal-summary">${clean(chara.summary)}</p>`
-      : `<p class="splat-modal-empty">No summary yet.</p>`;
+    const summaryText = local(chara, "summary");
+    const summary = summaryText
+      ? `<p class="splat-modal-summary">${clean(summaryText)}</p>`
+      : `<p class="splat-modal-empty">${escapeHtml(siteText("modal.noSummary"))}</p>`;
 
-    const notes = chara.notes && chara.notes.length ? `
+    const notesList = local(chara, "notes") || [];
+    const notes = notesList.length ? `
       <section class="splat-modal-notes">
-        <h4 class="splat-modal-label">追加筆記</h4>
-        <ul>${chara.notes.map((n) => `<li>${escapeHtml(clean(n))}</li>`).join("")}</ul>
+        <h4 class="splat-modal-label">${escapeHtml(siteText("modal.notes"))}</h4>
+        <ul>${notesList.map((n) => `<li>${escapeHtml(clean(n))}</li>`).join("")}</ul>
       </section>` : "";
 
     const rels = relationsOf(chara);
     const variants = variantsOf(chara);
     const first = variants[0];
+    const sub = charaSubName(name);
 
     // tabs only appear when there are relationships to show
     const tabs = rels.length ? `
       <div class="splat-tabs" role="tablist">
-        <button type="button" class="splat-tab" role="tab" data-tab="intro" aria-selected="true">介紹</button>
-        <button type="button" class="splat-tab" role="tab" data-tab="rel" aria-selected="false">關係<span class="splat-tab-count">${rels.length}</span></button>
+        <button type="button" class="splat-tab" role="tab" data-tab="intro" aria-selected="true">${escapeHtml(siteText("modal.tab.intro"))}</button>
+        <button type="button" class="splat-tab" role="tab" data-tab="rel" aria-selected="false">${escapeHtml(siteText("modal.tab.rel"))}<span class="splat-tab-count">${rels.length}</span></button>
       </div>` : "";
 
     const relPanel = rels.length ? `
@@ -283,7 +339,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         <div class="splat-modal-hero-text">
           <div class="splat-modal-head">
-            <h3 class="splat-modal-name">${escapeHtml(name)}${chara.name_ch ? `<small>${escapeHtml(chara.name_ch)}</small>` : ""}</h3>
+            <h3 class="splat-modal-name">${escapeHtml(charaName(name))}${sub ? `<small>${escapeHtml(sub)}</small>` : ""}</h3>
             ${tabs}
           </div>
           <div class="splat-tab-panel" data-panel="intro" role="tabpanel">
@@ -296,30 +352,39 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   }
 
+  // ---------------- modal ----------------
+
+  // set while a modal is open, so a language switch can refresh it
+  let refreshOpenModal = null;
+
   function openCharaModal(name) {
-    const chara = SPLAT_CHARA_ROSTER[name];
-    if (!chara) return;
+    if (!SPLAT_CHARA_ROSTER[name]) return;
 
     const backdrop = document.createElement("div");
     backdrop.className = "splat-modal-backdrop";
     backdrop.innerHTML = `
       <div class="splat-modal" role="dialog" aria-modal="true">
-        <button class="splat-modal-close" type="button" aria-label="Close">&times;</button>
+        <button class="splat-modal-close" type="button">&times;</button>
         <div class="splat-modal-scroll"></div>
       </div>
     `;
     const modal = backdrop.querySelector(".splat-modal");
     const scroller = backdrop.querySelector(".splat-modal-scroll");
+    const closeBtn = backdrop.querySelector(".splat-modal-close");
+    let currentId = name;
 
     // fill (or refill) the modal with a character — used again when a
     // relationship square is clicked, to jump to that character
-    function show(charaName) {
-      const c = SPLAT_CHARA_ROSTER[charaName];
+    function show(id) {
+      const c = SPLAT_CHARA_ROSTER[id];
       if (!c) return;
+      currentId = id;
       modal.className = `splat-modal${c.type ? ` splat-modal--${c.type}` : ""}`;
       modal.style.setProperty("--chara", c.color);
-      modal.setAttribute("aria-label", charaName);
-      scroller.innerHTML = modalContentHtml(charaName, c);
+      modal.dataset.id = id;
+      modal.setAttribute("aria-label", charaName(id));
+      closeBtn.setAttribute("aria-label", siteText("modal.close"));
+      scroller.innerHTML = modalContentHtml(id, c);
       scroller.scrollTop = 0;
     }
 
@@ -328,6 +393,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function close() {
       if (closing) return;
       closing = true;
+      refreshOpenModal = null;
       document.removeEventListener("keydown", onKey);
       unlockScroll();
       backdrop.classList.add("is-closing");
@@ -361,21 +427,35 @@ document.addEventListener("DOMContentLoaded", () => {
       // variant switch -> swap the portrait
       const vbtn = e.target.closest(".splat-variant-btn");
       if (vbtn) {
-        const name = modal.getAttribute("aria-label");
-        const chara = SPLAT_CHARA_ROSTER[name];
+        const id = modal.dataset.id;
+        const chara = SPLAT_CHARA_ROSTER[id];
         const variant = variantsOf(chara).find((v) => v.id === vbtn.dataset.variant);
-        modal.querySelector(".splat-portrait-slot").innerHTML = portraitHtml(name, chara, variant);
+        modal.querySelector(".splat-portrait-slot").innerHTML = portraitHtml(id, chara, variant);
         modal.querySelectorAll(".splat-variant-btn").forEach((b) => b.setAttribute("aria-pressed", b === vbtn));
       }
     });
-    backdrop.querySelector(".splat-modal-close").addEventListener("click", close);
+    closeBtn.addEventListener("click", close);
     document.addEventListener("keydown", onKey);
 
+    refreshOpenModal = () => show(currentId);
     show(name);
     lockScroll();
     document.body.appendChild(backdrop);
-    backdrop.querySelector(".splat-modal-close").focus();
+    closeBtn.focus();
   }
 
+  // ---------------- language switch ----------------
+
+  function refreshText() {
+    document.title = siteText("splat.pageTitle");
+  }
+
+  document.addEventListener("sitelangchange", () => {
+    refreshText();
+    setView(currentView);
+    if (refreshOpenModal) refreshOpenModal();
+  });
+
+  refreshText();
   setView("team");
 });
