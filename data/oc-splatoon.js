@@ -169,7 +169,6 @@ const SPLAT_CHARA_ROSTER = {
         }
     };
 
-
 const SPLATEAM = {
         "BBB" : {
             teamName: "BBB",
@@ -236,4 +235,18 @@ const SPLATEAM = {
         }
     };
 
+const TABS = [
+    {
+        name: "Characters"
+    },
+    {
+        name: "Map"
+    },
+    {
+        name: "Timeline"
+    },
+    {
+        name: "Playground"
+    }
+]
 
