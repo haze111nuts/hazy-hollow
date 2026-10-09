@@ -79,10 +79,14 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   }
 
+  // --i drives the staggered fade-in delay of each section (see CSS)
+  let sectionIndex = 0;
+
   function sectionHtml(title, subtitle, names) {
     if (!names.length) return "";
+    const i = Math.min(sectionIndex++, 6);
     return `
-      <section class="splat-team">
+      <section class="splat-team" style="--i:${i}">
         <header class="splat-team-header">
           <h2 class="splat-team-name">${escapeHtml(title)}</h2>
           ${subtitle ? `<span class="splat-team-name-ch">${escapeHtml(subtitle)}</span>` : ""}
@@ -113,6 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const VIEWS = { team: renderByTeam, all: renderAll };
 
   function setView(view) {
+    sectionIndex = 0;
     (VIEWS[view] || renderByTeam)();
     viewButtons.forEach((btn) => {
       btn.classList.toggle("is-active", btn.dataset.view === view);
@@ -173,10 +178,21 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `;
 
+    // play the closing animation (.is-closing in CSS), then remove
+    let closing = false;
     function close() {
-      backdrop.remove();
+      if (closing) return;
+      closing = true;
       document.removeEventListener("keydown", onKey);
       unlockScroll();
+      backdrop.classList.add("is-closing");
+
+      const remove = () => backdrop.remove();
+      backdrop.addEventListener("animationend", (e) => {
+        if (e.target === backdrop) remove();
+      });
+      // fallback in case the animation doesn't run (e.g. reduced motion)
+      window.setTimeout(remove, 400);
     }
     function onKey(e) {
       if (e.key === "Escape") close();

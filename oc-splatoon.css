@@ -230,6 +230,24 @@ body{
   from { opacity: 0; }
 }
 
+/* closing: reverse of the open animation */
+.splat-modal-backdrop.is-closing {
+  pointer-events: none;
+  animation: splat-fade-out 0.22s ease forwards;
+}
+
+.splat-modal-backdrop.is-closing .splat-modal {
+  animation: splat-pop-out 0.2s ease-in forwards;
+}
+
+@keyframes splat-fade-out {
+  to { opacity: 0; }
+}
+
+@keyframes splat-pop-out {
+  to { opacity: 0; transform: scale(0.92); }
+}
+
 .splat-modal {
   position: relative;
   width: min(420px, 100%);
@@ -287,6 +305,41 @@ body{
 }
 
 .splat-modal-close:hover { color: var(--ink); }
+
+/* ---------- page enter (fade in after the index transition) ----------
+   The header comes in first, then each team section in turn.
+   Tweak --enter-delay / --enter-step to change the timing. */
+
+.splat-page {
+  --enter-delay: 0.1s;   /* wait before the first element appears */
+  --enter-step: 0.08s;   /* gap between each section */
+}
+
+.splat-page > .back-link,
+.splat-header,
+.splat-team {
+  animation: splat-enter 0.55s cubic-bezier(.22,.8,.3,1) both;
+}
+
+.splat-page > .back-link { animation-delay: var(--enter-delay); }
+.splat-header            { animation-delay: calc(var(--enter-delay) + 0.06s); }
+.splat-team {
+  animation-delay: calc(var(--enter-delay) + 0.16s + var(--i, 0) * var(--enter-step));
+}
+
+@keyframes splat-enter {
+  from { opacity: 0; transform: translateY(16px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .splat-page > .back-link,
+  .splat-header,
+  .splat-team,
+  .splat-modal-backdrop.is-closing,
+  .splat-modal-backdrop.is-closing .splat-modal {
+    animation: none;
+  }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .splat-card,
