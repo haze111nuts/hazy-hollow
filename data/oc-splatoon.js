@@ -46,7 +46,7 @@ const SPLAT_CHARA_ROSTER = {
         },
         "Elise" : { 
             name_ch: "伊莉",
-            color: "#23884a"
+            color: "#11853d"
         },
         "Susie" : { 
             name_ch: "蘇西",
@@ -58,7 +58,7 @@ const SPLAT_CHARA_ROSTER = {
         },        
         "Zoelle" : { 
             name_ch: "佐伊",
-            color: "#3a466e"
+            color: "#303053"
         },        
         "Viper" : { 
             name_ch: "毒牙",
@@ -114,7 +114,7 @@ const SPLAT_CHARA_ROSTER = {
         },
         "Leon" : { 
             name_ch: "里昂",
-            color: "#99b41f"
+            color: "#bcc726"
         },        
         "Scratch" : { 
             name_ch: "小刻",
@@ -127,6 +127,10 @@ const SPLAT_CHARA_ROSTER = {
         "Ada" : { 
             name_ch: "艾妲",
             color: "#724361"
+        },
+        "Father Chelon" : { 
+            name_ch: "龜教父",
+            color: "#887e23"
         },
         "Moyer" : { 
             name_ch: "小莫",
@@ -162,10 +166,6 @@ const SPLAT_CHARA_ROSTER = {
             name_ch: "飯田",
             color: "#29ca87",
             type: "npc"
-        },
-        "Father Chelon" : { 
-            name_ch: "龜教父",
-            color: "#887e23"
         }
     };
 
@@ -185,16 +185,23 @@ const SPLATEAM = {
                 "Hannah","Lance","Minerva","Roy","Amy"
             ]            
         },
+        "New Squidbeak Splatoon" : { 
+            teamName: "New Squidbeak Splatoon",
+            teamName_ch: "新噴嘴小隊",
+            members: [
+                "Captain Cuttlefish","Callie","Marie","Blade","Axel","Edd","Wade"
+            ]
+        },
         "Splatter Club" : { 
             teamName: "Splatter Club",
             teamName_ch: "飛濺俱樂部",
             members: [
-                "Yoni", "Zarah", "Hannah", ""
+                "Yoni", "Zarah", "Hannah", "Scratch", ""
             ]            
         },
         "The Acolytes" : { 
             teamName: "The Acolytes",
-            teamName_ch: "追隨者",
+            teamName_ch: "親信使者",
             members: [
                 "Angel", "Lucian", "RJ", "Damian"
             ]            
@@ -203,7 +210,7 @@ const SPLATEAM = {
             teamName: "OCTA",
             teamName_ch: "章魚自助協會",
             members: [
-                "Dorothy","Moyer","Ada","Minerva","Edd","Mei",""
+                "Dorothy","Moyer","Ada","Minerva","Edd","",""
             ]
         },
         "Vector 8​" : { 
@@ -225,13 +232,6 @@ const SPLATEAM = {
             teamName_ch: "IKPD",
             members: [
                 "Lance","Minerva"
-            ]
-        },
-        "New Squidbeak Splatoon" : { 
-            teamName: "New Squidbeak Splatoon",
-            teamName_ch: "新噴嘴小隊",
-            members: [
-                "Callie","Marie","Blade","Axel","Edd","Wade"
             ]
         }
     };

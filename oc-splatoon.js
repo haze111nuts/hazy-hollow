@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return `
         <div class="splat-card splat-card--reserved" aria-label="Reserved slot">
           <div class="splat-thumb"><span class="splat-thumb-initial">?</span></div>
-          <span class="splat-card-name">Reserved</span>
+          <span class="splat-card-name">TBD</span>
         </div>
       `;
     }
