@@ -138,8 +138,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const SCROLL_KEYS = ["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " "];
 
+  // only let the wheel/keys through when they're over the modal's own
+  // scroll area AND that area actually has something to scroll — otherwise
+  // the scroll would leak through to the page behind
   function isInsideModal(target) {
-    return !!(target && target.closest && target.closest(".splat-modal"));
+    const scroller = target && target.closest && target.closest(".splat-modal-scroll");
+    return !!scroller && scroller.scrollHeight > scroller.clientHeight;
   }
   function preventScroll(e) {
     if (!isInsideModal(e.target)) e.preventDefault();
@@ -160,6 +164,67 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ---------------- modal ----------------
 
+  // pasted text can carry invisible zero-width characters — strip them
+  function clean(text) {
+    return String(text || "").replace(/[\u200B\u200C\u200D\uFEFF]/g, "");
+  }
+
+  // relationships are stored as [{ Name: "text" }, ...]
+  function relationsOf(chara) {
+    return (chara.relationships || []).map((obj) => {
+      const who = Object.keys(obj)[0];
+      return { who, text: clean(obj[who]) };
+    });
+  }
+
+  function relHtml(rel) {
+    const other = SPLAT_CHARA_ROSTER[rel.who];
+    const swatch = other
+      ? `<button type="button" class="splat-rel-swatch" style="--rel:${other.color}" data-goto="${escapeHtml(rel.who)}" aria-label="Open ${escapeHtml(rel.who)}">${escapeHtml(rel.who[0])}</button>`
+      : `<span class="splat-rel-swatch">${escapeHtml(rel.who[0])}</span>`;
+    return `
+      <div class="splat-rel">
+        ${swatch}
+        <div>
+          <span class="splat-rel-who">${escapeHtml(rel.who)}${other && other.name_ch ? `<small>${escapeHtml(other.name_ch)}</small>` : ""}</span>
+          <p>${escapeHtml(rel.text)}</p>
+        </div>
+      </div>
+    `;
+  }
+
+  function modalContentHtml(name, chara) {
+    // summary is your own text and may contain <br>, so it goes in as HTML
+    const summary = chara.summary
+      ? `<p class="splat-modal-summary">${clean(chara.summary)}</p>`
+      : `<p class="splat-modal-empty">No summary yet.</p>`;
+
+    const notes = chara.notes && chara.notes.length ? `
+      <section class="splat-modal-notes">
+        <h4 class="splat-modal-label">追加筆記</h4>
+        <ul>${chara.notes.map((n) => `<li>${escapeHtml(clean(n))}</li>`).join("")}</ul>
+      </section>` : "";
+
+    const rels = relationsOf(chara);
+    const relSection = rels.length ? `
+      <section>
+        <h4 class="splat-modal-label">關係</h4>
+        <div class="splat-rel-list">${rels.map(relHtml).join("")}</div>
+      </section>` : "";
+
+    return `
+      <div class="splat-modal-hero">
+        ${thumbHtml(name, "splat-modal-thumb")}
+        <div class="splat-modal-hero-text">
+          <h3 class="splat-modal-name">${escapeHtml(name)}${chara.name_ch ? `<small>${escapeHtml(chara.name_ch)}</small>` : ""}</h3>
+          ${summary}
+        </div>
+      </div>
+      ${notes}
+      ${relSection}
+    `;
+  }
+
   function openCharaModal(name) {
     const chara = SPLAT_CHARA_ROSTER[name];
     if (!chara) return;
@@ -167,16 +232,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const backdrop = document.createElement("div");
     backdrop.className = "splat-modal-backdrop";
     backdrop.innerHTML = `
-      <div class="splat-modal${chara.type ? ` splat-modal--${chara.type}` : ""}" role="dialog" aria-modal="true" aria-label="${escapeHtml(name)}" style="--chara:${chara.color}">
+      <div class="splat-modal" role="dialog" aria-modal="true">
         <button class="splat-modal-close" type="button" aria-label="Close">&times;</button>
-        ${thumbHtml(name, "splat-modal-thumb")}
-        <div class="splat-modal-body">
-          <h3 class="splat-modal-name">${escapeHtml(name)}</h3>
-          <div class="splat-modal-name-ch">${escapeHtml(chara.name_ch || "")}</div>
-          <p class="splat-modal-text">Placeholder text — character details go here.</p>
-        </div>
+        <div class="splat-modal-scroll"></div>
       </div>
     `;
+    const modal = backdrop.querySelector(".splat-modal");
+    const scroller = backdrop.querySelector(".splat-modal-scroll");
+
+    // fill (or refill) the modal with a character — used again when a
+    // relationship square is clicked, to jump to that character
+    function show(charaName) {
+      const c = SPLAT_CHARA_ROSTER[charaName];
+      if (!c) return;
+      modal.className = `splat-modal${c.type ? ` splat-modal--${c.type}` : ""}`;
+      modal.style.setProperty("--chara", c.color);
+      modal.setAttribute("aria-label", charaName);
+      scroller.innerHTML = modalContentHtml(charaName, c);
+      scroller.scrollTop = 0;
+    }
 
     // play the closing animation (.is-closing in CSS), then remove
     let closing = false;
@@ -199,11 +273,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     backdrop.addEventListener("click", (e) => {
-      if (e.target === backdrop) close();
+      if (e.target === backdrop) return close();
+      const goto = e.target.closest("[data-goto]");
+      if (goto) show(goto.dataset.goto);
     });
     backdrop.querySelector(".splat-modal-close").addEventListener("click", close);
     document.addEventListener("keydown", onKey);
 
+    show(name);
     lockScroll();
     document.body.appendChild(backdrop);
     backdrop.querySelector(".splat-modal-close").focus();

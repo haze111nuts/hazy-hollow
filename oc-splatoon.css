@@ -255,21 +255,20 @@ body{
   to { opacity: 0; transform: scale(0.92); }
 }
 
+/* modal box — header (portrait + name + summary), notes box,
+   then a grid of relationship cards. The inner part scrolls. */
 .splat-modal {
   position: relative;
-  width: min(420px, 100%);
-  max-height: 85vh;
-  overflow-y: auto;
+  width: min(900px, 100%);
+  max-height: calc(100vh - 3rem);
   background: var(--bg);
   color: var(--ink);
-  border-radius: 22px;
-  box-shadow: inset 0 8px 0 var(--chara), 0 20px 50px rgba(0,0,0,0.35);
-  padding: 1.75rem;
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 1rem;
+  text-align: left;
   animation: splat-pop 0.3s cubic-bezier(.34,1.4,.64,1);
 }
 
@@ -277,32 +276,21 @@ body{
   from { opacity: 0; transform: scale(0.9); }
 }
 
-.splat-modal-thumb {
-  width: 140px;
-}
-
-.splat-modal-name {
-  font-family: "Fraunces", Georgia, serif;
-  font-size: 1.7rem;
-  margin: 0;
-}
-
-.splat-modal-name-ch {
-  color: var(--ink-soft);
-  margin-top: 0.2rem;
-}
-
-
-.splat-modal-text {
-  color: var(--ink-soft);
-  margin: 1rem 0 0;
+.splat-modal-scroll {
+  min-height: 0; /* lets this area shrink and scroll inside the modal */
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 2rem;
+  display: grid;
+  gap: 1.8rem;
 }
 
 .splat-modal-close {
   position: absolute;
   top: 0.6rem;
   right: 0.8rem;
-  font-size: 1.6rem;
+  z-index: 2;
+  font-size: 1.7rem;
   line-height: 1;
   background: none;
   border: 0;
@@ -312,6 +300,182 @@ body{
 }
 
 .splat-modal-close:hover { color: var(--ink); }
+
+/* header */
+.splat-modal-hero {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 1.8rem;
+  align-items: start;
+}
+
+.splat-modal-hero-text {
+  display: grid;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.splat-modal-thumb .splat-thumb-initial {
+  font-size: 4rem;
+}
+
+.splat-modal-name {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(1.9rem, 4vw, 2.5rem);
+  line-height: 1.05;
+  margin: 0;
+  padding-right: 2rem; /* keep clear of the close button */
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.6rem;
+}
+
+.splat-modal-name small {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.splat-modal-summary {
+  margin: 0;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.splat-modal-empty {
+  margin: 0;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+/* section label, e.g. 追加筆記 / 關係 */
+.splat-modal-label {
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: var(--ink-soft);
+  margin: 0 0 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.splat-modal-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(51,54,31,0.15);
+}
+
+/* notes */
+.splat-modal-notes {
+  background: color-mix(in srgb, var(--chara) 12%, var(--bg));
+  border-radius: 14px;
+  padding: 1.1rem 1.3rem;
+}
+
+.splat-modal-notes ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.splat-modal-notes li {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.splat-modal-notes li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 2px;
+  background: var(--chara);
+}
+
+/* relationships */
+.splat-rel-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.8rem;
+}
+
+.splat-rel {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 0.7rem;
+  align-items: start;
+  background: #fff;
+  border-radius: 12px;
+  padding: 0.8rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+/* the related character's color square — clickable when they're in the roster */
+.splat-rel-swatch {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  border: 0;
+  padding: 0;
+  background: var(--rel, #bdbdbd);
+  display: grid;
+  place-items: center;
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.92);
+}
+
+button.splat-rel-swatch {
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+button.splat-rel-swatch:hover,
+button.splat-rel-swatch:focus-visible {
+  transform: scale(1.08);
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.splat-rel-who {
+  display: block;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 0.1rem;
+}
+
+.splat-rel-who small {
+  font-weight: 600;
+  color: var(--ink-soft);
+  margin-left: 0.3rem;
+}
+
+.splat-rel p {
+  margin: 0;
+  color: #4a4d36;
+}
+
+@media (max-width: 680px) {
+  .splat-modal-backdrop { padding: 0.75rem; }
+  .splat-modal { max-height: calc(100vh - 1.5rem); }
+  .splat-modal-scroll { padding: 1.4rem; }
+  .splat-modal-hero { grid-template-columns: 1fr; }
+  .splat-modal-hero .splat-modal-thumb { width: 160px; }
+}
 
 /* ---------- page enter (fade in after the index transition) ----------
    The header comes in first, then each team section in turn.
