@@ -99,7 +99,7 @@ body{
 .splat-card {
   font: inherit;
   color: inherit;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.1);
   border: 0;
   border-radius: 18px;
   padding: 0.6rem 0.6rem 0.8rem;
@@ -184,70 +184,41 @@ body{
   font-weight: 600;
 }
 
-/* collab (friends' characters) and npc (made by someone else):
-   muted thumbnail with a dashed ring — the ring color tells them apart */
-   
-/* .splat-card--collab { --ring: #888; --border: dashed }
-.splat-card--npc    { --ring: #fff; --border: dotted }
-
-.splat-card--collab,
-.splat-card--npc {
-  background: rgba(255,255,255,0.03);
-}
-
-.splat-card--collab .splat-thumb,
-.splat-card--npc .splat-thumb {
-  outline: 2px var(--border) var(--ring);
-  outline-offset: 3px;
-}
-
-.splat-card--npc .splat-thumb {
-  outline: 2px var(--border) var(--ring);
-  outline-offset: 3px;  
-  filter: saturate(0.8) brightness(0.5);
-  transition: filter 0.2s ease;
-}
-
-.splat-card--collab .splat-card-name,
-.splat-card--npc .splat-card-name {
-  color: rgba(255,255,255,0.75);
-}
-
-.splat-card--collab:hover .splat-thumb,
-.splat-card--npc:hover .splat-thumb,
-.splat-card--collab:focus-visible .splat-thumb,
-.splat-card--npc:focus-visible .splat-thumb {
-  filter: none;
-} */
-
-/* collab / npc corner ribbon — a diagonal tag across the thumbnail's
+/* collab / npc corner ribbon — a diagonal tag across the card's
    top-right corner. Change the label text in `content`, and the
    colors with --ribbon-bg / --ribbon-ink. */
 .splat-card--collab { --ribbon-bg: #f2c66d; --ribbon-ink: #3d3d3d; }
 .splat-card--npc    { --ribbon-bg: #ffffff; --ribbon-ink: #3d3d3d; }
 
-.splat-card--collab .splat-thumb::after,
-.splat-card--npc .splat-thumb::after {
+.splat-card--collab,
+.splat-card--npc {
+  position: relative;
+  overflow: hidden;
+}
+
+.splat-card--collab::after,
+.splat-card--npc::after {
   position: absolute;
-  top: 14px;
-  right: -34px;
-  width: 120px;
-  padding: 3px 0;
+  top: 16px;
+  right: -36px;
+  width: 130px;
+  padding: 4px 0;
   transform: rotate(45deg);
   background: var(--ribbon-bg);
   color: var(--ribbon-ink);
   font-family: "Nunito", sans-serif;
-  font-size: 0.66rem;
+  font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0,0,0,0.25);
   pointer-events: none;
+  z-index: 1;
 }
 
-.splat-card--collab .splat-thumb::after { content: "Collab"; }
-.splat-card--npc .splat-thumb::after    { content: "NPC"; }
+.splat-card--collab::after { content: "Collab"; }
+.splat-card--npc::after    { content: "NPC"; }
 
 /* ---------- modal ---------- */
 
@@ -342,23 +313,6 @@ body{
 
 .splat-modal-close:hover { color: var(--ink); }
 
-@media (prefers-reduced-motion: reduce) {
-  .splat-card,
-  .splat-modal,
-  .splat-modal-backdrop {
-    animation: none;
-    transition: none;
-  }
-}
-
-@media (max-width: 520px) {
-  .splat-card-grid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 0.8rem;
-  }
-  .splat-thumb-initial { font-size: 2rem; }
-}
-
 /* ---------- page enter (fade in after the index transition) ----------
    The header comes in first, then each team section in turn.
    Tweak --enter-delay / --enter-step to change the timing. */
@@ -392,4 +346,21 @@ body{
   .splat-modal-backdrop.is-closing .splat-modal {
     animation: none;
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .splat-card,
+  .splat-modal,
+  .splat-modal-backdrop {
+    animation: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .splat-card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0.8rem;
+  }
+  .splat-thumb-initial { font-size: 2rem; }
 }
