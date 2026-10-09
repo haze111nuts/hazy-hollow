@@ -9,6 +9,24 @@
 // placeholder with their initial.
 // ===========================================================
 
+// ===========================================================
+// CHARACTER ART — variant portraits
+//
+// Each entry in a character's `variant` list ({ id: "label" })
+// looks for an image named   <name>-<id>.png   in SPLAT_IMG_DIR,
+// e.g. Blade + casual  ->  img/splatoon/blade-casual.png
+//
+// TODO (Hazy): put your art in this folder (or change the path
+// below). Until a file exists, a striped placeholder is shown
+// automatically, so nothing breaks while art is missing.
+// ===========================================================
+const SPLAT_IMG_DIR = "img/splatoon/";
+
+function splatVariantSrc(name, id) {
+  const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  return `${SPLAT_IMG_DIR}${slug}-${id}.png`;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const grid = document.getElementById("splat-grid");
   const viewButtons = document.querySelectorAll(".splat-view-btn");
@@ -193,6 +211,42 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   }
 
+  // variants are stored as [{ id: "label" }, ...]
+  function variantsOf(chara) {
+    return (chara.variant || []).map((obj) => {
+      const id = Object.keys(obj)[0];
+      return { id, label: clean(obj[id]) };
+    });
+  }
+
+  // the big portrait. With variants it shows the variant's image, or a
+  // placeholder (striped, with the variant label) if the file isn't there yet
+  function portraitHtml(name, chara, variant) {
+    if (!variant) return thumbHtml(name, "splat-modal-thumb");
+    return `
+      <div class="splat-thumb splat-modal-thumb splat-modal-portrait" style="--chara:${chara.color}">
+        <!-- placeholder, shown until the image below loads -->
+        <div class="splat-portrait-placeholder">
+          <span class="splat-thumb-initial">${escapeHtml(name[0])}</span>
+          <span class="splat-portrait-tag">${escapeHtml(variant.label || variant.id)}</span>
+        </div>
+        <img src="${escapeHtml(splatVariantSrc(name, variant.id))}" alt="${escapeHtml(name)} — ${escapeHtml(variant.label)}"
+             onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+      </div>
+    `;
+  }
+
+  function variantButtonsHtml(variants, activeId) {
+    if (variants.length < 2) return "";
+    return `
+      <div class="splat-variants" role="group" aria-label="Variants">
+        ${variants.map((v) => `
+          <button type="button" class="splat-variant-btn" data-variant="${escapeHtml(v.id)}" aria-pressed="${v.id === activeId}">${escapeHtml(v.label || v.id)}</button>
+        `).join("")}
+      </div>
+    `;
+  }
+
   function modalContentHtml(name, chara) {
     // summary is your own text and may contain <br>, so it goes in as HTML
     const summary = chara.summary
@@ -206,22 +260,39 @@ document.addEventListener("DOMContentLoaded", () => {
       </section>` : "";
 
     const rels = relationsOf(chara);
-    const relSection = rels.length ? `
-      <section>
-        <h4 class="splat-modal-label">關係</h4>
+    const variants = variantsOf(chara);
+    const first = variants[0];
+
+    // tabs only appear when there are relationships to show
+    const tabs = rels.length ? `
+      <div class="splat-tabs" role="tablist">
+        <button type="button" class="splat-tab" role="tab" data-tab="intro" aria-selected="true">介紹</button>
+        <button type="button" class="splat-tab" role="tab" data-tab="rel" aria-selected="false">關係<span class="splat-tab-count">${rels.length}</span></button>
+      </div>` : "";
+
+    const relPanel = rels.length ? `
+      <div class="splat-tab-panel" data-panel="rel" role="tabpanel" hidden>
         <div class="splat-rel-list">${rels.map(relHtml).join("")}</div>
-      </section>` : "";
+      </div>` : "";
 
     return `
       <div class="splat-modal-hero">
-        ${thumbHtml(name, "splat-modal-thumb")}
+        <div class="splat-modal-side">
+          <div class="splat-portrait-slot">${portraitHtml(name, chara, first)}</div>
+          ${variantButtonsHtml(variants, first && first.id)}
+        </div>
         <div class="splat-modal-hero-text">
-          <h3 class="splat-modal-name">${escapeHtml(name)}${chara.name_ch ? `<small>${escapeHtml(chara.name_ch)}</small>` : ""}</h3>
-          ${summary}
+          <div class="splat-modal-head">
+            <h3 class="splat-modal-name">${escapeHtml(name)}${chara.name_ch ? `<small>${escapeHtml(chara.name_ch)}</small>` : ""}</h3>
+            ${tabs}
+          </div>
+          <div class="splat-tab-panel" data-panel="intro" role="tabpanel">
+            ${summary}
+            ${notes}
+          </div>
+          ${relPanel}
         </div>
       </div>
-      ${notes}
-      ${relSection}
     `;
   }
 
@@ -274,8 +345,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     backdrop.addEventListener("click", (e) => {
       if (e.target === backdrop) return close();
+
+      // relationship square -> jump to that character
       const goto = e.target.closest("[data-goto]");
-      if (goto) show(goto.dataset.goto);
+      if (goto) return show(goto.dataset.goto);
+
+      // tab switch
+      const tab = e.target.closest(".splat-tab");
+      if (tab) {
+        modal.querySelectorAll(".splat-tab").forEach((t) => t.setAttribute("aria-selected", t === tab));
+        modal.querySelectorAll("[data-panel]").forEach((p) => { p.hidden = p.dataset.panel !== tab.dataset.tab; });
+        return;
+      }
+
+      // variant switch -> swap the portrait
+      const vbtn = e.target.closest(".splat-variant-btn");
+      if (vbtn) {
+        const name = modal.getAttribute("aria-label");
+        const chara = SPLAT_CHARA_ROSTER[name];
+        const variant = variantsOf(chara).find((v) => v.id === vbtn.dataset.variant);
+        modal.querySelector(".splat-portrait-slot").innerHTML = portraitHtml(name, chara, variant);
+        modal.querySelectorAll(".splat-variant-btn").forEach((b) => b.setAttribute("aria-pressed", b === vbtn));
+      }
     });
     backdrop.querySelector(".splat-modal-close").addEventListener("click", close);
     document.addEventListener("keydown", onKey);

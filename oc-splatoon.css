@@ -14,6 +14,7 @@ body{
   margin: 0 auto;
   padding: 3rem 1.5rem 5rem;
   color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* ---------- header ---------- */
@@ -419,8 +420,8 @@ body{
   border-radius: 12px;
   padding: 0.8rem;
   box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-  font-size: 0.88rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 /* the related character's color square — clickable when they're in the roster */
@@ -469,12 +470,153 @@ button.splat-rel-swatch:focus-visible {
   color: #4a4d36;
 }
 
+/* ---------- modal: portrait column + variants ---------- */
+
+.splat-modal-side {
+  position: sticky; /* portrait + variants stay put while long content scrolls */
+  top: 0;
+  display: grid;
+  gap: 0.9rem;
+  align-content: start;
+  min-width: 0;
+}
+
+.splat-modal-portrait {
+  position: relative;
+}
+
+.splat-modal-portrait img {
+  position: absolute;
+  inset: 0;
+}
+
+/* placeholder art for a variant whose image file doesn't exist yet */
+.splat-portrait-placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background:
+    repeating-linear-gradient(-45deg, rgba(255,255,255,0.16) 0 10px, transparent 10px 20px);
+}
+
+.splat-modal-portrait.has-img .splat-portrait-placeholder { display: none; }
+
+.splat-portrait-tag {
+  position: absolute;
+  left: 0.6rem;
+  bottom: 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+}
+
+.splat-variants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.splat-variant-btn {
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--ink);
+  background: rgba(51,54,31,0.07);
+  border: 0;
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.splat-variant-btn:hover { background: rgba(51,54,31,0.14); }
+
+.splat-variant-btn[aria-pressed="true"] {
+  background: var(--chara);
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.splat-variant-btn:focus-visible,
+.splat-tab:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+/* ---------- modal: tabs ---------- */
+
+/* name + tabs stay visible together while long content scrolls */
+.splat-modal-head {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: grid;
+  gap: 1rem;
+  background: var(--bg);
+  box-shadow: 0 -2rem 0 var(--bg); /* covers the gap above it while stuck */
+}
+
+.splat-tabs {
+  display: flex;
+  gap: 0.2rem;
+  border-bottom: 1px solid rgba(51,54,31,0.14);
+}
+
+.splat-tab {
+  position: relative;
+  font: inherit;
+  font-weight: 800;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  background: none;
+  border: 0;
+  padding: 0.55rem 0.9rem 0.65rem;
+  cursor: pointer;
+}
+
+.splat-tab:hover { color: var(--ink); }
+
+.splat-tab[aria-selected="true"] { color: var(--ink); }
+
+.splat-tab[aria-selected="true"]::after {
+  content: "";
+  position: absolute;
+  left: 0.6rem;
+  right: 0.6rem;
+  bottom: -1px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--chara);
+}
+
+.splat-tab-count {
+  font-size: 0.72rem;
+  margin-left: 0.35rem;
+  padding: 0.05rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(51,54,31,0.08);
+}
+
+.splat-tab-panel {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.splat-tab-panel[hidden] { display: none; }
+
 @media (max-width: 680px) {
   .splat-modal-backdrop { padding: 0.75rem; }
   .splat-modal { max-height: calc(100vh - 1.5rem); }
   .splat-modal-scroll { padding: 1.4rem; }
   .splat-modal-hero { grid-template-columns: 1fr; }
   .splat-modal-hero .splat-modal-thumb { width: 160px; }
+  .splat-modal-side { position: static; grid-template-columns: auto 1fr; align-items: end; }
+  .splat-variants { flex-direction: column; align-items: flex-start; }
 }
 
 /* ---------- page enter (fade in after the index transition) ----------
