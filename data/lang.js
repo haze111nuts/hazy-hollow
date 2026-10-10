@@ -62,14 +62,14 @@ const SITE_STRINGS = {
     "lang.label":          "語言",
 
     // Splatoon page
-    "splat.pageTitle":     "海產OC",
-    "splat.title":         "海產OC",
+    "splat.pageTitle":     "Hazy海產屋",
+    "splat.title":         "Hazy海產屋",
     "view.label":          "檢視",
     "view.team":           "依隊伍",
     "view.all":            "全部",
     "team.unaffiliated":   "無所屬",
     "team.all":            "所有角色",
-    "card.reserved":       "待定",
+    "card.reserved":       "待補",
     "card.reservedLabel":  "保留位置",
     "ribbon.collab":       "Collab",
     "ribbon.npc":          "NPC",
