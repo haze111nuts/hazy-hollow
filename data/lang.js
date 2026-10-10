@@ -80,7 +80,7 @@ const SITE_STRINGS = {
     "modal.tab.rel":       "關係",
     "modal.notes":         "追加筆記",
     "modal.variants":      "造型",
-    "modal.noSummary":     "還沒有介紹。",
+    "modal.noSummary":     "介紹還沒寫完。",
     "modal.open":          "開啟{name}"
   }
 };
