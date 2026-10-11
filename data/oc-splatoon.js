@@ -81,7 +81,7 @@ const SPLAT_CHARA_ROSTER = {
         "Yoni" : { 
             name_ch: "尤尼",
             color: "#dae723",
-            summary: "在一代主線時間點和小布成為朋友的少年，因為住所就在小布家附近所以經常找他玩。曾經在小布因為特工的事心情低落時帶著他趴趴走想要鼓勵他。<br>是個無憂無慮、神經大條的傢伙，看起來什麼都不怕，好奇心旺盛又喜歡找樂子。偶爾就會毫無理由的亂歡呼，是個娛樂效果製造機。講話常常沒頭沒腦，就連不合時宜的時候都會哈哈亂笑。",
+            summary: "在一代主線時間點和小布成為朋友的少年，因為住所就在小布家附近所以經常找他玩。曾經在小布因為特工的事心情低落時帶著他趴趴走想要鼓勵他。<br>是個無憂無慮、神經大條的傢伙，看起來什麼都不怕，好奇心旺盛又喜歡找樂子。偶爾就會毫無理由的亂歡呼，是個娛樂效果製造機。講話常常沒頭沒腦，就連不合時宜的時候都會哈哈亂笑。<br>似乎在一代主線後的時間點找到一份電子遊樂場的工作。",
             notes: [
                 "尤尼代表的按鈕是Y鍵",
                 "他跟小布同齡",
@@ -121,7 +121,7 @@ const SPLAT_CHARA_ROSTER = {
                 {Minerva: "雙胞胎姐姐，兩人的觀念跟哲學雖然互相衝突但在軍團中還算相處和平，後來一連串事件導致埃德對她產生更多的不滿跟憤恨。兩人似乎有未解開的誤會。"},
                 {Blade: "因章魚軍團與深海地鐵的衝突而相遇。一直認為對方技術不足又沒競爭力卻可以一直突破難關很不解，對他抱持著競爭心跟嫉妒心等各種複雜感情。"},                
                 {Axel: "個性不太合所以兩人之間經常火藥味滿滿，覺得對方是從小在愜意環境下長大的天真愚蠢花枝。"},
-                {Dorothy: "偶爾去OCTA幫忙時相識的大媽，特別受對方照顧。"}
+                {Dorothy: "因為OCTA相識，覺得對方是個令人敬佩的女性。似乎特別受對方照顧。"}
                 
             ],
             variant:[
@@ -135,7 +135,9 @@ const SPLAT_CHARA_ROSTER = {
             color: "#6135b3",
             summary: "三代主線的主角，在蠻殼鎮長大。因為內向所以不善社交，沒有什麼特長，行為舉止也很尷尬所以變成當地青少年圈圈的笑柄，各種挫折讓他迴避漆彈運動，經常宅在家打電動。一次因緣際會遇到一隻餓扁的小鮭魚，在收養牠之後接二連三被捲入各種跟古代有關的調查事件，也因為這樣加入新噴嘴小隊變成了新3號。<br>雖然性格懦弱但心地善良，看到別人遇到困難雖然會猶豫但最後總是會選擇站出來。<br><br>——三代設定還沒安排完，以上待補——",
             notes: [
-                "偉德代表的按鈕是◀鍵（西）"
+                "偉德代表的按鈕是◀鍵（西）",
+                "他養的小鮭魚因為很會大便所以偉德總是在幫牠換褲子，因此被他取名便便王。偉德也會暱稱牠「便便」或「尿布」",
+                "他左邊側髮的觸手尾端有輕微的分裂，變成了像是魚尾一樣的形狀"
             ],
             relationships: [
                 {Blade: "因為新噴嘴小隊而相遇，認為對方是個什麼都很厲害的前輩，遇到困難的時候會總會被他拉一把。"},                
@@ -207,7 +209,7 @@ const SPLAT_CHARA_ROSTER = {
                 {Amy: "因RF的成立而認識，是隊員跟經紀人的關係，覺得對方很甜美又好相處，在她面前總會不小心進入「好可愛！」迷妹模式。"},
                 {Lance: "因RF的成立而認識，對戰上默契不錯，對他很欽佩好奇想當朋友但總因為找不到話題可以聊而煩惱，後來兩人成為警察同事。"},
                 {Roy: "因RF的成立而認識，完全不知道要怎麼和對方相處，但還是會盡量試著瞭解或是做出友善的舉動（可惜都沒鳥用！）"},
-                {Dorothy: "偶爾去OCTA幫忙時相識，很受對方照顧。覺得和她相處時特別愉快，每次去OCTA旅館都會會不由自主地和她一直聊天。"}
+                {Dorothy: "因為OCTA相識，很受對方照顧。覺得和她相處時特別愉快，每次去OCTA旅館都會會不由自主地和她一直聊天。"}
                 
             ],
             variant:[
@@ -290,7 +292,8 @@ const SPLAT_CHARA_ROSTER = {
             ],
             variant:[
                 {casual: "日常"},
-                {agent3: "特工服"}
+                {agent3: "特工服"},
+                {scout: "海林童子軍服"}
             ]                                    
         },
         "Scott" : { 
@@ -302,7 +305,8 @@ const SPLAT_CHARA_ROSTER = {
             ],
             relationships: [
                 {Susie: "親妹妹，雖然不常對她直接表達關心，但互動中透露出一種寵愛，會放任她到處跑也會默默守護。平時也少不了酸她幾句" },                
-                {Wade: "在調查事件中認識，平時幾乎都在挖苦對方，但在對方需要幫忙時還是會出手相助。知道對方家庭的秘密，一直在默默觀察他。"}
+                {Wade: "在調查事件中認識，平時幾乎都在挖苦對方，但在對方需要幫忙時還是會出手相助。知道對方家庭的秘密，一直在默默觀察他。"},
+                {Zoelle: "在童子軍團中認識，視對方為勁敵。兩人經常透過童軍活動來競爭。"}
             ]            
         },        
         "Zoelle" : { 
@@ -314,9 +318,14 @@ const SPLAT_CHARA_ROSTER = {
                 "她的名字翻成中文是佐薇爾，佐伊則是小名（英文寫作Zoey）"
             ],
             relationships: [
-                {Susie: "視對方"},
-                {Scott: "親哥哥，很尊敬，有時候認為他太死板，但關係很不錯。" }
-            ]                                
+                {Susie: "在童子軍團中認識，認為對方是個很有實力的人，兩人經常透過童軍活動來競爭。"},
+                {Zarah: "親姐姐，知道對方很辛苦但還是不喜歡她的生活選擇，就算擔心她也不知道要怎麼表達。" }
+            ],
+            variant:[
+                {casual: "日常"},
+                {scout: "海林童子軍服"},
+                {v8: "V8工作服"}
+            ]    
         },        
         "Viper" : { 
             name_ch: "毒牙",
@@ -379,7 +388,7 @@ const SPLAT_CHARA_ROSTER = {
             color: "#79db37"
         },
         "Dorothy" : { 
-            name_ch: "多蘿西",
+            name_ch: "多蘿希",
             color: "#7e342f"
         },
         "Ada" : { 
@@ -387,7 +396,7 @@ const SPLAT_CHARA_ROSTER = {
             color: "#724361"
         },
         "Father Chelon" : { 
-            name_ch: "龜教父",
+            name_ch: "教父先生",
             color: "#887e23"
         },
         "Noir" : { 
@@ -453,20 +462,6 @@ const SPLATEAM = {
             members: [
                 "Captain Cuttlefish","Callie","Marie","Blade","Axel","Edd","Wade"
             ]
-        },
-        "Splatter Club" : { 
-            teamName: "Splatter Club",
-            teamName_ch: "飛濺俱樂部",
-            members: [
-                "", "Zarah", "Hannah", ""
-            ]            
-        },
-        "The Acolytes" : { 
-            teamName: "The Acolytes",
-            teamName_ch: "親信使者",
-            members: [
-                "Angel", "Lucian", "RJ", "Damian"
-            ]            
         },        
         "OCTA" : { 
             teamName: "OCTA",
@@ -482,20 +477,48 @@ const SPLATEAM = {
                 "Viper","Tighe","Cathy","Max","Dr. Lapis","Beth","Ollie","Zoelle","Marina","Mei"
             ]                        
         },
+        "The Acolytes" : { 
+            teamName: "The Acolytes",
+            teamName_ch: "親信使者",
+            members: [
+                "Angel", "Lucian", "RJ", "Damian"
+            ]            
+        },
+        "Splatter Club" : { 
+            teamName: "Splatter Club",
+            teamName_ch: "飛濺俱樂部",
+            members: [
+                "", "Zarah", "Hannah", ""
+            ]            
+        },
+        "IKPD" : { 
+            teamName: "Inkopolis Police Department",
+            teamName_ch: "IKPD",
+            members: [
+                "Lance","Minerva", ""
+            ]
+        },
+        "EX-Octarian Army" : { 
+            teamName: "Ex-Octarian Army",
+            teamName_ch: "前章魚軍團成員",
+            members: [
+                "DJ Octavio","Marina","Viper","Minerva","Edd","Tighe","Cathy","Max","Dr. Lapis","Beth","Ollie","Dorothy","Ada","Lucian"
+            ]
+        },
         "Seagrove Scouts" : { 
             teamName: "Seagrove Scouts",
             teamName_ch: "海林童子軍團",
             members: [
                 "Susie","Zoelle",""
             ]
-        },
-        "IKPD" : { 
-            teamName: "Inkopolis Police Department",
-            teamName_ch: "IKPD",
-            members: [
-                "Lance","Minerva"
-            ]
         }
+        // "Shopping District" : { 
+        //     teamName: "Shopping District",
+        //     teamName_ch: "商店街打工仔",
+        //     members: [
+        //         "Paul","Yoni","Roy","Amy","Leon","Zarah","Scott"
+        //     ]
+        // }
     };
 
 const TABS = [
