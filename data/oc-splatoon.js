@@ -554,7 +554,7 @@ const SPLAT_CHARA_ROSTER = {
         "Paul" : { 
             name_ch: "保羅",
             color: "#325340",
-            summary: "在一代主線時間點登場。是高領市一家當鋪的老闆，當天負責給電動遊樂場提供獎品，結果獎品出現問題而向小布尋求幫助。<br>是個友善又風趣的商人大叔，喜歡分享知識、偶爾還會出一些謎題跟知識小問題給店裡的年輕人猜，還是那種經常講老爸笑話的人，偶爾會遭附近的年輕人批評說「很尬」，即使如此還是一直努力在學習年輕人之間流行的事物。很支持大家多玩射擊運動（這樣他的二手武器才有賣頭！）。算是個豪邁的人，但他有時也會露出小氣鬼的一面。",
+            summary: "在一代主線時間點登場。是高領市一家當鋪的老闆。一次負責給電動遊樂場提供獎品，結果獎品出現問題而向小布尋求幫助。<br>是個友善又風趣的商人大叔，喜歡分享知識、偶爾還會出一些謎題跟知識小問題給店裡的年輕人猜，還是那種經常講老爸笑話的人，偶爾會遭附近的年輕人批評說「很尬」，即使如此還是一直努力在學習年輕人之間流行的事物。很支持大家多玩射擊運動（這樣他的二手武器才有賣頭！）。算是個豪邁的人，但他有時也會露出小氣鬼的一面。",
             notes: [
                 "他代表的按鈕是電源鍵，名字來自Power（電源）"
             ],
@@ -724,7 +724,7 @@ const SPLATEAM = {
             teamName: "Ex-Octarian Army Member",
             teamName_ch: "前章魚軍團成員",
             members: [
-                "DJ Octavio","Marina","Viper","Minerva","Edd","Tighe","Candice","Maxwell","Dr. Lapis","Betty","Ollie","Lucian","Dorothy","Ada","Leon"
+                "DJ Octavio","Marina","Viper","Minerva","Edd","Tighe","Candice","Maxwell","Dr. Lapis","Betty","Ollie","Lucian","Dorothy","Ada"
             ]
         },
         "Seagrove Scouts" : { 
