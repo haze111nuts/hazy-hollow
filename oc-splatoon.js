@@ -11,21 +11,52 @@
 // ===========================================================
 
 // ===========================================================
-// CHARACTER ART — variant portraits
+// CHARACTER ART
 //
-// Each entry in a character's `variant` list ({ id: "label" })
-// looks for an image named   <name>-<id>.png   in SPLAT_IMG_DIR,
-// e.g. Blade + casual  ->  img/splatoon/blade-casual.png
+// All images live in SPLAT_IMG_DIR and are found by file name —
+// no code changes needed when you add art.
 //
-// TODO (Hazy): put your art in this folder (or change the path
-// below). Until a file exists, a striped placeholder is shown
-// automatically, so nothing breaks while art is missing.
+//   Character WITH outfits (a `variant` list):
+//     <name>_<outfit id>.png    one per outfit    e.g. blade_casual.png
+//     The FIRST outfit in the list is also their grid thumbnail.
+//
+//   Character WITHOUT outfits:
+//     <name>.png                thumbnail + modal  e.g. callie.png
+//
+// <name> is the character's name in lowercase, with spaces and dots
+// turned into "-"   (Captain Cuttlefish -> captain-cuttlefish,
+//                    Dr. Lapis -> dr-lapis).
+// The outfit id is the key in the `variant` list ({casual: "日常"}).
+//
+// Optional: a `thumb: "path"` field on a character overrides the
+// grid thumbnail. Until a file exists, a placeholder is shown, so
+// nothing breaks while art is missing.
+//
+// TODO (Hazy): change the folder or the ".png" here if needed.
 // ===========================================================
 const SPLAT_IMG_DIR = "img/splatoon/";
+const SPLAT_IMG_EXT = ".png";
 
+// "Captain Cuttlefish" -> "captain-cuttlefish"
+function splatSlug(name) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+// character without outfits: <name>.png
+function splatMainSrc(name) {
+  return `${SPLAT_IMG_DIR}${splatSlug(name)}${SPLAT_IMG_EXT}`;
+}
+
+// one outfit: <name>_<id>.png
 function splatVariantSrc(name, id) {
-  const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-  return `${SPLAT_IMG_DIR}${slug}-${id}.png`;
+  return `${SPLAT_IMG_DIR}${splatSlug(name)}_${id}${SPLAT_IMG_EXT}`;
+}
+
+// grid thumbnail: `thumb` field, else the first outfit, else <name>.png
+function splatThumbSrc(name, chara) {
+  if (chara.thumb) return chara.thumb;
+  const first = (chara.variant || [])[0];
+  return first ? splatVariantSrc(name, Object.keys(first)[0]) : splatMainSrc(name);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -118,12 +149,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ---------------- grid ----------------
 
+  // the character's main picture (see splatThumbSrc at the top).
+  // The initial sits underneath and stays visible if there's no image yet.
   function thumbHtml(name, extraClass) {
     const chara = SPLAT_CHARA_ROSTER[name];
-    const inner = chara.thumb
-      ? `<img src="${escapeHtml(chara.thumb)}" alt="" loading="lazy">`
-      : `<span class="splat-thumb-initial">${escapeHtml(name[0])}</span>`;
-    return `<div class="splat-thumb ${extraClass || ""}" style="--chara:${chara.color}">${inner}</div>`;
+    const src = splatThumbSrc(name, chara);
+    return `
+      <div class="splat-thumb ${extraClass || ""}" style="--chara:${chara.color}">
+        <span class="splat-thumb-initial">${escapeHtml(name[0])}</span>
+        <img class="splat-thumb-img" src="${escapeHtml(src)}" alt="" loading="lazy" onerror="this.remove()">
+      </div>`;
   }
 
   // type "collab" (a friend's character) and "npc" (already created by

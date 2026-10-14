@@ -54,7 +54,6 @@ const SPLAT_CHARA_ROSTER = {
             ],
             variant:[
                 {casual: "日常"},
-                {casual2: "日常2"},
                 {agent3: "特工服"},
                 {captain: "司令"}
             ]

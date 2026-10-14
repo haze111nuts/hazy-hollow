@@ -154,6 +154,12 @@ body{
   display: block;
 }
 
+/* the main picture covers the initial when the file exists */
+.splat-thumb .splat-thumb-img {
+  position: absolute;
+  inset: 0;
+}
+
 .splat-thumb-initial {
   font-family: "Fraunces", Georgia, serif;
   font-weight: 700;
