@@ -6,9 +6,9 @@
 // each character's data file instead — see data/oc-splatoon.js.
 //
 // HOW TO USE
-//   • In HTML:  <span data-i18n="view.team"></span>
+//   • In HTML:  <span data-i18n="view.group"></span>
 //               (the text is filled in automatically)
-//   • In JS:    siteText("view.team")
+//   • In JS:    siteText("view.group")
 //
 // ADD A NEW STRING:   add the same key to every language below.
 //                     If a key is missing in one language, the
@@ -37,10 +37,10 @@ const SITE_STRINGS = {
     "splat.pageTitle":     "Splatoon OCs",
     "splat.title":         "Splatoon OCs",
     "view.label":          "View",
-    "view.team":           "By team",
+    "view.group":           "By group",
     "view.all":            "All",
-    "team.unaffiliated":   "Other",
-    "team.all":            "All Characters",
+    "group.unaffiliated":   "Other",
+    "group.all":            "All Characters",
     "card.reserved":       "TBD",
     "card.reservedLabel":  "Reserved slot",
     "ribbon.collab":       "Collab",
@@ -65,10 +65,10 @@ const SITE_STRINGS = {
     "splat.pageTitle":     "Hazy海產屋",
     "splat.title":         "Hazy海產屋",
     "view.label":          "檢視",
-    "view.team":           "依隊伍",
+    "view.group":           "依分組",
     "view.all":            "全部",
-    "team.unaffiliated":   "未分類",
-    "team.all":            "所有角色",
+    "group.unaffiliated":   "未分類",
+    "group.all":            "所有角色",
     "card.reserved":       "待補",
     "card.reservedLabel":  "保留位置",
     "ribbon.collab":       "Collab",

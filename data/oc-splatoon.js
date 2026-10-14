@@ -26,7 +26,7 @@
 // Names: the key ("Blade") is the English name, name_ch is the
 // Chinese name. Relationship and variant ids stay the same in every
 // language — only the text after the colon is translated.
-// Team names: teamName (English) / teamName_ch (Chinese).
+// Group names: groupName (English) / groupName_ch (Chinese).
 // Interface text (tabs, buttons…) lives in data/lang.js instead.
 // ===========================================================
 
@@ -670,81 +670,81 @@ const SPLAT_CHARA_ROSTER = {
         }
     };
 
-const SPLATEAM = {
+const SPLAT_GROUP = {
         "BBB" : {
-            teamName: "BBB",
-            teamName_ch: "按鈕少年隊",
+            groupName: "BBB",
+            groupName_ch: "按鈕少年隊",
             members: [
                 "Blade","Axel","Yoni","Xiu","Edd","Wade"
             ]
         },
         "RF" : { 
-            teamName: "Royal Flush",
-            teamName_ch: "皇家同花順",
+            groupName: "Royal Flush",
+            groupName_ch: "皇家同花順",
             members: [
                 "Hannah","Lance","Minerva","Roy","Amy"
             ]            
         },
         "New Squidbeak Splatoon" : { 
-            teamName: "New Squidbeak Splatoon",
-            teamName_ch: "新噴嘴小隊",
+            groupName: "New Squidbeak Splatoon",
+            groupName_ch: "新噴嘴小隊",
             members: [
                 "Captain Cuttlefish","Callie","Marie","Blade","Axel","Edd","Wade"
             ]
         },        
         "OCTA" : { 
-            teamName: "OCTA",
-            teamName_ch: "章魚自助協會",
+            groupName: "OCTA",
+            groupName_ch: "章魚自助協會",
             members: [
                 "Dorothy","Moyer","Ada","Minerva","Edd","Blade",""
             ]
         },
         "Vector 8" : { 
-            teamName: "Vector 8",
-            teamName_ch: "向量8科研中心",
+            groupName: "Vector 8",
+            groupName_ch: "向量8科研中心",
             members: [
                 "Viper","Tighe","Candice","Maxwell","Dr. Lapis","Betty","Ollie","Zoelle","Marina","Mei"
             ]                        
         },
         "The Acolytes" : { 
-            teamName: "The Acolytes",
-            teamName_ch: "親信使者",
+            groupName: "The Acolytes",
+            groupName_ch: "親信使者",
             members: [
                 "Angel", "Lucian", "RJ", "Damian"
             ]            
         },
         "Splatter Club" : { 
-            teamName: "Splatter Club",
-            teamName_ch: "飛濺俱樂部",
+            groupName: "Splatter Club",
+            groupName_ch: "飛濺俱樂部",
             members: [
                 "", "Zarah", "Hannah", ""
             ]            
         },
         "EX-Octarian Army Member" : { 
-            teamName: "Ex-Octarian Army Member",
-            teamName_ch: "前章魚軍團成員",
+            groupName: "Ex-Octarian Army Member",
+            groupName_ch: "前章魚軍團成員",
             members: [
                 "DJ Octavio","Marina","Viper","Minerva","Edd","Tighe","Candice","Maxwell","Dr. Lapis","Betty","Ollie","Lucian","Dorothy","Ada"
             ]
         },
         "Seagrove Scouts" : { 
-            teamName: "Seagrove Scouts",
-            teamName_ch: "海林童子軍團",
+            groupName: "Seagrove Scouts",
+            groupName_ch: "海林童子軍團",
             members: [
                 "Susie","Zoelle",""
             ]
         }
         //,
         // "IKPD" : { 
-        //     teamName: "Inkopolis Police Department",
-        //     teamName_ch: "IKPD",
+        //     groupName: "Inkopolis Police Department",
+        //     groupName_ch: "IKPD",
         //     members: [
         //         "Lance","Minerva", ""
         //     ]
         // },        
         // "Shopping District" : { 
-        //     teamName: "Shopping District",
-        //     teamName_ch: "商店街打工仔",
+        //     groupName: "Shopping District",
+        //     groupName_ch: "商店街打工仔",
         //     members: [
         //         "Paul","Yoni","Roy","Amy","Leon","Zarah","Scott"
         //     ]

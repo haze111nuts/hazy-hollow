@@ -71,13 +71,13 @@ body{
   color: var(--c2);
 }
 
-/* ---------- team sections ---------- */
+/* ---------- group sections ---------- */
 
-.splat-team + .splat-team {
+.splat-group + .splat-group {
   margin-top: 2.75rem;
 }
 
-.splat-team-header {
+.splat-group-header {
   display: flex;
   align-items: baseline;
   gap: 0.75rem;
@@ -86,11 +86,11 @@ body{
   border-bottom: 2px dashed rgba(255,255,255,0.15);
 }
 
-.splat-team-name {
+.splat-group-name {
   font-size: 1.5rem;
 }
 
-.splat-team-name-ch {
+.splat-group-name-ch {
   color: rgba(255,255,255,0.55);
   font-size: 0.95rem;
 }
@@ -164,7 +164,7 @@ body{
 
 /* ---------- card variants ---------- */
 
-/* reserved slot — a blank "" entry in a team's members list */
+/* reserved slot — a blank "" entry in a group's members list */
 .splat-card--reserved {
   cursor: default;
   background: transparent;
@@ -615,7 +615,7 @@ button.splat-rel-swatch:focus-visible {
 }
 
 /* ---------- page enter (fade in after the index transition) ----------
-   The header comes in first, then each team section in turn.
+   The header comes in first, then each group section in turn.
    Tweak --enter-delay / --enter-step to change the timing. */
 
 .splat-page {
@@ -625,13 +625,13 @@ button.splat-rel-swatch:focus-visible {
 
 .splat-page > .back-link,
 .splat-header,
-.splat-team {
+.splat-group {
   animation: splat-enter 0.55s cubic-bezier(.22,.8,.3,1) both;
 }
 
 .splat-page > .back-link { animation-delay: var(--enter-delay); }
 .splat-header            { animation-delay: calc(var(--enter-delay) + 0.06s); }
-.splat-team {
+.splat-group {
   animation-delay: calc(var(--enter-delay) + 0.16s + var(--i, 0) * var(--enter-step));
 }
 
@@ -642,7 +642,7 @@ button.splat-rel-swatch:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .splat-page > .back-link,
   .splat-header,
-  .splat-team,
+  .splat-group,
   .splat-modal-backdrop.is-closing,
   .splat-modal-backdrop.is-closing .splat-modal {
     animation: none;

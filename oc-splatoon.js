@@ -1,7 +1,7 @@
 // ===========================================================
 // Splatoon OC browser — character grid + modal.
 //
-// Reads SPLAT_CHARA_ROSTER and SPLATEAM from data/oc-splatoon.js,
+// Reads SPLAT_CHARA_ROSTER and SPLAT_GROUP from data/oc-splatoon.js,
 // and interface text from data/lang.js (via siteText() in common.js).
 //
 // Thumbnails: add an optional `thumb` field to any character in
@@ -70,31 +70,31 @@ document.addEventListener("DOMContentLoaded", () => {
     return sub && sub !== charaName(id) ? sub : "";
   }
 
-  function teamName(team) {
-    return lang() === "zh" ? (team.teamName_ch || team.teamName) : team.teamName;
+  function groupName(group) {
+    return lang() === "zh" ? (group.groupName_ch || group.groupName) : group.groupName;
   }
 
-  function teamSubName(team) {
-    const sub = lang() === "zh" ? team.teamName : team.teamName_ch;
-    return sub && sub !== teamName(team) ? sub : "";
+  function groupSubName(group) {
+    const sub = lang() === "zh" ? group.groupName : group.groupName_ch;
+    return sub && sub !== groupName(group) ? sub : "";
   }
 
   // ---------------- data helpers ----------------
 
-  // list of team keys each character belongs to
-  function teamsOf(name) {
-    return Object.keys(SPLATEAM).filter((key) =>
-      SPLATEAM[key].members.includes(name)
+  // list of group keys each character belongs to
+  function groupsOf(name) {
+    return Object.keys(SPLAT_GROUP).filter((key) =>
+      SPLAT_GROUP[key].members.includes(name)
     );
   }
 
-  // members of a team. Blank entries ("") stay in as reserved slots
+  // members of a group. Blank entries ("") stay in as reserved slots
   // for characters not designed yet; names missing from the roster are skipped.
-  function membersOf(teamKey) {
-    return SPLATEAM[teamKey].members.filter((name) => {
+  function membersOf(groupKey) {
+    return SPLAT_GROUP[groupKey].members.filter((name) => {
       if (!name) return true;
       if (!SPLAT_CHARA_ROSTER[name]) {
-        console.warn(`[oc-splatoon] "${name}" is in team "${teamKey}" but not in SPLAT_CHARA_ROSTER`);
+        console.warn(`[oc-splatoon] "${name}" is in group "${groupKey}" but not in SPLAT_CHARA_ROSTER`);
         return false;
       }
       return true;
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function unaffiliated() {
-    return Object.keys(SPLAT_CHARA_ROSTER).filter((name) => teamsOf(name).length === 0);
+    return Object.keys(SPLAT_CHARA_ROSTER).filter((name) => groupsOf(name).length === 0);
   }
 
   function escapeHtml(str) {
@@ -160,10 +160,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!names.length) return "";
     const i = Math.min(sectionIndex++, 6);
     return `
-      <section class="splat-team" style="--i:${i}">
-        <header class="splat-team-header">
-          <h2 class="splat-team-name">${escapeHtml(title)}</h2>
-          ${subtitle ? `<span class="splat-team-name-ch">${escapeHtml(subtitle)}</span>` : ""}
+      <section class="splat-group" style="--i:${i}">
+        <header class="splat-group-header">
+          <h2 class="splat-group-name">${escapeHtml(title)}</h2>
+          ${subtitle ? `<span class="splat-group-name-ch">${escapeHtml(subtitle)}</span>` : ""}
         </header>
         <div class="splat-card-grid">
           ${names.map(cardHtml).join("")}
@@ -172,27 +172,27 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   }
 
-  function renderByTeam() {
-    let html = Object.keys(SPLATEAM)
+  function renderByGroup() {
+    let html = Object.keys(SPLAT_GROUP)
       .map((key) => {
-        const team = SPLATEAM[key];
-        return sectionHtml(teamName(team), teamSubName(team), membersOf(key));
+        const group = SPLAT_GROUP[key];
+        return sectionHtml(groupName(group), groupSubName(group), membersOf(key));
       })
       .join("");
-    html += sectionHtml(siteText("team.unaffiliated"), "", unaffiliated());
+    html += sectionHtml(siteText("group.unaffiliated"), "", unaffiliated());
     grid.innerHTML = html;
   }
 
   function renderAll() {
     const names = Object.keys(SPLAT_CHARA_ROSTER);
-    grid.innerHTML = sectionHtml(siteText("team.all"), "", names);
+    grid.innerHTML = sectionHtml(siteText("group.all"), "", names);
   }
 
-  const VIEWS = { team: renderByTeam, all: renderAll };
-  let currentView = "team";
+  const VIEWS = { group: renderByGroup, all: renderAll };
+  let currentView = "group";
 
   function setView(view) {
-    currentView = VIEWS[view] ? view : "team";
+    currentView = VIEWS[view] ? view : "group";
     sectionIndex = 0;
     VIEWS[currentView]();
     viewButtons.forEach((btn) => {
@@ -457,5 +457,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   refreshText();
-  setView("team");
+  setView("group");
 });
