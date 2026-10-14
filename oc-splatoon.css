@@ -202,7 +202,7 @@ body{
    top-right corner. Change the label text in `content`, and the
    colors with --ribbon-bg / --ribbon-ink. */
 .splat-card--collab { --ribbon-bg: #f2c66d; --ribbon-ink: #3d3d3d; }
-.splat-card--npc    { --ribbon-bg: #ffffff; --ribbon-ink: #3d3d3d; }
+.splat-card--npc    { --ribbon-bg: #6bf066; --ribbon-ink: #3d3d3d; }
 
 .splat-card--collab,
 .splat-card--npc {
