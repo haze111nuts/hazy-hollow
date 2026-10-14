@@ -123,8 +123,50 @@ body{
 .splat-card:focus-visible {
   transform: translateY(-4px) rotate(-1.5deg);
   background: rgba(255,255,255,0.1);
-  box-shadow: 0 0 0 2px var(--chara), 0 10px 24px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
   outline: none;
+}
+
+/* accent — "ink fill":
+   a thin ring in the character's color at rest; on hover the
+   character's color rises up from the bottom and fills the card
+   behind the picture and name.
+   Tweak: resting ring strength (70%), fill strength (--ink-strength),
+   fill speed (0.35s in the transition). */
+.splat-card {
+  position: relative;
+  --ink-strength: 55%;
+  --ink: color-mix(in srgb, var(--chara) var(--ink-strength), transparent);
+}
+
+/* keep the picture, name and ribbon above the ink */
+.splat-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.splat-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--chara) 70%, transparent);
+  background: linear-gradient(var(--ink), var(--ink)) bottom / 100% 0% no-repeat;
+  transition: background-size 0.35s cubic-bezier(.3,.7,.3,1), box-shadow 0.2s ease;
+}
+
+.splat-card:hover::before,
+.splat-card:focus-visible::before {
+  background-size: 100% 100%;
+  box-shadow: inset 0 0 0 2px var(--chara);
+}
+
+/* reserved slots have no character, so no accent */
+.splat-card--reserved::before { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .splat-card::before { transition: none; }
 }
 
 .splat-card-name {

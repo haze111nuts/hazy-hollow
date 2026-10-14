@@ -65,7 +65,7 @@ const SITE_STRINGS = {
     "splat.pageTitle":     "Hazy海產屋（施工中）",
     "splat.title":         "Hazy海產屋（施工中）",
     "view.label":          "檢視",
-    "view.group":           "按勢力",
+    "view.group":           "按組別",
     "view.all":            "全員一覽",
     "group.unaffiliated":   "未分類",
     "group.all":            "所有角色",
