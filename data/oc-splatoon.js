@@ -219,8 +219,7 @@ const SPLAT_CHARA_ROSTER = {
             ],
             variant:[
                 {casual: "日常"},
-                {octarian: "軍團時期"},
-                {ikpd: "IKPD"}
+                {octarian: "軍團時期"}
             ]
         },
         "Roy" : { 
