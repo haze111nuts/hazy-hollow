@@ -34,8 +34,8 @@ const SITE_STRINGS = {
     "lang.label":          "Language",
 
     // Splatoon page
-    "splat.pageTitle":     "Splatoon OCs",
-    "splat.title":         "Splatoon OCs",
+    "splat.pageTitle":     "Hazy's Splatverse Stuff (WIP)",
+    "splat.title":         "Hazy's Splatverse Stuff (WIP)",
     "view.label":          "View",
     "view.group":           "By group",
     "view.all":            "All",
@@ -62,8 +62,8 @@ const SITE_STRINGS = {
     "lang.label":          "語言",
 
     // Splatoon page
-    "splat.pageTitle":     "Hazy海產屋",
-    "splat.title":         "Hazy海產屋",
+    "splat.pageTitle":     "Hazy海產屋（施工中）",
+    "splat.title":         "Hazy海產屋（施工中）",
     "view.label":          "檢視",
     "view.group":           "依分組",
     "view.all":            "全部",
