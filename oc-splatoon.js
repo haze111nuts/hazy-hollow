@@ -242,7 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // one listener for every card, so re-rendering needs no rebinding
   grid.addEventListener("click", (e) => {
     const card = e.target.closest(".splat-card[data-name]");
-    if (card) openCharaModal(card.dataset.name);
+    if (card) openCharaModal(card.dataset.name, card);
   });
 
   // ---------------- scroll lock (wheel/touch/key interception) ----------------
@@ -392,8 +392,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // set while a modal is open, so a language switch can refresh it
   let refreshOpenModal = null;
 
-  function openCharaModal(name) {
+  // sourceCard = the grid card that was clicked; it keeps its ink
+  // filled (.is-open in CSS) until this modal closes
+  function openCharaModal(name, sourceCard) {
     if (!SPLAT_CHARA_ROSTER[name]) return;
+    if (sourceCard) sourceCard.classList.add("is-open");
 
     const backdrop = document.createElement("div");
     backdrop.className = "splat-modal-backdrop";
@@ -417,6 +420,9 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.className = `splat-modal${c.type ? ` splat-modal--${c.type}` : ""}`;
       modal.style.setProperty("--chara", c.color);
       modal.dataset.id = id;
+      // collab / npc ribbon text for the modal's corner (see CSS)
+      if (c.type) modal.dataset.ribbon = siteText("ribbon." + c.type);
+      else delete modal.dataset.ribbon;
       modal.setAttribute("aria-label", charaName(id));
       closeBtn.setAttribute("aria-label", siteText("modal.close"));
       scroller.innerHTML = modalContentHtml(id, c);
@@ -429,6 +435,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (closing) return;
       closing = true;
       refreshOpenModal = null;
+      if (sourceCard) sourceCard.classList.remove("is-open"); // ink drains as the modal fades
       document.removeEventListener("keydown", onKey);
       unlockScroll();
       backdrop.classList.add("is-closing");

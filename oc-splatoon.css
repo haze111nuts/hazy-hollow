@@ -157,7 +157,8 @@ body{
 }
 
 .splat-card:hover::before,
-.splat-card:focus-visible::before {
+.splat-card:focus-visible::before,
+.splat-card.is-open::before {   /* is-open: its modal is showing */
   background-size: 100% 100%;
   box-shadow: inset 0 0 0 2px var(--chara);
 }
@@ -241,10 +242,12 @@ body{
 }
 
 /* collab / npc corner ribbon — a diagonal tag across the card's
-   top-right corner. Change the label text in `content`, and the
+   top-left corner (same side as the modal's ribbon). Change the label text in `content`, and the
    colors with --ribbon-bg / --ribbon-ink. */
-.splat-card--collab { --ribbon-bg: #f2c66d; --ribbon-ink: #3d3d3d; }
-.splat-card--npc    { --ribbon-bg: #6bf066; --ribbon-ink: #3d3d3d; }
+.splat-card--collab,
+.splat-modal--collab { --ribbon-bg: #f2c66d; --ribbon-ink: #3d3d3d; }
+.splat-card--npc,
+.splat-modal--npc    { --ribbon-bg: #6bf066; --ribbon-ink: #3d3d3d; }
 
 .splat-card--collab,
 .splat-card--npc {
@@ -256,10 +259,10 @@ body{
 .splat-card--npc::after {
   position: absolute;
   top: 16px;
-  right: -36px;
+  left: -36px;
   width: 130px;
   padding: 4px 0;
-  transform: rotate(45deg);
+  transform: rotate(-45deg);
   background: var(--ribbon-bg);
   color: var(--ribbon-ink);
   font-family: "Nunito", sans-serif;
@@ -326,6 +329,30 @@ body{
   flex-direction: column;
   text-align: left;
   animation: splat-pop 0.3s cubic-bezier(.34,1.4,.64,1);
+}
+
+/* the same collab / npc ribbon, across the modal's top-left corner.
+   Uses the colors set on .splat-modal--collab / --npc above. */
+.splat-modal--collab::after,
+.splat-modal--npc::after {
+  content: attr(data-ribbon); /* text comes from data/lang.js */
+  position: absolute;
+  top: 35px;
+  left: -56px;
+  width: 218px;
+  padding: 7px 0;
+  transform: rotate(-45deg);
+  background: var(--ribbon-bg);
+  color: var(--ribbon-ink);
+  font-family: "Nunito", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  pointer-events: none;
+  z-index: 3;
 }
 
 @keyframes splat-pop {
