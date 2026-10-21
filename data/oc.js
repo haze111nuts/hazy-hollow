@@ -46,7 +46,7 @@
 // ===========================================================
 
 const OC_ROSTER = {
-        "Angel" : {
+        "Angelica" : {
             name: "安潔莉卡"
         },
         "Damien" : { 
@@ -125,7 +125,7 @@ function buildCharacterItems(keys) {
 
 // the shared placeholder roster used by every AU except "modern"
 // for now — edit this list any time to change who shows up
-const DEFAULT_AU_CAST = ["Angel", "Damien", "Leon", "Gerald", "Edwin", "Scratch"];
+const DEFAULT_AU_CAST = ["Angelica", "Damien", "Leon", "Gerald", "Edwin", "Scratch"];
 
 const AU_DATA = [
   {
@@ -417,7 +417,7 @@ const AU_DATA = [
         type: "storyBits",
         title: "Story Bits",
         items: [
-          { heading: "The Last Mission", text: "Gloria's official file ends three years ago. Angelica knows why. She's not telling." }
+          { heading: "The Last Mission", text: "Gloria's official file ends three years ago. Angelicaica knows why. She's not telling." }
         ]
       }
     ]
@@ -442,7 +442,7 @@ const AU_DATA = [
         type: "storyBits",
         title: "Story Bits",
         items: [
-          { heading: "The Last Mission", text: "Gloria's official file ends three years ago. Angelica knows why. She's not telling." }
+          { heading: "The Last Mission", text: "Gloria's official file ends three years ago. Angelicaica knows why. She's not telling." }
         ]
       }
     ]
