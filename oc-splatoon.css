@@ -728,12 +728,14 @@ button.splat-rel-swatch:focus-visible {
   transition: opacity 0.2s ease;
 }
 .splat-group-lore:hover,
-.splat-group-lore:focus-visible {
+.splat-group-lore:focus-visible,
+.splat-group-lore.is-open {          /* is-open: its lore is showing */
   border-bottom-color: #fff;
   outline: none;
 }
 .splat-group-lore:hover::after,
-.splat-group-lore:focus-visible::after { opacity: 1; }
+.splat-group-lore:focus-visible::after,
+.splat-group-lore.is-open::after { opacity: 1; }
 
 /* [[lore link]] inside summaries, notes and relationships.
    At rest:  the words in the accent color of the modal they sit in,
@@ -745,30 +747,30 @@ button.splat-rel-swatch:focus-visible {
    (55%), underline thickness (1.5px), sweep speed (0.4s). */
 .splat-lore-link {
   --a: var(--chara, var(--lore));
-  --mk:     color-mix(in srgb, var(--a) 32%, transparent);
-  --mk-mid: color-mix(in srgb, var(--a) 24%, transparent);
-  --ul:     color-mix(in srgb, var(--a) 64%, transparent);
+  --mk:     color-mix(in srgb, var(--a) 26%, transparent);
+  --mk-mid: color-mix(in srgb, var(--a) 19%, transparent);
+  --ul:     color-mix(in srgb, var(--a) 55%, var(--ink));   /* darker, so it shows on light colors */
   font: inherit;
-  color: color-mix(in srgb, var(--a) 80%, var(--ink));
+  color: inherit;
   border: 0;
   padding: 0 0.25em;
   margin: 0 -0.05em;
   cursor: pointer;
   border-radius: 0.6em 0.2em;
   background:
-    /* 1: the marker stroke — 0% wide at rest, swept in on hover */
+    /* 1: the marker highlight — always showing */
     linear-gradient(100deg, transparent 0.8%, var(--mk) 2.5%, var(--mk-mid) 50%, var(--mk) 96%, transparent 98.5%)
-      left 0 bottom 3px / 0% 55% no-repeat,
-    /* 2: the thin underline */
+      left 0 bottom 3px / 100% 55% no-repeat,
+    /* 2: the underline — 0% wide at rest, sweeps in from the left on hover */
     linear-gradient(var(--ul), var(--ul))
-      left 0 bottom 3px  / 100% 1.5px no-repeat;
-  transition: background-size 0.4s cubic-bezier(.3,.7,.3,1), color 0.25s ease;
+      left 0 bottom 2px / 0% 1px no-repeat;
+  transition: background-size 0.3s ease;
 }
 
 .splat-lore-link:hover,
-.splat-lore-link:focus-visible {
-  color: inherit;
-  background-size: 100% 55%, 100% 1.5px;
+.splat-lore-link:focus-visible,
+.splat-lore-link.is-open {           /* is-open: its lore is showing */
+  background-size: 100% 55%, 100% 1px;
   outline: none;
 }
 

@@ -308,7 +308,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // one listener for every card, so re-rendering needs no rebinding
   grid.addEventListener("click", (e) => {
     const lore = e.target.closest("[data-lore]");
-    if (lore) return openLoreModal(lore.dataset.lore);
+    if (lore) return openLoreModal(lore.dataset.lore, lore);
     const card = e.target.closest(".splat-card[data-name]");
     if (card) openCharaModal(card.dataset.name, card);
   });
@@ -539,7 +539,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // lore link in the text -> open the lore modal on top
       const lore = e.target.closest("[data-lore]");
-      if (lore) return openLoreModal(lore.dataset.lore);
+      if (lore) return openLoreModal(lore.dataset.lore, lore);
 
       // relationship square -> jump to that character
       const goto = e.target.closest("[data-goto]");
@@ -578,9 +578,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let refreshLoreModal = null;
 
-  function openLoreModal(ref) {
+  // source = the link or group title that was clicked; it keeps its
+  // hover look (.is-open in CSS) until this lore modal closes
+  function openLoreModal(ref, source) {
     const firstKey = findLoreKey(ref);
     if (!firstKey) return;
+    if (source) source.classList.add("is-open");
 
     const backdrop = document.createElement("div");
     backdrop.className = "splat-modal-backdrop splat-lore-backdrop";
@@ -611,6 +614,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (closing) return;
       closing = true;
       refreshLoreModal = null;
+      if (source) source.classList.remove("is-open"); // un-highlight as the lore closes
       document.removeEventListener("keydown", onKey);
       unlockScroll();
       backdrop.classList.add("is-closing");
