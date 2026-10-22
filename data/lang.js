@@ -53,7 +53,12 @@ const SITE_STRINGS = {
     "modal.notes":         "Notes",
     "modal.variants":      "Looks",
     "modal.noSummary":     "No profile yet.",
-    "modal.open":          "Open {name}"
+    "modal.open":          "Open {name}",
+
+    // lore modal
+    "lore.label":          "Lore",
+    "lore.members":        "Members",
+    "lore.empty":          "Nothing written here yet."
   },
 
   zh: {
@@ -81,6 +86,11 @@ const SITE_STRINGS = {
     "modal.notes":         "追加筆記",
     "modal.variants":      "造型",
     "modal.noSummary":     "介紹還在施工中…",
-    "modal.open":          "開啟{name}"
+    "modal.open":          "開啟{name}",
+
+    // lore modal
+    "lore.label":          "設定",
+    "lore.members":        "成員",
+    "lore.empty":          "內容還在施工中…"
   }
 };

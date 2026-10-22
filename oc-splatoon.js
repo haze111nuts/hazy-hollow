@@ -110,6 +110,54 @@ document.addEventListener("DOMContentLoaded", () => {
     return sub && sub !== groupName(group) ? sub : "";
   }
 
+  // ---------------- lore helpers ----------------
+  //
+  // Lore entries live in `Lores` (data/oc-splatoon.js).
+  // Link to one from any summary / note / relationship text with
+  //   [[OCTA]]                          -> shows "OCTA"
+  //   [[深海地鐵測驗程序]]              -> found by its name_ch
+  //   [[Royal Flush|RF]]                -> links Royal Flush, shows "RF"
+  // A group heading opens lore when the group has  lore: "<key>",
+  // or when its groupName matches a lore key.
+
+  function loreData() {
+    return typeof Lores !== "undefined" ? Lores : {};
+  }
+
+  // accepts the key, the English name or the Chinese name
+  function findLoreKey(ref) {
+    const all = loreData();
+    if (!ref) return null;
+    if (all[ref]) return ref;
+    return Object.keys(all).find((k) => all[k].name_en === ref || all[k].name_ch === ref) || null;
+  }
+
+  function loreName(key) {
+    const e = loreData()[key] || {};
+    return lang() === "zh" ? (e.name_ch || e.name_en || key) : (e.name_en || key);
+  }
+
+  function loreSubName(key) {
+    const e = loreData()[key] || {};
+    const sub = lang() === "zh" ? (e.name_en || key) : e.name_ch;
+    return sub && sub !== loreName(key) ? sub : "";
+  }
+
+  function groupLoreKey(group) {
+    return findLoreKey(group.lore) || findLoreKey(group.groupName);
+  }
+
+  // turn [[...]] in text into clickable lore links
+  function linkLore(html) {
+    return String(html).replace(/\[\[([^\]|]+?)(?:\|([^\]]+?))?\]\]/g, (all, ref, label) => {
+      const key = findLoreKey(ref.trim());
+      const text = label || ref;
+      return key
+        ? `<button type="button" class="splat-lore-link" data-lore="${escapeHtml(key)}">${text}</button>`
+        : text;  // unknown entry: just show the words
+    });
+  }
+
   // ---------------- data helpers ----------------
 
   // list of group keys each character belongs to
@@ -191,13 +239,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // --i drives the staggered fade-in delay of each section (see CSS)
   let sectionIndex = 0;
 
-  function sectionHtml(title, subtitle, names) {
+  // loreKey (optional): makes the heading a button that opens that lore entry
+  function sectionHtml(title, subtitle, names, loreKey) {
     if (!names.length) return "";
     const i = Math.min(sectionIndex++, 6);
+    const heading = loreKey
+      ? `<button type="button" class="splat-group-lore" data-lore="${escapeHtml(loreKey)}">${escapeHtml(title)}</button>`
+      : escapeHtml(title);
     return `
       <section class="splat-group" style="--i:${i}">
         <header class="splat-group-header">
-          <h2 class="splat-group-name">${escapeHtml(title)}</h2>
+          <h2 class="splat-group-name">${heading}</h2>
           ${subtitle ? `<span class="splat-group-name-ch">${escapeHtml(subtitle)}</span>` : ""}
         </header>
         <div class="splat-card-grid">
@@ -211,7 +263,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let html = Object.keys(SPLAT_GROUP)
       .map((key) => {
         const group = SPLAT_GROUP[key];
-        return sectionHtml(groupName(group), groupSubName(group), membersOf(key));
+        return sectionHtml(groupName(group), groupSubName(group), membersOf(key), groupLoreKey(group));
       })
       .join("");
     html += sectionHtml(siteText("group.unaffiliated"), "", unaffiliated());
@@ -241,6 +293,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // one listener for every card, so re-rendering needs no rebinding
   grid.addEventListener("click", (e) => {
+    const lore = e.target.closest("[data-lore]");
+    if (lore) return openLoreModal(lore.dataset.lore);
     const card = e.target.closest(".splat-card[data-name]");
     if (card) openCharaModal(card.dataset.name, card);
   });
@@ -262,12 +316,17 @@ document.addEventListener("DOMContentLoaded", () => {
   function preventScrollKeys(e) {
     if (SCROLL_KEYS.includes(e.key) && !isInsideModal(e.target)) e.preventDefault();
   }
+  // counted, so a lore modal on top of a character modal can close
+  // without unlocking the page while the character modal is still open
+  let lockCount = 0;
   function lockScroll() {
+    if (lockCount++ > 0) return;
     window.addEventListener("wheel", preventScroll, { passive: false });
     window.addEventListener("touchmove", preventScroll, { passive: false });
     window.addEventListener("keydown", preventScrollKeys, { passive: false });
   }
   function unlockScroll() {
+    if (lockCount === 0 || --lockCount > 0) return;
     window.removeEventListener("wheel", preventScroll, { passive: false });
     window.removeEventListener("touchmove", preventScroll, { passive: false });
     window.removeEventListener("keydown", preventScrollKeys, { passive: false });
@@ -302,7 +361,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ${swatch}
         <div>
           <span class="splat-rel-who">${escapeHtml(name)}</span>
-          <p>${escapeHtml(rel.text)}</p>
+          <p>${linkLore(escapeHtml(rel.text))}</p>
         </div>
       </div>
     `;
@@ -336,17 +395,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function modalContentHtml(name, chara) {
-    // summary is your own text and may contain <br>, so it goes in as HTML
+    // summary is your own text and may contain <br> or <p>, so it goes in
+    // as HTML — inside a <div>, because a <p> can't sit inside another <p>
     const summaryText = local(chara, "summary");
     const summary = summaryText
-      ? `<p class="splat-modal-summary">${clean(summaryText)}</p>`
+      ? `<div class="splat-modal-summary">${linkLore(clean(summaryText))}</div>`
       : `<p class="splat-modal-empty">${escapeHtml(siteText("modal.noSummary"))}</p>`;
 
     const notesList = local(chara, "notes") || [];
     const notes = notesList.length ? `
       <section class="splat-modal-notes">
         <h4 class="splat-modal-label">${escapeHtml(siteText("modal.notes"))}</h4>
-        <ul>${notesList.map((n) => `<li>${escapeHtml(clean(n))}</li>`).join("")}</ul>
+        <ul>${notesList.map((n) => `<li>${linkLore(escapeHtml(clean(n)))}</li>`).join("")}</ul>
       </section>` : "";
 
     const rels = relationsOf(chara);
@@ -391,6 +451,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // set while a modal is open, so a language switch can refresh it
   let refreshOpenModal = null;
+  // set while a character modal is open, so a lore modal can switch it
+  let openChara = null;
+
+  // true if this backdrop is the top-most open modal (Esc closes only that one)
+  function isTopModal(backdrop) {
+    const open = document.querySelectorAll(".splat-modal-backdrop:not(.is-closing)");
+    return open[open.length - 1] === backdrop;
+  }
 
   // sourceCard = the grid card that was clicked; it keeps its ink
   // filled (.is-open in CSS) until this modal closes
@@ -435,6 +503,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (closing) return;
       closing = true;
       refreshOpenModal = null;
+      openChara = null;
       if (sourceCard) sourceCard.classList.remove("is-open"); // ink drains as the modal fades
       document.removeEventListener("keydown", onKey);
       unlockScroll();
@@ -448,11 +517,15 @@ document.addEventListener("DOMContentLoaded", () => {
       window.setTimeout(remove, 400);
     }
     function onKey(e) {
-      if (e.key === "Escape") close();
+      if (e.key === "Escape" && isTopModal(backdrop)) close();
     }
 
     backdrop.addEventListener("click", (e) => {
       if (e.target === backdrop) return close();
+
+      // lore link in the text -> open the lore modal on top
+      const lore = e.target.closest("[data-lore]");
+      if (lore) return openLoreModal(lore.dataset.lore);
 
       // relationship square -> jump to that character
       const goto = e.target.closest("[data-goto]");
@@ -480,10 +553,120 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("keydown", onKey);
 
     refreshOpenModal = () => show(currentId);
+    openChara = { show };
     show(name);
     lockScroll();
     document.body.appendChild(backdrop);
     closeBtn.focus();
+  }
+
+  // ---------------- lore modal ----------------
+
+  let refreshLoreModal = null;
+
+  function openLoreModal(ref) {
+    const firstKey = findLoreKey(ref);
+    if (!firstKey) return;
+
+    const backdrop = document.createElement("div");
+    backdrop.className = "splat-modal-backdrop splat-lore-backdrop";
+    backdrop.innerHTML = `
+      <div class="splat-modal splat-lore" role="dialog" aria-modal="true">
+        <button class="splat-modal-close" type="button">&times;</button>
+        <div class="splat-modal-scroll"></div>
+      </div>
+    `;
+    const modal = backdrop.querySelector(".splat-lore");
+    const scroller = backdrop.querySelector(".splat-modal-scroll");
+    const closeBtn = backdrop.querySelector(".splat-modal-close");
+    let currentKey = firstKey;
+
+    function show(key) {
+      const entry = loreData()[key];
+      if (!entry) return;
+      currentKey = key;
+      modal.style.setProperty("--lore", entry.color || "#7c9473");
+      modal.setAttribute("aria-label", loreName(key));
+      closeBtn.setAttribute("aria-label", siteText("modal.close"));
+      scroller.innerHTML = loreContentHtml(key, entry);
+      scroller.scrollTop = 0;
+    }
+
+    let closing = false;
+    function close() {
+      if (closing) return;
+      closing = true;
+      refreshLoreModal = null;
+      document.removeEventListener("keydown", onKey);
+      unlockScroll();
+      backdrop.classList.add("is-closing");
+      const remove = () => backdrop.remove();
+      backdrop.addEventListener("animationend", (e) => { if (e.target === backdrop) remove(); });
+      window.setTimeout(remove, 400);
+    }
+    function onKey(e) {
+      if (e.key === "Escape" && isTopModal(backdrop)) close();
+    }
+
+    backdrop.addEventListener("click", (e) => {
+      if (e.target === backdrop) return close();
+
+      // a lore link inside lore text -> switch to that entry
+      const lore = e.target.closest("[data-lore]");
+      if (lore) return show(findLoreKey(lore.dataset.lore) || currentKey);
+
+      // a member chip -> show that character (in the open character
+      // modal if there is one, otherwise open a new one)
+      const member = e.target.closest("[data-member]");
+      if (member) {
+        const name = member.dataset.member;
+        close();
+        if (openChara) openChara.show(name);
+        else openCharaModal(name);
+      }
+    });
+    closeBtn.addEventListener("click", close);
+    document.addEventListener("keydown", onKey);
+
+    refreshLoreModal = () => show(currentKey);
+    show(firstKey);
+    lockScroll();
+    document.body.appendChild(backdrop);
+    closeBtn.focus();
+  }
+
+  function loreContentHtml(key, entry) {
+    const sub = loreSubName(key);
+    const summaryText = local(entry, "summary");
+    const summary = summaryText
+      ? `<div class="splat-lore-body">${linkLore(clean(summaryText))}</div>`
+      : `<p class="splat-modal-empty">${escapeHtml(siteText("lore.empty"))}</p>`;
+
+    // groups that point at this entry -> list their members
+    const members = [];
+    Object.keys(SPLAT_GROUP).forEach((gk) => {
+      if (groupLoreKey(SPLAT_GROUP[gk]) !== key) return;
+      membersOf(gk).forEach((n) => { if (n && !members.includes(n)) members.push(n); });
+    });
+    const memberHtml = members.length ? `
+      <section>
+        <h4 class="splat-modal-label">${escapeHtml(siteText("lore.members"))}</h4>
+        <div class="splat-lore-members">
+          ${members.map((n) => `
+            <button type="button" class="splat-lore-member" data-member="${escapeHtml(n)}" style="--rel:${SPLAT_CHARA_ROSTER[n].color}">
+              <span class="splat-lore-member-dot" aria-hidden="true"></span>${escapeHtml(charaName(n))}
+            </button>`).join("")}
+        </div>
+      </section>` : "";
+
+    return `
+      <header class="splat-lore-head">
+        <span class="splat-lore-eyebrow">${escapeHtml(siteText("lore.label"))}</span>
+        <h3 class="splat-lore-title">${escapeHtml(loreName(key))}${sub ? `<small>${escapeHtml(sub)}</small>` : ""}</h3>
+      </header>
+      ${summary}
+      ${memberHtml}
+    `;
   }
 
   // ---------------- language switch ----------------
@@ -496,6 +679,7 @@ document.addEventListener("DOMContentLoaded", () => {
     refreshText();
     setView(currentView);
     if (refreshOpenModal) refreshOpenModal();
+    if (refreshLoreModal) refreshLoreModal();
   });
 
   refreshText();

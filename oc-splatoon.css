@@ -689,6 +689,196 @@ button.splat-rel-swatch:focus-visible {
   .splat-variants { flex-direction: column; align-items: flex-start; }
 }
 
+/* ===========================================================
+   LORE — clickable group titles, [[links]] in text, lore modal
+   =========================================================== */
+
+/* group heading that opens a lore entry */
+.splat-group-lore {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  border-bottom: 2px dotted rgba(255,255,255,0.35);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.splat-group-lore::after {          /* small "i" badge */
+  content: "i";
+  display: inline-grid;
+  place-items: center;
+  width: 1.05em;
+  height: 1.05em;
+  margin-left: 0.4em;
+  vertical-align: 0.25em;
+  border-radius: 50%;
+  border: 1.5px solid currentColor;
+  font: 800 0.55em/1 "Nunito", sans-serif;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+.splat-group-lore:hover,
+.splat-group-lore:focus-visible {
+  border-bottom-color: #fff;
+  outline: none;
+}
+.splat-group-lore:hover::after,
+.splat-group-lore:focus-visible::after { opacity: 1; }
+
+/* [[lore link]] inside summaries, notes and relationships —
+   "marker swipe": a hand-drawn highlighter stroke with slanted ends,
+   in the accent color of the modal it sits in.
+   On hover the words take that color and the stroke shrinks down
+   into a thin underline.
+   Tweak: stroke strength (40% / 30% in --mk / --mk-mid), stroke
+   height (55% in background), underline thickness (9% on hover). */
+@property --mk-o { syntax: "<number>"; inherits: true; initial-value: 1; }
+
+.splat-lore-link {
+  --a: var(--chara, var(--lore));
+  --mk-o: 1;
+  --mk:     color-mix(in srgb, var(--a) calc(var(--mk-o) * 32%), transparent);
+  --mk-mid: color-mix(in srgb, var(--a) calc(var(--mk-o) * 24%), transparent);
+  font: inherit;
+  color: inherit;
+  border: 0;
+  padding: 0 0.25em;
+  margin: 0 -0.05em;
+  cursor: pointer;
+  border-radius: 0.6em 0.2em;
+  background:
+    linear-gradient(100deg, transparent 0.8%, var(--mk) 2.5%, var(--mk-mid) 50%, var(--mk) 96%, transparent 98.5%)
+    left 92% / 100% 55% no-repeat;
+  transition: background-size 0.3s ease, color 0.25s ease, --mk-o 0.3s ease;
+}
+
+.splat-lore-link:hover,
+.splat-lore-link:focus-visible {
+  color: color-mix(in srgb, var(--a) 80%, var(--ink));
+  background-size: 100% 9%;
+  --mk-o: 2;   /* the thin line is drawn in a stronger color */
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .splat-lore-link { transition: none; }
+}
+
+/* the lore modal: a narrower "file card" with an accent top edge */
+.splat-lore {
+  --chara: var(--lore);
+  width: min(620px, 100%);
+  border-top: 6px solid var(--lore);
+}
+.splat-lore .splat-modal-scroll {
+  padding: 2rem 2.3rem 2.3rem;
+  gap: 1.3rem;
+}
+
+.splat-lore-head {
+  display: grid;
+  gap: 0.35rem;
+  padding-right: 2rem; /* keep clear of the close button */
+}
+
+/* little "LORE / 設定" tag with an ink-drop dot */
+.splat-lore-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.splat-lore-eyebrow::before {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  background: var(--lore);
+}
+
+.splat-lore-title {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(1.7rem, 4vw, 2.2rem);
+  line-height: 1.1;
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.6rem;
+  text-wrap: balance;
+}
+.splat-lore-title small {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.splat-lore-body {
+  margin: 0;
+  line-height: 1.85;
+  font-size: 0.95rem;
+}
+
+/* <p> paragraphs inside a character summary or lore text:
+   normal paragraph spacing (one line between paragraphs), with no
+   extra space above the first or below the last one */
+.splat-modal-summary p,
+.splat-lore-body p {
+  margin: 1em 0;
+}
+.splat-modal-summary p:first-child,
+.splat-lore-body p:first-child { margin-top: 0; }
+.splat-modal-summary p:last-child,
+.splat-lore-body p:last-child { margin-bottom: 0; }
+
+/* member chips for group entries */
+.splat-lore-members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+.splat-lore-member {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ink);
+  background: #fff;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem 0.35rem 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.splat-lore-member:hover,
+.splat-lore-member:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 2px var(--rel), 0 4px 10px rgba(0,0,0,0.12);
+  outline: none;
+}
+.splat-lore-member-dot {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background: var(--rel);
+  flex-shrink: 0;
+}
+
+@media (max-width: 680px) {
+  .splat-lore .splat-modal-scroll { padding: 1.5rem 1.3rem 1.6rem; }
+}
+
 /* ---------- page enter (fade in after the index transition) ----------
    The header comes in first, then each group section in turn.
    Tweak --enter-delay / --enter-step to change the timing. */
