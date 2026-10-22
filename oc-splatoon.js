@@ -158,6 +158,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // a summary is a list of paragraphs (["…", "…"]) — each one becomes a
+  // <p>. A single string still works, and is used as written.
+  function hasText(value) {
+    const list = Array.isArray(value) ? value : [value];
+    return list.some((t) => clean(t).trim());
+  }
+  function paragraphsHtml(value) {
+    if (!Array.isArray(value)) return linkLore(clean(value));
+    return value
+      .filter((t) => clean(t).trim())
+      .map((t) => `<p>${linkLore(clean(t))}</p>`)
+      .join("");
+  }
+
   // ---------------- data helpers ----------------
 
   // list of group keys each character belongs to
@@ -398,8 +412,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // summary is your own text and may contain <br> or <p>, so it goes in
     // as HTML — inside a <div>, because a <p> can't sit inside another <p>
     const summaryText = local(chara, "summary");
-    const summary = summaryText
-      ? `<div class="splat-modal-summary">${linkLore(clean(summaryText))}</div>`
+    const summary = hasText(summaryText)
+      ? `<div class="splat-modal-summary">${paragraphsHtml(summaryText)}</div>`
       : `<p class="splat-modal-empty">${escapeHtml(siteText("modal.noSummary"))}</p>`;
 
     const notesList = local(chara, "notes") || [];
@@ -638,8 +652,8 @@ document.addEventListener("DOMContentLoaded", () => {
   function loreContentHtml(key, entry) {
     const sub = loreSubName(key);
     const summaryText = local(entry, "summary");
-    const summary = summaryText
-      ? `<div class="splat-lore-body">${linkLore(clean(summaryText))}</div>`
+    const summary = hasText(summaryText)
+      ? `<div class="splat-lore-body">${paragraphsHtml(summaryText)}</div>`
       : `<p class="splat-modal-empty">${escapeHtml(siteText("lore.empty"))}</p>`;
 
     // groups that point at this entry -> list their members
