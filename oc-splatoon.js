@@ -680,8 +680,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     return `
       <header class="splat-lore-head">
+        <h3 class="splat-lore-title">${escapeHtml(loreName(key))}</h3>
         <span class="splat-lore-eyebrow">${escapeHtml(local(entry, "type") || siteText("lore.label"))}</span>
-        <h3 class="splat-lore-title">${escapeHtml(loreName(key))}${sub ? `<small>${escapeHtml(sub)}</small>` : ""}</h3>
+        ${sub && sub !== loreName(key) ? `<p class="splat-lore-sub">${escapeHtml(sub)}</p>` : ""}
       </header>
       ${summary}
       ${memberHtml}
