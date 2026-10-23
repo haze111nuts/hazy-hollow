@@ -778,16 +778,76 @@ button.splat-rel-swatch:focus-visible {
   .splat-lore-link { transition: none; }
 }
 
-/* the lore modal: a narrower "file card" with an accent top edge */
+/* the lore modal: a "case file" — a folder in the lore's color with
+   the entry's name on its tab, a paper clip, and a sheet of paper
+   inside. It slides up from below (and back down when it closes). */
 .splat-lore {
   --chara: var(--lore);
-  width: min(620px, 100%);
-  border-top: 6px solid var(--lore);
+  --folder: color-mix(in srgb, var(--lore) 24%, #e6d3a3);
+  width: min(600px, 100%);
+  margin-top: 30px;                       /* room for the tab */
+  max-height: calc(100vh - 3rem - 30px);
+  background: var(--folder);
+  border-radius: 0 14px 14px 14px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+  overflow: visible;                      /* lets the tab and clip stick out */
+  padding: 12px;
+  animation: splat-file-in 0.5s cubic-bezier(.2,.85,.25,1.08);
 }
+@keyframes splat-file-in {
+  from { opacity: 0; transform: translateY(90px); }
+}
+
+.splat-lore-backdrop.is-closing { animation-duration: 0.34s; }
+.splat-lore-backdrop.is-closing .splat-lore {
+  animation: splat-file-out 0.3s ease-in forwards;
+}
+@keyframes splat-file-out {
+  to { opacity: 0; transform: translateY(70px); }
+}
+
+/* folder tab — shows "Lore / 設定" (set as data-tab in oc-splatoon.js) */
+.splat-lore::before {
+  content: attr(data-tab);
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  max-width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 7px 26px 4px 16px;
+  background: var(--folder);
+  border-radius: 12px 22px 0 0;
+  font: 800 0.78rem "Nunito", sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--lore) 55%, var(--ink));
+}
+
+/* paper clip */
+.splat-lore::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: -10px;
+  right: 92px;
+  width: 13px;
+  height: 46px;
+  border: 3px solid #8f98a0;
+  border-radius: 9px;
+  pointer-events: none;
+}
+
+/* the sheet of paper inside the folder (this part scrolls) */
 .splat-lore .splat-modal-scroll {
-  padding: 2rem 2.3rem 2.3rem;
+  background: #fffdf7;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  padding: 2rem 2rem 2.2rem;
   gap: 1.3rem;
 }
+.splat-lore .splat-modal-close { top: 1.1rem; right: 1.3rem; }
 
 .splat-lore-head {
   display: grid;
@@ -795,24 +855,31 @@ button.splat-rel-swatch:focus-visible {
   padding-right: 2rem; /* keep clear of the close button */
 }
 
-/* little "LORE / 設定" tag with an ink-drop dot */
+/* rubber stamp — the entry's `type` (e.g. Team, Organization) */
 .splat-lore-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
+  justify-self: start;
+  padding: 0.2rem 0.6rem;
+  border: 2px solid color-mix(in srgb, var(--lore) 70%, transparent);
+  border-radius: 4px;
+  rotate: -4deg;
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--ink-soft);
+  color: color-mix(in srgb, var(--lore) 75%, var(--ink));
 }
-.splat-lore-eyebrow::before {
-  content: "";
-  width: 0.7rem;
-  height: 0.7rem;
-  border-radius: 50% 50% 50% 0;
-  transform: rotate(-45deg);
-  background: var(--lore);
+
+/* lore opened on top of a character profile: a much lighter second
+   overlay, and the profile behind steps back a little */
+.splat-modal-backdrop:not(.splat-lore-backdrop) ~ .splat-lore-backdrop {
+  background: rgba(20,20,20,0.18);
+}
+.splat-modal-backdrop:not(.splat-lore-backdrop) > .splat-modal {
+  transition: transform 0.4s cubic-bezier(.3,.7,.3,1), filter 0.4s ease;
+}
+.splat-modal-backdrop:not(.splat-lore-backdrop):has(~ .splat-lore-backdrop:not(.is-closing)) > .splat-modal {
+  transform: scale(0.95) translateY(-10px);
+  filter: brightness(0.8) saturate(0.85);
 }
 
 .splat-lore-title {
@@ -889,6 +956,7 @@ button.splat-rel-swatch:focus-visible {
 }
 
 @media (max-width: 680px) {
+  .splat-lore { max-height: calc(100vh - 1.5rem - 30px); padding: 8px; }
   .splat-lore .splat-modal-scroll { padding: 1.5rem 1.3rem 1.6rem; }
 }
 
@@ -930,7 +998,8 @@ button.splat-rel-swatch:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .splat-card,
   .splat-modal,
-  .splat-modal-backdrop {
+  .splat-modal-backdrop,
+  .splat-lore-backdrop.is-closing .splat-lore {
     animation: none;
     transition: none;
   }

@@ -604,6 +604,7 @@ document.addEventListener("DOMContentLoaded", () => {
       currentKey = key;
       modal.style.setProperty("--lore", entry.color || "#7c9473");
       modal.setAttribute("aria-label", loreName(key));
+      modal.dataset.tab = siteText("lore.label"); // the folder tab (CSS reads data-tab)
       closeBtn.setAttribute("aria-label", siteText("modal.close"));
       scroller.innerHTML = loreContentHtml(key, entry);
       scroller.scrollTop = 0;
@@ -679,7 +680,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     return `
       <header class="splat-lore-head">
-        <span class="splat-lore-eyebrow">${escapeHtml(siteText("lore.label"))}</span>
+        <span class="splat-lore-eyebrow">${escapeHtml(local(entry, "type") || siteText("lore.label"))}</span>
         <h3 class="splat-lore-title">${escapeHtml(loreName(key))}${sub ? `<small>${escapeHtml(sub)}</small>` : ""}</h3>
       </header>
       ${summary}
