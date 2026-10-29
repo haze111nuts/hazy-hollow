@@ -849,9 +849,16 @@ button.splat-rel-swatch:focus-visible {
 }
 .splat-lore .splat-modal-close { top: 1.1rem; right: 1.3rem; }
 
-/* header: big title, the stamp right after its last word, then the
-   name in the other language on its own line underneath */
+/* header: big title with the other-language name under it on the left,
+   and a big stamp on the right, across both lines */
 .splat-lore-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "title stamp"
+    "sub   stamp";
+  align-items: center;
+  gap: 0.25rem 0.9rem;
   padding-right: 2rem; /* keep clear of the close button */
   padding-bottom: 1.1rem;
   border-bottom: 1px solid rgba(51,54,31,0.15); /* same line as the "Members" label */
@@ -859,9 +866,8 @@ button.splat-rel-swatch:focus-visible {
 
 /* rubber stamp — the entry's `type` (e.g. Team, Organization) */
 .splat-lore-eyebrow {
-  display: inline-block;
-  margin-left: 0.9rem;
-  vertical-align: 0.2em;
+  grid-area: stamp;
+  justify-self: end;
   padding: 0.35rem 0.75rem;
   border: 3px double color-mix(in srgb, var(--lore) 70%, transparent);
   border-radius: 6px;
@@ -894,9 +900,11 @@ button.splat-rel-swatch:focus-visible {
   font-size: clamp(1.7rem, 4vw, 2.2rem);
   line-height: 1.1;
   margin: 0;
-  display: inline;   /* so the stamp can sit right after the last word */
+  grid-area: title;
+  text-wrap: balance;
 }
 .splat-lore-sub {
+  grid-area: sub;
   margin: 0;
   font-size: 0.95rem;
   font-weight: 700;
@@ -914,7 +922,7 @@ button.splat-rel-swatch:focus-visible {
    extra space above the first or below the last one */
 .splat-modal-summary p,
 .splat-lore-body p {
-  margin: 1em 0;
+  margin: 0.75em 0;
 }
 .splat-modal-summary p:first-child,
 .splat-lore-body p:first-child { margin-top: 0; }
@@ -940,7 +948,7 @@ button.splat-rel-swatch:focus-visible {
   border-radius: 999px;
   padding: 0.35rem 0.8rem 0.35rem 0.5rem;
   cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 .splat-lore-member:hover,
