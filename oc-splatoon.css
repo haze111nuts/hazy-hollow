@@ -871,7 +871,7 @@ button.splat-rel-swatch:focus-visible {
   padding: 0.35rem 0.75rem;
   border: 3px double color-mix(in srgb, var(--lore) 70%, transparent);
   border-radius: 6px;
-  rotate: 5deg;
+  rotate: 9deg;
   opacity: 0.85;
   white-space: nowrap;
   font-size: 0.8rem;
