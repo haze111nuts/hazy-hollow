@@ -907,9 +907,9 @@ const SPLAT_GROUP = {
                 "Susie","Zoelle",""
             ]
         },
-        "Brine Pool Resort & Casino" : {
-            groupName: "Brine Pool Resort & Casino",
-            groupName_ch: "鹽泳池賭場酒店",
+        "Brine Pool Hotel & Casino" : {
+            groupName: "Brine Pool Hotel & Casino",
+            groupName_ch: "鹽水池賭場酒店",
             members: [
                 "Father Chelon", "Leon", "Alan", ""
             ]            
