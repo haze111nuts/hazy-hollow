@@ -31,6 +31,17 @@
 // Chinese name. Relationship and variant ids stay the same in every
 // language — only the text after the colon is translated.
 // Group names: groupName (English) / groupName_ch (Chinese).
+//
+// GROUP MEMBER LIST (shown in the group's lore modal) — all optional:
+//   memberLabel: "some"    heading says 包含成員 / Members include
+//                "staff"   heading says 包含員工 / Staff include
+//                (leave it out for 成員 / Members)
+//   roles: { "Hannah": "captain", "Amy": "manager" }
+//                Role keys come from data/lang.js ("role.captain"…).
+//                Two roles: ["leader", "funder"] → 領導人＆資助人.
+//                A key that isn't in lang.js is shown as written.
+//   defaultRole: "staff"   role for everyone not listed in roles
+//                (leave it out for 成員 / Member)
 // Interface text (tabs, buttons…) lives in data/lang.js instead.
 // ===========================================================
 
@@ -868,14 +879,16 @@ const SPLAT_GROUP = {
             groupName_ch: "按鈕少年隊",
             members: [
                 "Blade","Axel","Yoni","Xiu","Edd"
-            ]
+            ],
+            roles: { "Blade": "captain" }
         },
         "RF" : { 
             groupName: "Royal Flush",
             groupName_ch: "皇家同花順",
             members: [
                 "Hannah","Lance","Minerva","Roy","Amy"
-            ]            
+            ],
+            roles: { "Hannah": "captain", "Amy": "manager" }
         },
         "New Squidbeak Splatoon" : { 
             groupName: "New Squidbeak Splatoon",
@@ -889,14 +902,18 @@ const SPLAT_GROUP = {
             groupName_ch: "章魚自助協會",
             members: [
                 "Dorothy","Moyer","","","Ada","Minerva","Edd","Blade","Mei","Freya"
-            ]
+            ],
+            memberLabel: "some",
+            roles: { "Dorothy": ["leader", "funder"] }
         },
         "Vector 8 Research Institute" : { 
             groupName: "Vector 8 Research Institute",
             groupName_ch: "V8科研中心",
             members: [
                 "Viper","Tighe","Candice","Maxwell","Dr. Lapis","Betty","Ollie","Zoelle","Marina","Mei"
-            ]                        
+            ],
+            memberLabel: "staff",
+            defaultRole: "staff"                        
         },
         "Seagrove Scouts" : { 
             groupName: "Seagrove Scouts",
@@ -910,7 +927,10 @@ const SPLAT_GROUP = {
             groupName_ch: "鹽水池賭場酒店",
             members: [
                 "Father Chelon", "Leon", "Alan", ""
-            ]            
+            ],
+            memberLabel: "staff",
+            defaultRole: "staff",
+            roles: { "Father Chelon": "boss" }            
         },        
         "The Acolytes" : { 
             groupName: "The Acolytes",
@@ -981,7 +1001,7 @@ const Lores = {
         color : "#633030",         
         summary : [
             "全名為地下章魚過渡自助會。起初只是一小批因為各自的原因想離開軍團社會的章魚團隊，他們趁著３號給軍團造成巨大改變的這個動盪時期抓到了機會並成功脫出。為了準備搬去高領市長期生活，他們在位於蛸壺山谷和高領市之間的軟體山上的荒廢軍營中暫時住下。這段時間成員們之間出現了意見分歧，一部份的人認為比起離開，他們更想留下來繼續打造營地以便協助其他仍未能從軍團脫逃出的人；另一部份的成員則認為手上資源不足而堅持盡快下山，兩方因這件事僵持不下許久，慶幸的是這個紛爭因一位貴人的出現而獲得平緩，她就是常常一人去軟體山上做發聲練習的小姬，她在得知營地的存在後對這個團隊非常欽佩，立刻給他們資助了大量的金錢跟物資，她也是在這時和住在營地裡的飯田成為了朋友。這些豐富的資源讓始祖成員們得以在山上建立一個旅館，非營利組織OCTA也是在此時正式成立。很快的這個旅館就變成上陸章魚的中繼站，許多離開軍團的章魚都在這裡為了準備融入陸上生活而住了一小段時間。",
-            "當初那些更想要離開營地的始祖成員也如願搬去了高領市。他們為後期的OCTA擴大了據點和處理的事項範圍，現在隸屬於這個自助會下的建築除了章魚青年公寓以外，也有小章魚收容所，專門收留從軍團的幼稚園和小學帶出來的小章魚，又或是能幫助章魚順利融入陸上的魷魚語補習班，甚至也有一些與互助會合作的診所。"
+            "後來那些想要離開營地的始祖成員也如願搬去高領市，他們為後期的OCTA擴大了據點和處理的事項範圍，現在隸屬於這個自助會下的建築除了章魚青年公寓以外，也有小章魚收容所，專門收留從軍團的幼稚園和小學帶出來的小章魚，又或是能幫助章魚順利融入陸上的魷魚語補習班，甚至也有一些與互助會合作的診所。"
         ]
     },
     "Deepsea Metro Testing Procedure" : {

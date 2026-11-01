@@ -663,17 +663,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // groups that point at this entry -> list their members
     const members = [];
+    let grp = null;   // the group this entry belongs to (for its label and roles)
     Object.keys(SPLAT_GROUP).forEach((gk) => {
       if (groupLoreKey(SPLAT_GROUP[gk]) !== key) return;
+      if (!grp) grp = SPLAT_GROUP[gk];
       membersOf(gk).forEach((n) => { if (n && !members.includes(n)) members.push(n); });
     });
+    const label = siteText(grp && grp.memberLabel ? "lore.members." + grp.memberLabel : "lore.members");
+    // role keys -> words in the current language ("captain" -> Captain / 隊長).
+    // A key that isn't in data/lang.js is shown exactly as written.
+    const roleWord = (k) => { const w = siteText("role." + k); return w === "role." + k ? k : w; };
+    const roleOf = (n) => {
+      const r = (grp && grp.roles && grp.roles[n]) || (grp && grp.defaultRole) || "member";
+      return [].concat(r).map(roleWord).join(siteText("role.and"));
+    };
     const memberHtml = members.length ? `
       <section>
-        <h4 class="splat-modal-label">${escapeHtml(siteText("lore.members"))}</h4>
+        <h4 class="splat-modal-label">${escapeHtml(label)}</h4>
         <div class="splat-lore-members">
           ${members.map((n) => `
             <button type="button" class="splat-lore-member" data-member="${escapeHtml(n)}" style="--rel:${SPLAT_CHARA_ROSTER[n].color}">
-              <span class="splat-lore-member-dot" aria-hidden="true"></span>${escapeHtml(charaName(n))}
+              <span class="splat-lore-member-dot" aria-hidden="true"></span>
+              <span class="splat-lore-member-name">${escapeHtml(charaName(n))}</span>
+              <span class="splat-lore-role">${escapeHtml(roleOf(n))}</span>
             </button>`).join("")}
         </div>
       </section>` : "";

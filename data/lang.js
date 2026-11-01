@@ -58,7 +58,19 @@ const SITE_STRINGS = {
     // lore modal
     "lore.label":          "Lore",
     "lore.members":        "Members",
-    "lore.empty":          "Nothing written here yet."
+    "lore.members.some":   "Members include",   // memberLabel: "some"
+    "lore.members.staff":  "Staff include",     // memberLabel: "staff"
+    "lore.empty":          "Nothing written here yet.",
+
+    // member roles in the lore modal (used as roles: { Name: "captain" })
+    "role.and":            " & ",
+    "role.member":         "Member",
+    "role.captain":        "Captain",
+    "role.manager":        "Manager",
+    "role.leader":         "Leader",
+    "role.funder":         "Funder",
+    "role.staff":          "Staff",
+    "role.boss":           "Boss"
   },
 
   zh: {
@@ -91,6 +103,18 @@ const SITE_STRINGS = {
     // lore modal
     "lore.label":          "設定",
     "lore.members":        "成員",
-    "lore.empty":          "內容還在施工中…"
+    "lore.members.some":   "包含成員",
+    "lore.members.staff":  "包含員工",
+    "lore.empty":          "內容還在施工中…",
+
+    // member roles in the lore modal
+    "role.and":            "＆",
+    "role.member":         "成員",
+    "role.captain":        "隊長",
+    "role.manager":        "經紀人",
+    "role.leader":         "領導人",
+    "role.funder":         "資助人",
+    "role.staff":          "員工",
+    "role.boss":           "老闆"
   }
 };
