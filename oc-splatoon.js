@@ -337,9 +337,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  viewButtons.forEach((btn) => {
-    btn.addEventListener("click", () => setView(btn.dataset.view));
-  });
+  // clicking anywhere on the view switch toggles between the two views
+  const viewToggle = document.querySelector(".splat-view-toggle");
+  if (viewToggle) {
+    viewToggle.addEventListener("click", () => setView(currentView === "group" ? "all" : "group"));
+  }
 
   // one listener for every card, so re-rendering needs no rebinding
   grid.addEventListener("click", (e) => {
@@ -371,12 +373,15 @@ document.addEventListener("DOMContentLoaded", () => {
   let lockCount = 0;
   function lockScroll() {
     if (lockCount++ > 0) return;
+    // also stops the page scrollbar from being dragged (CSS: .is-scroll-locked)
+    document.documentElement.classList.add("is-scroll-locked");
     window.addEventListener("wheel", preventScroll, { passive: false });
     window.addEventListener("touchmove", preventScroll, { passive: false });
     window.addEventListener("keydown", preventScrollKeys, { passive: false });
   }
   function unlockScroll() {
     if (lockCount === 0 || --lockCount > 0) return;
+    document.documentElement.classList.remove("is-scroll-locked");
     window.removeEventListener("wheel", preventScroll, { passive: false });
     window.removeEventListener("touchmove", preventScroll, { passive: false });
     window.removeEventListener("keydown", preventScrollKeys, { passive: false });

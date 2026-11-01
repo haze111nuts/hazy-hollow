@@ -217,12 +217,17 @@ h1, h2 {
 /* ---------- language switch (filled in by common.js) ----------
    Works on light and dark pages: it inherits the text color. */
 
+/* the whole switch is one button: clicking anywhere toggles the language */
 .lang-switch {
   display: inline-flex;
   gap: 2px;
   padding: 4px;
+  border: 0;
   border-radius: 999px;
   background: rgba(127,127,127,0.18);
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
 }
 
 .lang-btn {
@@ -239,7 +244,7 @@ h1, h2 {
   transition: background 0.2s ease, color 0.2s ease, opacity 0.2s ease;
 }
 
-.lang-btn:hover { opacity: 1; }
+.lang-switch:hover .lang-btn { opacity: 1; }
 
 .lang-btn.is-active {
   opacity: 1;
@@ -247,7 +252,7 @@ h1, h2 {
   color: var(--ink);
 }
 
-.lang-btn:focus-visible {
+.lang-switch:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 2px;
 }

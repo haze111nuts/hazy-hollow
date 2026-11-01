@@ -195,16 +195,23 @@ function applySiteText(root) {
   document.documentElement.lang = getSiteLang() === "zh" ? "zh-Hant" : getSiteLang();
 }
 
+// the next language in SITE_LANGS order (with two languages: the other one)
+function nextSiteLang() {
+  const codes = Object.keys(siteLangs());
+  return codes[(codes.indexOf(getSiteLang()) + 1) % codes.length];
+}
+
+// one button showing every language; clicking anywhere on it switches
 function renderLangSwitches() {
   const current = getSiteLang();
+  const next = nextSiteLang();
   document.querySelectorAll("[data-lang-switch]").forEach((box) => {
-    box.classList.add("lang-switch");
-    box.setAttribute("role", "group");
-    box.setAttribute("aria-label", siteText("lang.label"));
-    box.innerHTML = Object.keys(siteLangs()).map((code) => `
-      <button type="button" class="lang-btn${code === current ? " is-active" : ""}"
-              data-lang="${code}" aria-pressed="${code === current}">${siteLangs()[code]}</button>
-    `).join("");
+    box.innerHTML = `
+      <button type="button" class="lang-switch"
+              aria-label="${siteText("lang.label")}: ${siteLangs()[current]} → ${siteLangs()[next]}">
+        ${Object.keys(siteLangs()).map((code) => `
+          <span class="lang-btn${code === current ? " is-active" : ""}">${siteLangs()[code]}</span>`).join("")}
+      </button>`;
   });
 }
 
@@ -217,8 +224,8 @@ function setSiteLang(code) {
 }
 
 document.addEventListener("click", (e) => {
-  const btn = e.target.closest && e.target.closest("[data-lang-switch] .lang-btn");
-  if (btn) setSiteLang(btn.dataset.lang);
+  const sw = e.target.closest && e.target.closest("[data-lang-switch] .lang-switch");
+  if (sw) setSiteLang(nextSiteLang());
 });
 
 // set the language before the page's own scripts render anything

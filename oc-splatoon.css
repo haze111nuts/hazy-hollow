@@ -9,6 +9,49 @@ body{
    --chara is set per card/modal from the character's color
    =========================================================== */
 
+/* ---------- page scrollbar (this page only) ----------
+   Light thumb for the dark background. The track shows faintly and
+   lights up when the mouse is on the bar. Chrome/Edge use the
+   ::-webkit-scrollbar parts below; Firefox gets a simple thin version. */
+html {
+  scrollbar-width: auto;   /* "auto" here lets Chrome/Edge use the */
+  scrollbar-color: auto;   /* custom ::-webkit-scrollbar parts      */
+}
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: rgba(255,255,255,0.06); }
+::-webkit-scrollbar-track:hover,
+::-webkit-scrollbar-track:active { background: rgba(255,255,255,0.16); }
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.5);
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.85);
+  background-clip: padding-box;
+  border-width: 2px;
+}
+@supports not selector(::-webkit-scrollbar) {
+  html { scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.6) transparent; }
+}
+
+/* scroll areas inside the profile / lore panels keep the site's
+   thin dark scrollbar, since those panels are light */
+.splat-modal-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+/* while a modal is open the page can't be scrolled at all — not even by
+   dragging its scrollbar. Both html and body, or body becomes its own
+   scroll area. The scrollbar's space stays (scrollbar-gutter in
+   common.css), so nothing shifts. */
+html.is-scroll-locked,
+html.is-scroll-locked body {
+  overflow: hidden;
+}
+
 .splat-page {
   max-width: 1100px;
   margin: 0 auto;
@@ -49,7 +92,30 @@ body{
   background: rgba(255,255,255,0.08);
   border-radius: 999px;
   padding: 4px;
+  cursor: pointer;   /* the whole switch toggles the view */
 }
+.splat-view-toggle:hover .splat-view-btn { color: #fff; }
+
+/* language switch: pinned to the top-right corner of the screen so it's
+   always reachable, small and faded until you hover it. z-index 600 keeps
+   it above open profiles / lore panels. (It sits outside the header in
+   the HTML — the header's entrance animation would pin it to the header.) */
+[data-lang-switch] {
+  position: fixed;
+  top: 12px;
+  right: 18px;
+  z-index: 600;
+}
+[data-lang-switch] .lang-switch {
+  font-size: 0.85em;
+  background: rgba(28,28,28,0.6);
+  color: #fff;
+  opacity: 0.55;
+  transition: opacity 0.2s ease;
+}
+[data-lang-switch] .lang-switch:hover,
+[data-lang-switch] .lang-switch:focus-visible { opacity: 1; }
+[data-lang-switch] .lang-btn { padding: 0.28rem 0.65rem; }
 
 .splat-view-btn {
   font: inherit;

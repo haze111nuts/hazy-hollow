@@ -27,31 +27,30 @@ const SPLAT_CHARA_DATA_EN = {
         "Blade" : {
             name: "Blade",
             summary: [
-                "一代主線的主角，因為一些家庭因素從外地搬到高領市跟爸爸和姐姐一起住。由於社恐講話笨拙加上運動神經差所以射擊比賽玩得不好，無法融入當地青少年圈圈，經常出糗或搞砸而被做成迷因瘋傳。一次在魚乾爺爺的考驗中展現出聰明才智以及洞察力等而被選為新噴嘴小隊的３號成員，也因此在後來精進了體能跟技術，也被捲進一些章魚軍團相關的衝突中，在這個冒險的最後終於長了自信並瞭解到自己的長處。特工活動的成功讓他變成[[OCTA]]的榮譽成員，他後來經常參與[[OCTA]]的各種義工活動。",
-                "個性有點神經質，經常為一點小事緊張；膽子不大但有正義感，也意外的很有領導氣質。整體是個相對平凡的少年，心思細膩、是和事佬＆苦勞役。運氣總是不太好，經常可以看到他露出哭笑不得的表情。經歷許多事件後特別珍惜自己的朋友跟家人。",
-                "他似乎會彈一點吉他。"
+                "The protagonist of the main story in Splatoon1. Due to family reasons, he moved to Inkopolis City to live with his dad and older sister. He is socially awkward and isn't very athletic, so he was bad at splat games and had trouble fitting in with the local teens, they saw him as a loser from out of town, even turned his awkward moments into memes. During a test from Captain Cuttlefish, he showed quick thinking and resourcefulness and was chosen to become Agent 3 of the New Squidbeak Splatoon. After that, he got better at battling, and got caught up in conflicts involving the Octarian Army. By the end of the adventure, he gained confidence and understood his own strengths. Thanks to his success as an agent, he became an honorary member of [[OCTA]], and he often helps out with their volunteer work.",
+                "He gets nervous easily and isn't very brave, but he has a strong sense of justice. Overall, he's a pretty ordinary teenage boy. He's thoughtful and kind, and usually ends up being the peacemaker and the one who does all the hard work. He tends to have bad luck, so he's often seen facepalming or making a \"why me\" face. After everything he's been through, he really values his friends and family.",
+                "He apparently knows how to play a little guitar."
             ],
             notes: [
-                "他代表的按鈕是B鍵，因此以B作為名字開頭",               
-                "一代劇情剛開始時（ME2015）他約14歲",
-                "名字直接翻成中文應是布雷德，為了簡單好叫一點而暱稱小布",
-                "名字原本是Brandon（來自Branch-枝）原是想跟姐姐黑娜湊「花+枝」但後來覺得布蘭登這名字太歐美現實又有點彆扭就換掉了",
-                "在2015玩一代時就有畫出雛形的角色，那時的設定是愛裝酷的中二小男生"
+                "He represents the B button, which is why his name starts with B.",
+                "He's about 14 at the start of Splatoon 1's main story (ME2015).",
+                "His name was originally Brandon (from \"branch\"), meant to pair with his sister Hannah (from the Japanese \"hana\", meaning flower). In Chinese, 花 (flower) + 枝 (branch) makes 花枝, the word for squid. The name was changed later because Brandon felt too much like an ordinary real-world name.",
+                "He was one of the characters first drawn back in 2015 while playing Splatoon 1. Back then, he was an edgy kid who tried hard to act cool."
             ],
             relationships: [
-                {Axel: "在二代主線開頭兩人之間出現一些誤解因此當了一段時間的勁敵，事件最後他們和好而且在短時間內變成要好的親友。"},
-                {Edd: "在深海地鐵的衝突中相遇，在拼湊線索後才搞懂對方的來歷。雖然對方態度一直不是很好很難交流，但還是會互相幫助，一直都視他為伙伴跟朋友。"},
-                {Yoni: "是自己在一代時間點交到的為數不多的好朋友，對方沒有像當時其他人一樣嘲笑他。兩人關係非常不錯，經常結伴。"},
-                {Xiu: "因為亞克才認識，起先因為對方太過外向而不太習慣，但後來變成交心的朋友，時常幫對方跟亞克調解關係。"},
-                {Hannah: "親姊弟，因為分開居住多年對她瞭解不足，好像因為各種原因被對方唾棄，一直不太知道要怎麼相處。"},
-                {Lance: "一次他來訪找黑娜而見到面，交集不多，後來看到他在比賽中的表現而對他很是仰慕跟敬佩，在他面前會緊張到無法正常對話。"},
-                {Noir: "在協助一些地下章魚居民脫逃時遇到的少年，看他戒心重又無家可歸決定收容他到家裡幫助他適應，後來變成好友跟家人，有時會不小心把他當成寵物照顧。"},
-                {"Captain Cuttlefish": "一開始覺得他是行為堪憂的怪長輩，幾年的特工活動下來才逐漸意識到對方一直在幫助自己成長。非常重視他，把他當作家人看待。"}
+                {Axel: "At the start of Splatoon 2's main story, a misunderstanding made them rivals for a while. They made up in the end and quickly became close friends."},
+                {Edd: "They met during the conflict in the Deepsea Metro, and only figured out each other's background after piecing the clues together. Edd has never been very friendly and is hard to talk to, but they still help each other out, and Blade has always seen him as a partner and friend."},
+                {Yoni: "One of the few good friends he made around the time of Splatoon 1. Unlike most people back then, Yoni never made fun of him. They get along really well and often hang out together."},
+                {Xiu: "They met through Axel. At first Blade wasn't used to how outgoing Xiu was, but they later became close friends. He often helps Xiu and Axel patch things up."},
+                {Hannah: "His older sister. Since they lived apart for many years, he doesn't know her very well, and she seems to despise him for various reasons. He's never really known how to get along with her."},
+                {Lance: "They met once when Lance came over to see Hannah, but didn't interact much. After seeing Lance play in matches, Blade came to really look up to him, and gets so nervous around him that he can't talk normally."},
+                {Noir: "A boy he met while helping some Octarians escape from underground. Seeing that Noir was very wary and had nowhere to go, Blade took him in and helped him adjust to life on the surface. They became good friends and are like family now, though Blade sometimes accidentally treats him like a pet."},
+                {"Captain Cuttlefish": "At first Blade thought he was a weird old geezer with questionable behavior, but after a few years of agent work, he slowly realized the Captain had been helping him grow the whole time. He cares about him a lot and sees him as family."}
             ],
             variant:[
-                {casual: "日常"},
-                {agent3: "特工服"},
-                {captain: "司令"}
+                {casual: "Casual"},
+                {agent3: "Agent 3"},
+                {captain: "Captain"}
             ]
         },
         "Axel" : { 
