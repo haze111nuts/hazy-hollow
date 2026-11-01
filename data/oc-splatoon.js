@@ -30,15 +30,16 @@
 // Names: the key ("Blade") is the English name, name_ch is the
 // Chinese name. Relationship and variant ids stay the same in every
 // language — only the text after the colon is translated.
-// Group names: groupName (English) / groupName_ch (Chinese).
+// Group names: groupName_en (English) / groupName_ch (Chinese).
+// Lore entries: title_en / title_ch (big title), subtitle_en /
+// subtitle_ch (small line under it — leave one out to hide it).
 //
 // GROUP MEMBER LIST (shown in the group's lore modal) — all optional:
-//   memberLabel: "some"    heading says 包含成員 / Members include
-//                "staff"   heading says 包含員工 / Staff include
+//   large_group: true     heading says 包含成員 / Members include
 //                (leave it out for 成員 / Members)
 //   roles: { "Hannah": "captain", "Amy": "manager" }
 //                Role keys come from data/lang.js ("role.captain"…).
-//                Two roles: ["leader", "funder"] → 領導人＆資助人.
+//                Two roles: ["leader", "funder"] → Leader & Funder.
 //                A key that isn't in lang.js is shown as written.
 //   defaultRole: "staff"   role for everyone not listed in roles
 //                (leave it out for 成員 / Member)
@@ -875,7 +876,7 @@ const SPLAT_CHARA_ROSTER = {
 
 const SPLAT_GROUP = {
         "BBB" : {
-            groupName: "BBB",
+            groupName_en: "BBB",
             groupName_ch: "按鈕少年隊",
             members: [
                 "Blade","Axel","Yoni","Xiu","Edd"
@@ -883,7 +884,7 @@ const SPLAT_GROUP = {
             roles: { "Blade": "captain" }
         },
         "RF" : { 
-            groupName: "Royal Flush",
+            groupName_en: "Royal Flush",
             groupName_ch: "皇家同花順",
             members: [
                 "Hannah","Lance","Minerva","Roy","Amy"
@@ -891,63 +892,64 @@ const SPLAT_GROUP = {
             roles: { "Hannah": "captain", "Amy": "manager" }
         },
         "New Squidbeak Splatoon" : { 
-            groupName: "New Squidbeak Splatoon",
+            groupName_en: "New Squidbeak Splatoon",
             groupName_ch: "新噴嘴小隊",
             members: [
                 "Captain Cuttlefish","Callie","Marie","Blade","Axel","Edd","Wade","Elise","Susie"
             ]
         },        
         "OCTA" : { 
-            groupName: "OCTA",
-            groupName_ch: "章魚自助協會",
+            groupName_en: "OCTA",
+            groupName_ch: "OCTA",
             members: [
-                "Dorothy","Moyer","","","Ada","Minerva","Edd","Blade","Mei","Freya"
+                "Dorothy","Moyer","","","Ada","Mei","Blade","Minerva","Edd","Freya","Pearl"
             ],
-            memberLabel: "some",
-            roles: { "Dorothy": ["leader", "funder"] }
+            large_group: true,
+            roles: { "Dorothy": ["founder"], "Minerva": ["volunteer"], "Edd": ["volunteer"], "Blade": ["volunteer"], "Freya": ["volunteer"], "Pearl": ["benefactor"] }
         },
         "Vector 8 Research Institute" : { 
-            groupName: "Vector 8 Research Institute",
+            groupName_en: "Vector 8 Research Institute",
             groupName_ch: "V8科研中心",
             members: [
-                "Viper","Tighe","Candice","Maxwell","Dr. Lapis","Betty","Ollie","Zoelle","Marina","Mei"
+                "Viper","Tighe","Candice","Maxwell","Dr. Lapis","Betty","Ollie","Marina","Zoelle","Mei"
             ],
-            memberLabel: "staff",
-            defaultRole: "staff"                        
+            large_group: true,
+            defaultRole: "researcher",
+            roles: { "Zoelle": ["intern"], "Mei": ["intern"], "Marina":["stakeholder"] }   
         },
         "Seagrove Scouts" : { 
-            groupName: "Seagrove Scouts",
+            groupName_en: "Seagrove Scouts",
             groupName_ch: "海林童子軍團",
             members: [
                 "Susie","Zoelle",""
             ]
         },
         "Brine Pool Hotel & Casino" : {
-            groupName: "Brine Pool Hotel & Casino",
+            groupName_en: "Brine Pool Hotel & Casino",
             groupName_ch: "鹽水池賭場酒店",
             members: [
                 "Father Chelon", "Leon", "Alan", ""
             ],
-            memberLabel: "staff",
+            large_group: true,
             defaultRole: "staff",
             roles: { "Father Chelon": "boss" }            
         },        
         "The Acolytes" : { 
-            groupName: "The Acolytes",
+            groupName_en: "The Acolytes",
             groupName_ch: "親信使者",
             members: [
                 "Angelica", "Lucian", "RJ", "Damian"
             ]            
         },
         "Splatter Club" : { 
-            groupName: "Splatter Club",
+            groupName_en: "Splatter Club",
             groupName_ch: "飛濺俱樂部",
             members: [
                 "", "Zarah", "Hannah", ""
             ]            
         },
         "EX-Octarians" : { 
-            groupName: "Ex-Octarians",
+            groupName_en: "Ex-Octarians",
             groupName_ch: "前章魚軍團成員",
             members: [
                 "DJ Octavio","Marina","Viper","Minerva","Edd","Tighe","Candice","Maxwell","Dr. Lapis","Betty","Ollie","Dorothy","Ada","Lucian","Freya"
@@ -972,19 +974,22 @@ const SPLAT_GROUP = {
 
 const Lores = {
     "BBB" : {
-        name_en : "BBB",
-        name_ch : "按鈕少年隊",
+        title_en : "BBB",
+        subtitle_en : "Button Bashing Boys",
+        title_ch : "按鈕少年隊",
+        subtitle_ch : "BBB",
         type: "Team",
         color: "#79db37",        
         summary : [
             "由一群青少年男孩組成的漆彈賽隊伍，主要活動於高領市。隊伍全名為Button Bashing Boys，簡稱BBB。於ME2017中旬組成。",
-            "成立的契機來自隊長小布，他原先很排斥漆彈運動也不願意社交，對組隊的事情想都沒想過，是在後來因為參與了一些和地下章魚有關的防衛活動後才開始願意接觸對戰，因此邂逅了亞克，兩人在經歷一番衝突後變成了朋友，他們兩個去魷空塔玩漆彈時經常會帶上好友尤尼，再加上亞克的舊識修經常會吵著要加入，久而久之四個人就玩在了一起並組了名為按鈕少年隊的隊伍。他們是比較休閒的親友團，偶爾會參加一點比賽。偶爾有缺人時小布會拉上第五名成員埃德一起玩。",
+            "成立的契機來自隊長小布，他原先很排斥漆彈運動也不願意社交，對組隊的事情想都沒想過，是在後來因為參與了一些和地下章魚有關的防衛活動後才開始願意接觸對戰，因此邂逅了亞克，兩人在經歷一番衝突後變成了朋友，他們兩個去魷空塔玩漆彈時經常會帶上好友尤尼，再加上亞克的舊識修經常會吵著要加入，久而久之四個人就玩在了一起並組了名為按鈕少年隊的隊伍。他們是比較休閒的親友團隊伍，偶爾會參加一點比賽。小布後來認識了埃德並邀請他進了隊伍，他有時會作為第五名成員替補其他成員的空缺。",
             "在中後期的時間點，某名成員經常做出會讓成員困擾的行為，最終因為演變得無法收拾而導致隊伍停止活動。"
         ]
     },    
     "Royal Flush" : {
-        name_en : "Royal Flush",
-        name_ch : "皇家同花順",
+        title_en : "Royal Flush",
+        title_ch : "皇家同花順",
+        subtitle_ch : "Royal Flush",
         type: "Team",
         color: "#2528eb",        
         summary : [
@@ -995,18 +1000,21 @@ const Lores = {
         ]
     },
     "OCTA" : {
-        name_en : "Octarian Community Transition Association",
-        name_ch : "OCTA",
+        title_en : "OCTA",
+        subtitle_en : "Octarian Community Transition Association",
+        title_ch : "OCTA",
+        subtitle_ch : "Octarian Community Transition Association",
         type: "Organization",
         color : "#633030",         
         summary : [
-            "全名為地下章魚過渡自助會。起初只是一小批因為各自的原因想離開軍團社會的章魚團隊，他們趁著３號給軍團造成巨大改變的這個動盪時期抓到了機會並成功脫出。為了準備搬去高領市長期生活，他們在位於蛸壺山谷和高領市之間的軟體山上的荒廢軍營中暫時住下。這段時間成員們之間出現了意見分歧，一部份的人認為比起離開，他們更想留下來繼續打造營地以便協助其他仍未能從軍團脫逃出的人；另一部份的成員則認為手上資源不足而堅持盡快下山，兩方因這件事僵持不下許久，慶幸的是這個紛爭因一位貴人的出現而獲得平緩，她就是常常一人去軟體山上做發聲練習的小姬，她在得知營地的存在後對這個團隊非常欽佩，立刻給他們資助了大量的金錢跟物資，她也是在這時和住在營地裡的飯田成為了朋友。這些豐富的資源讓始祖成員們得以在山上建立一個旅館，非營利組織OCTA也是在此時正式成立。很快的這個旅館就變成上陸章魚的中繼站，許多離開軍團的章魚都在這裡為了準備融入陸上生活而住了一小段時間。",
+            "全名為地下章魚過渡自助會。起初只是一小批因為各自的原因想離開軍團社會的章魚團隊，他們趁著３號給軍團造成巨大動盪的時期抓到機會脫逃。為了準備搬去高領市長期生活，他們在位於蛸壺山谷和高領市之間的軟體山上的荒廢軍營中暫時住下。這段時間成員們之間出現了意見分歧，一部份的人認為比起離開，他們更想留下來繼續打造營地以便協助其他仍未能從軍團脫逃出的人；另一部份的成員則認為手上資源不足而堅持盡快下山，兩方因這件事僵持不下，慶幸的是這個紛爭因一位貴人的出現而獲得平緩，她就是常常一人去軟體山上做發聲練習的小姬，她在得知營地的存在後對這個團隊非常欽佩，立刻給他們資助了大量的金錢跟物資，她這時也和住在營地裡的飯田成為了朋友。取得足夠資源後始祖成員們得以在山上建立一個旅館，非營利組織OCTA也是在此時正式成立。很快的這個旅館就變成上陸章魚的中繼站，許多離開軍團的章魚都在這裡為了準備融入陸上生活而住了一小段時間。",
             "後來那些想要離開營地的始祖成員也如願搬去高領市，他們為後期的OCTA擴大了據點和處理的事項範圍，現在隸屬於這個自助會下的建築除了章魚青年公寓以外，也有小章魚收容所，專門收留從軍團的幼稚園和小學帶出來的小章魚，又或是能幫助章魚順利融入陸上的魷魚語補習班，甚至也有一些與互助會合作的診所。"
         ]
     },
     "Deepsea Metro Testing Procedure" : {
-        name_en : "Deepsea Metro Testing Procedure",
-        name_ch : "深海地鐵測驗程序",
+        title_en : "Deepsea Metro Testing Procedure",
+        title_ch : "深海地鐵測驗程序",
+        subtitle_ch : "Deepsea Metro Testing Procedure",
         type: "Lore",
         color: "#18b989",
         summary : [
@@ -1014,20 +1022,23 @@ const Lores = {
         ]
     },
     "Vector 8 Research Institute" : {
-        name_en : "Vector 8 Research Institute",
-        name_ch : "V8科研中心",
+        title_en : "Vector 8 Research Institute",    
+        title_ch : "V8科研中心",
+        subtitle_ch : "Vector 8 Research Institute",        
         type: "Organization",
         color: "#78998e",
         summary : [
-            "一個由前章魚軍團的研究員們聯合創立的研究機構，全名為向量8科研中心（Vector 8 Research Institute），簡稱V8或V8科研中心。",
+            "一個由前章魚軍團的研究員們聯合創立的研究機構，全名為向量8科研中心，有時會簡稱V8或V8科研中心。",
             "在練魚公司因為CEO的消失和公司的重要設施NILS像被摧毀等種種原因而破產的消息傳出來後，一組菁英章魚工程師認為這是個復興衰退章魚社會的契機。在得到了軍團領導人的同意和資助之後，他們買下練魚公司的資產，在練魚公司的殘骸上建起了這個新的科技中心。",
             "象徵著「給章魚的無限潛能一個方向」，向量８科研中心是一個為了應對章魚社會面臨的當前問題而特別設立的研究機構。在經過數次人力整頓後，現在的V8分成了八個部門—能源部、考古部、機械部、人事部、記憶部、醫療部、人工智能部、虛擬實境部。其中後四個部門是為了對當初練魚公司的深海地鐵測驗程序進行逆向工程而設立的。",
             "後來的秩序計畫虛擬宇宙正是由他們與飯田聯合開發。"
         ]
     },
     "Project Lapis Lazuli" : {
-        name_en : "Project Lapis Lazuli ",
-        name_ch : "瑠璃企劃",
+        title_en : "Project Lapis Lazuli",
+        subtitle_en : "Vector 8 Research Institute",          
+        title_ch : "瑠璃企劃",
+        subtitle_ch : "Project Lapis Lazuli",
         type: "Lore",        
         color: "#180f91",        
         summary : [
@@ -1035,8 +1046,9 @@ const Lores = {
         ]
     },
     "Wade's Smallfry" : {
-        name_en : "Wade's Smallfry",
-        name_ch : "偉德的小鮭魚",
+        title_en : "Wade's Smallfry",       
+        title_ch : "偉德的小鮭魚",
+        subtitle_ch : "Wade's Smallfry",
         type: "Creature",        
         color: "#40693a",        
         summary : [

@@ -90,10 +90,6 @@ body{
   font-size: 1.5rem;
 }
 
-.splat-group-name-ch {
-  color: rgba(255,255,255,0.55);
-  font-size: 0.95rem;
-}
 
 
 /* ---------- character grid ---------- */
@@ -784,7 +780,7 @@ button.splat-rel-swatch:focus-visible {
 .splat-lore {
   --chara: var(--lore);
   --folder: color-mix(in srgb, var(--lore) 24%, #e6d3a3);
-  width: min(600px, 100%);
+  width: min(650px, 100%);
   margin-top: 30px;                       /* room for the tab */
   max-height: calc(100vh - 3rem - 30px);
   background: var(--folder);

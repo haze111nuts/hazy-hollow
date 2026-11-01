@@ -102,12 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function groupName(group) {
-    return lang() === "zh" ? (group.groupName_ch || group.groupName) : group.groupName;
-  }
-
-  function groupSubName(group) {
-    const sub = lang() === "zh" ? group.groupName : group.groupName_ch;
-    return sub && sub !== groupName(group) ? sub : "";
+    return lang() === "zh" ? (group.groupName_ch || group.groupName_en) : group.groupName_en;
   }
 
   // ---------------- lore helpers ----------------
@@ -115,36 +110,38 @@ document.addEventListener("DOMContentLoaded", () => {
   // Lore entries live in `Lores` (data/oc-splatoon.js).
   // Link to one from any summary / note / relationship text with
   //   [[OCTA]]                          -> shows "OCTA"
-  //   [[深海地鐵測驗程序]]              -> found by its name_ch
+  //   [[深海地鐵測驗程序]]              -> found by its title_ch
   //   [[Royal Flush|RF]]                -> links Royal Flush, shows "RF"
   // A group heading opens lore when the group has  lore: "<key>",
-  // or when its groupName matches a lore key.
+  // or when its groupName_en matches a lore key.
 
   function loreData() {
     return typeof Lores !== "undefined" ? Lores : {};
   }
 
-  // accepts the key, the English name or the Chinese name
+  // accepts the key, the English title or the Chinese title
   function findLoreKey(ref) {
     const all = loreData();
     if (!ref) return null;
     if (all[ref]) return ref;
-    return Object.keys(all).find((k) => all[k].name_en === ref || all[k].name_ch === ref) || null;
+    return Object.keys(all).find((k) => all[k].title_en === ref || all[k].title_ch === ref) || null;
   }
 
+  // big title: title_ch in Chinese, title_en in English
   function loreName(key) {
     const e = loreData()[key] || {};
-    return lang() === "zh" ? (e.name_ch || e.name_en || key) : (e.name_en || key);
+    return lang() === "zh" ? (e.title_ch || e.title_en || key) : (e.title_en || key);
   }
 
+  // line under the title: subtitle_ch / subtitle_en (none if left out)
   function loreSubName(key) {
     const e = loreData()[key] || {};
-    const sub = lang() === "zh" ? (e.name_en || key) : e.name_ch;
+    const sub = lang() === "zh" ? e.subtitle_ch : e.subtitle_en;
     return sub && sub !== loreName(key) ? sub : "";
   }
 
   function groupLoreKey(group) {
-    return findLoreKey(group.lore) || findLoreKey(group.groupName);
+    return findLoreKey(group.lore) || findLoreKey(group.groupName_en);
   }
 
   // turn [[...]] in text into clickable lore links
@@ -254,7 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let sectionIndex = 0;
 
   // loreKey (optional): makes the heading a button that opens that lore entry
-  function sectionHtml(title, subtitle, names, loreKey) {
+  function sectionHtml(title, names, loreKey) {
     if (!names.length) return "";
     const i = Math.min(sectionIndex++, 6);
     const heading = loreKey
@@ -264,7 +261,6 @@ document.addEventListener("DOMContentLoaded", () => {
       <section class="splat-group" style="--i:${i}">
         <header class="splat-group-header">
           <h2 class="splat-group-name">${heading}</h2>
-          ${subtitle ? `<span class="splat-group-name-ch">${escapeHtml(subtitle)}</span>` : ""}
         </header>
         <div class="splat-card-grid">
           ${names.map(cardHtml).join("")}
@@ -277,16 +273,16 @@ document.addEventListener("DOMContentLoaded", () => {
     let html = Object.keys(SPLAT_GROUP)
       .map((key) => {
         const group = SPLAT_GROUP[key];
-        return sectionHtml(groupName(group), groupSubName(group), membersOf(key), groupLoreKey(group));
+        return sectionHtml(groupName(group), membersOf(key), groupLoreKey(group));
       })
       .join("");
-    html += sectionHtml(siteText("group.unaffiliated"), "", unaffiliated());
+    html += sectionHtml(siteText("group.unaffiliated"), unaffiliated());
     grid.innerHTML = html;
   }
 
   function renderAll() {
     const names = Object.keys(SPLAT_CHARA_ROSTER);
-    grid.innerHTML = sectionHtml(siteText("group.all"), "", names);
+    grid.innerHTML = sectionHtml(siteText("group.all"), names);
   }
 
   const VIEWS = { group: renderByGroup, all: renderAll };
@@ -669,7 +665,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!grp) grp = SPLAT_GROUP[gk];
       membersOf(gk).forEach((n) => { if (n && !members.includes(n)) members.push(n); });
     });
-    const label = siteText(grp && grp.memberLabel ? "lore.members." + grp.memberLabel : "lore.members");
+    const label = siteText(grp && grp.large_group ? "lore.membersInclude" : "lore.members"); // large_group: true -> 包含成員
     // role keys -> words in the current language ("captain" -> Captain / 隊長).
     // A key that isn't in data/lang.js is shown exactly as written.
     const roleWord = (k) => { const w = siteText("role." + k); return w === "role." + k ? k : w; };

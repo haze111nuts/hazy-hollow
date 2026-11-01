@@ -58,8 +58,7 @@ const SITE_STRINGS = {
     // lore modal
     "lore.label":          "Lore",
     "lore.members":        "Members",
-    "lore.members.some":   "Members include",   // memberLabel: "some"
-    "lore.members.staff":  "Staff include",     // memberLabel: "staff"
+    "lore.membersInclude": "Members include",   // groups with large_group: true
     "lore.empty":          "Nothing written here yet.",
 
     // member roles in the lore modal (used as roles: { Name: "captain" })
@@ -67,10 +66,15 @@ const SITE_STRINGS = {
     "role.member":         "Member",
     "role.captain":        "Captain",
     "role.manager":        "Manager",
-    "role.leader":         "Leader",
-    "role.funder":         "Funder",
+    "role.founder":        "Founder",
     "role.staff":          "Staff",
-    "role.boss":           "Boss"
+    "role.researcher":     "Researcher",
+    "role.intern":         "Intern",    
+    "role.boss":           "Boss",
+    "role.volunteer":      "Volunteer",
+    "role.benefactor":     "Benefactor",
+    "role.stakeholder":    "Stakeholder",
+    "role.majorShareholder":"Major Shareholder",
   },
 
   zh: {
@@ -103,8 +107,7 @@ const SITE_STRINGS = {
     // lore modal
     "lore.label":          "設定",
     "lore.members":        "成員",
-    "lore.members.some":   "包含成員",
-    "lore.members.staff":  "包含員工",
+    "lore.membersInclude": "關連角色",
     "lore.empty":          "內容還在施工中…",
 
     // member roles in the lore modal
@@ -112,9 +115,14 @@ const SITE_STRINGS = {
     "role.member":         "成員",
     "role.captain":        "隊長",
     "role.manager":        "經紀人",
-    "role.leader":         "領導人",
-    "role.funder":         "資助人",
+    "role.founder":        "創始人",
     "role.staff":          "員工",
-    "role.boss":           "老闆"
+    "role.researcher":     "研究員",   
+    "role.intern":         "實習生",
+    "role.boss":           "老闆",
+    "role.volunteer":      "常駐義工",
+    "role.benefactor":     "資助人",
+    "role.stakeholder":    "利益關係人",
+    "role.majorShareholder":"大股東",
   }
 };
