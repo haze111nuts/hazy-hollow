@@ -1,11 +1,13 @@
 // ===========================================================
 // Splatoon OC browser — character grid + modal.
 //
-// Reads SPLAT_CHARA_ROSTER and SPLAT_GROUP from data/oc-splatoon.js,
-// and interface text from data/lang.js (via siteText() in common.js).
+// Reads data/oc-splatoon-common.js (character color + type, groups,
+// lore colors), data/oc-splatoon-zhtw.js and data/oc-splatoon-en.js
+// (character profiles + lore text), and interface text from
+// data/lang.js (via siteText() in common.js).
 //
 // Thumbnails: add an optional `thumb` field to any character in
-// SPLAT_CHARA_ROSTER (e.g. thumb: "img/splatoon/blade.png") and
+// a language data file (e.g. thumb: "img/splatoon/blade.png") and
 // it shows up automatically. Characters without one get a colored
 // placeholder with their initial.
 // ===========================================================
@@ -62,18 +64,40 @@ function splatThumbSrc(name, chara) {
 document.addEventListener("DOMContentLoaded", () => {
   const grid = document.getElementById("splat-grid");
   const viewButtons = document.querySelectorAll(".splat-view-btn");
-  if (!grid || typeof SPLAT_CHARA_ROSTER === "undefined") return;
+  if (!grid || typeof SPLAT_CHARA_COMMON_DATA === "undefined") return;
 
   // ---------------- language helpers ----------------
   //
-  // Character content is written once at the top level (currently in
-  // Chinese). A language block on the character overrides any field
-  // for that language, e.g.
-  //   "Blade": { summary: "中文…", en: { summary: "English…" } }
-  // Anything missing from the block falls back to the top level.
+  // Each site language (data/lang.js code) has its own character data
+  // file. Fields missing from a language fall back to the base
+  // language (Chinese); color + type always come from the common file.
+
+  const SPLAT_CHARA_DATA = {
+    zh: typeof SPLAT_CHARA_DATA_ZHTW !== "undefined" ? SPLAT_CHARA_DATA_ZHTW : {},
+    en: typeof SPLAT_CHARA_DATA_EN !== "undefined" ? SPLAT_CHARA_DATA_EN : {}
+  };
+  const SPLAT_BASE_LANG = "zh";
 
   function lang() {
     return getSiteLang();
+  }
+
+  // one character's data in the current language, merged with the
+  // base language and the common data. undefined if not in the roster.
+  function charaOf(id) {
+    const common = SPLAT_CHARA_COMMON_DATA[id];
+    if (!common) return undefined;
+    const base = SPLAT_CHARA_DATA[SPLAT_BASE_LANG][id] || {};
+    const own = (SPLAT_CHARA_DATA[lang()] || {})[id] || {};
+    return { ...base, ...own, ...common };
+  }
+
+  // a character's name in one language ("" if the Chinese name is missing;
+  // other languages fall back to the id, which is the English name)
+  function nameIn(code, id) {
+    const data = (SPLAT_CHARA_DATA[code] || {})[id];
+    if (data && data.name) return data.name;
+    return code === SPLAT_BASE_LANG ? "" : id;
   }
 
   // a character field in the current language
@@ -85,19 +109,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // display name of a character in the current language
   function charaName(id) {
-    const chara = SPLAT_CHARA_ROSTER[id];
-    if (!chara) return id;
-    const block = chara[lang()];
-    if (block && block.name) return block.name;
-    if (lang() === "zh" && chara.name_ch) return chara.name_ch;
-    return id;
+    return nameIn(lang(), id) || id;
   }
 
   // the name in the *other* language, shown small next to the main one
   function charaSubName(id) {
-    const chara = SPLAT_CHARA_ROSTER[id];
-    if (!chara) return "";
-    const sub = lang() === "zh" ? id : chara.name_ch;
+    if (!SPLAT_CHARA_COMMON_DATA[id]) return "";
+    const sub = nameIn(lang() === "zh" ? "en" : "zh", id);
     return sub && sub !== charaName(id) ? sub : "";
   }
 
@@ -107,36 +125,58 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ---------------- lore helpers ----------------
   //
-  // Lore entries live in `Lores` (data/oc-splatoon.js).
+  // Lore ids + colors live in SPLAT_LORE_COMMON_DATA (common file);
+  // title / subtitle / type / summary live in SPLAT_LORE_DATA_ZHTW
+  // and SPLAT_LORE_DATA_EN. Missing fields fall back to Chinese,
+  // except subtitle, which is only shown when that language has one.
   // Link to one from any summary / note / relationship text with
   //   [[OCTA]]                          -> shows "OCTA"
-  //   [[深海地鐵測驗程序]]              -> found by its title_ch
+  //   [[深海地鐵測驗程序]]              -> found by any language's title
   //   [[Royal Flush|RF]]                -> links Royal Flush, shows "RF"
   // A group heading opens lore when the group has  lore: "<key>",
   // or when its groupName_en matches a lore key.
 
-  function loreData() {
-    return typeof Lores !== "undefined" ? Lores : {};
+  const SPLAT_LORE_DATA = {
+    zh: typeof SPLAT_LORE_DATA_ZHTW !== "undefined" ? SPLAT_LORE_DATA_ZHTW : {},
+    en: typeof SPLAT_LORE_DATA_EN !== "undefined" ? SPLAT_LORE_DATA_EN : {}
+  };
+
+  function loreCommon() {
+    return typeof SPLAT_LORE_COMMON_DATA !== "undefined" ? SPLAT_LORE_COMMON_DATA : {};
   }
 
-  // accepts the key, the English title or the Chinese title
+  // one lore entry in the current language (undefined if not listed)
+  function loreOf(key) {
+    const common = loreCommon()[key];
+    if (!common) return undefined;
+    const base = SPLAT_LORE_DATA[SPLAT_BASE_LANG][key] || {};
+    const own = (SPLAT_LORE_DATA[lang()] || {})[key];
+    return {
+      ...base, ...(own || {}), ...common,
+      title: (own && own.title) || base.title || key,
+      subtitle: own ? own.subtitle : base.subtitle
+    };
+  }
+
+  // accepts the id or any language's title
   function findLoreKey(ref) {
-    const all = loreData();
     if (!ref) return null;
-    if (all[ref]) return ref;
-    return Object.keys(all).find((k) => all[k].title_en === ref || all[k].title_ch === ref) || null;
+    const ids = Object.keys(loreCommon());
+    if (ids.includes(ref)) return ref;
+    return ids.find((k) =>
+      Object.values(SPLAT_LORE_DATA).some((data) => data[k] && data[k].title === ref)
+    ) || null;
   }
 
-  // big title: title_ch in Chinese, title_en in English
   function loreName(key) {
-    const e = loreData()[key] || {};
-    return lang() === "zh" ? (e.title_ch || e.title_en || key) : (e.title_en || key);
+    const e = loreOf(key);
+    return e ? e.title : key;
   }
 
-  // line under the title: subtitle_ch / subtitle_en (none if left out)
+  // line under the title (none if this language leaves it out)
   function loreSubName(key) {
-    const e = loreData()[key] || {};
-    const sub = lang() === "zh" ? e.subtitle_ch : e.subtitle_en;
+    const e = loreOf(key);
+    const sub = e && e.subtitle;
     return sub && sub !== loreName(key) ? sub : "";
   }
 
@@ -183,8 +223,8 @@ document.addEventListener("DOMContentLoaded", () => {
   function membersOf(groupKey) {
     return SPLAT_GROUP[groupKey].members.filter((name) => {
       if (!name) return true;
-      if (!SPLAT_CHARA_ROSTER[name]) {
-        console.warn(`[oc-splatoon] "${name}" is in group "${groupKey}" but not in SPLAT_CHARA_ROSTER`);
+      if (!SPLAT_CHARA_COMMON_DATA[name]) {
+        console.warn(`[oc-splatoon] "${name}" is in group "${groupKey}" but not in SPLAT_CHARA_COMMON_DATA`);
         return false;
       }
       return true;
@@ -192,7 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function unaffiliated() {
-    return Object.keys(SPLAT_CHARA_ROSTER).filter((name) => groupsOf(name).length === 0);
+    return Object.keys(SPLAT_CHARA_COMMON_DATA).filter((name) => groupsOf(name).length === 0);
   }
 
   function escapeHtml(str) {
@@ -211,7 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // the character's main picture (see splatThumbSrc at the top).
   // The initial sits underneath and stays visible if there's no image yet.
   function thumbHtml(name, extraClass) {
-    const chara = SPLAT_CHARA_ROSTER[name];
+    const chara = charaOf(name);
     const src = splatThumbSrc(name, chara);
     return `
       <div class="splat-thumb ${extraClass || ""}" style="--chara:${chara.color}">
@@ -238,7 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       `;
     }
-    const chara = SPLAT_CHARA_ROSTER[name];
+    const chara = charaOf(name);
     return `
       <button class="splat-card${typeClass(chara)}"${ribbonAttr(chara)} type="button" data-name="${escapeHtml(name)}" style="--chara:${chara.color}">
         ${thumbHtml(name)}
@@ -281,7 +321,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function renderAll() {
-    const names = Object.keys(SPLAT_CHARA_ROSTER);
+    const names = Object.keys(SPLAT_CHARA_COMMON_DATA);
     grid.innerHTML = sectionHtml(siteText("group.all"), names);
   }
 
@@ -361,7 +401,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function relHtml(rel) {
-    const other = SPLAT_CHARA_ROSTER[rel.who];
+    const other = charaOf(rel.who);
     const name = charaName(rel.who);
     const swatch = other
       ? `<button type="button" class="splat-rel-swatch" style="--rel:${other.color}" data-goto="${escapeHtml(rel.who)}" aria-label="${escapeHtml(siteText("modal.open", { name }))}">${escapeHtml(name[0])}</button>`
@@ -473,7 +513,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // sourceCard = the grid card that was clicked; it keeps its ink
   // filled (.is-open in CSS) until this modal closes
   function openCharaModal(name, sourceCard) {
-    if (!SPLAT_CHARA_ROSTER[name]) return;
+    if (!SPLAT_CHARA_COMMON_DATA[name]) return;
     if (sourceCard) sourceCard.classList.add("is-open");
 
     const backdrop = document.createElement("div");
@@ -492,7 +532,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // fill (or refill) the modal with a character — used again when a
     // relationship square is clicked, to jump to that character
     function show(id) {
-      const c = SPLAT_CHARA_ROSTER[id];
+      const c = charaOf(id);
       if (!c) return;
       currentId = id;
       modal.className = `splat-modal${c.type ? ` splat-modal--${c.type}` : ""}`;
@@ -553,7 +593,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const vbtn = e.target.closest(".splat-variant-btn");
       if (vbtn) {
         const id = modal.dataset.id;
-        const chara = SPLAT_CHARA_ROSTER[id];
+        const chara = charaOf(id);
         const variant = variantsOf(chara).find((v) => v.id === vbtn.dataset.variant);
         modal.querySelector(".splat-portrait-slot").innerHTML = portraitHtml(id, chara, variant);
         modal.querySelectorAll(".splat-variant-btn").forEach((b) => b.setAttribute("aria-pressed", b === vbtn));
@@ -595,7 +635,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentKey = firstKey;
 
     function show(key) {
-      const entry = loreData()[key];
+      const entry = loreOf(key);
       if (!entry) return;
       currentKey = key;
       modal.style.setProperty("--lore", entry.color || "#7c9473");
@@ -678,7 +718,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <h4 class="splat-modal-label">${escapeHtml(label)}</h4>
         <div class="splat-lore-members">
           ${members.map((n) => `
-            <button type="button" class="splat-lore-member" data-member="${escapeHtml(n)}" style="--rel:${SPLAT_CHARA_ROSTER[n].color}">
+            <button type="button" class="splat-lore-member" data-member="${escapeHtml(n)}" style="--rel:${SPLAT_CHARA_COMMON_DATA[n].color}">
               <span class="splat-lore-member-dot" aria-hidden="true"></span>
               <span class="splat-lore-member-name">${escapeHtml(charaName(n))}</span>
               <span class="splat-lore-role">${escapeHtml(roleOf(n))}</span>
