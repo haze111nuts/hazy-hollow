@@ -44,12 +44,16 @@ html {
 }
 
 /* while a modal is open the page can't be scrolled at all — not even by
-   dragging its scrollbar. Both html and body, or body becomes its own
-   scroll area. The scrollbar's space stays (scrollbar-gutter in
-   common.css), so nothing shifts. */
-html.is-scroll-locked,
-html.is-scroll-locked body {
+   dragging its scrollbar. The scrollbar's space stays (scrollbar-gutter
+   in common.css), so nothing shifts.
+   body is set to visible: its overflow-x: hidden (common.css) would
+   otherwise turn it into its own 100%-tall scroll box, which cuts the
+   page short and jumps the scroll position back to the top. */
+html.is-scroll-locked {
   overflow: hidden;
+}
+html.is-scroll-locked body {
+  overflow: visible;
 }
 
 .splat-page {
