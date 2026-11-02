@@ -34,7 +34,7 @@ const SPLAT_CHARA_DATA_EN = {
                 "He represents the B button, which is why his name starts with B.",
                 "He's about 14 y/o at the start of the Splatoon 1 main story (ME2015).",
                 "His name was originally Brandon (from \"branch\"), meant to pair with his sister Hannah (from the Japanese \"hana\", meaning flower) because in Chinese, 花 (flower) + 枝 (branch) makes 花枝, the word for squid. Later it was swapped for a name that felt more iconic.",
-                "His first design was drawn back in 2015 when Splatoon 1 was released. Back then, he was an edgy kid who tried very hard to act cool."
+                "His first design was created in 2015 after Splatoon 1 was released. Back then, he was an edgy kid who tried very hard to act cool."
             ],
             relationships: [
                 {Axel: "They met during the events in Splatoon 2, where a misunderstanding made them rivals for a while. They made up in the end and quickly became close friends."},
