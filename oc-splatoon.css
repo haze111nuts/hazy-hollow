@@ -424,6 +424,7 @@ html.is-scroll-locked body {
 .splat-modal-scroll {
   min-height: 0; /* lets this area shrink and scroll inside the modal */
   overflow-y: auto;
+  scrollbar-gutter: stable; /* keep the scrollbar's space, so text doesn't shift when it appears */
   overscroll-behavior: contain;
   padding: 2rem;
   display: grid;

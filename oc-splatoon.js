@@ -112,10 +112,18 @@ document.addEventListener("DOMContentLoaded", () => {
     return nameIn(lang(), id) || id;
   }
 
-  // the name in the *other* language, shown small next to the main one
+  // Japanese name (data/oc-splatoon-jp.js), "" if there isn't one
+  function jpName(id) {
+    const data = typeof SPLAT_CHARA_DATA_JP !== "undefined" ? SPLAT_CHARA_DATA_JP[id] : null;
+    return (data && data.name) || "";
+  }
+
+  // the small name next to the main one:
+  // Chinese mode -> English name; English mode -> Japanese name
+  // (or the Chinese name if there's no Japanese one yet)
   function charaSubName(id) {
     if (!SPLAT_CHARA_COMMON_DATA[id]) return "";
-    const sub = nameIn(lang() === "zh" ? "en" : "zh", id);
+    const sub = lang() === "zh" ? nameIn("en", id) : (jpName(id) || nameIn("zh", id));
     return sub && sub !== charaName(id) ? sub : "";
   }
 

@@ -33,19 +33,19 @@ const SPLAT_CHARA_DATA_EN = {
             ],
             notes: [
                 "He represents the B button, which is why his name starts with B.",
-                "He's about 14y/o at the start of the Splatoon 1 main story (ME2015).",
+                "He's about 14 y/o at the start of the Splatoon 1 main story (ME2015).",
                 "His name was originally Brandon (from \"branch\"), meant to pair with his sister Hannah (from the Japanese \"hana\", meaning flower). In Chinese, 花 (flower) + 枝 (branch) makes 花枝, the word for squid. It was later swapped for a name that felt more iconic.",
                 "His first design was drawn back in 2015 when Splatoon 1 was released. Back then, he was an edgy kid who tried hard to act cool."
             ],
             relationships: [
                 {Axel: "They met during the events in Splatoon 2, where a misunderstanding made them rivals for a while. They made up in the end and quickly became close friends."},
-                {Edd: "They met during the conflict in the Deepsea Metro, and only figured out each other's background after piecing the clues together. Edd has never been very friendly and is hard to talk to, but they still help each other out, and Blade has always seen him as a partner and friend."},
+                {Edd: "They met during the conflict in the Deepsea Metro. Edd has never been very friendly and is hard to talk to, but they still help each other out, and Blade has always seen him as a friend."},
                 {Yoni: "One of the few good friends he made around the time of Splatoon 1. Unlike most people back then, Yoni never made fun of him. They get along really well and often hang out together."},
                 {Xiu: "They met through Axel. At first Blade wasn't used to how outgoing Xiu was, but they later became close friends. He often helps Xiu and Axel patch things up."},
                 {Hannah: "His older sister. Since they lived apart for many years, he doesn't know her very well, and she seems to despise him for various reasons. He's never really known how to get along with her."},
                 {Lance: "They met once when Lance came over to see Hannah, but didn't interact much. After seeing Lance play in matches, Blade came to really look up to him, and gets so nervous around him that he can't talk normally."},
-                {Noir: "A boy he met while helping some Octarians escape from underground. Seeing that Noir was very wary and had nowhere to go, Blade took him in and helped him adjust to life on the surface. They became good friends and are like family now, though Blade sometimes accidentally treats him like a pet."},
-                {"Captain Cuttlefish": "At first Blade thought he was a weird old geezer with questionable behavior, but after a few years of agent work, he slowly realized the Captain had been helping him grow the whole time. He cares about him a lot and sees him as family."}
+                {Noir: "A boy he met while helping Octarians escape from underground. Seeing that Noir was very wary and had nowhere to go, Blade took him in and helped him adjust to life on the surface. They became good friends and are like family now, though Blade sometimes accidentally treats him like a pet."},
+                {"Captain Cuttlefish": "At first Blade thought he was a weird old geezer with strange behavior, but after a few years of agent work, he slowly realized the Captain had been helping him grow the whole time. He cares about him a lot and sees him as family."}
             ],
             variant:[
                 {casual: "Casual"},
@@ -62,7 +62,7 @@ const SPLAT_CHARA_DATA_EN = {
         ],
         notes: [
             "He represents the A button, which is why his name starts with A.",
-            "He's about 15y/o at the start of the Splatoon 2 main story (ME2017).",
+            "He's about 15 y/o at the start of the Splatoon 2 main story (ME2017).",
             "His family is loosely based on Hawaiian culture, and in real-world terms, he'd be part Asian."
         ],
         relationships: [
