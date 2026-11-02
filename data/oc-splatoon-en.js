@@ -27,18 +27,18 @@ const SPLAT_CHARA_DATA_EN = {
         "Blade" : {
             name: "Blade",
             summary: [
-                "The protagonist of the main story in Splatoon1. Due to family reasons, he moved to Inkopolis City to live with his dad and older sister. He is socially awkward and isn't very athletic, so he was bad at splat games and had trouble fitting in with the local teens, they saw him as a loser from out of town, even turned his awkward moments into memes. During a test from Captain Cuttlefish, he showed quick thinking and resourcefulness and was chosen to become Agent 3 of the New Squidbeak Splatoon. After that, he got better at battling, and got caught up in conflicts involving the Octarian Army. By the end of the adventure, he gained confidence and understood his own strengths. Thanks to his success as an agent, he became an honorary member of [[OCTA]], and he often helps out with their volunteer work.",
+                "The protagonist of the main story in Splatoon 1. Due to family reasons, he moved to Inkopolis City to live with his dad and older sister. He is socially awkward and isn't very athletic, so he was bad at splat games and had trouble fitting in with the local teens, they saw him as a loser from out of town, even turned his awkward moments into memes. During a test from Captain Cuttlefish, he showed quick thinking and resourcefulness and was chosen to become Agent 3 of the New Squidbeak Splatoon. After that, he got better at battling, and got caught up in conflicts involving the Octarian Army. By the end of the adventure, he gained confidence and understood his own strengths. Thanks to his success as an agent, he became an honorary member of [[OCTA]], and he often helps out with their volunteer work.",
                 "He gets nervous easily and isn't very brave, but he has a strong sense of justice. Overall, he's a pretty ordinary teenage boy. He's thoughtful and kind, and usually ends up being the peacemaker and the one who does all the hard work. He tends to have bad luck, so he's often seen facepalming or making a \"why me\" face. After everything he's been through, he really values his friends and family.",
                 "He apparently knows how to play a little guitar."
             ],
             notes: [
                 "He represents the B button, which is why his name starts with B.",
-                "He's about 14 at the start of Splatoon 1's main story (ME2015).",
-                "His name was originally Brandon (from \"branch\"), meant to pair with his sister Hannah (from the Japanese \"hana\", meaning flower). In Chinese, 花 (flower) + 枝 (branch) makes 花枝, the word for squid. The name was changed later because Brandon felt too much like an ordinary real-world name.",
-                "He was one of the characters first drawn back in 2015 while playing Splatoon 1. Back then, he was an edgy kid who tried hard to act cool."
+                "He's about 14y/o at the start of the Splatoon 1 main story (ME2015).",
+                "His name was originally Brandon (from \"branch\"), meant to pair with his sister Hannah (from the Japanese \"hana\", meaning flower). In Chinese, 花 (flower) + 枝 (branch) makes 花枝, the word for squid. It was later swapped for a name that felt more iconic.",
+                "His first design was drawn back in 2015 when Splatoon 1 was released. Back then, he was an edgy kid who tried hard to act cool."
             ],
             relationships: [
-                {Axel: "At the start of Splatoon 2's main story, a misunderstanding made them rivals for a while. They made up in the end and quickly became close friends."},
+                {Axel: "They met during the events in Splatoon 2, where a misunderstanding made them rivals for a while. They made up in the end and quickly became close friends."},
                 {Edd: "They met during the conflict in the Deepsea Metro, and only figured out each other's background after piecing the clues together. Edd has never been very friendly and is hard to talk to, but they still help each other out, and Blade has always seen him as a partner and friend."},
                 {Yoni: "One of the few good friends he made around the time of Splatoon 1. Unlike most people back then, Yoni never made fun of him. They get along really well and often hang out together."},
                 {Xiu: "They met through Axel. At first Blade wasn't used to how outgoing Xiu was, but they later became close friends. He often helps Xiu and Axel patch things up."},

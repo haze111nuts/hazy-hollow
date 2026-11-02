@@ -548,6 +548,55 @@ html.is-scroll-locked body {
   background: var(--chara);
 }
 
+/* notes fold: click the "Notes" header to fold / unfold. A profile too
+   long to fit opens with its notes folded (fitNotes in oc-splatoon.js). */
+.splat-notes-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.splat-notes-toggle:hover { color: var(--ink); }
+.splat-notes-toggle:focus-visible { outline: 2px solid var(--chara); outline-offset: 3px; border-radius: 4px; }
+.splat-notes-chev {
+  width: 0.45rem; height: 0.45rem;
+  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+  rotate: 45deg; translate: 0 -0.12rem;
+  transition: rotate 0.25s ease, translate 0.25s ease;
+}
+.splat-notes-count {
+  font-size: 0.68rem; letter-spacing: 0;
+  min-width: 1.35rem; padding: 0.05rem 0.4rem; border-radius: 999px; text-align: center;
+  background: color-mix(in srgb, var(--chara) 22%, transparent);
+  color: color-mix(in srgb, var(--chara) 55%, var(--ink));
+}
+/* the body slides open/closed (grid row 1fr <-> 0fr) */
+.splat-notes-body {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows 0.3s ease;
+}
+.splat-notes-inner { min-height: 0; overflow: hidden; }
+.splat-modal-notes .splat-modal-label { transition: margin 0.3s ease; }
+.splat-modal-notes { transition: padding 0.3s ease; }
+
+.splat-modal-notes.is-folded .splat-notes-body { grid-template-rows: 0fr; }
+.splat-modal-notes.is-folded .splat-notes-chev { rotate: -45deg; translate: -0.1rem 0; }
+/* the count only shows while folded */
+.splat-modal-notes:not(.is-folded) .splat-notes-count { display: none; }
+.splat-modal-notes.no-anim,
+.splat-modal-notes.no-anim * { transition: none !important; }
+/* folded: the box shrinks to just its header row */
+.splat-modal-notes.is-folded { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.splat-modal-notes.is-folded .splat-modal-label { margin-bottom: 0; }
+
 /* relationships */
 .splat-rel-list {
   display: grid;

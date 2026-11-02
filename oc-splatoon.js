@@ -457,11 +457,19 @@ document.addEventListener("DOMContentLoaded", () => {
       ? `<div class="splat-modal-summary">${paragraphsHtml(summaryText)}</div>`
       : `<p class="splat-modal-empty">${escapeHtml(siteText("modal.noSummary"))}</p>`;
 
+    // notes can be folded away; they start open, and fitNotes() folds them
+    // if the profile is too long to fit without scrolling
     const notesList = local(chara, "notes") || [];
     const notes = notesList.length ? `
       <section class="splat-modal-notes">
-        <h4 class="splat-modal-label">${escapeHtml(siteText("modal.notes"))}</h4>
-        <ul>${notesList.map((n) => `<li>${linkLore(escapeHtml(clean(n)))}</li>`).join("")}</ul>
+        <h4 class="splat-modal-label">
+          <button type="button" class="splat-notes-toggle" aria-expanded="true">
+            <span class="splat-notes-chev" aria-hidden="true"></span>${escapeHtml(siteText("modal.notes"))}<span class="splat-notes-count">${notesList.length}</span>
+          </button>
+        </h4>
+        <div class="splat-notes-body"><div class="splat-notes-inner">
+          <ul>${notesList.map((n) => `<li>${linkLore(escapeHtml(clean(n)))}</li>`).join("")}</ul>
+        </div></div>
       </section>` : "";
 
     const rels = relationsOf(chara);
@@ -500,6 +508,22 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </div>
     `;
+  }
+
+  // ---------------- notes folding ----------------
+  function setNotesFolded(section, folded) {
+    section.classList.toggle("is-folded", folded);
+    const btn = section.querySelector(".splat-notes-toggle");
+    if (btn) btn.setAttribute("aria-expanded", String(!folded));
+  }
+  // after a profile is on screen: fold its notes if the profile scrolls
+  // (no slide animation for this first fold)
+  function fitNotes(scroller) {
+    const section = scroller.querySelector(".splat-modal-notes");
+    if (!section || scroller.scrollHeight <= scroller.clientHeight) return;
+    section.classList.add("no-anim");
+    setNotesFolded(section, true);
+    requestAnimationFrame(() => section.classList.remove("no-anim"));
   }
 
   // ---------------- modal ----------------
@@ -550,6 +574,7 @@ document.addEventListener("DOMContentLoaded", () => {
       closeBtn.setAttribute("aria-label", siteText("modal.close"));
       scroller.innerHTML = modalContentHtml(id, c);
       scroller.scrollTop = 0;
+      requestAnimationFrame(() => fitNotes(scroller));
     }
 
     // play the closing animation (.is-closing in CSS), then remove
@@ -577,6 +602,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     backdrop.addEventListener("click", (e) => {
       if (e.target === backdrop) return close();
+
+      // notes header -> fold / unfold the notes
+      const notesBtn = e.target.closest(".splat-notes-toggle");
+      if (notesBtn) {
+        const section = notesBtn.closest(".splat-modal-notes");
+        return setNotesFolded(section, !section.classList.contains("is-folded"));
+      }
 
       // lore link in the text -> open the lore modal on top
       const lore = e.target.closest("[data-lore]");
