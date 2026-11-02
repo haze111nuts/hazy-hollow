@@ -27,7 +27,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Blade" : {
             name: "Blade",
             summary: [
-                "The protagonist of the main story in Splatoon 1. Due to family reasons, he moved to Inkopolis City to live with his dad and older sister. He is socially awkward and isn't very athletic, so he was bad at splat games and had trouble fitting in with the local teens, they saw him as a loser from out of town, even turned his awkward moments into memes. During a test from Captain Cuttlefish, he showed quick thinking and resourcefulness and was chosen to become Agent 3 of the New Squidbeak Splatoon. After that, he got better at battling, and got caught up in conflicts involving the Octarian Army. By the end of the adventure, he gained confidence and understood his own strengths. Thanks to his success as an agent, he became an honorary member of [[OCTA]], and he often helps out with their volunteer work.",
+                "The protagonist of the main story in Splatoon 1. Due to family reasons, he moved to Inkopolis City to live with his dad and older sister. He is socially awkward and not very athletic, so he wasn't good at splat games and never really fit in. The local teens just saw him as the loser kid from out of town. During a test from Captain Cuttlefish, he showed quick thinking and resourcefulness and was chosen to become Agent 3 of the New Squidbeak Splatoon. After that, he got better at battling, and got caught up in conflicts involving the Octarian Army. By the end of the adventure, he gained confidence and understood his own strengths. Thanks to his success as an agent, he became an honorary member of [[OCTA]], and he often works with them as a volunteer.",
                 "He gets nervous easily and isn't very brave, but he has a strong sense of justice. Overall, he's a pretty ordinary teenage boy. He's thoughtful and kind, and usually ends up being the peacemaker and the one who does all the hard work. He tends to have bad luck, so he's often seen facepalming or making a \"why me\" face. After everything he's been through, he really values his friends and family.",
                 "He apparently knows how to play a little guitar."
             ],
@@ -53,32 +53,31 @@ const SPLAT_CHARA_DATA_EN = {
                 {captain: "Captain"}
             ]
         },
-        "Axel" : { 
-            name: "Axel",
-            summary: [
-                "二代主線的主角，那時他因為跟一群品行不良的青少年混在一起所以和家人關係緊張。一起事件導致他把３號視為眼中釘並對其追著跑，為了抓住他而當上新噴嘴小隊的4號成員，中途被捲進了與章魚軍團的衝突中，在一連串的冒險中逐漸領悟到自己被騙，在事件結束後跟３號解開誤會，並成功跟家人和解。",
-                "是個衝動、頭腦簡單而且性格火爆的小混混，講話很大聲，常常一言不合就出手搞的臉上經常有小傷，不過他很重義氣且做事光明正大，討厭卑鄙手段和小花招。是個很照顧奶奶的乖孫，若打架受傷會因為不想讓奶奶擔心而跑去住在朋友家。",
-                "家人經營一家夏威夷風味餐廳，他偶爾會去幫忙（但大部分時間都會想辦法開溜）"
-            ],
-            notes: [
-                "他代表的按鈕是A鍵，因此以A作為名字開頭",
-                "二代劇情剛開始時（ME2017）他約15歲",
-                "設定中有稍微加入夏威夷人的概念，算是有亞洲人血統",
-                "名字直接翻成中文應是亞克索爾，太長不順口只好簡稱亞克"
-            ],
-            relationships: [
-                {Blade: "在二代主線開頭兩人之間出現一些誤解因此當了一段時間的勁敵，事件最後他們和好而且在短時間內變成要好的親友。"},
-                {Xiu: "曾經造成亞克品行變差的爛朋友之一，雖然對方已經道歉過但亞克一直沒能徹底原諒他，兩人之間一直有點尷尬。"},
-                {Edd: "勉強還當對方是朋友，因為個性不太合所以兩人之間經常火藥味滿滿，亞克尤其不爽對方對小布那個無理的態度。"},
-                {Viper: "二代主線時作為敵人相遇，因為都很固執又不認輸，每次遇到時兩人總是會吵的沒完沒了。認為對方只是個愛叫囂的井底章魚。" },
-                {Elise: "親兄妹，從小就玩在一起，經常鬥嘴，總是被對方叨唸跟打頭。"},
-                {Marie: "二代主線中相遇，一開始覺得她又囉唆又煩，後來逐漸變成朋友。經常稱呼她為老太婆，也因此吃了好幾記紙傘攻擊。"}
-            ],
-            variant:[
-                {casual: "日常"},
-                {agent4: "特工服"}
-            ]            
-        },
+    "Axel": {
+        name: "Axel",
+        summary: [
+            "The protagonist of the main story in Splatoon 2. When he first appeared, he was hanging out with the wrong crowd, and things got tense between him and his family. After a certain chain of events, he saw Blade as an enemy and chased after him and even agreed to work as Agent 4 of the New Squidbeak Splatoon just to catch him. Along the way, he got caught up in the conflict with the Octarian Army. The journey eventually made him rethink the way he had been acting. In the end, he cut ties with his previous friends, cleared things up with Blade, and made peace with his family.",
+            "He's a loud, rowdy punk who's hot-headed and simple-minded. He gets into fights over the smallest things, so he usually has a bruise or two on his face. Still, he's loyal to his friends, always plays fair, and hates dirty tricks. Deep down, he's a good kid. Whenever he gets hurt in a fight, he stays at a friend's place so his grandma won't worry.",
+            "His family runs a Hawaiian-style restaurant. He helps out sometimes, but most of the time he tries to sneak off."
+        ],
+        notes: [
+            "He represents the A button, which is why his name starts with A.",
+            "He's about 15y/o at the start of the Splatoon 2 main story (ME2017).",
+            "His family is loosely based on Hawaiian culture, and in real-world terms, he'd be part Asian."
+        ],
+        relationships: [
+            { Blade: "They met during the events in Splatoon 2, where a misunderstanding made them rivals for a while. They made up in the end and quickly became close friends." },
+            { Xiu: "One of the bad friends who led Axel down the wrong path. Xiu has apologized, but Axel has never fully forgiven him, so things between them are still a bit awkward." },
+            { Edd: "Axel barely counts him as a friend. Their personalities clash, so they butt heads a lot, and Axel especially hates how rude Edd is to Blade." },
+            { Viper: "They met as enemies during the events in Splatoon 2. Both are stubborn and hate losing, so they argue nonstop whenever they run into each other. Axel thinks Viper is just a loudmouthed Octarian who needs his ass kicked." },
+            { Elise: "His younger sister. They grew up together and bicker all the time, and she's always nagging him and smacking him on the head." },
+            { Marie: "They met during the events in Splatoon 2. He found her naggy and annoying, but they slowly became friends. He often calls her \"granny\" and has taken plenty of hits from her wagasa parasol for it." }
+        ],
+        variant: [
+            { casual: "Casual" },
+            { agent4: "Agent 4" }
+        ]
+    },
         "Yoni" : { 
             name: "Yoni",
             summary: [
