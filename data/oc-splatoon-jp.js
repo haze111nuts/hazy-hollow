@@ -24,7 +24,7 @@ const SPLAT_CHARA_DATA_JP = {
         "Elise"              : { name: "エリス" },
         "Viper"              : { name: "ヴァイパー" },
         "Tighe"              : { name: "タイ" },
-        "Candice"            : { name: "キャンデ" },
+        "Candice"            : { name: "キャンディ" },
         "Maxwell"            : { name: "マクス" },
         "Dr. Lapis"          : { name: "ルリ博士" },
         "Betty"              : { name: "ベティ" },

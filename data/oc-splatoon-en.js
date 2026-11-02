@@ -39,8 +39,8 @@ const SPLAT_CHARA_DATA_EN = {
             relationships: [
                 {Axel: "They met during the events in Splatoon 2, where a misunderstanding made them rivals for a while. They made up in the end and quickly became close friends."},
                 {Edd: "They met during the conflict in the Deepsea Metro. Edd has never been very friendly and is hard to talk to, but they still help each other out, and Blade has always seen him as a friend."},
-                {Yoni: "One of the few good friends he made around the time of Splatoon 1. Unlike most people back then, Yoni never made fun of him. They get along really well and often hang out together."},
-                {Xiu: "They met through Axel. At first Blade wasn't used to how outgoing Xiu was, but they later became close friends. He often helps Xiu and Axel patch things up."},
+                {Yoni: "One of the few good friends he made around the time of Splatoon 1. Unlike most kids back then, Yoni never made fun of him. They get along really well and often hang out together."},
+                {Xiu: "They met because of Axel. At first Blade wasn't used to how outgoing Xiu was, but they later became close friends. He often helps Xiu and Axel patch things up."},
                 {Hannah: "His older sister. Since they lived apart for many years, he doesn't know her very well, and she seems to despise him for various reasons. He's never really known how to get along with her."},
                 {Lance: "They met once when Lance came over to see Hannah, but didn't interact much. After seeing Lance play in matches, Blade came to really look up to him, and gets so nervous around him that he can't talk normally."},
                 {Noir: "A boy he met while helping Octarians escape from underground. Seeing that Noir was very wary and had nowhere to go, Blade took him in and helped him adjust to life on the surface. They became good friends and are like family now, though Blade sometimes accidentally treats him like a pet."},
@@ -122,6 +122,7 @@ const SPLAT_CHARA_DATA_EN = {
             ],
             notes: [
                 "他代表的按鈕是+鍵，名字來自Add（加）",
+                "他的名字也來自發音相近的Eight（８）",                
                 "二代劇情剛開始時（ME2017）他約18歲",
                 "中文名字寫法經過好幾波修改：艾德→愛德→埃德"
             ],
@@ -394,7 +395,7 @@ const SPLAT_CHARA_DATA_EN = {
                 "看上去是個知性淑女，行為舉止卻時常流露出調皮跟童趣，愛說笑還常常搞一些莫名其妙的小花招捉弄同事，跟人聊天起來像個路邊的太太。個性很爽朗，會熱心的指導學生，且總是可以讓談話氣氛變得很輕鬆，是個親切的女子。"
             ],
             notes: [
-                "全名的拼法是Shinomiya Delphine，跟飯田一樣是日本姓配上英文名",
+                "全名的拼法是Shinomiya Delphine，日文寫作シノミヤ＝デルフィーヌ，跟飯田和水田類似",
                 "名字來自任天堂Swtich內的記憶體LPDDR4。可以重組成DRLP（Dr. Lapis）跟4D（四宮黛芬）並且對應她研究記憶的職業"
             ],
             relationships: [
@@ -681,7 +682,7 @@ const SPLAT_CHARA_DATA_EN = {
                 "個性悲觀，內向又膽小，還很優柔寡斷，總是把事情往最壞的方向想，在軍隊中也是因為能力在水平以下而總是戰戰兢兢的，是在摯友的陪伴下才終於初次感覺到幸福。在失去摯友之後可能是打擊太大經常會失神或是精神渙散，在養女的多年的陪伴下才逐漸恢復元氣。是個工作勤勞的人，但經常因為態度不夠強硬而被收容所的小章魚們淹沒。"
             ],
             notes: [
-                "全名的拼法是Asai Ada，跟飯田一樣是日本姓配上英文名",
+                "全名的拼法是Asai Ada，日文寫作アサイ＝エイダ，跟飯田和水田類似",
                 "名字Ada來自於Switch的充電器（Adapter）",
                 "姓氏的由來是巴西莓（Açaí berry）"
             ],
