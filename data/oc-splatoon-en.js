@@ -27,15 +27,14 @@ const SPLAT_CHARA_DATA_EN = {
         "Blade" : {
             name: "Blade",
             summary: [
-                "The protagonist of the main story in Splatoon 1. Due to family reasons, he moved to Inkopolis City to live with his dad and older sister. He is socially awkward and not very athletic, so he wasn't good at splat games and never really fit in. The local teens just saw him as the loser kid from out of town. During a test from Captain Cuttlefish, he showed quick thinking and resourcefulness and was chosen to become Agent 3 of the New Squidbeak Splatoon. After that, he got better at battling, and got caught up in conflicts involving the Octarian Army. By the end of the adventure, he gained confidence and understood his own strengths. Thanks to his success as an agent, he became an honorary member of [[OCTA]], and he often works with them as a volunteer.",
-                "He gets nervous easily and isn't very brave, but he has a strong sense of justice. Overall, he's a pretty ordinary teenage boy. He's thoughtful and kind, and usually ends up being the peacemaker and the one who does all the hard work. He tends to have bad luck, so he's often seen facepalming or making a \"why me\" face. After everything he's been through, he really values his friends and family.",
-                "He apparently knows how to play a little guitar."
+                "The protagonist of the main story in Splatoon 1. He moved to Inkopolis City to live with his dad and older sister due to family reasons. He was socially awkward and not very athletic, so he wasn't good at splat games and never really fit in. The local teens saw him as the loser kid from out of town and often made fun of him by turning him into online memes. When Captain Cuttlefish secretly put him to the test, he showed quick thinking and resourcefulness and was chosen to become Agent 3 of the New Squidbeak Splatoon. He got caught up in conflicts involving the Octarian Army. By the end of the adventure, he gained confidence and understood his own strengths. Thanks to his success as an agent, he became an honorary member of [[OCTA]], and he often works with them as a volunteer.",
+                "He gets nervous easily and isn't very brave, but he has a strong sense of justice and is actually a good leader. Overall, he's a pretty ordinary teenage boy. He's thoughtful and kind, and usually ends up being the peacemaker and the one who does all the hard work. He tends to have bad luck, so he's often seen facepalming or giving a \"why me\" look. After everything he's been through, he really values his friends and family. He apparently knows how to play a little guitar."
             ],
             notes: [
                 "He represents the B button, which is why his name starts with B.",
                 "He's about 14 y/o at the start of the Splatoon 1 main story (ME2015).",
-                "His name was originally Brandon (from \"branch\"), meant to pair with his sister Hannah (from the Japanese \"hana\", meaning flower). In Chinese, 花 (flower) + 枝 (branch) makes 花枝, the word for squid. It was later swapped for a name that felt more iconic.",
-                "His first design was drawn back in 2015 when Splatoon 1 was released. Back then, he was an edgy kid who tried hard to act cool."
+                "His name was originally Brandon (from \"branch\"), meant to pair with his sister Hannah (from the Japanese \"hana\", meaning flower) because in Chinese, 花 (flower) + 枝 (branch) makes 花枝, the word for squid. Later it was swapped for a name that felt more iconic.",
+                "His first design was drawn back in 2015 when Splatoon 1 was released. Back then, he was an edgy kid who tried very hard to act cool."
             ],
             relationships: [
                 {Axel: "They met during the events in Splatoon 2, where a misunderstanding made them rivals for a while. They made up in the end and quickly became close friends."},
@@ -56,14 +55,13 @@ const SPLAT_CHARA_DATA_EN = {
     "Axel": {
         name: "Axel",
         summary: [
-            "The protagonist of the main story in Splatoon 2. When he first appeared, he was hanging out with the wrong crowd, and things got tense between him and his family. After a certain chain of events, he saw Blade as an enemy and chased after him and even agreed to work as Agent 4 of the New Squidbeak Splatoon just to catch him. Along the way, he got caught up in the conflict with the Octarian Army. The journey eventually made him rethink the way he had been acting. In the end, he cut ties with his previous friends, cleared things up with Blade, and made peace with his family.",
-            "He's a loud, rowdy punk who's hot-headed and simple-minded. He gets into fights over the smallest things, so he usually has a bruise or two on his face. Still, he's loyal to his friends, always plays fair, and hates dirty tricks. Deep down, he's a good kid. Whenever he gets hurt in a fight, he stays at a friend's place so his grandma won't worry.",
-            "His family runs a Hawaiian-style restaurant. He helps out sometimes, but most of the time he tries to sneak off."
+            "The protagonist of the main story in Splatoon 2. When he first appeared, he was hanging out with the wrong crowd, and things got tense between him and his family. After a certain chain of events, he saw Blade as an enemy and chased after him and even agreed to work as Agent 4 of the New Squidbeak Splatoon just to catch him. Along the way, he got caught up in the conflict with the Octarian Army. The journey eventually made him rethink the way he had been acting. In the end, he cut ties with his previous friends, cleared things up with Blade, and made peace with his family. His family runs a Hawaiian-style restaurant. He helps out sometimes, but most of the time he tries to sneak off.",
+            "He's a loud, rowdy punk who's hot-headed and simple-minded. He gets into fights over the smallest things, so he usually has a bruise or two on his face. Still, he's loyal to his friends, always plays fair, and hates dirty tricks. Deep down, he's a good kid. Whenever he gets hurt in a fight, he stays at a friend's place so his grandma won't worry."
         ],
         notes: [
             "He represents the A button, which is why his name starts with A.",
             "He's about 15 y/o at the start of the Splatoon 2 main story (ME2017).",
-            "His family is loosely based on Hawaiian culture, and in real-world terms, he'd be part Asian."
+            "His family is loosely based on Hawaiian culture, and conceptually, he is part Asian."
         ],
         relationships: [
             { Blade: "They met during the events in Splatoon 2, where a misunderstanding made them rivals for a while. They made up in the end and quickly became close friends." },
