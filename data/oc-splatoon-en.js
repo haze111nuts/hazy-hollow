@@ -33,7 +33,7 @@ const SPLAT_CHARA_DATA_EN = {
             notes: [
                 "He represents the B button, which is why his name starts with B.",
                 "He's about 14 y/o at the start of the Splatoon 1 main story (ME2015).",
-                "His name was originally Brandon (from \"branch\"), meant to pair with his sister Hannah (from the Japanese \"hana\", meaning flower) because in Chinese, 花 (flower) + 枝 (branch) makes 花枝, the word for squid. Later it was swapped for a name that felt more iconic.",
+                "His name was originally Brandon (from \"branch\"), meant to pair with his sister Hannah (from the Japanese \"hana\", meaning flower) because in Chinese, 花 (flower) + 枝 (branch) makes 花枝(squid). Later it was swapped for a name that felt more iconic.",
                 "His first design was created in 2015 after Splatoon 1 was released. Back then, he was an edgy kid who tried very hard to act cool."
             ],
             relationships: [
@@ -56,7 +56,7 @@ const SPLAT_CHARA_DATA_EN = {
         name: "Axel",
         summary: [
             "The protagonist of the main story in Splatoon 2. When he first appeared, he was hanging out with the wrong crowd, and things got tense between him and his family. After a certain chain of events, he saw Blade as an enemy and chased after him and even agreed to work as Agent 4 of the New Squidbeak Splatoon just to catch him. Along the way, he got caught up in the conflict with the Octarian Army. The journey eventually made him rethink the way he had been acting. In the end, he cut ties with his previous friends, cleared things up with Blade, and made peace with his family. His family runs a Hawaiian-style restaurant. He helps out sometimes, but usually tries to sneak off.",
-            "He's a loud, rowdy punk who's hot-headed and simple-minded. He gets into fights over the smallest things, so he usually has a bruise or two on his face. Still, he's loyal to his friends, always plays fair, and hates dirty tricks. Deep down, he's a good kid. Whenever he gets hurt in a fight, he stays at a friend's place so his grandma won't worry."
+            "He's a loud, rowdy punk who's hot-headed and simple-minded. He gets into fights over the smallest things, so he usually has a bruise or two on his face. Still, he's loyal to his friends, always plays fair, and hates dirty tricks. Deep down, he's a good kid. Whenever he gets hurt in a fight, he stays at a friend's place so his grandma doesn’t have to see his injuries"
         ],
         notes: [
             "He represents the A button, which is why his name starts with A.",
