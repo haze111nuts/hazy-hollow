@@ -116,28 +116,26 @@ const SPLAT_CHARA_DATA_EN = {
         "Edd" : { 
             name: "Edd",
             summary: [
-                "深海地鐵支線的主角。原本是章魚軍團的一員，這個成長環境讓他有足夠的機械工程知識，尤其擅長交通工具相關的技術，但他不認可軍團的理念，曾在軍團的學院中和一夥人持續進行跟改革有關的秘密活動。在即將離開地下時不巧被捲入[[深海地鐵測驗程序]]而失憶，他在事件最後得以逃出抵達陸上並回想起自己的過去。為了報答新噴嘴小隊在事件中對他的幫助，他姑且算是加入新噴嘴小隊成為8號成員。",
-                "孤狼一匹，個性固執而且有些孤僻，總是眼神兇惡一臉不滿的樣子﹑傲氣十足﹑情緒表達上非常不坦率，就算想幫忙也不會親口說，是一個很不好相處的傢伙。他還很不信任他人，然而曾經的軍團同夥卻說他原本並不是這樣的人…？",
-                "他似乎還挺喜歡陸上的景色。"
+                "The protagonist of the Deepsea Metro side story. He used to be a member of the Octarian Army. Growing up there gave him a solid background in mechanical engineering, and he specialized in vehicles related technoloies. He never align with the Army's ideals, and while at the Octarian Army Academy, he secretly worked with a group of students who wanted change. Just before he could leave the underground, he got caught up in the [[Deepsea Metro Testing Procedure]] and lost his memory. In the end, he escaped to the surface and remembered his past. To repay the New Squidbeak Splatoon for their help, he joined them as Agent 8.",
+                "A proud, edgy loner who always looks annoyed and unfriendly. He's stubborn and never shows how he really feels. Even when he wants to help, he won't say it out loud, which makes him hard to get along with. He doesn't trust anyone, but his old comrades from the Army say he wasn't always like this…?",
+                "He seems to like the scenery on the surface."
             ],
             notes: [
-                "他代表的按鈕是+鍵，名字來自Add（加）",
-                "他的名字也來自發音相近的Eight（８）",                
-                "二代劇情剛開始時（ME2017）他約18歲",
-                "中文名字寫法經過好幾波修改：艾德→愛德→埃德"
+                "He represents the + button, which is why his name comes from \"Add\".",
+                "His name also comes from \"Eight\".",
+                "He's about 18 y/o at the start of the Splatoon 2 main story (ME2017)."
             ],
             relationships: [
-                {Minerva: "雙胞胎姐姐，兩人的觀念跟哲學雖然互相衝突但在軍團中還算相處和平，後來一連串事件導致埃德對她產生許多不滿跟憤恨。兩人似乎有未解開的誤會。"},
-                {Blade: "軍團時期曾關注對方的入侵事蹟，對他的能力跟意圖抱持質疑，深海地鐵事件中更因為失憶導致兩人之間發生沒必要的衝突，最後順利和解。對他的態度不太友善但偶爾會出手幫忙。"},
-                {Axel: "個性不太合所以兩人之間經常火藥味滿滿，覺得對方是從小在愜意環境下長大的天真愚蠢花枝。"},
-                {Dorothy: "因為OCTA相識，覺得對方是個令人敬佩的女性。似乎特別受對方照顧。"},
-                {Marina: "在深海地鐵事件中相識，同為前軍團成員也有工程背景還算和拍。挺感謝她各方面的營救跟幫忙但實在不想一直欠她人情。"},
-                
+                { Minerva: "His twin sister. They have opposite views and beliefs, but they got along fine back in the Army. A chain of events later left Edd with a lot of resentment toward her. There seems to be a misunderstanding between them that was yet to be cleared up." },
+                { Blade: "Back in the Army, Edd followed intel of Agent 3's infiltration and doubted his skills and motives. During the events in the Deepsea Metro, Edd's memory loss caused more conflict between them, but they made peace in the end. He isn't very friendly to Blade, but he does help him out now and then." },
+                { Axel: "Their personalities clash, so they butt heads a lot. Edd thinks Axel is a naive brat who's never experienced hardships." },
+                { Dorothy: "They met because of OCTA. He admires her, and she seems to take extra good care of him." },
+                { Marina: "They met during the events in the Deepsea Metro. Both are former Octarians with an engineering background, so they get along fairly well. He's grateful for all the help she offered to him, but he really doesn't want to keep owing her favors." }
             ],
-            variant:[
-                {agent8: "深海地鐵測驗衣"},
-                {casual: "日常"}                
-            ]            
+            variant: [
+                { agent8: "Agent 8" },
+                { casual: "Casual" }
+            ]
         },
         "Wade" : { 
             name: "Wade",
