@@ -98,7 +98,7 @@ const SPLAT_CHARA_DATA_EN = {
             name: "Xiu",
             summary: [
                 "First appeared in the main story of Splatoon 2. He has known Axel for a long time, and back then, he was one of the bad kids who led Axel down the wrong path. After Axel cut ties with the group, Xiu left too, just so he could make up with him. He eventually managed to squeeze his way into Axel's new circle of friends.",
-                "He's an attention-seeking social butterfly who's never afraid to show himself off. He tends to likes high-class and fancy things, but he's really just a regular teenager who wants to impress the cool kids. He's bit of a drama queen and can be pretty flirtatious. He's also extremely online. He's very active on social media and will jump on every trend for attention, even managed to injure his own eye in one of the livestream challenges. He works part-time at a beauty store in Arowana Mall, he seems to have a knack for makeup and fashion.",
+                "He's an attention-seeking social butterfly who's never afraid to show himself off. He tends to like high-class and fancy things, but he's really just a regular teenager who wants to impress the cool kids. He's a bit of a drama queen and can be pretty flirtatious. He's also extremely online. He's very active on social media and will jump on every trend for attention, and he even managed to injure his own eye in one of the livestream challenges. He works part-time at a beauty store in Arowana Mall and seems to have a knack for makeup and fashion.",
                 "His favorite food is tiramisu."
             ],
             notes: [
@@ -116,7 +116,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Edd" : { 
             name: "Edd",
             summary: [
-                "The protagonist of the Deepsea Metro side story. He used to be a member of the Octarian Army. Growing up there gave him a solid background in mechanical engineering, and he specialized in vehicles related technologies. He never align with the Army's ideals, and while at the Octarian Army Academy, he secretly worked with a group of students who wanted change. Just before he could leave the underground, he got caught up in the [[Deepsea Metro Testing Procedure]] and lost his memory. In the end, he escaped to the surface and remembered his past. To repay the New Squidbeak Splatoon for their help, he joined them as Agent 8.",
+                "The protagonist of the Deepsea Metro side story. He used to be a member of the Octarian Army. Growing up there gave him a solid background in mechanical engineering, and he specialized in vehicle-related technology. He never aligned with the Army's ideals, and while at the Octarian Army Academy, he secretly worked with a group of students who wanted change. Just before he could leave the underground, he got caught up in the [[Deepsea Metro Testing Procedure]] and lost his memory. In the end, he escaped to the surface and remembered his past. To repay the New Squidbeak Splatoon for their help, he joined them as Agent 8.",
                 "A proud, edgy loner who always looks annoyed and unfriendly. He's stubborn and never shows how he really feels. Even when he wants to help, he won't say it out loud, which makes him hard to get along with. He doesn't trust anyone, but his old comrades from the Army say he wasn't always like this…?",
                 "He seems to like the scenery on the surface."
             ],
@@ -126,11 +126,11 @@ const SPLAT_CHARA_DATA_EN = {
                 "He's about 18 y/o at the start of the Splatoon 2 main story (ME2017)."
             ],
             relationships: [
-                { Minerva: "His twin sister. They have opposite views and beliefs, but they got along fine back in the Army. A chain of events later left Edd with a lot of resentment toward her. There seems to be a misunderstanding between them that was yet to be cleared up." },
-                { Blade: "Back in the Army, Edd followed intel of Agent 3's infiltration and doubted his skills and motives. During the events in the Deepsea Metro, Edd's memory loss caused more conflict between them, but they made peace in the end. He isn't very friendly to Blade, but he does help him out now and then." },
+                { Minerva: "His twin sister. They have opposite views and beliefs, but they got along fine back in the Army. A chain of events later left Edd with a lot of resentment toward her. There seems to be a misunderstanding between them that has yet to be cleared up." },
+                { Blade: "Back in the Army, Edd followed intel on Agent 3's infiltration and doubted his skills and motives. During the events in the Deepsea Metro, Edd's memory loss caused more conflict between them, but they made peace in the end. He isn't very friendly to Blade, but he does help him out now and then." },
                 { Axel: "Their personalities clash, so they butt heads a lot. Edd thinks Axel is a naive brat who's never experienced hardships." },
                 { Dorothy: "They met because of OCTA. He admires her, and she seems to take extra good care of him." },
-                { Marina: "They met during the events in the Deepsea Metro. Both are former Octarians with an engineering background, so they get along fairly well. He's grateful for all the help she offered to him, but he really doesn't want to keep owing her favors." }
+                { Marina: "They met during the events in the Deepsea Metro. Both are former Octarians with an engineering background, so they get along fairly well. He's grateful for all the help she offered him, but he really doesn't want to keep owing her favors." }
             ],
             variant: [
                 { agent8: "Agent 8" },
