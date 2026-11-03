@@ -336,9 +336,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const VIEWS = { group: renderByGroup, all: renderAll };
   let currentView = "group";
 
-  function setView(view) {
+  // animate: false re-draws the grid without the sections sliding in
+  // (used when switching language — see .no-enter in the CSS)
+  function setView(view, animate = true) {
     currentView = VIEWS[view] ? view : "group";
     sectionIndex = 0;
+    grid.classList.toggle("no-enter", !animate);
     VIEWS[currentView]();
     viewButtons.forEach((btn) => {
       btn.classList.toggle("is-active", btn.dataset.view === currentView);
@@ -790,7 +793,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.addEventListener("sitelangchange", () => {
     refreshText();
-    setView(currentView);
+    setView(currentView, false);
     if (refreshOpenModal) refreshOpenModal();
     if (refreshLoreModal) refreshLoreModal();
   });

@@ -1130,6 +1130,9 @@ button.splat-rel-swatch:focus-visible {
   from { opacity: 0; transform: translateY(16px); }
 }
 
+/* switching language re-draws the grid: no slide-in for that */
+.splat-grid.no-enter .splat-group { animation: none; }
+
 @media (prefers-reduced-motion: reduce) {
   .splat-page > .back-link,
   .splat-header,
