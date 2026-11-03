@@ -27,7 +27,7 @@ const SPLAT_CHARA_DATA_EN = {
     "Blade": {
         name: "Blade",
         summary: [
-            "The protagonist of the main story in Splatoon 1. He moved to Inkopolis City to live with his dad and older sister due to family reasons. He was socially awkward and not very athletic, so he wasn't good at splat games and never really fit in. The local teens saw him as the loser kid from out of town and often made fun of him by turning him into online memes. When Captain Cuttlefish secretly put him to the test, he showed quick thinking and resourcefulness and was chosen to become Agent 3 of the New Squidbeak Splatoon. He got caught up in conflicts involving the Octarian Army. By the end of the adventure, he gained confidence and understood his own strengths. Thanks to his success as an agent, he became an honorary member of [[OCTA]], and he often works with them as a volunteer.",
+            "The protagonist of the main story in Splatoon 1. He moved to Inkopolis City to live with his dad and sister due to family reasons. He was socially awkward and not very athletic, so he wasn't good at splat games and never really fit in. The local teens saw him as the loser kid from out of town and often made fun of him by turning him into online memes. When Captain Cuttlefish secretly put him to the test, he showed quick thinking and resourcefulness and was chosen to become Agent 3 of the New Squidbeak Splatoon. He got caught up in conflicts involving the Octarian Army. By the end of the adventure, he gained confidence and understood his own strengths. Thanks to his success as an agent, he became an honorary member of [[OCTA]], and he often works with them as a volunteer.",
             "He gets nervous easily and isn't very brave, but he has a strong sense of justice and is actually a good leader. Overall, he's a pretty ordinary teenage boy. He's thoughtful and kind, and usually ends up being the peacemaker and the one who does all the hard work. He tends to have bad luck, so he's often seen facepalming or giving a \"why me\" look. After everything he's been through, he really values his friends and family. He apparently knows how to play a little guitar."
         ],
         notes: [
@@ -237,7 +237,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Roy" : { 
             name: "Roy",
             summary: [
-                "偶爾會在魷空塔比賽的積分榜上出現的少年。一天忽然從街上冒出騷擾艾咪而和蘭斯起衝突，在給對方一番挑釁後兩人決定用對戰解決，過程中因為表現非常出色而被招進了黑娜的隊裡。是隊伍中的遠距離擔當，狙人乾淨絲毫不手軟，甚至到了有些無情的地步。有時會毫無通知就翹掉練習。",
+                "偶爾會在魷空塔比賽的積分榜上出現的少年。一天忽然從街上冒出騷擾艾咪而和蘭斯起衝突，在給對方一番挑釁後兩人決定用對戰解決，過程中因為表現非常出色而被招進了黑娜的隊裡。是隊伍中的遠距離擔當，狙人乾淨絲毫不手軟，甚至到了極度無情的地步。有時會毫無通知就翹掉練習。",
                 "他的話不多，表情也超少，每次隊伍聚會都一副漠不關心的樣子，而且他不管對誰講話都很不客氣，每次開口都是不友善的字句。他還很沒有同理心，絲毫不在乎別人的感受。他的全身上下散發著一股不良少年的氣質，總是給人一種隨時會衝出去揍人的感覺。他好像很喜歡吃甜的，總是在喝飲料或是啃零食。",
                 "平日似乎是在高領市一家當鋪打工，會在裡面的二手武器專區幫忙修補器材。"
             ],
@@ -499,7 +499,7 @@ const SPLAT_CHARA_DATA_EN = {
             ],
             relationships: [
                 {"Father Chelon": "讓自己能獲得人生的人物，非常效忠對方。會全力完成他吩咐的事項。"},
-                {Angelica: "從小就跟對方一起在教父先生的提拔下長大，是伙伴也是某種程度上的家人。後來被安排成其下屬。即便一副不耐煩的樣子還是會聽命一切吩咐。在關鍵時刻總會默默的挺她。"},                
+                {Angelica: "從小就跟對方一起在教父先生的提拔下長大，是伙伴也是某種程度上的家人。後來被安排成其下屬。即便一副不耐煩的樣子還是會聽命一切吩咐。"},                
                 {Lucian: "突然就被安排到同組一起工作，知道他很有本事但實在沒有很喜歡，有時候真想扁下去。"},
                 {Damian: "不靠譜的新人，感覺不適合作這一行。認為要配合他很麻煩。"}
             ],
