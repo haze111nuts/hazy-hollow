@@ -81,7 +81,7 @@ const SPLAT_CHARA_DATA_EN = {
         summary: [
             "First appeared in the main story of Splatoon 1. He was the only friend Blade had around that time, and he is always excited to hang out with Blade. When Blade lost his morale due to the hardship he faced in agent work, Yoni tried to cheer him up by showing him around the city. Yoni seems to know all the best places in Inkopolis.",
             "He is an outgoing and chaotic guy, always goofing around without a care in the world. He is constantly looking for fun and seems to have trouble sitting still. He is usually the comic relief of the group, often blurting out random jokes or memes that no one gets. He often speaks without thinking and will burst out laughing even at the most inappropriate moments.",
-            "He apparently got a job at an arcade after the events of Splatoon 1."
+            "He apparently got a job at Bar\"N\"Arcades during the events of Splatoon 1."
         ],
         notes: [
             "He represents the Y button, which is why his name starts with Y.",
@@ -91,7 +91,7 @@ const SPLAT_CHARA_DATA_EN = {
         relationships: [
             { Blade: "They met during the main story in Splatoon 1. Yoni thought the new kid needed some fun, so he showed him around Inkopolis City. Since they became friends, he tags along with Blade everywhere." },
             { Lance: "His older brother, who always looked out for him growing up. They seemed close, but something later came between them." },
-            { Paul: "They met during an incident at the arcade. They're both money-hungry dudes, so they get along great. Yoni likes hanging out at his pawnshop." }
+            { Paul: "They met during an incident at Bar\"N\"Arcades. They're both money-hungry dudes, so they get along great. Yoni likes hanging out at his pawnshop." }
         ]
     },
         "Xiu" : { 
