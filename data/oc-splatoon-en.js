@@ -79,7 +79,7 @@ const SPLAT_CHARA_DATA_EN = {
     "Yoni": {
         name: "Yoni",
         summary: [
-            "First appeared the main story of Splatoon 1. For a while, Yoni was the only friend Blade had, he is always excited to hang out with Blade. When Blade lost his morale due to the hardship he faced in agent work, Yoni tried to cheer him up by showing him around the city. Yoni seems to knows all the best places in Inkopolis.",
+            "First appeared the main story of Splatoon 1. He was the only friend Blade had around that time, and he is always excited to hang out with Blade. When Blade lost his morale due to the hardship he faced in agent work, Yoni tried to cheer him up by showing him around the city. Yoni seems to know all the best places in Inkopolis.",
             "He is an outgoing and chaotic guy, always goofing around without a care in the world. He is constantly looking for fun and seems to have trouble sitting still. He is usually the comic relief of the group, often blurt out random jokes or memes that no one gets. He often speaks without thinking and will burst out laughing even at the most inappropriate moments. ",
             "He apparently got a job at an arcade after the events of Splatoon 1."
         ],
