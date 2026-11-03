@@ -98,13 +98,13 @@ const SPLAT_CHARA_DATA_EN = {
             name: "Xiu",
             summary: [
                 "First appeared in the main story of Splatoon 2. He has known Axel for a long time, and back then, he was one of the bad kids who led Axel down the wrong path. After Axel cut ties with the group, Xiu left too, just so he could make up with him. He eventually managed to squeeze his way into Axel's new circle of friends.",
-                "He's an attention-seeking social butterfly who's never afraid to show himself off. He loves putting on a fabulous, high-class act to impress people, but he's really just a regular teenager who wants to fit in with the cool kids. He's flirty and a bit of a drama queen. He's also extremely online. He's very active on social media and jumps on every trend for attention, even managed to injure his own eye in one of the livestream challenges. He works part-time at a beauty counter in Arowana Mall now and then, he seems to have a knack for makeup and fashion.",
+                "He's an attention-seeking social butterfly who's never afraid to show himself off. He tends to likes high-class and fancy things, but he's really just a regular teenager who wants to impress the cool kids. He's bit of a drama queen and can be pretty flirtatious. He's also extremely online. He's very active on social media and will jump on every trend for attention, even managed to injure his own eye in one of the livestream challenges. He works part-time at a beauty store in Arowana Mall, he seems to have a knack for makeup and fashion.",
                 "His favorite food is tiramisu."
             ],
             notes: [
                 "He represents the X button, which is why his name starts with X.",
                 "He's a year older than Blade.",
-                "Conceptually, he has a bit of a New Yorker vibe."
+                "Conceptually, he is somewhat of a New Yorker."
             ],
             relationships: [
                 { Axel: "They used to be close but Xiu and some others led Axel down the wrong path, and they nearly fell out for good. Xiu has been trying to make up with him ever since, but Axel has never fully forgiven him, so things between them are still a bit awkward." },
