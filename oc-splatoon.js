@@ -528,8 +528,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (btn) btn.setAttribute("aria-expanded", String(!folded));
   }
   // after a profile is on screen: fold its notes if the profile scrolls
-  // (no slide animation for this first fold)
+  // (no slide animation for this first fold). Not on phones — the profile
+  // always scrolls there anyway, so folding wouldn't help.
+  const PHONE_LAYOUT = window.matchMedia("(max-width: 680px)"); // same width as the CSS phone layout
   function fitNotes(scroller) {
+    if (PHONE_LAYOUT.matches) return;
     const section = scroller.querySelector(".splat-modal-notes");
     if (!section || scroller.scrollHeight <= scroller.clientHeight) return;
     section.classList.add("no-anim");

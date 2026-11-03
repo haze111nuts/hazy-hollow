@@ -120,6 +120,11 @@ html.is-scroll-locked body {
 [data-lang-switch] .lang-switch:hover,
 [data-lang-switch] .lang-switch:focus-visible { opacity: 1; }
 [data-lang-switch] .lang-btn { padding: 0.28rem 0.65rem; }
+/* on phones the top-right corner is where a panel's × sits, so the
+   switch moves to the bottom-right corner instead */
+@media (max-width: 680px) {
+  [data-lang-switch] { top: auto; bottom: 12px; right: 12px; }
+}
 
 .splat-view-btn {
   font: inherit;
@@ -608,6 +613,9 @@ html.is-scroll-locked body {
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 0.8rem;
 }
+/* English text runs longer, so relationships stack in one column there
+   (html lang is set by common.js when the language changes) */
+html:lang(en) .splat-rel-list { grid-template-columns: 1fr; }
 
 .splat-rel {
   display: grid;

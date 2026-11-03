@@ -79,8 +79,8 @@ const SPLAT_CHARA_DATA_EN = {
     "Yoni": {
         name: "Yoni",
         summary: [
-            "First appeared the main story of Splatoon 1. He was the only friend Blade had around that time, and he is always excited to hang out with Blade. When Blade lost his morale due to the hardship he faced in agent work, Yoni tried to cheer him up by showing him around the city. Yoni seems to know all the best places in Inkopolis.",
-            "He is an outgoing and chaotic guy, always goofing around without a care in the world. He is constantly looking for fun and seems to have trouble sitting still. He is usually the comic relief of the group, often blurt out random jokes or memes that no one gets. He often speaks without thinking and will burst out laughing even at the most inappropriate moments. ",
+            "First appeared in the main story of Splatoon 1. He was the only friend Blade had around that time, and he is always excited to hang out with Blade. When Blade lost his morale due to the hardship he faced in agent work, Yoni tried to cheer him up by showing him around the city. Yoni seems to know all the best places in Inkopolis.",
+            "He is an outgoing and chaotic guy, always goofing around without a care in the world. He is constantly looking for fun and seems to have trouble sitting still. He is usually the comic relief of the group, often blurting out random jokes or memes that no one gets. He often speaks without thinking and will burst out laughing even at the most inappropriate moments.",
             "He apparently got a job at an arcade after the events of Splatoon 1."
         ],
         notes: [
@@ -90,28 +90,28 @@ const SPLAT_CHARA_DATA_EN = {
         ],
         relationships: [
             { Blade: "They met during the main story in Splatoon 1. Yoni thought the new kid needed some fun, so he showed him around Inkopolis City. Since they became friends, he tags along with Blade everywhere." },
-            { Lance: "His older brother, who has always been looking out for him growing up. They seemed close, but something later came between them." },
+            { Lance: "His older brother, who always looked out for him growing up. They seemed close, but something later came between them." },
             { Paul: "They met during an incident at the arcade. They're both money-hungry dudes, so they get along great. Yoni likes hanging out at his pawnshop." }
         ]
     },
         "Xiu" : { 
             name: "Xiu",
             summary: [
-                "二代主線時間點登場的少年。跟亞克似乎很久以前就認識，登場時跟亞克一起混在一群劣質青少年中，是讓對方品行變差的爛朋友之一。在對方脫逃出圈子後因為還想繼續和他作朋友而不顧後果的去找他和解，後來勉強擠進了亞克的新朋友圈。",
-                "個性外向積極愛表現，喜歡社交認識新朋友，還有點厚臉皮，經常有著不知哪來的謎之自信。是那種會在聚會或派對上提出奇怪團康鬼點子的人。似乎很喜歡大城市生活。是沒網路就會死的類型，在自己的社交帳號上很活躍，常會為了博取關注參與各種流行話題，一次直播挑戰中出事搞得他右眼有點受傷。另外，他喜歡的食物是提拉米酥。",
-                "偶爾會在龍魚購物商場的美妝專櫃做兼職。"
+                "First appeared in the main story of Splatoon 2. He has known Axel for a long time, and back then, he was one of the bad kids who led Axel down the wrong path. After Axel cut ties with the group, Xiu left too, just so he could make up with him. He eventually managed to squeeze his way into Axel's new circle of friends.",
+                "He's an attention-seeking social butterfly who's never afraid to show himself off. He loves putting on a fabulous, high-class act to impress people, but he's really just a regular teenager who wants to fit in with the cool kids. He's flirty and a bit of a drama queen. He's also extremely online. He's very active on social media and jumps on every trend for attention, even managed to injure his own eye in one of the livestream challenges. He works part-time at a beauty counter in Arowana Mall now and then, he seems to have a knack for makeup and fashion.",
+                "His favorite food is tiramisu."
             ],
             notes: [
-                "他代表的按鈕是X鍵，因此以X作為名字開頭",
-                "他比小布要大一歲",
-                "設定中有稍微加入紐約人的概念",
+                "He represents the X button, which is why his name starts with X.",
+                "He's a year older than Blade.",
+                "Conceptually, he has a bit of a New Yorker vibe."
             ],
             relationships: [
-                {Axel: "曾是親密的朋友，跟一些人一起帶壞亞克而差點鬧翻。修後來持續想和解但對方一直沒能徹底原諒他，兩人之間總是有點尷尬。"},
-                {Elise: "跟兄妹倆很小就認識所以很常玩在一起，是好朋友，兩人經常簡訊聊天，很多時候是在討論亞克的事情。"},
-                {Blade: "起先是為了要獲得更多接觸亞克的機會才接近對方變成好友，後來慢慢成為交心。"}
+                { Axel: "They used to be close but Xiu and some others led Axel down the wrong path, and they nearly fell out for good. Xiu has been trying to make up with him ever since, but Axel has never fully forgiven him, so things between them are still a bit awkward." },
+                { Elise: "He's known Axel and Elise since they were little, so they grew up hanging out together. They're good friends and they would text each other everyday, usually talking about Axel." },
+                { Blade: "At first, he got close to Blade just to have more chances to be around Axel, but over time they became real friends." }
             ],
-            variant:[]
+            variant: []
         },
         "Edd" : { 
             name: "Edd",
