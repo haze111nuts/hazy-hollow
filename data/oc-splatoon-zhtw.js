@@ -852,7 +852,8 @@ const SPLAT_LORE_DATA_ZHTW = {
         subtitle: "Deepsea Metro Testing Procedure",
         type: "Lore",
         summary : [
-            "TEST"
+            "練魚公司為了尋找優秀的個體而設計的測驗程序。在進行測驗之前，他們會將受驗者過去的所有記憶移除，接著讓測驗者搭乘地鐵去各個測驗戰進行挑戰，並會再測驗過程中慢慢歸還受驗者的記憶。他們聲稱會實現通過測驗的人的願望，但直到８號的出現為止似乎都完全沒有人通過該程序，而且那些參加者最後都下落不明。",
+            "似乎有不少章魚兵的失蹤似乎與此有關連。"
         ]
     },
     "Vector 8 Research Institute" : {
