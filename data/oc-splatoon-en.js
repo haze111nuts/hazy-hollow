@@ -117,7 +117,7 @@ const SPLAT_CHARA_DATA_EN = {
             name: "Edd",
             summary: [
                 "The protagonist of the Deepsea Metro side story. He used to be a member of the Octarian Army. Growing up there gave him a solid background in mechanical engineering, and he specialized in vehicle-related technology. He never aligned with the Army's ideals, and while at the Octarian Army Academy, he secretly worked with a group of students who wanted change. Just before he could leave the underground, he got caught up in the [[Deepsea Metro Testing Procedure]] and lost his memory. In the end, he escaped to the surface and remembered his past. To repay the New Squidbeak Splatoon for their help, he joined them as Agent 8.",
-                "A proud, edgy loner who always looks annoyed and unfriendly. He's stubborn and never shows how he really feels. Even when he wants to help, he won't say it out loud, which makes him hard to get along with. He doesn't trust anyone, but his old comrades from the Army say he wasn't always like this…?",
+                "A proud, edgy loner who always looks skeptical and unfriendly. He's stubborn and never shows how he really feels. Even when he wants to help, he won't say it out loud, which makes him hard to get along with. He doesn't trust anyone, but his old comrades from the Army say he wasn't always like this…?",
                 "He seems to like the scenery on the surface."
             ],
             notes: [
