@@ -68,7 +68,7 @@ const SPLAT_CHARA_DATA_EN = {
             { Xiu: "One of the bad friends who led Axel down the wrong path. Xiu has apologized, but Axel has never fully forgiven him, so things between them are still a bit awkward." },
             { Edd: "Axel barely counts him as a friend. Their personalities clash, so they butt heads a lot, and Axel especially hates how rude Edd is to Blade." },
             { Viper: "They met as enemies during the events in Splatoon 2. Both are stubborn and hate losing, so they argue nonstop whenever they run into each other. Axel thinks Viper is just a loudmouthed Octarian who needs his ass kicked." },
-            { Elise: "His younger sister. They grew up together and bicker all the time, and she's always nagging him and smacking him on the head." },
+            { Elise: "His younger sister. They grew up together and bicker all the time. She's always nagging him and smacking him on the head but they care about each other a lot." },
             { Marie: "They met during the events in Splatoon 2. He found her naggy and annoying, but they slowly became friends. He often calls her \"granny\" and has taken plenty of hits from her wagasa parasol for it." }
         ],
         variant: [
@@ -89,9 +89,9 @@ const SPLAT_CHARA_DATA_EN = {
             "Conceptually, he is Latino."
         ],
         relationships: [
-            { Blade: "They met during the main story in Splatoon 1. Yoni thought the new kid needed some fun, so he showed him around Inkopolis City. Since they became friends, he tags along with Blade everywhere." },
+            { Blade: "They met during the main story in Splatoon 1. Yoni thought the new kid needed some fun, so he showed him around Inkopolis City. Ever since they became friends, he tags along with Blade everywhere." },
             { Lance: "His older brother, who always looked out for him growing up. They seemed close, but something later came between them." },
-            { Paul: "They met during an incident at Bar\"N\"Arcades. They're both money-hungry dudes, so they get along great. Yoni likes hanging out at his pawnshop." }
+            { Paul: "They met during an incident at Bar\"N\"Arcades. They're both money-hungry dudes, so they get along great. Yoni loves hanging out at his pawnshop." }
         ]
     },
         "Xiu" : { 
@@ -108,7 +108,7 @@ const SPLAT_CHARA_DATA_EN = {
             ],
             relationships: [
                 { Axel: "They used to be close but Xiu and some others led Axel down the wrong path, and they nearly fell out for good. Xiu has been trying to make up with him ever since, but Axel has never fully forgiven him, so things between them are still a bit awkward." },
-                { Elise: "He's known Axel and Elise since they were little, so they grew up hanging out together. They're good friends and they would text each other everyday, usually talking about Axel." },
+                { Elise: "He met Elise while hanging out with her brother Axel, they became good friends and they would text each other often, usually talking about Axel." },
                 { Blade: "At first, he got close to Blade just to have more chances to be around Axel, but over time they became real friends." }
             ],
             variant: []
@@ -127,9 +127,9 @@ const SPLAT_CHARA_DATA_EN = {
             ],
             relationships: [
                 { Minerva: "His twin sister. They have opposite views and beliefs, but they got along fine back in the Army. A chain of events later left Edd with a lot of resentment toward her. There seems to be a misunderstanding between them that has yet to be cleared up." },
-                { Blade: "Back in the Army, Edd followed intel on Agent 3's infiltration and doubted his skills and motives. During the events in the Deepsea Metro, Edd's memory loss caused more conflict between them, but they made peace in the end. He isn't very friendly to Blade, but he does help him out now and then." },
-                { Axel: "Their personalities clash, so they butt heads a lot. Edd thinks Axel is a naive brat who's never experienced hardships." },
-                { Dorothy: "They met because of OCTA. He admires her, and she seems to take extra good care of him." },
+                { Blade: "Back in the Army, Edd was aware of Agent 3's infiltration and was skeptical of his skills and motives. During the events in the Deepsea Metro, Edd's memory loss caused more conflict between them, but they made peace in the end. He isn't very friendly to Blade but he does stick around with Blade's team and help him out from time to time." },
+                { Axel: "Their personalities clash, so they butt heads a lot. Edd thinks Axel is a naive Inkling brat who's never experienced hardships." },
+                { Dorothy: "They met because of OCTA. Edd think she is a brilliant woman, and she is particularly caring for him." },
                 { Marina: "They met during the events in the Deepsea Metro. Both are former Octarians with an engineering background, so they get along fairly well. He's grateful for all the help she offered him, but he really doesn't want to keep owing her favors." }
             ],
             variant: [
@@ -174,9 +174,9 @@ const SPLAT_CHARA_DATA_EN = {
             ],
             relationships: [
                 { Lance: "They've known each other for a long time and often teamed up in pair League Battles before Royal Flush was formed. Their conversations are usually short, but she trusts him a lot. There's an unspoken understanding between them." },
-                { Minerva: "They met during Hannah's one and only agent mission. Hannah thought she was okay and acknowledged her skills. After Minerva joined Royal Flush, they became teammates and friends, and they're also roommates." },
-                { Amy: "She sees Amy as a wimpy manager and a fangirl. She isn't too mean to her, but she dumps all the team-related chores on her." },                
-                { Roy: "Someone Lance and Amy picked for the team. She has no problem with his skills, but she finds him dangerous and hard to deal with, and never knows what to do with him. She won't talk to him unless she has to." },
+                { Minerva: "They met during Hannah's one and only agent mission. Hannah thought she was a fair opponent and acknowledged her skills. After Minerva joined Royal Flush, they became teammates and friends, and they're also roommates." },
+                { Amy: "She sees Amy as a wimpy manager and a fangirl. She isn't too mean to her, but she does tend to dump all the team-related chores on her." },                
+                { Roy: "To Hannah he is someone Lance and Amy picked for the team. She has no problem with his skills, but she finds him difficult to work with, and never knows what to do with him. She will not talk to him unless she has to." },
                 { Blade: "Her younger brother. They lived apart for many years, and because of their personalities and family reasons, she despises him. She has no interest in getting along with him and can't stand being in the same room with him." }
             ],
             variant: [
