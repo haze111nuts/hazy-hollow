@@ -117,7 +117,7 @@ const SPLAT_CHARA_DATA_EN = {
             name: "Edd",
             summary: [
                 "The protagonist of the Deepsea Metro side story. He used to be a member of the Octarian Army. Growing up there gave him a solid background in mechanical engineering, and he specialized in vehicle-related technology. He never aligned with the Army's ideals, and while at the Octarian Army Academy, he secretly worked with a group of students who wanted change. Just before he could leave the underground, he got caught up in the [[Deepsea Metro Testing Procedure]] and lost his memory. In the end, he escaped to the surface and remembered his past. To repay the New Squidbeak Splatoon for their help, he joined them as Agent 8.",
-                "A proud, edgy loner who always looks skeptical and unfriendly. He's stubborn and never shows how he really feels. Even when he wants to help, he won't say it out loud, which makes him hard to get along with. He doesn't trust anyone, but his old comrades from the Army say he wasn't always like this…?",
+                "A proud, edgy loner who always looks unfriendly and skeptical. He's stubborn and never shows how he really feels. Even when he wants to help, he won't say it out loud, which makes him hard to get along with. He doesn't trust anyone, but his old comrades from the Army say he wasn't always like this…?",
                 "He seems to like the scenery on the surface."
             ],
             notes: [
@@ -162,7 +162,7 @@ const SPLAT_CHARA_DATA_EN = {
             name: "Hannah",
             summary: [
                 "Soon after Inkopolis Tower opened for splat battles, she became a well-known top-ranked player with a violent close-range playstyle. She was then scouted by a shady duo to fight against the Octarians, she carried out one mission for them but quit right after to focus on competitive games. As ordinary battles eventually stopped being enough for her, she later accepted a fan's offer to help her put [[Royal Flush|a team]] together. This allowed her to play in many official tournaments, crushing opponents one after another with her team. Late in the story, she went missing, apparently fighting in some kind of illegal underground matches.",
-                "She is a tough, cold and aggressive individual who has a harsh attitude toward everything. She always looks unimpressed and annoyed. The only thing that will get her fired up or make her feel any sort of enjoyment is splat battles. She has a sharp tongue and a mean mouth and is never friendly to anyone. She especially cannot stand wimps or anything remotely sentimental. She also seems to have trouble saying simple things like \"thanks\".",
+                "She is a tough, cold and aggressive individual who has a harsh attitude toward everything. She always looks unimpressed and annoyed. The only thing that will get her fired up or make her feel any sort of enjoyment is splat battles. She has a sharp tongue and a mean mouth. She is never friendly to anyone and she especially cannot stand wimps or anything remotely sentimental. She also seems to have trouble saying simple things like \"thanks\".",
                 "She chugs down several cans of energy drinks on a daily basis."
             ],
             notes: [
