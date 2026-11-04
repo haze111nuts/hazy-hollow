@@ -161,8 +161,8 @@ const SPLAT_CHARA_DATA_EN = {
         "Hannah" : { 
             name: "Hannah",
             summary: [
-                "Soon after Inkopolis Tower opened for splat battles, she became a well-known top-ranked player with aggressive close-range playstyle. She once carried out a mission for the New Squidbeak Splatoon but quit right after. She is someone who expects a lot from both teammates and opponents, so solo Ranked Battles and pair League Battles eventually stopped being enough for her. She later accepted a fan's offer to become her manager and put a team together. This allowed her to play in many official tournaments and she was able to crush them with her team. Late in the story, she went missing, apparently fighting in some kind of illegal underground matches.",
-                "She is a tough, cold and aggresive indivisual who has a harsh attitude toward everything. She always looks unimpressed and annoyed, the only thing that will get her fired up or feel any sort of enjoyment is splat battle. She has a sharp tongue and a mean mouth and is never friendly to anyone, she especially cannot stand wimps or anything remotely sentimental. She also seems to have trouble saying simple things like \"thanks\".",
+                "Soon after Inkopolis Tower opened for splat battles, she became a well-known top-ranked player with an aggressive close-range playstyle. She once carried out a mission for the New Squidbeak Splatoon but quit right after. She is someone who expects a lot from both teammates and opponents, so solo Ranked Battles and pair League Battles eventually stopped being enough for her. She later accepted a fan's offer to become her manager and put a team together. This allowed her to play in many official tournaments, where she and her team crushed the competition. Late in the story, she went missing, apparently fighting in some kind of illegal underground matches.",
+                "She is a tough, cold and aggressive individual who has a harsh attitude toward everything. She always looks unimpressed and annoyed. The only thing that will get her fired up or make her feel any sort of enjoyment is splat battles. She has a sharp tongue and a mean mouth and is never friendly to anyone. She especially cannot stand wimps or anything remotely sentimental. She also seems to have trouble saying simple things like \"thanks\".",
                 "She chugs down several cans of energy drinks on a daily basis."
             ],
             notes: [
@@ -173,11 +173,11 @@ const SPLAT_CHARA_DATA_EN = {
                 "Her name was originally going to be something like Homura (ホムラ) to match the HOME button, but the idea was dropped."
             ],
             relationships: [
-                { Lance: "They've known each other for a long time and often teamed up in pair League Battles before Royal Flush was formed. Their conversations are usually short, but she trusts him a lot. there's an unspoken understanding between them." },
-                { Minerva: "They met during Hannah's one and only agent mission. Hannah thought she was okay and acknowledged her skills. After Minerva joined Royal Flush, they became teammates and friends, they're also roommates." },
-                { Amy: "She sees Amy as a wimpy manager and a fangirl. She isn't too mean to her, but she would dump every team-related chores on her." },                
+                { Lance: "They've known each other for a long time and often teamed up in pair League Battles before Royal Flush was formed. Their conversations are usually short, but she trusts him a lot, and there's an unspoken understanding between them." },
+                { Minerva: "They met during Hannah's one and only agent mission. Hannah thought she was okay and acknowledged her skills. After Minerva joined Royal Flush, they became teammates and friends, and they're also roommates." },
+                { Amy: "She sees Amy as a wimpy manager and a fangirl. She isn't too mean to her, but she dumps all the team-related chores on her." },                
                 { Roy: "Someone Lance and Amy picked for the team. She has no problem with his skills, but she finds him dangerous and hard to deal with, and never knows what to do with him. She won't talk to him unless she has to." },
-                { Blade: "Her younger brother. They lived apart for many years, and because of their personalities and family reasons, she despises him. She has no interest in getting along with him, she can's stand being in the same room with him." }
+                { Blade: "Her younger brother. They lived apart for many years, and because of their personalities and family reasons, she despises him. She has no interest in getting along with him and can't stand being in the same room with him." }
             ],
             variant: [
                 { casual: "Casual" },
