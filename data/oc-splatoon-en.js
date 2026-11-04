@@ -161,28 +161,28 @@ const SPLAT_CHARA_DATA_EN = {
         "Hannah" : { 
             name: "Hannah",
             summary: [
-                "在魷空塔剛開放漆彈比賽沒多久她就常在賽場中展現驚人又暴力的近戰技術，成為當地知名的TOP玩家。曾經為新噴嘴小隊做過一次任務但迅速辭退。生活中沒有其他重視的事情所以可以說打對戰就是她的全部。因為對敵我的戰力品質要求都很高，她逐漸覺得獨自玩或雙人排位沒辦法給她帶來滿足，後來接受了一個粉絲的建議，讓對方做為經紀人幫忙組建一支隊伍，得以參加各種正式比賽，常常在比賽中碾壓別隊。在晚期的劇情中失聯，似乎是跑到了非法地下戰鬥場裡面替別人打黑賽。",
-                "她的性格強硬，眼神總是充滿不屑，講話惡毒且毫不在乎他人想法，經常開口就是在辱罵或貶低別人，很討厭軟弱的傢伙。是個不喜歡依賴他人的人。",
-                "她有點咖啡因成癮，有狂喝能量飲料的習慣，一天要喝上好幾罐。"
+                "Soon after Inkopolis Tower opened for splat battles, she became a well-known top-ranked player with aggressive close-range playstyle. She once carried out a mission for the New Squidbeak Splatoon but quit right after. She is someone who expects a lot from both teammates and opponents, so solo Ranked Battles and pair League Battles eventually stopped being enough for her. She later accepted a fan's offer to become her manager and put a team together. This allowed her to play in many official tournaments and she was able to crush them with her team. Late in the story, she went missing, apparently fighting in some kind of illegal underground matches.",
+                "She is a tough, cold and aggresive indivisual who has a harsh attitude toward everything. She always looks unimpressed and annoyed, the only thing that will get her fired up or feel any sort of enjoyment is splat battle. She has a sharp tongue and a mean mouth and is never friendly to anyone, she especially cannot stand wimps or anything remotely sentimental. She also seems to have trouble saying simple things like \"thanks\".",
+                "She chugs down several cans of energy drinks on a daily basis."
             ],
             notes: [
-                "她代表的按鈕是HOME鍵，因此以H作為名字開頭",
-                "她在皇家同花順中代表的牌是Ace",
-                "她比小布大兩歲",
-                "名字最初來源是日文的花，想跟弟弟小布湊「花+枝」",
-                "本來有意要配合HOME按鈕用上ホムラ之類的名字，但最後沒採用。"
+                "She represents the HOME button, which is why her name starts with H.",
+                "In Royal Flush, she represents the Ace.",
+                "She's two years older than Blade.",
+                "Her name comes from the Japanese \"hana\", meaning flower. It was meant to pair with her brother Blade's original name, Brandon (from \"branch\"), because in Chinese, 花 (flower) + 枝 (branch) makes 花枝 (squid).",
+                "Her name was originally going to be something like Homura (ホムラ) to match the HOME button, but the idea was dropped."
             ],
             relationships: [
-                {Lance: "從小就熟識，在RF組成之前就經常會一起參加雙人排位，雖然平常兩人之間的對話都很簡短，但對他很是信任。兩人之間有種沉默的默契。"},                
-                {Minerva: "在黑娜唯一一次的特工任務中相識，認為對方身手不錯而給予了認可，後來因對方的加入變成隊友與朋友，是同居關係。"},
-                {Roy: "是熟人和經紀人推的隊員人選，對他的戰力水準沒意見但總覺得這人很危險又難搞，總是拿他沒辦法，非必要不會搭話。"},
-                {Amy: "對她的印象就是一個弱雞經紀人兼小粉絲，平日對她的態度不算太差，倒是很習慣把所有隊伍活動相關的事情全塞給她打理。"},
-                {Blade: "親姊弟，兩人分開居住多年，因性格與家庭因素而對他有極大的厭惡感，完全沒有要好好跟他相處的意思。每次看到他都會煩到想趕快離開。"}
+                { Lance: "They've known each other for a long time and often teamed up in pair League Battles before Royal Flush was formed. Their conversations are usually short, but she trusts him a lot. there's an unspoken understanding between them." },
+                { Minerva: "They met during Hannah's one and only agent mission. Hannah thought she was okay and acknowledged her skills. After Minerva joined Royal Flush, they became teammates and friends, they're also roommates." },
+                { Amy: "She sees Amy as a wimpy manager and a fangirl. She isn't too mean to her, but she would dump every team-related chores on her." },                
+                { Roy: "Someone Lance and Amy picked for the team. She has no problem with his skills, but she finds him dangerous and hard to deal with, and never knows what to do with him. She won't talk to him unless she has to." },
+                { Blade: "Her younger brother. They lived apart for many years, and because of their personalities and family reasons, she despises him. She has no interest in getting along with him, she can's stand being in the same room with him." }
             ],
-            variant:[
-                {casual: "日常"},
-                {casual2: "任務0"}
-            ]            
+            variant: [
+                { casual: "Casual" },
+                { casual2: "Mission Zero" }
+            ]         
         },
         "Lance" : { 
             name: "Lance",
