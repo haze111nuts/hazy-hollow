@@ -883,5 +883,37 @@ const SPLAT_LORE_DATA_ZHTW = {
             "在第三代主線的時間點登場的小生物，在被偉德撿到後和他一起被捲入一場古代調查相關的大冒險。",
             "他因為很會大便所以偉德總是在幫牠換褲子，因此被取名便便王。偉德也會暱稱牠「便便」或「尿布」，似乎沒有一個固定的名字。"
         ]
+    },
+    "Inkopolis" : {
+        title: "高領市",
+        subtitle: "Inkopolis",
+        type: "Location",
+        summary : [
+            "在高領地區中心的大都會。待補"
+        ]
+    },
+    "Inkadia" : {
+        title: "",
+        subtitle: "Greater Inkopolis",
+        type: "Location",
+        summary : [
+            "待補"
+        ]
+    },
+    "Inkopolis Plaza" : {
+        title: "高領市中心",
+        subtitle: "Inkopolis Plaza",
+        type: "Location",
+        summary : [
+            "魷空塔在的地方。待補"
+        ]
+    },
+    "Inkopolis Square" : {
+        title: "高領廣場",
+        subtitle: "Inkopolis Square",
+        type: "Location",
+        summary : [
+            "在高領市的某個街區。待補"
+        ]
     }
 };
