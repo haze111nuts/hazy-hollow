@@ -64,7 +64,7 @@ const SPLAT_CHARA_DATA_EN = {
             "His family is loosely based on Hawaiian culture, and conceptually, he is part Asian."
         ],
         relationships: [
-            { Blade: "They met during the events in Splatoon 2, where a misunderstanding made them rivals for a while. They made up in the end and quickly became close friends." },
+            { Blade: "They met during the events in Splatoon 2, where a misunderstanding made them rivals for a while. They made up in the end and quickly became close friends. Axel often calls him 'B'." },
             { Xiu: "One of the bad friends who led Axel down the wrong path. Xiu has apologized, but Axel has never fully forgiven him, so things between them are still a bit awkward." },
             { Edd: "Axel barely counts him as a friend. Their personalities clash, so they butt heads a lot, and Axel especially hates how rude Edd is to Blade." },
             { Viper: "They met as enemies during the events in Splatoon 2. Both are stubborn and hate losing, so they argue nonstop whenever they run into each other. Axel thinks Viper is just a loudmouthed Octarian who needs his ass kicked." },
@@ -98,7 +98,7 @@ const SPLAT_CHARA_DATA_EN = {
             name: "Xiu",
             summary: [
                 "First appeared in the main story of Splatoon 2. He has known Axel for a long time, and back then, he was one of the bad kids who led Axel down the wrong path. After Axel cut ties with the group, Xiu left too, just so he could make up with him. He eventually managed to squeeze his way into Axel's new circle of friends.",
-                "He's an attention-seeking social butterfly who's never afraid to show himself off. He tends to like high-class and fancy things, but he's really just a regular teenager who wants to impress the cool kids. He's a bit of a drama queen and can be pretty flirtatious. He's also extremely online. He's very active on social media and will jump on every trend for attention. He managed to injure his own eye in one of the livestream challenges. He works part-time at a beauty store in Arowana Mall and seems to have a knack for makeup and fashion.",
+                "He's an attention-seeking social butterfly who's never afraid to show himself off. He tends to like high-class and fancy things, but he's really just a regular teenager who wants to impress the cool kids. He's a bit of a drama queen and can be pretty flirtatious. He's also extremely online. He's very active on social media and will jump on every trend for attention, he even managed to injure his own eye in one of the livestream challenges. He works part-time at a beauty store in Arowana Mall and seems to have a knack for makeup and fashion.",
                 "His favorite food is tiramisu."
             ],
             notes: [
@@ -192,22 +192,22 @@ const SPLAT_CHARA_DATA_EN = {
                 "他似乎不太喜歡別人打亂自己的行程。"
             ],
             notes: [
-                "他代表的按鈕是L鍵，因此以L作為名字開頭",
-                "他在皇家同花順中代表的牌是King",
-                "他比黑娜大一歲",
-                "設定中有加入拉丁美洲裔的概念"             
+                "He represents the L button, which is why his name starts with L.",
+                "In Royal Flush, he represents the King.",
+                "He's a year older than Hannah.",
+                "Conceptually, he is Latino."
             ],
             relationships: [
-                {Yoni: "親弟弟，對方從小就好動而需要常常看管他。一直以來都對他很關心，兩人的感情看似不錯，後來因為某些原因出現了裂痕。"},
-                {Hannah: "從小就熟識的老朋友，以前就經常會一起雙人排位，兩人之間有種沉默的默契。"},
-                {Amy: "因RF的成立而認識，是自己隊裡的經紀人。出於某些原因對她有點在意，會不由自主地觀察她。也許是看她總是默默一人忙碌還常被騷擾而對她特別關照。"},                
-                {Roy: "因RF的成立而認識，雖然不確定他為何處處針對自己，但還是視對方為伙伴跟朋友。經常得在他衝動時負責制住他。"},
-                {Minerva: "因RF的成立而認識，兩人在對戰上的默契相當好。晚期的劇情中兩人成為警察同事。"},
+                { Yoni: "His younger brother. Yoni was always full of energy as a kid, so Lance often had to keep an eye on him. He has always cared about Yoni, and they seemed close, but something later came between them." },
+                { Hannah: "They've known each other for a long time and often teamed up in pair League Battles. There's an unspoken understanding between them." },
+                { Amy: "They met when Royal Flush was formed, and she's the team's manager. Something about her keeps catching his attention, whether it's small details that don't quite add up or the way she always seems to be working hard all by herself. He tends to look out for her more than anyone else." },
+                { Roy: "They met when Royal Flush was formed. He isn't sure why Roy keeps picking on him, but he still sees him as a teammate and a friend. He's often the one who has to hold Roy back when he gets too worked up." },
+                { Minerva: "They met when Royal Flush was formed, and they work really well together in battle. Late in the story, they became fellow police officers." }
             ],
-            variant:[
-                {casual: "日常"},
-                {hatoff: "帽子off"}
-            ]                        
+            variant: [
+                { casual: "Casual" },
+                { hatoff: "w/o Hat" }
+            ]              
         },
         "Minerva" : { 
             name: "Minerva",
