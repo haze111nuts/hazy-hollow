@@ -188,7 +188,7 @@ const SPLAT_CHARA_DATA_EN = {
             name: "Lance",
             summary: [
                 "A longtime friend of Hannah's. Like her, he became a well-known top-ranked player soon after Inkopolis Tower opened for splat battles. After [[Royal Flush]] was formed, he became one of the team’s key players. He went to the police academy a few years later. He appears as a police officer later in the story and seems to be very busy on a big case.",
-                "He is a brave, honest and noble guy of few words. He always looks serious and never shows much emotion, but he is very kind and be will be there when help is needed. He is very well-built and can lift a person easily, so he is often the one to step in when things get out of hand. Troublemakers often turn around to find him suddenly standing right behind them. He also has an exceptionally sharp eye for detail and tends to pick up on things no one else notices. "
+                "He is a brave, honest and noble guy of few words. He always looks serious and never shows much emotion, but he is very kind and will be there when help is needed. He is very well-built and can lift a person easily, so he is often the one to step in when things get out of hand. Troublemakers often turn around to find him suddenly standing right behind them. He also has an exceptionally sharp eye for detail and tends to pick up on things no one else notices."
             ],
             notes: [
                 "He represents the L button, which is why his name starts with L.",
@@ -235,8 +235,8 @@ const SPLAT_CHARA_DATA_EN = {
         "Roy" : { 
             name: "Roy",
             summary: [
-                "A boy who occasionally showed up on the Inkopolis Tower leaderboard. One day, he appeared on the street and started harassing Amy, which led to a clash between him with Lance. The two agreed to settle it with a few rounds of splat battles, and Roy's skills earned him a spot in  [[Royal Flush]]. As the team's long-range player, his aim is cold and so precise that it can be a little unsettling to watch. He often skips practice without telling anyone.",
-                "He barely talks or shows any expression, and he always looks uninterested at team get-togethers. Whenever he does speak, it's usually something very rude and offensive. Other people's feelings mean very little to him, and he constantly looks like he is going to throw a punch or draw a knife at anyone who attempts to mess with him. Apparently, he has a sweet tooth and is often seen snacking or drinking something sugery. He seems to work part-time at a pawnshop in Inkopolis City, where he helps with repairs in the used weapons section."
+                "A boy who occasionally showed up on the Inkopolis Tower leaderboard. One day, he appeared on the street and started harassing Amy, which led to a clash between him and Lance. The two agreed to settle it with a few rounds of splat battles, and Roy's skills earned him a spot in [[Royal Flush]]. As the team's long-range player, he has an aim so cold and precise that it can be a little unsettling to watch. He often skips practice without telling anyone.",
+                "He barely talks or shows any expression, and he always looks uninterested at team get-togethers. Whenever he does speak, it's usually something very rude and offensive. Other people's feelings mean very little to him, and he constantly looks like he is going to throw a punch or draw a knife at anyone who attempts to mess with him. Apparently, he has a sweet tooth and is often seen snacking or drinking something sugary. He seems to work part-time at a pawnshop in Inkopolis City, where he helps with repairs in the used weapons section."
             ],
             notes: [
                 "He represents the R button, which is why his name starts with R.",
@@ -245,9 +245,9 @@ const SPLAT_CHARA_DATA_EN = {
                 "The white patches on his skin are caused by vitiligo."
             ],
             relationships: [
-                { Amy: "They didn't seem to know each other before Royal Flush was formed. For some reason, he won't stop making snide remarks about her, and yet he will do whatever she says without putting up much fight." },
-                { Lance: "Picking a fight with Lance is how Roy ended up in Royal Flush.  He's always messing with Lance, turning everything into a competition between them, and he seems to be enjoying it a little too much."},
-                { Paul: "The owner of the pawnshop and his boss. Roy mostly just does watever Paul asked, but he finds it annoying when Paul acts all buddy-buddy with him like ruffling his hair every time he comes in to work." }
+                { Amy: "They didn't seem to know each other before Royal Flush was formed. For some reason, he won't stop making snide remarks about her, and yet he will do whatever she says without putting up much of a fight." },
+                { Lance: "Picking a fight with Lance is how Roy ended up in Royal Flush. He's always messing with Lance, turning everything into a competition between them, and he seems to be enjoying it a little too much."},
+                { Paul: "The owner of the pawnshop and his boss. Roy mostly just does whatever Paul asks, but he finds it annoying when Paul acts all buddy-buddy with him like ruffling his hair every time he comes in to work." }
             ],
             variant:[
                 { casual: "Casual" },
