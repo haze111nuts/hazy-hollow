@@ -187,8 +187,8 @@ const SPLAT_CHARA_DATA_EN = {
         "Lance" : { 
             name: "Lance",
             summary: [
-                "A friend of Hannah, have known each other for a long time. Like her, he became a well-known top-ranked player soon after Inkopolis Tower opened for splat battles. He was there when Hannah formed [[Royal Flush]] under Amy's help, he then became one of the team's key players. He went to the police academy after a few years, and he appears as a police officer later in the story.",
-                "He is a brave, honest and noble guy with few words. He may look serious and never show much feelings, but he is always there when you need him. He is very well-built and can lift a person easily, he is often the one to step in when things get out of hand. Troublemakers often turn around to find him suddenly standing right behind them. He also has an exceptionally sharp eye for detail, tends to pick up things no one notices. He does get a little grumpy when someone throw off his schedule."
+                "A longtime friend of Hannah's. Like her, he became a well-known top-ranked player soon after Inkopolis Tower opened for splat battles. After [[Royal Flush]] was formed, he became one of the team’s key players. He went to the police academy a few years later, and he appears as a police officer later in the story.",
+                "He is a brave, honest and noble guy of few words. He always look serious and never shows much emotion, but he will be there when help is needed. He is very well-built and can lift a person easily, so he is often the one to step in when things get out of hand. Troublemakers often turn around to find him suddenly standing right behind them. He also has an exceptionally sharp eye for detail and tends to pick up on things no one else notices. "
             ],
             notes: [
                 "He represents the L button, which is why his name starts with L.",
