@@ -121,7 +121,7 @@ const SPLAT_CHARA_DATA_EN = {
                 "He seems to like the scenery on the surface."
             ],
             notes: [
-                "He represents the + button, which is why his name comes from \"Add\".",
+                "He represents the + button, and his name is derived from ‘Add’.",
                 "His name also comes from \"Eight\".",
                 "He's about 18 y/o at the start of the Splatoon 2 main story (ME2017)."
             ],
@@ -162,7 +162,7 @@ const SPLAT_CHARA_DATA_EN = {
             name: "Hannah",
             summary: [
                 "Soon after Inkopolis Tower opened for splat battles, she became a well-known top-ranked player with a violent close-range playstyle. She was then scouted by a shady duo to fight against the Octarians, she carried out one mission for them then quit right after to focus on competitive games. As ordinary battles eventually stopped being enough for her, she later accepted a fan's offer to help her put [[Royal Flush|a team]] together. This allowed her to play in many official tournaments, crushing opponents one after another with her team. Late in the story, she went missing, apparently fighting in some kind of illegal underground matches.",
-                "She is a tough, cold and aggressive individual who has a harsh attitude toward everything. She always looks unimpressed and annoyed. The only thing that will get her fired up or make her feel any sort of enjoyment is splat battles. She has a sharp tongue and a mean mouth. She is never friendly to anyone and she especially cannot stand wimps or anything remotely sentimental. She also seems to have trouble saying simple things like \"thanks\".",
+                "She is a tough, grumpy and aggressive individual who has a harsh attitude toward everything. She always looks unimpressed and annoyed. The only thing that will get her fired up or make her feel any sort of enjoyment is splat battles. She has a sharp tongue and a mean mouth. She is never friendly to anyone and she especially cannot stand wimps or anything remotely sentimental. She also seems to have trouble saying simple things like \"thanks\".",
                 "She chugs down several cans of energy drinks on a daily basis."
             ],
             notes: [
@@ -187,8 +187,8 @@ const SPLAT_CHARA_DATA_EN = {
         "Lance" : { 
             name: "Lance",
             summary: [
-                "A longtime friend of Hannah's. Like her, he became a well-known top-ranked player soon after Inkopolis Tower opened for splat battles. After [[Royal Flush]] was formed, he became one of the team’s key players. He went to the police academy a few years later, and he appears as a police officer later in the story.",
-                "He is a brave, honest and noble guy of few words. He always looks serious and never shows much emotion, but he will be there when help is needed. He is very well-built and can lift a person easily, so he is often the one to step in when things get out of hand. Troublemakers often turn around to find him suddenly standing right behind them. He also has an exceptionally sharp eye for detail and tends to pick up on things no one else notices. "
+                "A longtime friend of Hannah's. Like her, he became a well-known top-ranked player soon after Inkopolis Tower opened for splat battles. After [[Royal Flush]] was formed, he became one of the team’s key players. He went to the police academy a few years later. He appears as a police officer later in the story and seems to be very busy on a big case.",
+                "He is a brave, honest and noble guy of few words. He always looks serious and never shows much emotion, but he is very kind and be will be there when help is needed. He is very well-built and can lift a person easily, so he is often the one to step in when things get out of hand. Troublemakers often turn around to find him suddenly standing right behind them. He also has an exceptionally sharp eye for detail and tends to pick up on things no one else notices. "
             ],
             notes: [
                 "He represents the L button, which is why his name starts with L.",
@@ -216,7 +216,7 @@ const SPLAT_CHARA_DATA_EN = {
                 "She is very fond of sparkling drinks."
             ],
             notes: [
-                "She represents the - button, which is why her name comes from \"Minus\".",
+                "She represents the - button, and her name is derived from ‘Minus’.",
                 "In Royal Flush, she represents the Queen."
             ],
             relationships: [
@@ -224,7 +224,7 @@ const SPLAT_CHARA_DATA_EN = {
                 { Hannah: "They met when Hannah infiltrated the Army as Agent 3. Losing to her stuck with Minerva for a long time, so after leaving the underground, she challenged Hannah to a rematch. They later became teammates, friends, and even roommates. She cares about Hannah a lot and always looks after her." },
                 { Amy: "They met when Royal Flush was formed, and Amy is the team's manager. Minerva thinks she's very sweet, and can't help going into snuggly mode when Amy is around." },
                 { Lance: "They met as teammates in Royal Flush and work really well together in battle. She admires him and wants to be friends, but she always struggles to find something to talk about. Late in the story, they became fellow police officers." },
-                { Roy: "They met as teammates in Royal Flush. She has no idea how to get along with him, but she keeps trying her best to understand him and befriend him, though it never seems to work." },
+                { Roy: "They met as teammates in Royal Flush. Despite struggling to get along with him, she continues to try to understand him and become his friend. So far, her efforts haven't gotten her very far." },
                 { Dorothy: "They met because of OCTA, and Dorothy takes good care of her. Minerva really enjoys her company and always ends up spending a lot of time with her whenever she visits the OCTA HQ." }
             ],
             variant: [
@@ -235,24 +235,23 @@ const SPLAT_CHARA_DATA_EN = {
         "Roy" : { 
             name: "Roy",
             summary: [
-                "偶爾會在魷空塔比賽的積分榜上出現的少年。一天忽然從街上冒出騷擾艾咪而和蘭斯起衝突，在給對方一番挑釁後兩人決定用對戰解決，過程中因為表現非常出色而被招進了黑娜的隊裡。是隊伍中的遠距離擔當，狙人乾淨絲毫不手軟，甚至到了極度無情的地步。有時會毫無通知就翹掉練習。",
-                "他的話不多，表情也超少，每次隊伍聚會都一副漠不關心的樣子，而且他不管對誰講話都很不客氣，每次開口都是不友善的字句。他還很沒有同理心，絲毫不在乎別人的感受。他的全身上下散發著一股不良少年的氣質，總是給人一種隨時會衝出去揍人的感覺。他好像很喜歡吃甜的，總是在喝飲料或是啃零食。",
-                "平日似乎是在高領市一家當鋪打工，會在裡面的二手武器專區幫忙修補器材。"
+                "A boy who occasionally showed up on the Inkopolis Tower leaderboard. One day, he appeared on the street and started harassing Amy, which led to a clash between him with Lance. Roy kept pushing Lance's buttons until the two agreed to settle it with a splat battle, and Roy's skills earned him a spot in  [[Royal Flush]]. As the team's long-range player, his aim is cold and so precise that it can be a little unsettling to watch. He often skips practice without telling anyone.",
+                "He barely talks or shows any expression, and he always looks uninterested at team get-togethers. Whenever he does speak, it's usually something very rude and offensive. Other people's feelings mean very little to him, and he constantly looks like he is going to throw a punch or draw a knife at anyone who attempts to mess with him. Apparently, he has a sweet tooth and is often seen snacking or drinking something sugery. He seems to work part-time at a pawnshop in Inkopolis City, where he helps with repairs in the used weapons section."
             ],
             notes: [
-                "他代表的按鈕是R鍵，因此以R作為名字開頭",
-                "他在皇家同花順中代表的牌是Jack",
-                "他比蘭斯跟艾咪小兩歲",
-                "他的皮膚上的紋路是由白蝕症造成的"
+                "He represents the R button, which is why his name starts with R.",
+                "In Royal Flush, he represents the Jack.",
+                "He's two years younger than Lance and Amy.",
+                "The white patches on his skin are caused by vitiligo."
             ],
             relationships: [
-                {Amy: "在RF成立之前似乎互不相認識。不知是出自什麼心態總是會特別會講一些刻薄的話來糗她，但又意外的很聽她的話…？"},
-                {Lance: "因為跟他起衝突才認識並進入RF。經常挑釁跟捉弄對方，不管是什麼事都想跟他拼個高下，似乎有點享受這種較勁的感覺。"},
-                {Paul: "當鋪的老闆，自己的上司，對他還算聽話，覺得每次上班都會被抓去揉頭有點煩。"}
+                { Amy: "They didn't seem to know each other before Royal Flush was formed. For some reason, he won't stop making snide remarks about her, and yet he will do whatever she says without putting up much fight." },
+                { Lance: "Picking a fight with Lance is how Roy ended up in Royal Flush.  He's always messing with Lance, turning everything into a competition between them, and he seems to be enjoying it a little too much."},
+                { Paul: "The owner of the pawnshop and his boss. Roy mostly just does watever Paul asked, but he finds it annoying when Paul acts all buddy-buddy with him like ruffling his hair every time he comes in to work." }
             ],
             variant:[
-                {casual: "日常"},
-                {shop: "當鋪打工仔"}
+                { casual: "Casual" },
+                { shop: "Pawnshop Job" }
             ]            
         },
         "Amy" : { 
