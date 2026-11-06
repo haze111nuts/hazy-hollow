@@ -212,7 +212,8 @@ const SPLAT_CHARA_DATA_EN = {
             name: "Minerva",
             summary: [
                 "Edd's twin sister, and once an elite Octozoness soldier in the Octarian Army. She was the top of her class and a classic model student, loyal to the Army and hoping to serve for life. When Hannah infiltrated the Army while briefly acting as Agent 3, she defeated Minerva and told her she was \"wasting talent in a shitty place\". Minerva did not take the lose well, and with her brother's influence, she finally decided to join the wave of Octarians leaving the Army after DJ Octavio was defeated. After moving to the surface, she tracked down Hannah for a rematch, and later joined [[Royal Flush|her team]].",
-                "She is a hardworking, disciplined and very by-the-book girl. She is not very outspoken and tends to keep complaints to herself. She thinks about life in the Army a lot, but the surface still amazes her, and every now and then her girly, starry-eyed side comes out, especially when she sees something cute or dashing. She has great focus, and once she gets in the zone on the battlefield, she's very hard to defeat. Apparently, sparkling water is her go-to drink."
+                "She is a hardworking, disciplined and very by-the-book girl. She is not very outspoken and tends to keep complaints to herself. She thinks about life in the Army a lot, but the surface still amazes her, and every now and then her girly, starry-eyed side comes out, especially when she sees something cute or dashing. She has great focus, and once she gets in the zone on the battlefield, she's very hard to defeat.", 
+                "She is very fond of sparkling drinks."
             ],
             notes: [
                 "She represents the - button, which is why her name comes from \"Minus\".",
