@@ -211,26 +211,24 @@ const SPLAT_CHARA_DATA_EN = {
         "Minerva" : { 
             name: "Minerva",
             summary: [
-                "埃德的雙胞胎姐姐，章魚軍團的菁英部隊章魚女兵，是同期中成績跟表現都最傑出的，典型的資優生類型。對軍團抱有深厚的感情，總是希望可以一直為其效勞。在一次軍團外敵入侵時被那時暫時作為３號的黑娜打敗，甚至被她酸是「在鬼地方浪費才能」，難以接受這個事實的米奈瓦從那之後對於陸上的印象開始有些動搖，再加上後來弟弟潛移默化的影響，她在３號打敗DJ將軍時終於改變了心意，跟著出走潮離開了軍團到陸上生活，她也因此找到當初的打敗她的黑娜想要再戰一局，後來她自願進了她的隊伍。",
-                "是個認真、工作勤勞、嚴首紀律的人。屬於比較忍氣吞聲的類型，如有什麼不滿只敢在心裡發牢騷。不由自主的對陸上的人事物感到新鮮好奇，偶爾會露出少女心或是花癡的一面。集中力很好，在戰場上進入狀態的話會是一個很難打倒的強敵。",
-                "她似乎很喜歡喝碳酸水。"
+                "Edd's twin sister, and once an elite Octozoness soldier in the Octarian Army. She was the top of her class and a classic model student, loyal to the Army and hoping to serve for life. When Hannah infiltrated the Army while briefly acting as Agent 3, she defeated Minerva and told her she was \"wasting talent in a shitty place\". Minerva did not take the lose well, and with her brother's influence, she finally decided to join the wave of Octarians leaving the Army after DJ Octavio was defeated. After moving to the surface, she tracked down Hannah for a rematch, and later joined [[Royal Flush|her team]].",
+                "She is a hardworking, disciplined and very by-the-book girl. She is not very outspoken and tends to keep complaints to herself. She thinks about life in the Army a lot, but the surface still amazes her, and every now and then her girly, starry-eyed side comes out, especially when she sees something cute or dashing. She has great focus, and once she gets in the zone on the battlefield, she's very hard to defeat. Apparently, sparkling water is her go-to drink."
             ],
             notes: [
-                "她代表的按鈕是-鍵，名字來自Minus（減）",
-                "她在皇家同花順中代表的牌是Queen"
+                "She represents the - button, which is why her name comes from \"Minus\".",
+                "In Royal Flush, she represents the Queen."
             ],
             relationships: [
-                {Edd: "雙胞胎弟弟，兩人的觀念跟哲學雖然互相衝突但在軍團中還算相處和平，後來突然被對方惡言相向與疏遠而非常錯愕。似乎有未解開的誤會。"},
-                {Hannah: "在一次軍團被入侵的時候相識，被對方打敗後一直對此耿耿於懷，後來上岸後主動她再戰，後變成隊友與朋友甚至同居。對她很是關心和照顧。"},
-                {Amy: "因RF的成立而認識，是自己隊裡的經紀人。覺得對方很甜美又很好相處，在她面前總會不小心進入「好可愛！」迷妹模式。"},
-                {Lance: "因RF的成立而認識的隊友，兩人在對戰上的默契相當好，對他很欽佩也很想當朋友但總因為找不到話題可以聊而煩惱，後來兩人成為警察同事。"},
-                {Roy: "因RF的成立而認識的隊友，完全不知道要怎麼和對方相處，但還是會盡量試著瞭解或是做出友善的舉動（可惜都沒鳥用…）"},
-                {Dorothy: "因為OCTA相識，很受對方照顧。覺得和她相處時特別愉快，每次去OCTA旅館都會不由自主地和她一直聊天。"}
-                
+                { Edd: "Her twin brother. They have opposite views and beliefs, but they got along fine back in the Army. She was shocked when he suddenly started lashing out at her and pushing her away. There seems to be a misunderstanding between them that has yet to be cleared up." },
+                { Hannah: "They met when Hannah infiltrated the Army as Agent 3. Losing to her stuck with Minerva for a long time, so after leaving the underground, she challenged Hannah to a rematch. They later became teammates, friends, and even roommates. She cares about Hannah a lot and always looks after her." },
+                { Amy: "They met when Royal Flush was formed, and Amy is the team's manager. Minerva thinks she's very sweet, and can't help going into snuggly mode when Amy is around." },
+                { Lance: "They met as teammates in Royal Flush and work really well together in battle. She admires him and wants to be friends, but she always struggles to find something to talk about. Late in the story, they became fellow police officers." },
+                { Roy: "They met as teammates in Royal Flush. She has no idea how to get along with him, but she keeps trying her best to understand him and befriend him, though it never seems to work." },
+                { Dorothy: "They met because of OCTA, and Dorothy takes good care of her. Minerva really enjoys her company and always ends up spending a lot of time with her whenever she visits the OCTA HQ." }
             ],
-            variant:[
-                {casual: "日常"},
-                {octarian: "軍團時期"}
+            variant: [
+                { casual: "Casual" },
+                { octarian: "Octarian" }
             ]
         },
         "Roy" : { 
