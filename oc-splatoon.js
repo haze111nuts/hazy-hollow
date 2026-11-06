@@ -112,18 +112,23 @@ document.addEventListener("DOMContentLoaded", () => {
     return nameIn(lang(), id) || id;
   }
 
-  // Japanese name (data/oc-splatoon-jp.js), "" if there isn't one
+  // Japanese names (data/oc-splatoon-jp.js) are hidden for now.
+  // Set to true to show them as the small name in English mode again.
+  const SHOW_JP_NAMES = false;
+
+  // Japanese name, "" if there isn't one (or if they're hidden)
   function jpName(id) {
+    if (!SHOW_JP_NAMES) return "";
     const data = typeof SPLAT_CHARA_DATA_JP !== "undefined" ? SPLAT_CHARA_DATA_JP[id] : null;
     return (data && data.name) || "";
   }
 
   // the small name next to the main one:
   // Chinese mode -> English name; English mode -> Japanese name
-  // (or the Chinese name if there's no Japanese one yet)
+  // (nothing while SHOW_JP_NAMES is false, or if there's no Japanese name)
   function charaSubName(id) {
     if (!SPLAT_CHARA_COMMON_DATA[id]) return "";
-    const sub = lang() === "zh" ? nameIn("en", id) : (jpName(id) || nameIn("zh", id));
+    const sub = lang() === "zh" ? nameIn("en", id) : jpName(id);
     return sub && sub !== charaName(id) ? sub : "";
   }
 
