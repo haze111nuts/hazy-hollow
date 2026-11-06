@@ -235,7 +235,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Roy" : { 
             name: "Roy",
             summary: [
-                "A boy who occasionally showed up on the Inkopolis Tower leaderboard. One day, he appeared on the street and started harassing Amy, which led to a clash between him with Lance. Roy kept pushing Lance's buttons until the two agreed to settle it with a splat battle, and Roy's skills earned him a spot in  [[Royal Flush]]. As the team's long-range player, his aim is cold and so precise that it can be a little unsettling to watch. He often skips practice without telling anyone.",
+                "A boy who occasionally showed up on the Inkopolis Tower leaderboard. One day, he appeared on the street and started harassing Amy, which led to a clash between him with Lance. The two agreed to settle it with a few rounds of splat battles, and Roy's skills earned him a spot in  [[Royal Flush]]. As the team's long-range player, his aim is cold and so precise that it can be a little unsettling to watch. He often skips practice without telling anyone.",
                 "He barely talks or shows any expression, and he always looks uninterested at team get-togethers. Whenever he does speak, it's usually something very rude and offensive. Other people's feelings mean very little to him, and he constantly looks like he is going to throw a punch or draw a knife at anyone who attempts to mess with him. Apparently, he has a sweet tooth and is often seen snacking or drinking something sugery. He seems to work part-time at a pawnshop in Inkopolis City, where he helps with repairs in the used weapons section."
             ],
             notes: [
