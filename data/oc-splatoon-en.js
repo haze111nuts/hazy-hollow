@@ -28,7 +28,7 @@ const SPLAT_CHARA_DATA_EN = {
         name: "Blade",
         summary: [
             "The protagonist of the main story in Splatoon 1. He moved to Inkopolis City to live with his dad and sister due to family reasons. He was socially awkward and not very athletic, so he wasn't good at splat games and never really fit in. The local teens saw him as the loser kid from out of town and often made fun of him by turning him into online memes. When Captain Cuttlefish secretly put him to the test, he showed quick thinking and resourcefulness and was chosen to become Agent 3 of the New Squidbeak Splatoon. He got caught up in conflicts involving the Octarian Army. By the end of the adventure, he gained confidence and understood his own strengths. Thanks to his success as an agent, he became an honorary member of [[OCTA]], and he often works with them as a volunteer.",
-            "He gets nervous easily and isn't very brave, but he has a strong sense of justice and is actually a good leader. Overall, he's a pretty ordinary teenage boy. He's thoughtful and kind, and usually ends up being the peacemaker and the one who does all the hard work. He tends to have bad luck, so he's often seen facepalming or giving a \"why me\" look. After everything he's been through, he really values his friends and family. He apparently knows how to play a little guitar."
+            "He gets nervous easily and isn't very brave, but he is a great leader with strong sense of justice. Overall, he's a pretty ordinary teenage boy. He's thoughtful and kind, and usually ends up being the peacemaker and the one who does all the hard work. He tends to have bad luck, so he's often seen facepalming or giving a \"why me\" look. After everything he's been through, he really values his friends and family. He apparently knows how to play a little guitar."
         ],
         notes: [
             "He represents the B button, which is why his name starts with B.",
@@ -64,7 +64,7 @@ const SPLAT_CHARA_DATA_EN = {
             "His family is loosely based on Hawaiian culture, and conceptually, he is part Asian."
         ],
         relationships: [
-            { Blade: "They met during the events in Splatoon 2, where a misunderstanding made them rivals for a while. They made up in the end and quickly became close friends." },
+            { Blade: "They met during the events in Splatoon 2, where a misunderstanding made them rivals for a while. They made up in the end and quickly became close friends. Axel often calls him 'B'." },
             { Xiu: "One of the bad friends who led Axel down the wrong path. Xiu has apologized, but Axel has never fully forgiven him, so things between them are still a bit awkward." },
             { Edd: "Axel barely counts him as a friend. Their personalities clash, so they butt heads a lot, and Axel especially hates how rude Edd is to Blade." },
             { Viper: "They met as enemies during the events in Splatoon 2. Both are stubborn and hate losing, so they argue nonstop whenever they run into each other. Axel thinks Viper is just a loudmouthed Octarian who needs his ass kicked." },
@@ -98,7 +98,7 @@ const SPLAT_CHARA_DATA_EN = {
             name: "Xiu",
             summary: [
                 "First appeared in the main story of Splatoon 2. He has known Axel for a long time, and back then, he was one of the bad kids who led Axel down the wrong path. After Axel cut ties with the group, Xiu left too, just so he could make up with him. He eventually managed to squeeze his way into Axel's new circle of friends.",
-                "He's an attention-seeking social butterfly who's never afraid to show himself off. He tends to like high-class and fancy things, but he's really just a regular teenager who wants to impress the cool kids. He's a bit of a drama queen and can be pretty flirtatious. He's also extremely online. He's very active on social media and will jump on every trend for attention, and he even managed to injure his own eye in one of the livestream challenges. He works part-time at a beauty store in Arowana Mall and seems to have a knack for makeup and fashion.",
+                "He's an attention-seeking social butterfly who's never afraid to show himself off. He tends to like high-class and fancy things, but he's really just a regular teenager who wants to impress the cool kids. He's a bit of a drama queen and can be pretty flirtatious. He's also extremely online. He's very active on social media and will jump on every trend for attention, he even managed to injure his own eye in one of the livestream challenges. He works part-time at a beauty store in Arowana Mall and seems to have a knack for makeup and fashion.",
                 "His favorite food is tiramisu."
             ],
             notes: [
@@ -116,8 +116,8 @@ const SPLAT_CHARA_DATA_EN = {
         "Edd" : { 
             name: "Edd",
             summary: [
-                "The protagonist of the Deepsea Metro side story. He used to be a member of the Octarian Army. Growing up there gave him a solid background in mechanical engineering, and he specialized in vehicle-related technology. He never aligned with the Army's ideals, and while at the Octarian Army Academy, he secretly worked with a group of students who wanted change. Just before he could leave the underground, he got caught up in the [[Deepsea Metro Testing Procedure]] and lost his memory. In the end, he escaped to the surface and remembered his past. To repay the New Squidbeak Splatoon for their help, he joined them as Agent 8.",
-                "A proud, edgy loner who always looks unfriendly and skeptical. He's stubborn and never shows how he really feels. Even when he wants to help, he won't say it out loud, which makes him hard to get along with. He doesn't trust anyone, but his old comrades from the Army say he wasn't always like this…?",
+                "The protagonist of the Deepsea Metro side story. He used to be a member of the Octarian Army. Growing up there gave him a solid background in mechanical engineering, and he specialized in vehicle-related technology. He never aligned with the Army's ideals, and while at the Octarian Army Academy, he secretly worked with a group of students who wanted change. Just before he could leave the underground, he got caught up in the [[Deepsea Metro Testing Procedure]] and lost his memory. In the end, he  remembered his past and escaped to the surface. To repay the New Squidbeak Splatoon for their help, he joined them as Agent 8.",
+                "He is a proud, edgy loner who always looks unfriendly and skeptical. He's stubborn and never shows how he really feels. Even when he wants to help, he won't say it out loud, which makes him hard to get along with. He seems to have some trust issue and tends to keep his distance from others, but his old comrades from the Army say that \"he wasn't always like this\".",
                 "He seems to like the scenery on the surface."
             ],
             notes: [
@@ -161,7 +161,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Hannah" : { 
             name: "Hannah",
             summary: [
-                "Soon after Inkopolis Tower opened for splat battles, she became a well-known top-ranked player with a violent close-range playstyle. She was then scouted by a shady duo to fight against the Octarians, she carried out one mission for them but quit right after to focus on competitive games. As ordinary battles eventually stopped being enough for her, she later accepted a fan's offer to help her put [[Royal Flush|a team]] together. This allowed her to play in many official tournaments, crushing opponents one after another with her team. Late in the story, she went missing, apparently fighting in some kind of illegal underground matches.",
+                "Soon after Inkopolis Tower opened for splat battles, she became a well-known top-ranked player with a violent close-range playstyle. She was then scouted by a shady duo to fight against the Octarians, she carried out one mission for them then quit right after to focus on competitive games. As ordinary battles eventually stopped being enough for her, she later accepted a fan's offer to help her put [[Royal Flush|a team]] together. This allowed her to play in many official tournaments, crushing opponents one after another with her team. Late in the story, she went missing, apparently fighting in some kind of illegal underground matches.",
                 "She is a tough, cold and aggressive individual who has a harsh attitude toward everything. She always looks unimpressed and annoyed. The only thing that will get her fired up or make her feel any sort of enjoyment is splat battles. She has a sharp tongue and a mean mouth. She is never friendly to anyone and she especially cannot stand wimps or anything remotely sentimental. She also seems to have trouble saying simple things like \"thanks\".",
                 "She chugs down several cans of energy drinks on a daily basis."
             ],
@@ -187,51 +187,49 @@ const SPLAT_CHARA_DATA_EN = {
         "Lance" : { 
             name: "Lance",
             summary: [
-                "黑娜的舊識，和她一樣在魷空塔剛開放漆彈比賽沒多久就因為對戰成績出色而成為當地知名的TOP玩家之一。在黑娜組了正式的隊伍後作為隊中重要戰力活動了一段時間。後來讀了警校，在晚期劇情的時間點是以警察的身分在活動。",
-                "是沉默寡言的類型，講話句子都很短。雖然不常流露感情但是個很熱心又可靠的人，正義感十足，會以迅雷不及掩耳的速度出現在混混身後進行壓制。品行三觀端正，是個很有原則也很有禮貌的正人君子。有過人的觀察力，總有辦法注意到一般人不會注意的細節。他的身材體格優秀，力氣非常大，可以輕易把人扔出去。經常在幫忙處理失控的人或場面。",
-                "他似乎不太喜歡別人打亂自己的行程。"
+                "A longtime friend of Hannah's. Like her, he became a well-known top-ranked player soon after Inkopolis Tower opened for splat battles. After [[Royal Flush]] was formed, he became one of the team’s key players. He went to the police academy a few years later, and he appears as a police officer later in the story.",
+                "He is a brave, honest and noble guy of few words. He always looks serious and never shows much emotion, but he will be there when help is needed. He is very well-built and can lift a person easily, so he is often the one to step in when things get out of hand. Troublemakers often turn around to find him suddenly standing right behind them. He also has an exceptionally sharp eye for detail and tends to pick up on things no one else notices. "
             ],
             notes: [
-                "他代表的按鈕是L鍵，因此以L作為名字開頭",
-                "他在皇家同花順中代表的牌是King",
-                "他比黑娜大一歲",
-                "設定中有加入拉丁美洲裔的概念"             
+                "He represents the L button, which is why his name starts with L.",
+                "In Royal Flush, he represents the King.",
+                "He's a year older than Hannah.",
+                "Conceptually, he is Latino."
             ],
             relationships: [
-                {Yoni: "親弟弟，對方從小就好動而需要常常看管他。一直以來都對他很關心，兩人的感情看似不錯，後來因為某些原因出現了裂痕。"},
-                {Hannah: "從小就熟識的老朋友，以前就經常會一起雙人排位，兩人之間有種沉默的默契。"},
-                {Amy: "因RF的成立而認識，是自己隊裡的經紀人。出於某些原因對她有點在意，會不由自主地觀察她。也許是看她總是默默一人忙碌還常被騷擾而對她特別關照。"},                
-                {Roy: "因RF的成立而認識，雖然不確定他為何處處針對自己，但還是視對方為伙伴跟朋友。經常得在他衝動時負責制住他。"},
-                {Minerva: "因RF的成立而認識，兩人在對戰上的默契相當好。晚期的劇情中兩人成為警察同事。"},
+                { Yoni: "His younger brother. Yoni was always full of energy as a kid, so Lance often had to keep an eye on him. He has always cared about Yoni, and they seemed close, but something later came between them." },
+                { Hannah: "They've known each other for a long time and often teamed up in pair League Battles. There's an unspoken understanding between them." },
+                { Amy: "They met when Royal Flush was formed, and she's the team's manager. Something about her keeps catching his attention, whether it's small details that don't quite add up or the way she always seems to be working hard all by herself. He tends to look out for her more than anyone else." },
+                { Roy: "They met when Royal Flush was formed. He isn't sure why Roy keeps picking on him, but he still sees him as a teammate and a friend. He's often the one who has to hold Roy back when he gets too worked up." },
+                { Minerva: "They met when Royal Flush was formed, and they work really well together in battle. Late in the story, they became fellow police officers." }
             ],
-            variant:[
-                {casual: "日常"},
-                {hatoff: "帽子off"}
-            ]                        
+            variant: [
+                { casual: "Casual" },
+                { hatoff: "w/o Hat" }
+            ]              
         },
         "Minerva" : { 
             name: "Minerva",
             summary: [
-                "埃德的雙胞胎姐姐，章魚軍團的菁英部隊章魚女兵，是同期中成績跟表現都最傑出的，典型的資優生類型。對軍團抱有深厚的感情，總是希望可以一直為其效勞。在一次軍團外敵入侵時被那時暫時作為３號的黑娜打敗，甚至被她酸是「在鬼地方浪費才能」，難以接受這個事實的米奈瓦從那之後對於陸上的印象開始有些動搖，再加上後來弟弟潛移默化的影響，她在３號打敗DJ將軍時終於改變了心意，跟著出走潮離開了軍團到陸上生活，她也因此找到當初的打敗她的黑娜想要再戰一局，後來她自願進了她的隊伍。",
-                "是個認真、工作勤勞、嚴首紀律的人。屬於比較忍氣吞聲的類型，如有什麼不滿只敢在心裡發牢騷。不由自主的對陸上的人事物感到新鮮好奇，偶爾會露出少女心或是花癡的一面。集中力很好，在戰場上進入狀態的話會是一個很難打倒的強敵。",
-                "她似乎很喜歡喝碳酸水。"
+                "Edd's twin sister, and once an elite Octozoness soldier in the Octarian Army. She was the top of her class and a classic model student, loyal to the Army and hoping to serve for life. When Hannah infiltrated the Army while briefly acting as Agent 3, she defeated Minerva and told her she was \"wasting talent in a shitty place\". Minerva did not take the lose well, and with her brother's influence, she finally decided to join the wave of Octarians leaving the Army after DJ Octavio was defeated. After moving to the surface, she tracked down Hannah for a rematch, and later joined [[Royal Flush|her team]].",
+                "She is a hardworking, disciplined and very by-the-book girl. She is not very outspoken and tends to keep complaints to herself. She thinks about life in the Army a lot, but the surface still amazes her, and every now and then her girly, starry-eyed side comes out, especially when she sees something cute or dashing. She has great focus, and once she gets in the zone on the battlefield, she's very hard to defeat.", 
+                "She is very fond of sparkling drinks."
             ],
             notes: [
-                "她代表的按鈕是-鍵，名字來自Minus（減）",
-                "她在皇家同花順中代表的牌是Queen"
+                "She represents the - button, which is why her name comes from \"Minus\".",
+                "In Royal Flush, she represents the Queen."
             ],
             relationships: [
-                {Edd: "雙胞胎弟弟，兩人的觀念跟哲學雖然互相衝突但在軍團中還算相處和平，後來突然被對方惡言相向與疏遠而非常錯愕。似乎有未解開的誤會。"},
-                {Hannah: "在一次軍團被入侵的時候相識，被對方打敗後一直對此耿耿於懷，後來上岸後主動她再戰，後變成隊友與朋友甚至同居。對她很是關心和照顧。"},
-                {Amy: "因RF的成立而認識，是自己隊裡的經紀人。覺得對方很甜美又很好相處，在她面前總會不小心進入「好可愛！」迷妹模式。"},
-                {Lance: "因RF的成立而認識的隊友，兩人在對戰上的默契相當好，對他很欽佩也很想當朋友但總因為找不到話題可以聊而煩惱，後來兩人成為警察同事。"},
-                {Roy: "因RF的成立而認識的隊友，完全不知道要怎麼和對方相處，但還是會盡量試著瞭解或是做出友善的舉動（可惜都沒鳥用…）"},
-                {Dorothy: "因為OCTA相識，很受對方照顧。覺得和她相處時特別愉快，每次去OCTA旅館都會不由自主地和她一直聊天。"}
-                
+                { Edd: "Her twin brother. They have opposite views and beliefs, but they got along fine back in the Army. She was shocked when he suddenly started lashing out at her and pushing her away. There seems to be a misunderstanding between them that has yet to be cleared up." },
+                { Hannah: "They met when Hannah infiltrated the Army as Agent 3. Losing to her stuck with Minerva for a long time, so after leaving the underground, she challenged Hannah to a rematch. They later became teammates, friends, and even roommates. She cares about Hannah a lot and always looks after her." },
+                { Amy: "They met when Royal Flush was formed, and Amy is the team's manager. Minerva thinks she's very sweet, and can't help going into snuggly mode when Amy is around." },
+                { Lance: "They met as teammates in Royal Flush and work really well together in battle. She admires him and wants to be friends, but she always struggles to find something to talk about. Late in the story, they became fellow police officers." },
+                { Roy: "They met as teammates in Royal Flush. She has no idea how to get along with him, but she keeps trying her best to understand him and befriend him, though it never seems to work." },
+                { Dorothy: "They met because of OCTA, and Dorothy takes good care of her. Minerva really enjoys her company and always ends up spending a lot of time with her whenever she visits the OCTA HQ." }
             ],
-            variant:[
-                {casual: "日常"},
-                {octarian: "軍團時期"}
+            variant: [
+                { casual: "Casual" },
+                { octarian: "Octarian" }
             ]
         },
         "Roy" : { 
