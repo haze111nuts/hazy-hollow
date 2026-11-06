@@ -28,7 +28,7 @@ const SPLAT_CHARA_DATA_EN = {
         name: "Blade",
         summary: [
             "The protagonist of the main story in Splatoon 1. He moved to Inkopolis City to live with his dad and sister due to family reasons. He was socially awkward and not very athletic, so he wasn't good at splat games and never really fit in. The local teens saw him as the loser kid from out of town and often made fun of him by turning him into online memes. When Captain Cuttlefish secretly put him to the test, he showed quick thinking and resourcefulness and was chosen to become Agent 3 of the New Squidbeak Splatoon. He got caught up in conflicts involving the Octarian Army. By the end of the adventure, he gained confidence and understood his own strengths. Thanks to his success as an agent, he became an honorary member of [[OCTA]], and he often works with them as a volunteer.",
-            "He gets nervous easily and isn't very brave, but he has a strong sense of justice and great leadership skills. Overall, he's a pretty ordinary teenage boy. He's thoughtful and kind, and usually ends up being the peacemaker and the one who does all the hard work. He tends to have bad luck, so he's often seen facepalming or giving a \"why me\" look. After everything he's been through, he really values his friends and family. He apparently knows how to play a little guitar."
+            "He gets nervous easily and isn't very brave, but he is a great leader with strong sense of justice. Overall, he's a pretty ordinary teenage boy. He's thoughtful and kind, and usually ends up being the peacemaker and the one who does all the hard work. He tends to have bad luck, so he's often seen facepalming or giving a \"why me\" look. After everything he's been through, he really values his friends and family. He apparently knows how to play a little guitar."
         ],
         notes: [
             "He represents the B button, which is why his name starts with B.",
@@ -187,9 +187,8 @@ const SPLAT_CHARA_DATA_EN = {
         "Lance" : { 
             name: "Lance",
             summary: [
-                "黑娜的舊識，和她一樣在魷空塔剛開放漆彈比賽沒多久就因為對戰成績出色而成為當地知名的TOP玩家之一。在黑娜組了正式的隊伍後作為隊中重要戰力活動了一段時間。後來讀了警校，在晚期劇情的時間點是以警察的身分在活動。",
-                "是沉默寡言的類型，講話句子都很短。雖然不常流露感情但是個很熱心又可靠的人，正義感十足，會以迅雷不及掩耳的速度出現在混混身後進行壓制。品行三觀端正，是個很有原則也很有禮貌的正人君子。有過人的觀察力，總有辦法注意到一般人不會注意的細節。他的身材體格優秀，力氣非常大，可以輕易把人扔出去。經常在幫忙處理失控的人或場面。",
-                "他似乎不太喜歡別人打亂自己的行程。"
+                "A friend of Hannah, have known each other for a long time. Like her, he became a well-known top-ranked player soon after Inkopolis Tower opened for splat battles. He was there when Hannah formed [[Royal Flush]] under Amy's help, he then became one of the team's key players. He went to the police academy after a few years, and he appears as a police officer later in the story.",
+                "He is a brave, honest and noble guy with few words. He may look serious and never show much feelings, but he is always there when you need him. He is very well-built and can lift a person easily, he is often the one to step in when things get out of hand. Troublemakers often turn around to find him suddenly standing right behind them. He also has an exceptionally sharp eye for detail, tends to pick up things no one notices. He does get a little grumpy when someone throw off his schedule."
             ],
             notes: [
                 "He represents the L button, which is why his name starts with L.",
