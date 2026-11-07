@@ -235,7 +235,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Roy" : { 
             name: "Roy",
             summary: [
-                "A boy who occasionally showed up on the Inkopolis Tower leaderboard. One day, he appeared on the street and started harassing Amy, which led to a clash between him and Lance. The two agreed to settle it with a few rounds of splat battles, and Roy's skills earned him a spot in [[Royal Flush]]. As the team's long-range player, he has an aim so cold and precise that it can be a little unsettling to watch. He often skips practice without telling anyone.",
+                "A boy who occasionally showed up on the Inkopolis Tower leaderboard. One day, he appeared on the street and started harassing Amy, which led to a clash between him and Lance. The two agreed to settle it with a few rounds of splat battles, and Roy's skills shown in the games earned him a spot in [[Royal Flush]]. As the team's long-range player, he has an aim so cold and precise that it can be a little unsettling to watch. He often skips practice without telling anyone.",
                 "He barely talks or shows any expression, and he always looks uninterested at team get-togethers. Whenever he does speak, it's usually something very rude and offensive. Other people's feelings mean very little to him, and he constantly looks like he is going to throw a punch or draw a knife at anyone who attempts to mess with him. Apparently, he has a sweet tooth and is often seen snacking or drinking something sugary. He seems to work part-time at a pawnshop in Inkopolis City, where he helps with repairs in the used weapons section."
             ],
             notes: [
@@ -257,21 +257,21 @@ const SPLAT_CHARA_DATA_EN = {
         "Amy" : { 
             name: "Amy",
             summary: [
-                "在黑娜和蘭斯面前出現，自願作為經紀人幫他們組隊伍的女孩子。似乎是兩人的粉絲。平時隊伍行程與比賽報名等所有活動相關的事宜都是由她來處理。雖然看上去有點弱雞又迷糊的樣子，但她處理隊伍事務的效率驚人的高，總是可以把所有事情安排得很好。一直都是RF背後的支柱跟好幫手，對這支隊伍非常有熱情，隊名也是她想出來的。她明確表示過自己沒有戰鬥天分不能上場，但卻曾經做出普通人無法做出的反射動作…",
-                "是個個性內向溫馴的書呆子，容易害羞且講話很小聲，不太擅長和人交流，似乎很習慣自己一個人獨處。看起來有點勞碌命，總是很忙的樣子。品味奇特，可以看到她擁有一些黑暗又古怪的衣物或周邊，還喜歡吃魚骨當點心。",
-                "可以經常看到她在高領市一家古董書店幫忙。"
+                "The manager of [[Royal Flush]]. She claimed to be a longtime fan of Hannah and Lance. She was the one who offered to help them build the team, and also the one who came up with its name. As the team's manager, she handles all the important work, from schedules to tournament sign-ups, and she's surprisingly good at it for someone who seems so timid and clumsy. She states she has no talent for splat battle and never played much, though she once reacted faster than any ordinary person could…",
+                "She is a shy, gentle, soft-spoken nerdy girl who gets flustered easily. She is rather introverted and tends to do things alone, but she is very sweet and attentive to the members of [[Royal Flush]]. She's always busy with the team-related chores Hannah shoved to her. Her taste can be a little unusual, she has quite a collection of t-shirts, books or merch that are dark and creepy. ",
+                "She can often be seen working at an old-fashioned used bookstore in Inkopolis City."
             ],
             notes: [
-                "她代表的按鈕是音量-鍵，將名字的A顛倒可拆成V（對應volume）跟-",
-                "她在皇家同花順中代表的牌是10",
-                "她跟蘭斯同齡",
-                "脖子上的OK繃是有一天突然貼上的"
+                "She represents the volume down button. The A in her name can be flipped upside down to become V (for volume) and a ‘-’.",
+                "In Royal Flush, she represents the 10.",
+                "She's the same age as Lance.",
+                "One day, she suddenly showed up with a bandage on her neck."
             ],
             relationships: [
-                {Hannah: "似乎從魷空塔開放以來就是她的粉絲，對她的戰力很是瞭解。好像不介意一直被她使喚。"},
-                {Lance: "似乎從魷空塔開放以來就是他的粉絲，對他的戰力很是瞭解。對他的關心有些不知所措。"},
-                {Minerva: "認為是個可靠的成員。不介意對方的迷妹貼貼。"},
-                {Roy: "在RF成立之前似乎互不相認識。因經常被對方酸而感到很困擾。"}
+                { Hannah: "Amy knows her strength very well and seems to be a big fan of her. She doesn't really mind being bossed around by Hannah." },
+                { Lance: "Amy knows his strength very well and seems to be a big fan of him. She’s never quite sure what to make of all the attention he pays to her." },
+                { Minerva: "She sees Minerva as a reliable teammate and doesn't mind her snuggles." },
+                { Roy: "They didn't seem to know each other before Royal Flush was formed. She finds his constant snide remarks a bit troublesome." }
             ],
             variant:[
                 {casual: "日常"},
