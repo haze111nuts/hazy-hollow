@@ -257,25 +257,25 @@ const SPLAT_CHARA_DATA_EN = {
         "Amy" : { 
             name: "Amy",
             summary: [
-                "The manager of [[Royal Flush]]. She claimed to be a longtime fan of Hannah and Lance. She was the one who offered to help them build the team, and also the one who came up with its name. As the team's manager, she handles all the important work, from schedules to tournament sign-ups, and she's surprisingly good at it for someone who seems so timid and clumsy. She states she has no talent for splat battle and never played much, though she once reacted faster than any ordinary person could…",
-                "She is a shy, gentle, soft-spoken nerdy girl who gets flustered easily. She is rather introverted and tends to do things alone, but she is very sweet and attentive to the members of [[Royal Flush]]. She's always busy with the team-related chores Hannah shoved to her. Her taste can be a little unusual, she has quite a collection of t-shirts, books or merch that are dark and creepy. ",
+                "The manager of [[Royal Flush]]. She claimed to be a longtime fan of Hannah and Lance. She was the one who offered to help build a team, and also the one who came up with its name. As the team's manager, she handles all the important work, from schedules to tournament sign-ups, and she's surprisingly good at it for someone who seems so timid and clumsy. She states she has no talent for splat battles and has never played much, though she once reacted faster than any ordinary person could…",
+                "She is a shy, gentle, soft-spoken nerdy girl who gets flustered easily. She is rather introverted and tends to do things alone, but she is very sweet and attentive to the members of [[Royal Flush]]. She's always busy with the team-related chores Hannah shoves onto her. Her taste can be a little unusual. She has quite a collection of t-shirts, books and merch that are dark and creepy.",
                 "She can often be seen working at an old-fashioned used bookstore in Inkopolis City."
             ],
             notes: [
-                "She represents the volume down button. The A in her name can be flipped upside down to become V (for volume) and a ‘-’.",
+                "She represents the volume down button. The A in her name can be flipped upside down to become a V (for volume) and a ‘-’.",
                 "In Royal Flush, she represents the 10.",
                 "She's the same age as Lance.",
                 "One day, she suddenly showed up with a bandage on her neck."
             ],
             relationships: [
-                { Hannah: "Amy knows her strength very well and seems to be a big fan of her. She doesn't really mind being bossed around by Hannah." },
-                { Lance: "Amy knows his strength very well and seems to be a big fan of him. She’s never quite sure what to make of all the attention he pays to her." },
+                { Hannah: "Amy knows her strength very well and seems to be a big fan of hers. She doesn't really mind being bossed around by Hannah." },
+                { Lance: "Amy knows his strength very well and seems to be a big fan of his. She’s never quite sure what to make of all the attention he pays to her." },
                 { Minerva: "She sees Minerva as a reliable teammate and doesn't mind her snuggles." },
                 { Roy: "They didn't seem to know each other before Royal Flush was formed. She finds his constant snide remarks a bit troublesome." }
             ],
             variant:[
-                {casual: "日常"},
-                {glassesoff: "眼鏡off"}
+                {casual: "Casual"},
+                {glassesoff: "w/o Glasses"}
             ]            
         },
         "Elise" : { 
