@@ -257,7 +257,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Amy" : { 
             name: "Amy",
             summary: [
-                "The manager of [[Royal Flush]]. She seems to be a longtime fan of Hannah and Lance, she showed up one day and offered to help build a team for them; she is also the one who came up with its name. As the team's manager, she handles all the important work, from schedules to tournament sign-ups, and she's surprisingly good at it for someone who seems so timid and clumsy. She states she has no talent for splat battles and has never played much, though she once reacted faster than any ordinary person could…",
+                "The manager of [[Royal Flush]]. She seems to be a longtime fan of Hannah and Lance, she showed up one day and offered to help them build a team; she is also the one who came up with its name. As the team's manager, she handles all the important work, from schedules to tournament sign-ups, and she's surprisingly good at it for someone who seems so timid and clumsy. She states she has no talent for splat battles and has never played much, though she once reacted faster than any ordinary person could…",
                 "She is a shy, gentle, soft-spoken nerdy girl who gets flustered easily. She is rather introverted and tends to do things alone, but she is very sweet and attentive to the members of [[Royal Flush]]. She's always busy with the team-related chores Hannah shoves onto her. Her taste can be a little unusual. She has quite a collection of t-shirts, books and merch that are dark and creepy.",
                 "She can often be seen working at an old-fashioned used bookstore in Inkopolis City."
             ],
