@@ -258,7 +258,7 @@ const SPLAT_CHARA_DATA_EN = {
             name: "Amy",
             summary: [
                 "The manager of [[Royal Flush]]. She seems to be a longtime fan of Hannah and Lance, she showed up one day and offered to help them build a team; she is also the one who came up with its name. As the team's manager, she handles all the important work, from schedules to tournament sign-ups, and she's surprisingly good at it for someone who seems so timid and clumsy. She states she has no talent for splat battles and has never played much, though she once reacted faster than any ordinary person could…",
-                "She is a shy, gentle, soft-spoken nerdy girl who gets flustered easily. She is rather introverted and tends to do things alone, but she is very sweet and attentive to the members of [[Royal Flush]]. She's always busy with the team-related chores Hannah shoves onto her. Her taste can be a little unusual. She has quite a collection of t-shirts, books and merch that are dark and creepy.",
+                "She is a shy, gentle, soft-spoken nerdy girl who gets flustered easily. She is rather introverted and tends to do things alone, but she is very sweet and attentive to the members of [[Royal Flush]]. She's always busy with the team-related chores Hannah shoves onto her. Her taste can be a little unusual. She has quite a collection of books, t-shirts, and merch that are dark and creepy.",
                 "She can often be seen working at an old-fashioned used bookstore in Inkopolis City."
             ],
             notes: [
@@ -837,9 +837,16 @@ const SPLAT_LORE_DATA_EN = {
             "後來那些想要離開營地的始祖成員也如願搬去高領市，他們為後期的OCTA擴大了據點和處理的事項範圍，現在隸屬於這個自助會下的建築除了章魚青年公寓以外，也有小章魚收容所，專門收留從軍團的幼稚園和小學帶出來的小章魚，又或是能幫助章魚順利融入陸上的魷魚語補習班，甚至也有一些與互助會合作的診所。"
         ]
     },
+    "Elite Octoling Soldier" : {
+        title: "Elite Octoling Soldier",
+        type: "Notes",
+        summary : [
+            "12345"
+        ]
+    },
     "Deepsea Metro Testing Procedure" : {
         title: "Deepsea Metro Testing Procedure",
-        type: "Lore",
+        type: "Notes",
         summary : [
             "TEST"
         ]
@@ -857,7 +864,7 @@ const SPLAT_LORE_DATA_EN = {
     "Project Lapis Lazuli" : {
         title: "Project Lapis Lazuli",
         subtitle: "Vector 8 Research Institute",
-        type: "Lore",
+        type: "Notes",
         summary : [
             "由來自軍團的研究員主導，將練魚公司廢棄倉庫中找到的「已經互相汙染」的記憶魚板進行分解與數據化等逆向工程。企劃名稱的由來是因為主導企畫的研究員四宮黛芬認為這些被污染的記憶魚板類似變質岩。"
         ]

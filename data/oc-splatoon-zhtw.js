@@ -847,10 +847,18 @@ const SPLAT_LORE_DATA_ZHTW = {
             "後來那些想要離開營地的始祖成員也如願搬去高領市，他們為後期的OCTA擴大了據點和處理的事項範圍，現在隸屬於這個自助會下的建築除了章魚青年公寓以外，也有小章魚收容所，專門收留從軍團的幼稚園和小學帶出來的小章魚，又或是能幫助章魚順利融入陸上的魷魚語補習班，甚至也有一些與互助會合作的診所。"
         ]
     },
+    "Elite Octoling Soldier" : {
+        title: "菁英章魚兵",
+        subtitle: "Elite Octoling Soldier",
+        type: "Notes",
+        summary : [
+            "12345"
+        ]
+    },
     "Deepsea Metro Testing Procedure" : {
         title: "深海地鐵測驗程序",
         subtitle: "Deepsea Metro Testing Procedure",
-        type: "Lore",
+        type: "Notes",
         summary : [
             "由練魚公司主導，透過深海地鐵運輸系統實行的一個身心體能測驗程序。是二代的章魚DLC中的劇情核心。",
             "在進行測驗之前，他們會將受驗者過去的所有記憶移除，接著讓測驗者搭乘深海地鐵去各個測驗站進行體能挑戰，並在測驗過程中慢慢歸還受驗者的記憶。練魚公司聲稱會幫通過測驗的人實現一個願望，但直到８號的出現為止似乎都完全沒有人通過該程序，而且那些參加者最後都下落不明。",
@@ -871,7 +879,7 @@ const SPLAT_LORE_DATA_ZHTW = {
     "Project Lapis Lazuli" : {
         title: "瑠璃企劃",
         subtitle: "Project Lapis Lazuli",
-        type: "Lore",
+        type: "Notes",
         summary : [
             "由來自軍團的研究員主導，將練魚公司廢棄倉庫中找到的「已經互相汙染」的記憶魚板進行分解與數據化等逆向工程。企劃名稱的由來是因為主導企畫的研究員四宮黛芬認為這些被污染的記憶魚板類似變質岩。"
         ]
