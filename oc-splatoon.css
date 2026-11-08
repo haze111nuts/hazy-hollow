@@ -907,7 +907,7 @@ button.splat-rel-swatch:focus-visible {
    inside. It slides up from below (and back down when it closes). */
 .splat-lore {
   --chara: var(--lore);
-  --folder: color-mix(in srgb, var(--lore) 24%, #e6d3a3);
+  --folder: var(--lore);   /* set from oc-splatoon.js (LORE_FOLDER_STRENGTH) */
   width: min(650px, 100%);
   margin-top: 30px;                       /* room for the tab */
   max-height: calc(100vh - 3rem - 30px);
@@ -946,7 +946,7 @@ button.splat-rel-swatch:focus-visible {
   font: 800 0.78rem "Nunito", sans-serif;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--lore) 55%, var(--ink));
+  color: var(--lore-ink, var(--ink));   /* dark or white, picked in oc-splatoon.js */
 }
 
 /* paper clip */

@@ -545,6 +545,38 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(() => section.classList.remove("no-anim"));
   }
 
+  // ---------------- lore folder colour ----------------
+  // How strong the lore modal's folder colour is:
+  //   1    = the entry's full colour ("Full colour")
+  //   0.78 = lifted a little toward white ("Bright")
+  // The tab text picks dark or white on its own, so any value works.
+  const LORE_FOLDER_STRENGTH = 0.78;
+
+  function hexToRgb(hex) {
+    let h = String(hex).replace("#", "");
+    if (h.length === 3) h = h.split("").map((c) => c + c).join("");
+    return [0, 2, 4].map((i) => parseInt(h.slice(i, i + 2), 16));
+  }
+
+  // `amount` of the colour, the rest white (like CSS color-mix)
+  function mixWithWhite(hex, amount) {
+    const rgb = hexToRgb(hex).map((v) => Math.round(v * amount + 255 * (1 - amount)));
+    return "#" + rgb.map((v) => v.toString(16).padStart(2, "0")).join("");
+  }
+
+  // dark ink or white, whichever is easier to read on `hex`
+  // (the contrast check from the web accessibility guidelines)
+  function inkOn(hex) {
+    const lin = (v) => {
+      v /= 255;
+      return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+    };
+    const [r, g, b] = hexToRgb(hex).map(lin);
+    const L = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    const DARK = "#26281c", DARK_L = 0.0205; // the dark ink and its brightness
+    return (L + 0.05) / (DARK_L + 0.05) >= 1.05 / (L + 0.05) ? DARK : "#fff";
+  }
+
   // ---------------- modal ----------------
 
   // set while a modal is open, so a language switch can refresh it
@@ -694,7 +726,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const entry = loreOf(key);
       if (!entry) return;
       currentKey = key;
-      modal.style.setProperty("--lore", entry.color || "#7c9473");
+      const color = entry.color || "#7c9473";
+      const folder = mixWithWhite(color, LORE_FOLDER_STRENGTH);
+      modal.style.setProperty("--lore", color);
+      modal.style.setProperty("--folder", folder);
+      // tab text: dark on light folders, white on dark ones
+      modal.style.setProperty("--lore-ink", inkOn(folder));
       modal.setAttribute("aria-label", loreName(key));
       modal.dataset.tab = siteText("lore.label"); // the folder tab (CSS reads data-tab)
       closeBtn.setAttribute("aria-label", siteText("modal.close"));

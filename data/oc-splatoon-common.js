@@ -193,5 +193,12 @@ const SPLAT_LORE_COMMON_DATA = {
     "Deepsea Metro Testing Procedure" : { color: "#18b989" },
     "Vector 8 Research Institute"     : { color: "#78998e" },
     "Project Lapis Lazuli"            : { color: "#180f91" },
-    "Wade's Smallfry"                 : { color: "#40693a" }
+    "Elite Octoling Soldier"          : { color: "#c23b6e" },
+    "Wade's Smallfry"                 : { color: "#40693a" },
+    "Inkopolis"                       : { color: "#2e4cf1" },
+    "Inkadia"                         : { color: "#f59518" },
+    "Inkopolis Plaza"                 : { color: "#58b818" },
+    "Inkopolis Square"                : { color: "#d431b1" },
+    "Splat Battle"                    : { color: "#00b4cc" },
+    "Humanoid Cephalopod"             : { color: "#a4e2d3" }
 };
