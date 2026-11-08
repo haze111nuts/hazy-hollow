@@ -23,7 +23,7 @@ const SPLAT_CHARA_COMMON_DATA = {
     "Wade"               : { color: "#6135b3" },
     "Hannah"             : { color: "#2528eb" },
     "Lance"              : { color: "#8622c9" },
-    "Minerva"            : { color: "#6d211c" },
+    "Minerva"            : { color: "#ad3b3b" },
     "Roy"                : { color: "#56a6a8" },
     "Amy"                : { color: "#5db685" },
     "Elise"              : { color: "#11853d" },
@@ -189,7 +189,9 @@ const SPLAT_GROUP = {
 const SPLAT_LORE_COMMON_DATA = {
     "BBB"                             : { color: "#79db37" },
     "Royal Flush"                     : { color: "#2528eb" },
+    "New Squidbeak Splatoon"          : { color: "#ad9f22" },    
     "OCTA"                            : { color: "#633030" },
+    "Octarian Army"                   : { color: "#8a4478" },
     "Deepsea Metro Testing Procedure" : { color: "#18b989" },
     "Vector 8 Research Institute"     : { color: "#78998e" },
     "Project Lapis Lazuli"            : { color: "#180f91" },
@@ -199,6 +201,8 @@ const SPLAT_LORE_COMMON_DATA = {
     "Inkadia"                         : { color: "#f59518" },
     "Inkopolis Plaza"                 : { color: "#58b818" },
     "Inkopolis Square"                : { color: "#d431b1" },
+    "Inkopolis Tower"                 : { color: "#a4c726" },
     "Splat Battle"                    : { color: "#00b4cc" },
-    "Humanoid Cephalopod"             : { color: "#a4e2d3" }
+    "Humanoid Cephalopod"             : { color: "#a4e2d3" },
+    "Bar‘N’Arcades"                     : { color: "#a3903c" },
 };
