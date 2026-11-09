@@ -140,23 +140,21 @@ const SPLAT_CHARA_DATA_EN = {
         "Wade" : { 
             name: "Wade",
             summary: [
-                "三代主線的主角，在蠻殼鎮長大。因為內向所以不善社交，沒有什麼特長，行為舉止也很尷尬所以變成當地青少年圈圈的笑柄，各種挫折讓他迴避漆彈運動，經常宅在家打電動。一次因緣際會遇到一隻餓扁的[[偉德的小鮭魚|小鮭魚]]，在收養牠之後接二連三被捲入各種跟古代有關的調查事件，也因為這樣加入新噴嘴小隊變成了新３號。",
-                "雖然性格懦弱但心地善良，看到別人遇到困難雖然會猶豫但最後總是會選擇站出來。算是比較怨天尤人的類型，遇到不順心的事情總會唉唉叫。他唯一比較厲害的好像只有打電動，訂閱數不高但他偶爾會在他的頻道上面開直播玩遊戲。",
-                "——三代設定還沒安排完，以上待補——"
+                "The protagonist of the main story in Splatoon 3, who grew up in Splatsville. He's socially awkward and doesn't have any real talents, which made him a laughingstock among the local teens. He started avoiding splat battles and spent most of his time at home playing video games. One day, he came across [[Wade's Smallfry|a starving Smallfry]] and took it in, which started a chain of events ralated to the research of Alterna; This ultimately made him join the New Squidbeak Splatoon as the new Agent 3",
+                "He's timid but kind-hearted. He may hesitate when he sees someone in trouble, but he always ended up helping at the end. He can be pretty lazy and whiny sometimes, especially when things don't go his way. The only thing he seems to be good at is video games, and he occasionally livestreams on his channel, even though it doesn't have many subscribers.",
+                "-- Wade's bio is currently WIP, more details coming soon --"
             ],
             notes: [
-                "他代表的按鈕是◀鍵，名字來自West（西邊）",
-                "他左邊側髮的觸手尾端有輕微的分裂，變成了像是魚尾一樣的形狀"
+                "He represents the ◀ button, and his name is derived from \"West\"."
             ],
             relationships: [
-                {Blade: "因為新噴嘴小隊而相遇，認為對方是個什麼都很厲害的前輩，遇到困難的時候會總會被他拉一把。"},                
-                {Susie: "因為小鮭魚而相遇，覺得對方是很有主見又很可靠的小妹妹，雖然嘴上經常抱怨她很煩但兩人關係很不錯。"}
-                
+                { Blade: "They met because of the New Squidbeak Splatoon. Wade thinks he is a capable and experienced agent and looks up to him." },
+                { Susie: "They met because of his Smallfry. He thinks of her as a strong-willed, dependable little girl who is good at everything. He finds her annoying sometimes, but they actually get along pretty well." }
             ],
-            variant:[
-                {casual: "日常"},
-                {agent3: "特工服"}
-            ]                   
+            variant: [
+                { casual: "Casual" },
+                { agent3: "Agent 3" }
+            ]                 
         },
         "Hannah" : { 
             name: "Hannah",
