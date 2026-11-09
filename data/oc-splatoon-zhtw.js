@@ -302,7 +302,7 @@ const SPLAT_CHARA_DATA_ZHTW = {
             relationships: [
                 {Axel: "親兄妹，從小就玩在一起，經常打罵對方或是對他指指點點，但感情深厚，經常替他擔心，只要一聯絡不上就會很緊張。"},
                 {Xiu: "從小就認識所以很常玩在一起，是好朋友，兩人經常簡訊聊天，很多時候是在討論亞克的事情。" },
-                {Blade: "在哥哥開始參與BBB活動後認識，覺得他待人真誠是個很棒的人，似乎有一點好感。"}
+                {Blade: "在哥哥開始參與BBB活動後認識，覺得他待人真誠是個很棒的人。跟他相處或合作時會有點緊張。"}
             ],
             variant:[
                 {casual: "日常"},
@@ -849,9 +849,7 @@ const SPLAT_LORE_DATA_ZHTW = {
         title: "新噴嘴小隊",
         subtitle: "New Squidbeak Splatoon",
         type: "Team",
-        summary : [
-            "XXX"
-        ]
+        summary : []
     },
     "OCTA" : {
         title: "OCTA",

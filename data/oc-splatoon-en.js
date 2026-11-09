@@ -56,7 +56,7 @@ const SPLAT_CHARA_DATA_EN = {
         name: "Axel",
         summary: [
             "The protagonist of the main story in Splatoon 2. At the beginning, he was hanging out with the wrong crowd, and things got tense between him and his family. After a certain chain of events, he saw Blade as an enemy and chased after him and even agreed to work as Agent 4 of the [[New Squidbeak Splatoon]] just to catch him. Along the way, he got caught up in the conflict with the [[Octarian Army]]. The journey eventually made him rethink the way he had been acting. In the end, he cut ties with his previous friends, cleared things up with Blade, and made peace with his family. Later, he formed the team [[BBB]] with Blade and a few other friends. His family runs a Hawaiian-style restaurant. He helps out sometimes, but usually tries to sneak off.",
-            "He's a loud, rowdy punk who's hot-headed and simple-minded. He gets into fights over the smallest things, so he usually has a bruise or two on his face. Still, he's loyal to his friends, always plays fair, and hates dirty tricks. Deep down, he's a good kid and he especially cares about his grandma. Whenever he gets hurt in a fight, he stays at a friend's place so his grandma doesn’t have to see his injuries."
+            "He's a loud, rowdy punk who's hot-headed and simple-minded. He gets into fights over the smallest things, so he usually has a bruise or two on his face. Still, he's loyal to his friends, always plays fair, and hates dirty tricks. Deep down, he's a good kid and he especially cares about his grandma. Whenever he gets hurt in a fight, he stays at a friend's place so his grandma doesn't have to see his injuries."
         ],
         notes: [
             "He represents the A button, which is why his name starts with A.",
@@ -185,7 +185,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Lance" : { 
             name: "Lance",
             summary: [
-                "A longtime friend of Hannah's. Like her, he became a well-known top-ranked player soon after [[Inkopolis Tower]] opened for [[Splat Battle|splat battles]]. After [[Royal Flush]] was formed, he became one of the team’s key players. He went to the police academy a few years later. He appears as a police officer later in the story and seems to be very busy on a big case.",
+                "A longtime friend of Hannah's. Like her, he became a well-known top-ranked player soon after [[Inkopolis Tower]] opened for [[Splat Battle|splat battles]]. After [[Royal Flush]] was formed, he became one of the team's key players. He went to the police academy a few years later. He appears as a police officer later in the story and seems to be very busy on a big case.",
                 "He is a brave, honest and noble guy of few words. He always looks serious and never shows much emotion, but he is very kind and will be there when help is needed. He is very well-built and can lift a person easily, so he is often the one to step in when things get out of hand. Troublemakers often turn around to find him suddenly standing right behind them. He also has an exceptionally sharp eye for detail and tends to pick up on things no one else notices.",
                 "Apparently, he comes from a big family with lots of cousins."
             ],
@@ -268,7 +268,7 @@ const SPLAT_CHARA_DATA_EN = {
             ],
             relationships: [
                 { Hannah: "Amy knows her strength very well and seems to be a big fan of hers. She doesn't really mind being bossed around by Hannah." },
-                { Lance: "Amy knows his strength very well and seems to be a big fan of his. She’s never quite sure what to make of all the attention he pays to her." },
+                { Lance: "Amy knows his strength very well and seems to be a big fan of his. She's never quite sure what to make of all the attention he pays to her." },
                 { Minerva: "She sees Minerva as a reliable teammate and doesn't mind her snuggles." },
                 { Roy: "They didn't seem to know each other before Royal Flush was formed. She finds his constant snide remarks a bit troublesome." }
             ],
@@ -280,25 +280,23 @@ const SPLAT_CHARA_DATA_EN = {
         "Elise" : { 
             name: "Elise",
             summary: [
-                "亞克的妹妹，從小和對方一起長大。跟家人感情很好。會因為身邊的人都在玩射擊遊戲也跟風一起玩，很喜歡參加祭典。看見哥哥有固定的隊友可以一起活動一直有點羨慕。曾經有一次不小心揭發哥哥的４號身分，搞到最後自己也參與其中，偶爾會代班進行4號的活動。",
-                "是個青春洋溢的女生，外向而且很熱心、擅長交朋友、很好相處。跟哥哥一樣重義氣，有一定程度的正義感，經常會幫朋友抱不平。也有多管閒事的習慣，喜歡聽八卦跟分享八卦，是個不太擅長看守秘密的人。",
-                "家人經營一家夏威夷風味餐廳，可以很常看到她在那裡幫忙。"
+                "Axel's younger sister. They grew up together, and she's very close with her family. She got into [[Splat Battle|splat battles]] because everyone around her was playing, and she loves taking part in Splatfests. She has always been a little jealous that her brother has a [[BBB|regular team]] to hang out with. One day, she accidentally found out that Axel was working for [[New Squidbeak Splatoon]] and ended up getting involved too. Now she sometimes fills in for him as Agent 4.  Her family runs a Hawaiian-style restaurant, and she can often be found helping out there.",
+                "She's a cheerful, energetic tomboy who gets along with just about anyone. She's attentive to her friends and never hesitates to speak up when something isn't right. Like Axel, she's very loyal to people she cares about. She's also a bit nosy and loves a good piece of gossip, so she's not the best person to tell a secret to."
             ],
             notes: [
-                "她代表的按鈕是▶鍵，名字來自East（東邊）",
-                "她比哥哥亞克小一歲",
-                "設定中有稍微加入夏威夷人的概念，算是有亞洲人血統",
-                "原本中文叫做艾莉，為了增加兄妹感＆避免跟其他人撞字而改成亞莉"
+                "She represents the ▶ button, and her name is derived from \"East\".",
+                "She's one year younger than Axel.",
+                "Her family is loosely based on Hawaiian culture, and conceptually, she is part Asian."
             ],
             relationships: [
-                {Axel: "親兄妹，從小就玩在一起，經常打罵對方或是對他指指點點，但感情深厚，經常替他擔心，只要一聯絡不上就會很緊張。"},
-                {Xiu: "從小就認識所以很常玩在一起，是好朋友，兩人經常簡訊聊天，很多時候是在討論亞克的事情。" },
-                {Blade: "在哥哥開始參與BBB活動後認識，覺得他待人真誠是個很棒的人，似乎有一點好感。"}
+                { Axel: "Her older brother. They grew up playing together and bicker all the time, and she's always nagging him and smacking him on the head. Still, they're very close. She worries about him a lot and gets anxious whenever she can't reach him." },
+                { Xiu: "They've known each other for a while and are good friends. They text each other a lot, usually talking about Axel." },
+                { Blade: "They met after Axel formed [[BBB]]. She thinks he's a great guy. She looks up to him and will get a little nervous whenever they get to hang out together." }
             ],
-            variant:[
-                {casual: "日常"},
-                {agent4: "特工服"}
-            ]                        
+            variant: [
+                { casual: "Casual" },
+                { agent4: "Agent 4" }
+            ]                   
         },
         "Viper" : { 
             name: "Viper",
@@ -766,7 +764,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Captain Cuttlefish" : { 
             name: "Captain Cuttlefish",
             summary: [
-                "The captain of the [[New Squidbeak Splatoon]]. He is a veteran of the Great Turf War, he has been keeping a close eye on what the [[Octarian Army]] is up to. As soon as he catches a wind of their new scheme, he formed the New Squidbeak Splatoon with his two granddaughters, hoping to stop the Octarians before they could cause any trouble. He comes across as a twitchy, rather suspicious old man, and it seems that most of the people don't take him seriously, his granddaughters included.",
+                "The captain of the [[New Squidbeak Splatoon]]. As a veteran of the Great Turf War, he has been keeping a close eye on what the [[Octarian Army]] is up to. As soon as he caught wind of their new scheme, he formed the New Squidbeak Splatoon with his two granddaughters, hoping to stop the Octarians before they could cause any trouble. He comes across as a twitchy, rather suspicious old man, and it seems that most people don't take him seriously, his granddaughters included.",
                 "Around the time of Splatoon 1, he saw potential in Blade and decided to train him as Agent 3. Later, he got trapped in the Deepsea Metro along with Edd, but they managed to escape with the others in the end. Around the time of Splatoon 3, he retired and handed his role as captain over to Blade, but he is still closely involved with the New Squidbeak Splatoon."
             ]
         },

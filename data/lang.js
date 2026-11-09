@@ -59,7 +59,7 @@ const SITE_STRINGS = {
     "lore.label":          "Lore",
     "lore.members":        "Members",
     "lore.membersInclude": "Members include",   // groups with large_group: true
-    "lore.empty":          "Nothing written here yet.",
+    "lore.empty":          "Nothing written for this entry yet.",
 
     // member roles in the lore modal (used as roles: { Name: "captain" })
     "role.and":            " & ",
