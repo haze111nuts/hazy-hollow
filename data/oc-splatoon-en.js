@@ -140,7 +140,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Wade" : { 
             name: "Wade",
             summary: [
-                "The protagonist of the main story in Splatoon 3, who grew up in Splatsville. He's socially awkward and doesn't have any real talents, which made him a laughingstock among the local teens. He started avoiding splat battles and spent most of his time at home playing video games. One day, he came across [[Wade's Smallfry|a starving Smallfry]] and took it in, which started a chain of events ralated to the research of Alterna; This ultimately made him join the New Squidbeak Splatoon as the new Agent 3",
+                "The protagonist of the main story in Splatoon 3, who grew up in [[Splatsville]]. He's socially awkward and doesn't have any real talents, which made him a laughingstock among the local teens. He started avoiding splat battles and spent most of his time at home playing video games. One day, he came across [[Wade's Smallfry|a starving Smallfry]] and took it in, which started a chain of events ralated to the research of Alterna; This ultimately made him join the New Squidbeak Splatoon as the new Agent 3",
                 "He's timid but kind-hearted. He may hesitate when he sees someone in trouble, but he always ended up helping at the end. He can be pretty lazy and whiny sometimes, especially when things don't go his way. The only thing he seems to be good at is video games, and he occasionally livestreams on his channel, even though it doesn't have many subscribers.",
                 "-- Wade's bio is currently WIP, more details coming soon --"
             ],
@@ -568,7 +568,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Zoelle" : { 
             name: "Zoelle",
             summary: [
-                "三代主線中登場。在蠻殼鎮長大，是蘇西在海林童子軍團中的勁敵，跟蘇西一樣是個非常傑出的童子軍小隊長。對於考古學抱有熱情，喜歡收集各種人類相關的歷史文物。在三代主線附近的時間點遇到了V8科研中心的研究員貝蒂並被其收容，後來她被招進了V8科研中心，在考古學與人類科技修復部門實習。",
+                "三代主線中登場。在[[蠻殼鎮]]長大，是蘇西在海林童子軍團中的勁敵，跟蘇西一樣是個非常傑出的童子軍小隊長。對於考古學抱有熱情，喜歡收集各種人類相關的歷史文物。在三代主線附近的時間點遇到了V8科研中心的研究員貝蒂並被其收容，後來她被招進了V8科研中心，在考古學與人類科技修復部門實習。",
                 "個性沉穩、自立、堅忍不拔，話不多，習慣自己一個人默默學習。專注力很強。總是把情緒藏在內心深處。",
                 "她似乎是裁判貓的忠實粉絲。",
                 "——三代設定還沒安排完，以上待補——"
@@ -591,7 +591,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Zarah" : { 
             name: "Zarah",
             summary: [
-                "佐伊的姐姐，在蠻殼鎮長大。因為母親生活方式很糟糕，加上家裡很窮，從小就經常被晾在一邊。對生活一直很不滿意，獲得自由後經常用招搖撞騙的方式獲取錢財，擅長編織謊言，詐騙技術高超。她後來替教父先生工作。",
+                "佐伊的姐姐，在[[蠻殼鎮]]長大。因為母親生活方式很糟糕，加上家裡很窮，從小就經常被晾在一邊。對生活一直很不滿意，獲得自由後經常用招搖撞騙的方式獲取錢財，擅長編織謊言，詐騙技術高超。她後來替教父先生工作。",
                 "個性叛逆，自私利己，有點厭世，覺得自己都管不好自己了實在懶得管別人。是個想幹嘛就幹嘛而且一點都不後悔的人。會用光鮮亮麗的物質生活彌補心理的空缺。",
                 "——相關的設定還沒有安排完，以上待補——"
             ],
@@ -948,5 +948,10 @@ const SPLAT_LORE_DATA_EN = {
         summary: [
             "XXX"
         ]
+    },
+    "Splatsville": {
+        title: "Splatsville",
+        type: "Location",
+        summary: []
     }
 };

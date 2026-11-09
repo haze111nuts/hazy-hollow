@@ -205,4 +205,5 @@ const SPLAT_LORE_COMMON_DATA = {
     "Splat Battle"                    : { color: "#00b4cc" },
     "Humanoid Cephalopod"             : { color: "#a4e2d3" },
     "Bar‘N’Arcades"                     : { color: "#a3903c" },
+    "Splatsville"                     : { color: "#d3e01f" },
 };
