@@ -225,8 +225,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // ---------------- data helpers ----------------
 
   // list of group keys each character belongs to
+  // groups shown on the grid page (hideInGrid: true groups only exist
+  // for their lore page's member list)
+  function gridGroups() {
+    return Object.keys(SPLAT_GROUP).filter((key) => !SPLAT_GROUP[key].hideInGrid);
+  }
+
   function groupsOf(name) {
-    return Object.keys(SPLAT_GROUP).filter((key) =>
+    return gridGroups().filter((key) =>
       SPLAT_GROUP[key].members.includes(name)
     );
   }
@@ -323,7 +329,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function renderByGroup() {
-    let html = Object.keys(SPLAT_GROUP)
+    let html = gridGroups()
       .map((key) => {
         const group = SPLAT_GROUP[key];
         return sectionHtml(groupName(group), membersOf(key), groupLoreKey(group));

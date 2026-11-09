@@ -649,7 +649,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Dorothy" : { 
             name: "Dorothy",
             summary: [
-                "OCTA的創辦人之一。於章魚軍團出生所以從小接受軍團的教育與訓練並變成章魚女兵。因為無法接受軍團的某條命令進行了反抗，這個行為讓她被放逐到章魚平民農村，她在那裡撿到一隻被當地幫派衝突波及的年幼章魚，也在那結交到不少其他對軍團抱有不滿的居民，他們一直私下互相幫助，一直在等待能從軍團的嚴苛社會中脫逃的機會。在３號擊敗將軍之後趁著騷動一起和同夥離開了蛸壺山谷，在軟體山上拓荒紮營，正式和同伴們組成了OCTA—章魚自助協會，給其他想離開軍團的章魚開拓了一條上岸的路。之後一直致力於OCTA的指揮與經營，她成功的在軟體山上成立了一家旅館作為OCTA的大本營，之後一直都在那活動。",
+                "OCTA的創辦人之一。於章魚軍團出生所以從小接受軍團的教育與訓練並變成章魚女兵。因為無法接受軍團的某條命令進行了反抗，這個行為讓她被放逐到章魚平民農村，她在那裡撿到一隻被當地幫派衝突波及的年幼章魚，也在那結交到不少其他對軍團抱有不滿的居民，他們一直私下互相幫助，一直在等待能從軍團的嚴苛社會中脫逃的機會。在３號擊敗將軍之後趁著騷動一起和同夥離開了[[蛸壺山谷]]，在軟體山上拓荒紮營，正式和同伴們組成了OCTA—章魚自助協會，給其他想離開軍團的章魚開拓了一條上岸的路。之後一直致力於OCTA的指揮與經營，她成功的在軟體山上成立了一家旅館作為OCTA的大本營，之後一直都在那活動。",
                 "個性豪爽﹑勇敢又熱心，勤勞又樂觀向上，可以把悲憤化為動力，是個固執不輕易退縮的人，還很會幫人討公道。經常在鼓勵與幫助身邊的人。特別照顧與關注所有從軍團逃出的年輕人，總會特別留意其中幾個。"
             ],
             notes: [
@@ -754,13 +754,13 @@ const SPLAT_CHARA_DATA_EN = {
         "Callie" : { 
             name: "Callie",
             summary: [
-                "A member of the Squid Sisters, the popular idol duo from [[Inkopolis|Inkopolis City]], and Agent 1 of the [[New Squidbeak Splatoon]]. In the main story of Splatoon 1, she was one of the agents who helped Blade on his missions as Agent 3. Around the time of Splatoon 2, she went missing after getting mixed up with the [[Octarian Army]]. Once things were resolved, she resumed her idol career and continued her agent work with the New Squidbeak Splatoon."
+                "A member of the [[Squid Sisters]], the popular idol duo from [[Inkopolis|Inkopolis City]], and Agent 1 of the [[New Squidbeak Splatoon]]. In the main story of Splatoon 1, she was one of the agents who helped Blade on his missions as Agent 3. Around the time of Splatoon 2, she went missing after getting mixed up with the [[Octarian Army]]. Once things were resolved, she resumed her idol career and continued her agent work with the New Squidbeak Splatoon."
             ]
         },
         "Marie" : { 
             name: "Marie",
             summary: [
-                "A member of the Squid Sisters, the popular idol duo from [[Inkopolis|Inkopolis City]], and Agent 2 of the [[New Squidbeak Splatoon]]. In the main story of Splatoon 1, she was one of the agents who helped Blade on his missions as Agent 3. Around the time of Splatoon 2, she put her idol career on hold to search for the missing Callie, and recruited Axel as Agent 4 to investigate in Octo Canyon. Once things were resolved, she resumed her idol career and continued her agent work with the New Squidbeak Splatoon."
+                "A member of the [[Squid Sisters]], the popular idol duo from [[Inkopolis|Inkopolis City]], and Agent 2 of the [[New Squidbeak Splatoon]]. In the main story of Splatoon 1, she was one of the agents who helped Blade on his missions as Agent 3. Around the time of Splatoon 2, she put her idol career on hold to search for the missing Callie, and recruited Axel as Agent 4 to investigate in [[Octo Canyon]]. Once things were resolved, she resumed her idol career and continued her agent work with the New Squidbeak Splatoon."
             ]
         },
         "Captain Cuttlefish" : { 
@@ -953,6 +953,21 @@ const SPLAT_LORE_DATA_EN = {
     "Splatsville": {
         title: "Splatsville",
         type: "Location",
+        summary: []
+    },
+    "Octo Valley": {
+        title: "Octo Valley",
+        type: "Location",
+        summary: []
+    },
+    "Octo Canyon": {
+        title: "Octo Canyon",
+        type: "Location",
+        summary: []
+    },
+    "Squid Sisters": {
+        title: "Squid Sisters",
+        type: "Idol Group",
         summary: []
     }
 };

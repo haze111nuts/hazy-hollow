@@ -77,6 +77,9 @@ const SPLAT_CHARA_COMMON_DATA = {
 //                A key that isn't in lang.js is shown as written.
 //   defaultRole: "staff"   role for everyone not listed in roles
 //                (leave it out for 成員 / Member)
+//   hideInGrid: true      not shown as a section on the grid page — the
+//                group only exists to list members on its lore page
+//                (e.g. canon idol groups)
 // Blank names ("") are reserved slots for characters not designed yet.
 // ===========================================================
 
@@ -104,6 +107,14 @@ const SPLAT_GROUP = {
                 "Captain Cuttlefish","Callie","Marie","Blade","Axel","Edd","Wade","Elise","Susie"
             ]
         },        
+        "Squid Sisters" : { 
+            groupName_en: "Squid Sisters",
+            groupName_ch: "潮色姊妹",
+            members: [
+                "Callie","Marie"
+            ],
+            hideInGrid: true
+        },
         "OCTA" : { 
             groupName_en: "OCTA",
             groupName_ch: "OCTA",
@@ -206,4 +217,7 @@ const SPLAT_LORE_COMMON_DATA = {
     "Humanoid Cephalopod"             : { color: "#a4e2d3" },
     "Bar‘N’Arcades"                     : { color: "#a3903c" },
     "Splatsville"                     : { color: "#d3e01f" },
+    "Octo Valley"                     : { color: "#6b4fa0" },
+    "Octo Canyon"                     : { color: "#c2552d" },
+    "Squid Sisters"                   : { color: "#e8459f" },
 };
