@@ -828,6 +828,11 @@ const SPLAT_LORE_DATA_EN = {
             "在後期劇情中似乎因為不可抗力的因素而解散。"
         ]
     },
+    "New Squidbeak Splatoon" : {
+        title: "New Squidbeak Splatoon",
+        type: "Team",
+        summary : []
+    },
     "OCTA" : {
         title: "OCTA",
         subtitle: "Octarian Community Transition Association",
@@ -842,16 +847,6 @@ const SPLAT_LORE_DATA_EN = {
         type: "Organization",
         summary : []
     },
-    "Elite Octoling Soldier" : {
-        title: "Elite Octoling Soldier",
-        type: "Notes",
-        summary : []
-    },
-    "Deepsea Metro Testing Procedure" : {
-        title: "Deepsea Metro Testing Procedure",
-        type: "Notes",
-        summary : []
-    },
     "Vector 8 Research Institute" : {
         title: "Vector 8 Research Institute",
         type: "Organization",
@@ -862,13 +857,10 @@ const SPLAT_LORE_DATA_EN = {
             "後來的秩序計畫虛擬宇宙正是由他們與飯田聯合開發。"
         ]
     },
-    "Project Lapis Lazuli" : {
-        title: "Project Lapis Lazuli",
-        subtitle: "Vector 8 Research Institute",
-        type: "Notes",
-        summary : [
-            "由來自軍團的研究員主導，將練魚公司廢棄倉庫中找到的「已經互相汙染」的記憶魚板進行分解與數據化等逆向工程。企劃名稱的由來是因為主導企畫的研究員四宮黛芬認為這些被污染的記憶魚板類似變質岩。"
-        ]
+    "Squid Sisters": {
+        title: "Squid Sisters",
+        type: "Idol Group",
+        summary: []
     },
     "Wade's Smallfry" : {
         title: "Wade's Smallfry",
@@ -877,11 +869,6 @@ const SPLAT_LORE_DATA_EN = {
             "在第三代主線的時間點登場的小生物，在被偉德撿到後和他一起被捲入一場古代調查相關的大冒險。",
             "他因為很會大便所以偉德總是在幫牠換褲子，因此被取名便便王。偉德也會暱稱牠「便便」或「尿布」，似乎沒有一個固定的名字。"
         ]
-    },
-    "New Squidbeak Splatoon" : {
-        title: "New Squidbeak Splatoon",
-        type: "Team",
-        summary : []
     },
     "Inkopolis" : {
         title: "Inkopolis",
@@ -917,22 +904,6 @@ const SPLAT_LORE_DATA_EN = {
         type: "Location",
         summary: []
     },
-    "Splat Battle": {
-        title: "Splat Battle",
-        type: "Lore",
-        summary: [
-            "以魷魚和章魚天生就可以噴墨和躲藏在墨水裡的特性所設計的墨水運動。在軟體世紀初（距離海產現代2000年前）就有文獻紀載基本規則與器材的需求，是一項歷史悠久的競技運動。",
-            "最原始的漆彈賽由兩隊各四名的運動員在事先劃好範圍的場地較量。兩方事先需換成不同顏色的墨水，接上場地內兩側的重生裝置，且每位隊員需各持有能夠潑灑墨水的武器，基本的規則為在三分鐘的時限內用墨水互相對抗並噴灑對手與場地，由最後墨水面積比較大的隊獲勝。近年來的國際漆彈協會更是批准了新的漆彈賽規則，衍生出了搶地、搶塔、搶魚和搶蛤的形式。",
-            "對於近代的年輕魷魚來說，漆彈是多數運動項目的其中一種最為刺激的項目。在一般的學校中，雖然也有各種不同的球類運動校隊，但年度的國高中漆彈聯賽仍是各間學校最受矚目的賽事。即使如此，由於被墨水噴灑而重生的痛感並不是一般大眾可以輕易承受的負擔，所以許多人最多也只會觀看比賽，而不會真的參與其中。直到2000年初無痛重生裝置被研發出來之前，漆彈都還是一種只有少數魷魚才會參與的運動。"
-        ]
-    },
-    "Humanoid Cephalopod": {
-        title: "Humanoid Cephalopod",
-        type: "Lore",
-        summary: [
-            "魷魚和章魚的通稱。這兩個種族在演化出了獨特的身體構造－他們的身體構造大部分是以墨水組成。他們的身體在沾上太多不同顏色的墨水或是過量的水時，就會因為身體無法保持形狀而溶解身亡。（待補）"
-        ]
-    },
     "Bar‘N’Arcades": {
         title: "Bar‘N’Arcades",
         type: "Location",
@@ -953,9 +924,38 @@ const SPLAT_LORE_DATA_EN = {
         type: "Location",
         summary: []
     },
-    "Squid Sisters": {
-        title: "Squid Sisters",
-        type: "Idol Group",
-        summary: []
+    "Splat Battle": {
+        title: "Splat Battle",
+        type: "Notes",
+        summary: [
+            "以魷魚和章魚天生就可以噴墨和躲藏在墨水裡的特性所設計的墨水運動。在軟體世紀初（距離海產現代2000年前）就有文獻紀載基本規則與器材的需求，是一項歷史悠久的競技運動。",
+            "最原始的漆彈賽由兩隊各四名的運動員在事先劃好範圍的場地較量。兩方事先需換成不同顏色的墨水，接上場地內兩側的重生裝置，且每位隊員需各持有能夠潑灑墨水的武器，基本的規則為在三分鐘的時限內用墨水互相對抗並噴灑對手與場地，由最後墨水面積比較大的隊獲勝。近年來的國際漆彈協會更是批准了新的漆彈賽規則，衍生出了搶地、搶塔、搶魚和搶蛤的形式。",
+            "對於近代的年輕魷魚來說，漆彈是多數運動項目的其中一種最為刺激的項目。在一般的學校中，雖然也有各種不同的球類運動校隊，但年度的國高中漆彈聯賽仍是各間學校最受矚目的賽事。即使如此，由於被墨水噴灑而重生的痛感並不是一般大眾可以輕易承受的負擔，所以許多人最多也只會觀看比賽，而不會真的參與其中。直到2000年初無痛重生裝置被研發出來之前，漆彈都還是一種只有少數魷魚才會參與的運動。"
+        ]
+    },
+    "Humanoid Cephalopod": {
+        title: "Humanoid Cephalopod",
+        type: "Notes",
+        summary: [
+            "魷魚和章魚的通稱。這兩個種族在演化出了獨特的身體構造－他們的身體構造大部分是以墨水組成。他們的身體在沾上太多不同顏色的墨水或是過量的水時，就會因為身體無法保持形狀而溶解身亡。（待補）"
+        ]
+    },
+    "Elite Octoling Soldier" : {
+        title: "Elite Octoling Soldier",
+        type: "Notes",
+        summary : []
+    },
+    "Deepsea Metro Testing Procedure" : {
+        title: "Deepsea Metro Testing Procedure",
+        type: "Notes",
+        summary : []
+    },
+    "Project Lapis Lazuli" : {
+        title: "Project Lapis Lazuli",
+        subtitle: "Vector 8 Research Institute",
+        type: "Notes",
+        summary : [
+            "由來自軍團的研究員主導，將練魚公司廢棄倉庫中找到的「已經互相汙染」的記憶魚板進行分解與數據化等逆向工程。企劃名稱的由來是因為主導企畫的研究員四宮黛芬認為這些被污染的記憶魚板類似變質岩。"
+        ]
     }
 };
