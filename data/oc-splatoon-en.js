@@ -27,7 +27,7 @@ const SPLAT_CHARA_DATA_EN = {
     "Blade": {
         name: "Blade",
         summary: [
-            "The protagonist of the main story in Splatoon 1. He moved to Inkopolis City to live with his dad and sister due to family reasons. He was socially awkward and not very athletic, so he wasn't good at splat games and never really fit in. The local teens saw him as the loser kid from out of town and often made fun of him by turning him into online memes. When Captain Cuttlefish secretly put him to the test, he showed quick thinking and resourcefulness and was chosen to become Agent 3 of the New Squidbeak Splatoon. He got caught up in conflicts involving the Octarian Army. By the end of the adventure, he gained confidence and understood his own strengths. Thanks to his success as an agent, he became an honorary member of [[OCTA]], and he often works with them as a volunteer.",
+            "The protagonist of the main story in Splatoon 1. He moved to [[Inkopolis|Inkopolis City]] to live with his dad and sister due to family reasons. He was socially awkward and not very athletic, so he wasn't good at [[Splat Battle|splat games]] and never really fit in. The local teens saw him as the loser kid from out of town and often made fun of him by turning him into online memes. When Captain Cuttlefish secretly put him to the test, he showed quick thinking and resourcefulness and was chosen to become Agent 3 of the [[New Squidbeak Splatoon]]. He got caught up in conflicts involving the [[Octarian Army]]. By the end of the adventure, he gained confidence and understood his own strengths. Later, he formed the splat team [[BBB]] with a few friends. Thanks to his success as an agent, he became an honorary member of [[OCTA]], and he often works with them as a volunteer.",
             "He gets nervous easily and isn't very brave, but he is a great leader with strong sense of justice. Overall, he's a pretty ordinary teenage boy. He's thoughtful and kind, and usually ends up being the peacemaker and the one who does all the hard work. He tends to have bad luck, so he's often seen facepalming or giving a \"why me\" look. After everything he's been through, he really values his friends and family. He apparently knows how to play a little guitar."
         ],
         notes: [
@@ -55,7 +55,7 @@ const SPLAT_CHARA_DATA_EN = {
     "Axel": {
         name: "Axel",
         summary: [
-            "The protagonist of the main story in Splatoon 2. At the beginning, he was hanging out with the wrong crowd, and things got tense between him and his family. After a certain chain of events, he saw Blade as an enemy and chased after him and even agreed to work as Agent 4 of the New Squidbeak Splatoon just to catch him. Along the way, he got caught up in the conflict with the Octarian Army. The journey eventually made him rethink the way he had been acting. In the end, he cut ties with his previous friends, cleared things up with Blade, and made peace with his family. His family runs a Hawaiian-style restaurant. He helps out sometimes, but usually tries to sneak off.",
+            "The protagonist of the main story in Splatoon 2. At the beginning, he was hanging out with the wrong crowd, and things got tense between him and his family. After a certain chain of events, he saw Blade as an enemy and chased after him and even agreed to work as Agent 4 of the [[New Squidbeak Splatoon]] just to catch him. Along the way, he got caught up in the conflict with the [[Octarian Army]]. The journey eventually made him rethink the way he had been acting. In the end, he cut ties with his previous friends, cleared things up with Blade, and made peace with his family. Later, he formed the team [[BBB]] with Blade and a few other friends. His family runs a Hawaiian-style restaurant. He helps out sometimes, but usually tries to sneak off.",
             "He's a loud, rowdy punk who's hot-headed and simple-minded. He gets into fights over the smallest things, so he usually has a bruise or two on his face. Still, he's loyal to his friends, always plays fair, and hates dirty tricks. Deep down, he's a good kid and he especially cares about his grandma. Whenever he gets hurt in a fight, he stays at a friend's place so his grandma doesn’t have to see his injuries."
         ],
         notes: [
@@ -79,9 +79,9 @@ const SPLAT_CHARA_DATA_EN = {
     "Yoni": {
         name: "Yoni",
         summary: [
-            "First appeared in the main story of Splatoon 1. He was the only friend Blade had around that time, and he is always excited to hang out with Blade. When Blade lost his morale due to the hardship he faced in agent work, Yoni tried to cheer him up by showing him around the city. Yoni seems to know all the best places in Inkopolis.",
-            "He is an outgoing and chaotic guy, always goofing around without a care in the world. He is constantly looking for fun and seems to have trouble sitting still. He is usually the comic relief of the group, often blurting out random jokes or memes that no one gets. He often speaks without thinking and will burst out laughing even at the most inappropriate moments.",
-            "He apparently got a job at Bar\"N\"Arcades during the events of Splatoon 1."
+            "First appeared in the main story of Splatoon 1. He was the only friend Blade had around that time, and he is always excited to hang out with Blade. When Blade lost his morale due to the hardship he faced in agent work, Yoni tried to cheer him up by showing him around the city. Yoni seems to know all the best places in [[Inkopolis Plaza|Inkopolis]].",
+            "He is an outgoing and chaotic guy, always goofing around without a care in the world. He is constantly looking for fun and seems to have trouble sitting still. He is usually the comic relief of the group, often blurting out random jokes or memes that no one gets. He often speaks without thinking and will burst out laughing even at the most inappropriate moments. He seems to have a big, lively family.",
+            "He apparently got a job at [[Bar‘N’Arcades]] during the events of Splatoon 1."
         ],
         notes: [
             "He represents the Y button, which is why his name starts with Y.",
@@ -98,7 +98,7 @@ const SPLAT_CHARA_DATA_EN = {
             name: "Xiu",
             summary: [
                 "First appeared in the main story of Splatoon 2. He has known Axel for a long time, and back then, he was one of the bad kids who led Axel down the wrong path. After Axel cut ties with the group, Xiu left too, just so he could make up with him. He eventually managed to squeeze his way into Axel's new circle of friends.",
-                "He's an attention-seeking social butterfly who's never afraid to show himself off. He tends to like high-class and fancy things, but he's really just a regular teenager who wants to impress the cool kids. He's a bit of a drama queen and can be pretty flirtatious. He's also extremely online. He's very active on social media and will jump on every trend for attention, he even managed to injure his own eye in one of the livestream challenges. He works part-time at a beauty store in Arowana Mall and seems to have a knack for makeup and fashion.",
+                "He's an attention-seeking social butterfly who's never afraid to show himself off. He tends to like high-class and fancy things, but he's really just a regular teenager who wants to impress the cool kids. He's a bit of a drama queen and can be pretty flirtatious. He's also extremely online. He's very active on social media and will jump on every trend for attention, he even managed to injure his own eye in one of the livestream challenges. He lives close to [[Inkopolis Square]] and works part-time at a beauty store in Arowana Mall, he seems to have a knack for makeup and fashion.",
                 "His favorite food is tiramisu."
             ],
             notes: [
@@ -116,7 +116,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Edd" : { 
             name: "Edd",
             summary: [
-                "The protagonist of the Deepsea Metro side story. He used to be a member of the Octarian Army. Growing up there gave him a solid background in mechanical engineering, and he specialized in vehicle-related technology. He never aligned with the Army's ideals, and while at the Octarian Army Academy, he secretly worked with a group of students who wanted change. Just before he could leave the underground, he got caught up in the [[Deepsea Metro Testing Procedure]] and lost his memory. In the end, he  remembered his past and escaped to the surface. To repay the New Squidbeak Splatoon for their help, he joined them as Agent 8.",
+                "The protagonist of the Deepsea Metro side story. He used to be a member of the [[Octarian Army]]. Growing up there gave him a solid background in mechanical engineering, and he specialized in vehicle-related technology. He never aligned with the Army's ideals, and while at the Octarian Army Academy, he secretly worked with a group of students who wanted change. Just before he could leave the underground, he got caught up in the [[Deepsea Metro Testing Procedure]] and lost his memory. In the end, he  remembered his past and escaped to the surface. To repay the [[New Squidbeak Splatoon]] for their help, he joined them as Agent 8.",
                 "He is a proud, edgy loner who always looks unfriendly and skeptical. He's stubborn and never shows how he really feels. Even when he wants to help, he won't say it out loud, which makes him hard to get along with. He seems to have some trust issue and tends to keep his distance from others, but his old comrades from the Army say that \"he wasn't always like this\".",
                 "He seems to like the scenery on the surface."
             ],
@@ -159,7 +159,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Hannah" : { 
             name: "Hannah",
             summary: [
-                "Soon after Inkopolis Tower opened for splat battles, she became a well-known top-ranked player with a violent close-range playstyle. She was then scouted by a shady duo to fight against the Octarians, she carried out one mission for them then quit right after to focus on competitive games. As ordinary battles eventually stopped being enough for her, she later accepted a fan's offer to help her put [[Royal Flush|a team]] together. This allowed her to play in many official tournaments, crushing opponents one after another with her team. Late in the story, she went missing, apparently fighting in some kind of illegal underground matches.",
+                "Soon after [[Inkopolis Tower]] opened for [[Splat Battle|splat battles]], she became a well-known top-ranked player with a violent close-range playstyle. She was then scouted by a shady duo to fight against the Octarians, she carried out one mission for them then quit right after to focus on competitive games. As ordinary battles eventually stopped being enough for her, she later accepted a fan's offer to help her put [[Royal Flush|a team]] together. This allowed her to play in many official tournaments, crushing opponents one after another with her team. Late in the story, she went missing, apparently fighting in some kind of illegal underground matches.",
                 "She is a tough, grumpy and aggressive individual who has a harsh attitude toward everything. She always looks unimpressed and annoyed. The only thing that will get her fired up or make her feel any sort of enjoyment is splat battles. She has a sharp tongue and a mean mouth. She is never friendly to anyone and she especially cannot stand wimps or anything remotely sentimental. She also seems to have trouble saying simple things like \"thanks\".",
                 "She chugs down several cans of energy drinks on a daily basis."
             ],
@@ -185,8 +185,8 @@ const SPLAT_CHARA_DATA_EN = {
         "Lance" : { 
             name: "Lance",
             summary: [
-                "A longtime friend of Hannah's. Like her, he became a well-known top-ranked player soon after Inkopolis Tower opened for splat battles. After [[Royal Flush]] was formed, he became one of the team’s key players. He went to the police academy a few years later. He appears as a police officer later in the story and seems to be very busy on a big case.",
-                "He is a brave, honest and noble guy of few words. He always looks serious and never shows much emotion, but he is very kind and will be there when help is needed. He is very well-built and can lift a person easily, so he is often the one to step in when things get out of hand. Troublemakers often turn around to find him suddenly standing right behind them. He also has an exceptionally sharp eye for detail and tends to pick up on things no one else notices."
+                "A longtime friend of Hannah's. Like her, he became a well-known top-ranked player soon after [[Inkopolis Tower]] opened for [[Splat Battle|splat battles]]. After [[Royal Flush]] was formed, he became one of the team’s key players. He went to the police academy a few years later. He appears as a police officer later in the story and seems to be very busy on a big case.",
+                "He is a brave, honest and noble guy of few words. He always looks serious and never shows much emotion, but he is very kind and will be there when help is needed. He is very well-built and can lift a person easily, so he is often the one to step in when things get out of hand. Troublemakers often turn around to find him suddenly standing right behind them. He also has an exceptionally sharp eye for detail and tends to pick up on things no one else notices. He seems to have a big, lively family."
             ],
             notes: [
                 "He represents the L button, which is why his name starts with L.",
@@ -209,7 +209,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Minerva" : { 
             name: "Minerva",
             summary: [
-                "Edd's twin sister, and once an elite Octozoness soldier in the Octarian Army. She was the top of her class and a classic model student, loyal to the Army and hoping to serve for life. When Hannah infiltrated the Army while briefly acting as Agent 3, she defeated Minerva and told her she was \"wasting talent in a shitty place\". Minerva did not take the lose well, and with her brother's influence, she finally decided to join the wave of Octarians leaving the Army after DJ Octavio was defeated. After moving to the surface, she tracked down Hannah for a rematch, and later joined [[Royal Flush|her team]].",
+                "Edd's twin sister, and once an [[Elite Octoling Soldier]] in the [[Octarian Army]]. She was the top of her class and a classic model student, loyal to the Army and hoping to serve for life. When Hannah infiltrated the Army while briefly acting as Agent 3, she defeated Minerva and told her she was \"wasting talent in a shitty place\". Minerva did not take the lose well, and with her brother's influence, she finally decided to join the wave of Octarians leaving the Army after DJ Octavio was defeated. After moving to the surface, she tracked down Hannah for a rematch, and later joined [[Royal Flush|her team]].",
                 "She is a hardworking, disciplined and very by-the-book girl. She is not very outspoken and tends to keep complaints to herself. She thinks about life in the Army a lot, but the surface still amazes her, and every now and then her girly, starry-eyed side comes out, especially when she sees something cute or dashing. She has great focus, and once she gets in the zone on the battlefield, she's very hard to defeat.", 
                 "She is very fond of sparkling drinks."
             ],
@@ -233,8 +233,8 @@ const SPLAT_CHARA_DATA_EN = {
         "Roy" : { 
             name: "Roy",
             summary: [
-                "A boy who occasionally showed up on the Inkopolis Tower leaderboard. One day, he appeared on the street and started harassing Amy, which led to a clash between him and Lance. The two agreed to settle it with a few rounds of splat battles, and Roy's skills shown in the games earned him a spot in [[Royal Flush]]. As the team's long-range player, he has an aim so cold and precise that it can be a little unsettling to watch. He often skips practice without telling anyone.",
-                "He barely talks or shows any expression, and he always looks uninterested at team get-togethers. Whenever he does speak, it's usually something very rude and offensive. Other people's feelings mean very little to him, and he constantly looks like he is going to throw a punch or draw a knife at anyone who attempts to mess with him. Apparently, he has a sweet tooth and is often seen snacking or drinking something sugary. He seems to work part-time at a pawnshop in Inkopolis City, where he helps with repairs in the used weapons section."
+                "A boy who occasionally showed up on the [[Inkopolis Tower]] leaderboard. One day, he appeared on the street and started harassing Amy, which led to a clash between him and Lance. The two agreed to settle it with a few rounds of splat battles, and Roy's skills shown in the games earned him a spot in [[Royal Flush]]. As the team's long-range player, he has an aim so cold and precise that it can be a little unsettling to watch. He often skips practice without telling anyone.",
+                "He barely talks or shows any expression, and he always looks uninterested at team get-togethers. Whenever he does speak, it's usually something very rude and offensive. Other people's feelings mean very little to him, and he constantly looks like he is going to throw a punch or draw a knife at anyone who attempts to mess with him. Apparently, he has a sweet tooth and is often seen snacking or drinking something sugary. He seems to work part-time at a pawnshop in [[Inkopolis|Inkopolis City]], where he helps with repairs in the used weapons section."
             ],
             notes: [
                 "He represents the R button, which is why his name starts with R.",
@@ -257,7 +257,7 @@ const SPLAT_CHARA_DATA_EN = {
             summary: [
                 "The manager of [[Royal Flush]]. She seems to be a longtime fan of Hannah and Lance, she showed up one day and offered to help them build a team; she is also the one who came up with its name. As the team's manager, she handles all the important work, from schedules to tournament sign-ups, and she's surprisingly good at it for someone who seems so timid and clumsy. She states she has no talent for splat battles and has never played much, though she once reacted faster than any ordinary person could…",
                 "She is a shy, gentle, soft-spoken nerdy girl who gets flustered easily. She is rather introverted and tends to do things alone, but she is very sweet and attentive to the members of [[Royal Flush]]. She's always busy with the team-related chores Hannah shoves onto her. Her taste can be a little unusual. She has quite a collection of books, t-shirts, and merch that are dark and creepy.",
-                "She can often be seen working at an old-fashioned used bookstore in Inkopolis City."
+                "She can often be seen working at an old-fashioned used bookstore in [[Inkopolis|Inkopolis City]]."
             ],
             notes: [
                 "She represents the volume down button. The A in her name can be flipped upside down to become a V (for volume) and a ‘-’.",
@@ -873,6 +873,79 @@ const SPLAT_LORE_DATA_EN = {
         summary : [
             "在第三代主線的時間點登場的小生物，在被偉德撿到後和他一起被捲入一場古代調查相關的大冒險。",
             "他因為很會大便所以偉德總是在幫牠換褲子，因此被取名便便王。偉德也會暱稱牠「便便」或「尿布」，似乎沒有一個固定的名字。"
+        ]
+    },
+    "New Squidbeak Splatoon" : {
+        title: "New Squidbeak Splatoon",
+        type: "Team",
+        summary : [
+            "XXX"
+        ]
+    },
+    "Octarian Army" : {
+        title: "Octarian Army",
+        type: "Organization",
+        summary : [
+            "XXX"
+        ]
+    },
+    "Inkopolis" : {
+        title: "Inkopolis",
+        type: "Location",
+        summary : [
+            "在高領地區中心的大都會，最著名的景點是高領市中心和高領廣場。",
+            "又稱尚興市。"
+        ]
+    },
+    "Inkadia" : {
+        title: "Greater Inkopolis",
+        type: "Location",
+        summary : [
+            "跟蠻殼地區和鹽辛地區比起來相對比較現代化的地區。高領市以外，軟體山和章魚軍團管轄的山谷都在高領地區的範疇以內，在水下也有深海村鎮。"
+        ]
+    },
+    "Inkopolis Plaza" : {
+        title: "Inkopolis Plaza",
+        type: "Location",
+        summary : [
+            "高領市的樞紐，以海龍王百貨和魷空塔聞名。自從魷空塔在ME2015年開放後因為聚集了許多前來比賽的魷魚而變得更加繁忙，一度還造成人潮擁擠，間接加速了高領廣場的改建計畫。"
+        ]
+    },
+    "Inkopolis Square": {
+        title: "Inkopolis Square",
+        type: "Location",
+        summary: [
+            "高領市的一處街區。原先這裡是治安有些問題的區域，但在高領市政府在實施改建計畫、並在ME2017年完成十代塔的翻修、以其作為第二個辦理漆彈賽的地方以後，變成了另一個年輕魷魚聚集的場所。"
+        ]
+    },
+    "Inkopolis Tower": {
+        title: "Inkopolis Tower",
+        type: "Location",
+        summary: [
+            "xxx"
+        ]
+    },
+    "Splat Battle": {
+        title: "Splat Battle",
+        type: "Lore",
+        summary: [
+            "以魷魚和章魚天生就可以噴墨和躲藏在墨水裡的特性所設計的墨水運動。在軟體世紀初（距離海產現代2000年前）就有文獻紀載基本規則與器材的需求，是一項歷史悠久的競技運動。",
+            "最原始的漆彈賽由兩隊各四名的運動員在事先劃好範圍的場地較量。兩方事先需換成不同顏色的墨水，接上場地內兩側的重生裝置，且每位隊員需各持有能夠潑灑墨水的武器，基本的規則為在三分鐘的時限內用墨水互相對抗並噴灑對手與場地，由最後墨水面積比較大的隊獲勝。近年來的國際漆彈協會更是批准了新的漆彈賽規則，衍生出了搶地、搶塔、搶魚和搶蛤的形式。",
+            "對於近代的年輕魷魚來說，漆彈是多數運動項目的其中一種最為刺激的項目。在一般的學校中，雖然也有各種不同的球類運動校隊，但年度的國高中漆彈聯賽仍是各間學校最受矚目的賽事。即使如此，由於被墨水噴灑而重生的痛感並不是一般大眾可以輕易承受的負擔，所以許多人最多也只會觀看比賽，而不會真的參與其中。直到2000年初無痛重生裝置被研發出來之前，漆彈都還是一種只有少數魷魚才會參與的運動。"
+        ]
+    },
+    "Humanoid Cephalopod": {
+        title: "Humanoid Cephalopod",
+        type: "Lore",
+        summary: [
+            "魷魚和章魚的通稱。這兩個種族在演化出了獨特的身體構造－他們的身體構造大部分是以墨水組成。他們的身體在沾上太多不同顏色的墨水或是過量的水時，就會因為身體無法保持形狀而溶解身亡。（待補）"
+        ]
+    },
+    "Bar‘N’Arcades": {
+        title: "Bar‘N’Arcades",
+        type: "Location",
+        summary: [
+            "XXX"
         ]
     }
 };
