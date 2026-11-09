@@ -754,19 +754,20 @@ const SPLAT_CHARA_DATA_EN = {
         "Callie" : { 
             name: "Callie",
             summary: [
-                "A member of the Squid Sisters, the popular idol duo from [[Inkopolis|Inkopolis City]], and Agent 1 of the [[New Squidbeak Splatoon]]. In the main story of Splatoon 1, she was one of the agents who helped Blade on his missions as Agent 3. Around the time of Splatoon 2, she went missing after getting mixed up with the [[Octarian Army]]. Once things were resolved, she went back to being an idol and continued her agent work with the New Squidbeak Splatoon."
+                "A member of the Squid Sisters, the popular idol duo from [[Inkopolis|Inkopolis City]], and Agent 1 of the [[New Squidbeak Splatoon]]. In the main story of Splatoon 1, she was one of the agents who helped Blade on his missions as Agent 3. Around the time of Splatoon 2, she went missing after getting mixed up with the [[Octarian Army]]. Once things were resolved, she resumed her idol career and continued her agent work with the New Squidbeak Splatoon."
             ]
         },
         "Marie" : { 
             name: "Marie",
             summary: [
-                "A member of the Squid Sisters, the popular idol duo from [[Inkopolis|Inkopolis City]], and Agent 2 of the [[New Squidbeak Splatoon]]. In the main story of Splatoon 1, she was one of the agents who helped Blade on his missions as Agent 3. Around the time of Splatoon 2, she put her idol career on hold to search for the missing Callie, and recruited Axel as Agent 4 to investigate Octo Canyon. Once things were resolved, she went back to being an idol and continued her agent work with the New Squidbeak Splatoon."
+                "A member of the Squid Sisters, the popular idol duo from [[Inkopolis|Inkopolis City]], and Agent 2 of the [[New Squidbeak Splatoon]]. In the main story of Splatoon 1, she was one of the agents who helped Blade on his missions as Agent 3. Around the time of Splatoon 2, she put her idol career on hold to search for the missing Callie, and recruited Axel as Agent 4 to investigate in Octo Canyon. Once things were resolved, she resumed her idol career and continued her agent work with the New Squidbeak Splatoon."
             ]
         },
         "Captain Cuttlefish" : { 
             name: "Captain Cuttlefish",
             summary: [
-                "The captain of the [[New Squidbeak Splatoon]]. He is a veteran of the Great Turf War between the Inklings and the Octarians, so he keeps a close eye on what the [[Octarian Army]] is up to these days. When he noticed something was off, he dragged his two granddaughters into forming the New Squidbeak Splatoon on their own, hoping to stop the Octarians before they could grow any stronger. He comes across as a twitchy, rather suspicious old man. Around the time of Splatoon 1, he saw potential in Blade and decided to train him as Agent 3. Later, he got trapped in the Deepsea Metro along with Edd, but they managed to escape with the others in the end. Around the time of Splatoon 3, he retired and handed his role as captain over to Blade, but he is still closely involved with the New Squidbeak Splatoon."
+                "The captain of the [[New Squidbeak Splatoon]]. He is a veteran of the Great Turf War, he has been keeping a close eye on what the [[Octarian Army]] is up to. As soon as he catches a wind of their new scheme, he formed the New Squidbeak Splatoon with his two granddaughters, hoping to stop the Octarians before they could cause any trouble. He comes across as a twitchy, rather suspicious old man, and it seems that most of the people don't take him seriously, his granddaughters included.",
+                "Around the time of Splatoon 1, he saw potential in Blade and decided to train him as Agent 3. Later, he got trapped in the Deepsea Metro along with Edd, but they managed to escape with the others in the end. Around the time of Splatoon 3, he retired and handed his role as captain over to Blade, but he is still closely involved with the New Squidbeak Splatoon."
             ]
         },
         "DJ Octavio" : { 
