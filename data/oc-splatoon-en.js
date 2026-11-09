@@ -805,6 +805,13 @@ const SPLAT_CHARA_DATA_EN = {
 //
 // Link to a lore page from any text with [[OCTA]], [[深海地鐵測驗程序]]
 // (any language's title works) or [[Royal Flush|RF]] (custom label).
+//
+// ORDER: keep entries grouped by type, in this order —
+//   1. Team  2. Organization  3. Idol Group  4. Creature
+//   5. Location  6. Notes
+// Use the same order in oc-splatoon-zhtw.js, oc-splatoon-en.js
+// and oc-splatoon-common.js. A new entry goes at the end of its
+// type's group.
 // ===========================================================
 
 const SPLAT_LORE_DATA_EN = {

@@ -195,6 +195,13 @@ const SPLAT_GROUP = {
 // Master list of lore pages: the id (key) is used for [[links]]
 // and must match the keys in SPLAT_LORE_DATA_ZHTW / _EN.
 //   color   the lore page's theme color
+//
+// ORDER: keep entries grouped by type, in this order —
+//   1. Team  2. Organization  3. Idol Group  4. Creature
+//   5. Location  6. Notes
+// Use the same order in oc-splatoon-zhtw.js, oc-splatoon-en.js
+// and oc-splatoon-common.js. A new entry goes at the end of its
+// type's group.
 // ===========================================================
 
 const SPLAT_LORE_COMMON_DATA = {
@@ -211,7 +218,7 @@ const SPLAT_LORE_COMMON_DATA = {
     "Inkopolis Plaza"                 : { color: "#58b818" },
     "Inkopolis Square"                : { color: "#d431b1" },
     "Inkopolis Tower"                 : { color: "#a4c726" },
-    "Bar‘N’Arcades"                     : { color: "#a3903c" },
+    "Bar‘N’Arcades"                   : { color: "#a3903c" },
     "Splatsville"                     : { color: "#d3e01f" },
     "Octo Valley"                     : { color: "#6b4fa0" },
     "Octo Canyon"                     : { color: "#c2552d" },
