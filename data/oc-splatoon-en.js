@@ -27,7 +27,7 @@ const SPLAT_CHARA_DATA_EN = {
     "Blade": {
         name: "Blade",
         summary: [
-            "The protagonist of the main story in Splatoon 1. He moved to [[Inkopolis|Inkopolis City]] to live with his dad and sister due to family reasons. He was socially awkward and not very athletic, so he wasn't good at [[Splat Battle|splat games]] and never really fit in. The local teens saw him as the loser kid from out of town and often made fun of him by turning him into online memes. When Captain Cuttlefish secretly put him to the test, he showed quick thinking and resourcefulness and was chosen to become Agent 3 of the [[New Squidbeak Splatoon]]. He then got caught up in conflicts involving the [[Octarian Army]]. By the end of the adventure, he gained confidence and understood his own strengths. Later, he formed the splat team [[BBB]] with a few friends. Thanks to his success as an agent, he became an honorary member of [[OCTA]], and he often works with them as a volunteer.",
+            "The protagonist of the main story in Splatoon 1. He moved to [[Inkopolis|Inkopolis City]] to live with his dad and sister due to family reasons. He was socially awkward and not very athletic, so he wasn't good at [[Splat Battle|splat games]] and never really fit in. The local teens saw him as the loser kid from out of town and often made fun of him by turning him into online memes. When Captain Cuttlefish secretly put him to the test, he showed quick thinking and resourcefulness and was chosen to become Agent 3 of the [[New Squidbeak Splatoon]]. He then got caught up in conflicts involving the [[Octarian Army]]. By the end of the adventure, he gained confidence and understood his own strengths. Later, he formed the splat team [[BBB]] with a few friends. And thanks to his success as an agent, he became an honorary member of [[OCTA]], and he often works with them as a volunteer.",
             "He gets nervous easily and isn't very brave, but he is a great leader with strong sense of justice. Overall, he's a pretty ordinary teenage boy. He's thoughtful and kind, and usually ends up being the peacemaker and the one who does all the hard work. He tends to have bad luck, so he's often seen facepalming or giving a \"why me\" look. After everything he's been through, he really values his friends and family. He apparently knows how to play a little guitar."
         ],
         notes: [
@@ -837,19 +837,20 @@ const SPLAT_LORE_DATA_EN = {
             "後來那些想要離開營地的始祖成員也如願搬去高領市，他們為後期的OCTA擴大了據點和處理的事項範圍，現在隸屬於這個自助會下的建築除了章魚青年公寓以外，也有小章魚收容所，專門收留從軍團的幼稚園和小學帶出來的小章魚，又或是能幫助章魚順利融入陸上的魷魚語補習班，甚至也有一些與互助會合作的診所。"
         ]
     },
+    "Octarian Army" : {
+        title: "Octarian Army",
+        type: "Organization",
+        summary : []
+    },
     "Elite Octoling Soldier" : {
         title: "Elite Octoling Soldier",
         type: "Notes",
-        summary : [
-            "12345"
-        ]
+        summary : []
     },
     "Deepsea Metro Testing Procedure" : {
         title: "Deepsea Metro Testing Procedure",
         type: "Notes",
-        summary : [
-            "TEST"
-        ]
+        summary : []
     },
     "Vector 8 Research Institute" : {
         title: "Vector 8 Research Institute",
@@ -880,16 +881,7 @@ const SPLAT_LORE_DATA_EN = {
     "New Squidbeak Splatoon" : {
         title: "New Squidbeak Splatoon",
         type: "Team",
-        summary : [
-            "XXX"
-        ]
-    },
-    "Octarian Army" : {
-        title: "Octarian Army",
-        type: "Organization",
-        summary : [
-            "XXX"
-        ]
+        summary : []
     },
     "Inkopolis" : {
         title: "Inkopolis",
@@ -923,9 +915,7 @@ const SPLAT_LORE_DATA_EN = {
     "Inkopolis Tower": {
         title: "Inkopolis Tower",
         type: "Location",
-        summary: [
-            "xxx"
-        ]
+        summary: []
     },
     "Splat Battle": {
         title: "Splat Battle",
@@ -946,9 +936,7 @@ const SPLAT_LORE_DATA_EN = {
     "Bar‘N’Arcades": {
         title: "Bar‘N’Arcades",
         type: "Location",
-        summary: [
-            "XXX"
-        ]
+        summary: []
     },
     "Splatsville": {
         title: "Splatsville",

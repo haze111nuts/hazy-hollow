@@ -859,17 +859,13 @@ const SPLAT_LORE_DATA_ZHTW = {
         title: "章魚軍團",
         subtitle: "Octarian Army",
         type: "Organization",
-        summary : [
-            "XXX"
-        ]
+        summary : []
     },
     "Elite Octoling Soldier" : {
         title: "菁英章魚兵",
         subtitle: "Elite Octoling Soldier",
         type: "Notes",
-        summary : [
-            "12345"
-        ]
+        summary : []
     },
     "Deepsea Metro Testing Procedure" : {
         title: "深海地鐵測驗程序",
@@ -946,9 +942,7 @@ const SPLAT_LORE_DATA_ZHTW = {
         title: "魷空塔",
         subtitle: "Inkopolis Tower",
         type: "Location",
-        summary: [
-            "xxx"
-        ]
+        summary: []
     },
     "Splat Battle": {
         title: "漆彈比賽",
@@ -972,9 +966,7 @@ const SPLAT_LORE_DATA_ZHTW = {
         title: "藤壺電子反斗城",
         subtitle: "Bar‘N’Arcades",
         type: "Location",
-        summary: [
-            "XXX"
-        ]
+        summary: []
     },
     "Splatsville": {
         title: "蠻殼鎮",
