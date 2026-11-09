@@ -27,7 +27,7 @@ const SPLAT_CHARA_DATA_EN = {
     "Blade": {
         name: "Blade",
         summary: [
-            "The protagonist of the main story in Splatoon 1. He moved to [[Inkopolis|Inkopolis City]] to live with his dad and sister due to family reasons. He was socially awkward and not very athletic, so he wasn't good at [[Splat Battle|splat games]] and never really fit in. The local teens saw him as the loser kid from out of town and often made fun of him by turning him into online memes. When Captain Cuttlefish secretly put him to the test, he showed quick thinking and resourcefulness and was chosen to become Agent 3 of the [[New Squidbeak Splatoon]]. He got caught up in conflicts involving the [[Octarian Army]]. By the end of the adventure, he gained confidence and understood his own strengths. Later, he formed the splat team [[BBB]] with a few friends. Thanks to his success as an agent, he became an honorary member of [[OCTA]], and he often works with them as a volunteer.",
+            "The protagonist of the main story in Splatoon 1. He moved to [[Inkopolis|Inkopolis City]] to live with his dad and sister due to family reasons. He was socially awkward and not very athletic, so he wasn't good at [[Splat Battle|splat games]] and never really fit in. The local teens saw him as the loser kid from out of town and often made fun of him by turning him into online memes. When Captain Cuttlefish secretly put him to the test, he showed quick thinking and resourcefulness and was chosen to become Agent 3 of the [[New Squidbeak Splatoon]]. He then got caught up in conflicts involving the [[Octarian Army]]. By the end of the adventure, he gained confidence and understood his own strengths. Later, he formed the splat team [[BBB]] with a few friends. Thanks to his success as an agent, he became an honorary member of [[OCTA]], and he often works with them as a volunteer.",
             "He gets nervous easily and isn't very brave, but he is a great leader with strong sense of justice. Overall, he's a pretty ordinary teenage boy. He's thoughtful and kind, and usually ends up being the peacemaker and the one who does all the hard work. He tends to have bad luck, so he's often seen facepalming or giving a \"why me\" look. After everything he's been through, he really values his friends and family. He apparently knows how to play a little guitar."
         ],
         notes: [
@@ -79,9 +79,9 @@ const SPLAT_CHARA_DATA_EN = {
     "Yoni": {
         name: "Yoni",
         summary: [
-            "First appeared in the main story of Splatoon 1. He was the only friend Blade had around that time, and he is always excited to hang out with Blade. When Blade lost his morale due to the hardship he faced in agent work, Yoni tried to cheer him up by showing him around the city. Yoni seems to know all the best places in [[Inkopolis Plaza|Inkopolis]].",
-            "He is an outgoing and chaotic guy, always goofing around without a care in the world. He is constantly looking for fun and seems to have trouble sitting still. He is usually the comic relief of the group, often blurting out random jokes or memes that no one gets. He often speaks without thinking and will burst out laughing even at the most inappropriate moments. He seems to have a big, lively family.",
-            "He apparently got a job at [[Bar‘N’Arcades]] during the events of Splatoon 1."
+            "First appeared in the main story of Splatoon 1. He was the only friend Blade had around that time, and he is always excited to hang out with Blade. When Blade lost his morale due to the hardship he faced in agent work, Yoni tried to cheer him up by showing him around the city. Yoni seems to know all the best places in [[Inkopolis Plaza|Inkopolis]]. He got a job at [[Bar‘N’Arcades]] during the events of Splatoon 1.",
+            "He is an outgoing and chaotic guy, always goofing around without a care in the world. He is constantly looking for fun and seems to have trouble sitting still. He is usually the comic relief of the group, often blurting out random jokes or memes that no one gets. He often speaks without thinking and will burst out laughing even at the most inappropriate moments.",
+            "Apparently, he comes from a big family with lots of cousins."
         ],
         notes: [
             "He represents the Y button, which is why his name starts with Y.",
@@ -98,7 +98,7 @@ const SPLAT_CHARA_DATA_EN = {
             name: "Xiu",
             summary: [
                 "First appeared in the main story of Splatoon 2. He has known Axel for a long time, and back then, he was one of the bad kids who led Axel down the wrong path. After Axel cut ties with the group, Xiu left too, just so he could make up with him. He eventually managed to squeeze his way into Axel's new circle of friends.",
-                "He's an attention-seeking social butterfly who's never afraid to show himself off. He tends to like high-class and fancy things, but he's really just a regular teenager who wants to impress the cool kids. He's a bit of a drama queen and can be pretty flirtatious. He's also extremely online. He's very active on social media and will jump on every trend for attention, he even managed to injure his own eye in one of the livestream challenges. He lives close to [[Inkopolis Square]] and works part-time at a beauty store in Arowana Mall, he seems to have a knack for makeup and fashion.",
+                "He's an attention-seeking social butterfly who's never afraid to show himself off. He tends to like high-class and fancy things, but he's really just a regular teenager who wants to impress the cool kids. He's a bit of a drama queen and can be pretty flirtatious. He's also extremely online. He's very active on social media and will jump on every trend for attention, he even managed to injure his own eye in one of the livestream challenges. He lives close to [[Inkopolis Square]] and works part-time at a beauty store in Arowana Mall, and he seems to have a knack for makeup and fashion.",
                 "His favorite food is tiramisu."
             ],
             notes: [
@@ -186,7 +186,8 @@ const SPLAT_CHARA_DATA_EN = {
             name: "Lance",
             summary: [
                 "A longtime friend of Hannah's. Like her, he became a well-known top-ranked player soon after [[Inkopolis Tower]] opened for [[Splat Battle|splat battles]]. After [[Royal Flush]] was formed, he became one of the team’s key players. He went to the police academy a few years later. He appears as a police officer later in the story and seems to be very busy on a big case.",
-                "He is a brave, honest and noble guy of few words. He always looks serious and never shows much emotion, but he is very kind and will be there when help is needed. He is very well-built and can lift a person easily, so he is often the one to step in when things get out of hand. Troublemakers often turn around to find him suddenly standing right behind them. He also has an exceptionally sharp eye for detail and tends to pick up on things no one else notices. He seems to have a big, lively family."
+                "He is a brave, honest and noble guy of few words. He always looks serious and never shows much emotion, but he is very kind and will be there when help is needed. He is very well-built and can lift a person easily, so he is often the one to step in when things get out of hand. Troublemakers often turn around to find him suddenly standing right behind them. He also has an exceptionally sharp eye for detail and tends to pick up on things no one else notices.",
+                "Apparently, he comes from a big family with lots of cousins."
             ],
             notes: [
                 "He represents the L button, which is why his name starts with L.",
@@ -209,7 +210,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Minerva" : { 
             name: "Minerva",
             summary: [
-                "Edd's twin sister, and once an [[Elite Octoling Soldier]] in the [[Octarian Army]]. She was the top of her class and a classic model student, loyal to the Army and hoping to serve for life. When Hannah infiltrated the Army while briefly acting as Agent 3, she defeated Minerva and told her she was \"wasting talent in a shitty place\". Minerva did not take the lose well, and with her brother's influence, she finally decided to join the wave of Octarians leaving the Army after DJ Octavio was defeated. After moving to the surface, she tracked down Hannah for a rematch, and later joined [[Royal Flush|her team]].",
+                "Edd's twin sister, and once an [[Elite Octoling Soldier]] in the [[Octarian Army]]. She was the top of her class and a classic model student, loyal to the Army and hoping to serve for life. When Hannah infiltrated the Army while briefly acting as Agent 3, she defeated Minerva and told her she was \"wasting talent in a shitty place\". Minerva did not take the loss well, and with her brother's influence, she finally decided to join the wave of Octarians leaving the Army after DJ Octavio was defeated. After moving to the surface, she tracked down Hannah for a rematch, and later joined [[Royal Flush|her team]].",
                 "She is a hardworking, disciplined and very by-the-book girl. She is not very outspoken and tends to keep complaints to herself. She thinks about life in the Army a lot, but the surface still amazes her, and every now and then her girly, starry-eyed side comes out, especially when she sees something cute or dashing. She has great focus, and once she gets in the zone on the battlefield, she's very hard to defeat.", 
                 "She is very fond of sparkling drinks."
             ],
@@ -753,19 +754,19 @@ const SPLAT_CHARA_DATA_EN = {
         "Callie" : { 
             name: "Callie",
             summary: [
-                "高領市的當紅偶像團體潮色姊妹的成員之一，也是新噴嘴小隊的1號。在一代的主線中是協助３號完成任務的特工之一。在二代的時間點因為跟章魚軍團扯上關係而失聯，事情解決後回歸偶像職業，並繼續在新噴嘴小隊中進行特工活動。"
+                "A member of the Squid Sisters, the popular idol duo from [[Inkopolis|Inkopolis City]], and Agent 1 of the [[New Squidbeak Splatoon]]. In the main story of Splatoon 1, she was one of the agents who helped Blade on his missions as Agent 3. Around the time of Splatoon 2, she went missing after getting mixed up with the [[Octarian Army]]. Once things were resolved, she went back to being an idol and continued her agent work with the New Squidbeak Splatoon."
             ]
         },
         "Marie" : { 
             name: "Marie",
             summary: [
-                "高領市的當紅偶像團體潮色姊妹的成員之一，也是新噴嘴小隊的2號。在一代的主線中是協助３號完成任務的特工之一。在二代的時間點為了尋找失聯的小擬而暫停偶像活動，之間聘用了4號亞克在章魚峽谷進行調查，事情解決後回歸偶像職業，並繼續在新噴嘴小隊中進行特工活動。"
+                "A member of the Squid Sisters, the popular idol duo from [[Inkopolis|Inkopolis City]], and Agent 2 of the [[New Squidbeak Splatoon]]. In the main story of Splatoon 1, she was one of the agents who helped Blade on his missions as Agent 3. Around the time of Splatoon 2, she put her idol career on hold to search for the missing Callie, and recruited Axel as Agent 4 to investigate Octo Canyon. Once things were resolved, she went back to being an idol and continued her agent work with the New Squidbeak Splatoon."
             ]
         },
         "Captain Cuttlefish" : { 
             name: "Captain Cuttlefish",
             summary: [
-                "新噴嘴小隊的隊長。過去曾經參與魷魚與章魚的戰爭的老兵，所以對如今的地下章魚軍團的狀況特別關注，在注意到異常後拉著兩個孫女擅自組了一個自衛隊組織「新噴嘴小隊」希望能在地下章魚的勢力擴張之前進行阻止。是個看上去有些神經質的可疑老人。在一代的時間點看上小布了的潛能，決定將小布培養成３號。後來在一次事件中跟8號一起被困在了深海地鐵，後來和其他人一起成功脫逃。他在三代的時間點退休了並將隊長的位子讓給了３號，但還是與新噴嘴小隊有密切關係。"
+                "The captain of the [[New Squidbeak Splatoon]]. He is a veteran of the Great Turf War between the Inklings and the Octarians, so he keeps a close eye on what the [[Octarian Army]] is up to these days. When he noticed something was off, he dragged his two granddaughters into forming the New Squidbeak Splatoon on their own, hoping to stop the Octarians before they could grow any stronger. He comes across as a twitchy, rather suspicious old man. Around the time of Splatoon 1, he saw potential in Blade and decided to train him as Agent 3. Later, he got trapped in the Deepsea Metro along with Edd, but they managed to escape with the others in the end. Around the time of Splatoon 3, he retired and handed his role as captain over to Blade, but he is still closely involved with the New Squidbeak Splatoon."
             ]
         },
         "DJ Octavio" : { 
