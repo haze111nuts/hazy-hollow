@@ -186,7 +186,7 @@ const SPLAT_CHARA_DATA_EN = {
             name: "Lance",
             summary: [
                 "A longtime friend of Hannah's. Like her, he became a well-known top-ranked player soon after [[Inkopolis Tower]] opened for [[Splat Battle|splat battles]]. After [[Royal Flush]] was formed, he became one of the team's key players. He went to the police academy a few years later. He appears as a police officer later in the story and seems to be very busy on a big case.",
-                "He is a brave, honest and noble guy of few words. He always looks serious and never shows much emotion, but he is very kind and will be there when help is needed. He is very well-built and can lift a person easily, so he is often the one to step in when things get out of hand. Troublemakers often turn around to find him suddenly standing right behind them. He also has an exceptionally sharp eye for detail and tends to pick up on things no one else notices.",
+                "He is a brave, honest and noble guy of few words. He always looks serious and never shows much emotion, but he is very kind and will always be there when help is needed. He is very well-built, and lifting a person is no big deal for him, so he's often the one to step in when things get out of hand. Troublemakers often turn around to find him suddenly standing right behind them. He also has an exceptionally sharp eye for detail and tends to pick up on things no one else notices.",
                 "Apparently, he comes from a big family with lots of cousins."
             ],
             notes: [
@@ -257,8 +257,7 @@ const SPLAT_CHARA_DATA_EN = {
             name: "Amy",
             summary: [
                 "The manager of [[Royal Flush]]. She seems to be a longtime fan of Hannah and Lance, she showed up one day and offered to help them build a team; she is also the one who came up with its name. As the team's manager, she handles all the important work, from schedules to tournament sign-ups, and she's surprisingly good at it for someone who seems so timid and clumsy. She states she has no talent for splat battles and has never played much, though she once reacted faster than any ordinary person could…",
-                "She is a shy, gentle, soft-spoken nerdy girl who gets flustered easily. She is rather introverted and tends to do things alone, but she is very sweet and attentive to the members of [[Royal Flush]]. She's always busy with the team-related chores Hannah shoves onto her. Her taste can be a little unusual. She has quite a collection of books, t-shirts, and merch that are dark and creepy.",
-                "She can often be seen working at an old-fashioned used bookstore in [[Inkopolis|Inkopolis City]]."
+                "She is a shy and timid nerdy girl. She is gentle, humble and soft-spoken. She is also rather introverted and tends to do things alone, but she is very sweet and attentive to the members of [[Royal Flush]]. She's always busy with the team-related chores Hannah shoves onto her. Her taste can be a little unusual, she's got quite a collection of books, t-shirts, and merch that are dark and creepy. She can often be seen working at an old-fashioned used bookstore in [[Inkopolis|Inkopolis City]]."
             ],
             notes: [
                 "She represents the volume down button. The A in her name can be flipped upside down to become a V (for volume) and a ‘-’.",
