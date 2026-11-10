@@ -864,7 +864,11 @@ const SPLAT_LORE_DATA_ZHTW = {
         title: "章魚軍團",
         subtitle: "Octarian Army",
         type: "Organization",
-        summary : []
+        summary : [ 
+            "在高領地區山谷的地下活動的章魚社會，現今由DJ芥末章魚將軍領導。",
+            "自從章魚在ME1900年代初期的大塗地戰敗給魷魚後，撤退到山谷地下的章魚為了像魷魚們搶回陸上領土，而逐漸變成軍事政府領導的社會。從中心的章魚學院到邊界的章魚平民農村都是隸屬於章魚軍團的範圍。", // talk about strict society and 
+            "長期有著缺乏能源的問題。曾經數次計畫搶奪高領市的電池鯰魚，但數次被新噴嘴小隊瓦解。在３號的活躍下軍團出現了前所未有的出走潮，導致內部一片混亂，但就算是在那之前似乎常常也會有章魚莫名其妙失蹤的狀況。",
+            "後期的軍團在經過內部改革之後放寬了許多限制。（待補）"] 
     },
     "Vector 8 Research Institute" : {
         title: "V8科研中心",
@@ -929,7 +933,10 @@ const SPLAT_LORE_DATA_ZHTW = {
         title: "魷空塔",
         subtitle: "Inkopolis Tower",
         type: "Location",
-        summary: []
+        summary: [
+            "位於高領市中心的專門用來主辦漆彈賽的高塔。塔內社置了專用地下交通水管線，讓魷魚可以輕易的從魷空塔到移動到各式場景打漆彈。（待補）"
+//            ,"在ME2000年初，高領政府看上了水母社會的財力潛能和喜歡觀賞比賽的天性，開始了一系列將漆彈作為商業企劃主題的專案，，設置了專用地下交通水管線到這些場地讓魷魚可以輕易的從魷空塔到移動到各式場景打漆彈。"
+        ]
     },
     "Bar‘N’Arcades": {
         title: "藤壺電子反斗城",
@@ -947,13 +954,13 @@ const SPLAT_LORE_DATA_ZHTW = {
         title: "蛸壺山谷",
         subtitle: "Octo Valley",
         type: "Location",
-        summary: []
+        summary: ["章魚軍團的大本營，章魚兵學院和軍團政府都在這邊活動。（待補）"]
     },
     "Octo Canyon": {
         title: "蛸壺峽谷",
         subtitle: "Octo Canyon",
         type: "Location",
-        summary: []
+        summary: ["章魚軍團的另一塊區域。在這個地方的章魚兵們受到３號的影響較少，所以在章魚出走潮開始後，這裡變成守舊派的主要活動地點。（待補）"]
     },
     "Deepsea Metro" : { //dont apply this into bio yet because we may want one for th event in octo expansion??
         title: "深海地鐵",
@@ -982,13 +989,13 @@ const SPLAT_LORE_DATA_ZHTW = {
         title: "地下章魚",
         subtitle: "Octarians",
         type: "Notes",
-        summary : []
+        summary : [] // includes both octoling simple tentacle creature.
     },    
     "Elite Octoling Soldier" : {
         title: "菁英章魚兵",
         subtitle: "Elite Octoling Soldier",
         type: "Notes",
-        summary : []
+        summary : [] // mostly consist of woman blah blah
     },  
     "Deepsea Metro Testing Procedure" : {
         title: "深海地鐵測驗程序",
@@ -996,8 +1003,8 @@ const SPLAT_LORE_DATA_ZHTW = {
         type: "Notes",
         summary : [
             "由練魚公司主導，透過深海地鐵運輸系統實行的一個身心體能測驗程序。是二代的章魚DLC中的劇情核心。",
-            "在進行測驗之前，他們會將受驗者過去的所有記憶移除，接著讓測驗者搭乘深海地鐵去各個測驗站進行體能挑戰，並在測驗過程中慢慢歸還受驗者的記憶。練魚公司聲稱會幫通過測驗的人實現一個願望，但直到８號的出現為止似乎都完全沒有人通過該程序，而且那些參加者最後都下落不明。",
-            "此測驗程序的真實用途似乎與基因篩選有關，另外，這個測驗程序的合法性令人質疑。據調查，該程序在給第１０００８受驗者執行測驗之後營來了終止。"
+            "在進行測驗之前，他們會將受驗者過去的所有記憶移除，接著讓測驗者搭乘深海地鐵去各個測驗站進行體能挑戰，並在測驗過程中慢慢歸還受驗者的記憶。練魚公司聲稱會幫通過測驗的人實現一個願望，但直到８號的出現為止似乎都完全沒有人通過該程序，而且那些參加者最後都下落不明。", // need to fix on the part where no one pass - technically incorrect
+            "此測驗程序的真實用途似乎與篩選優秀個體有關。另外，這個測驗程序的合法性令人質疑。據調查，該程序在給第１０００８受驗者執行測驗之後迎來了終止。"
         ]
     },
     "Project Lapis Lazuli" : {
