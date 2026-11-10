@@ -140,8 +140,8 @@ const SPLAT_CHARA_DATA_EN = {
         "Wade" : { 
             name: "Wade",
             summary: [
-                "The protagonist of the main story in Splatoon 3, who grew up in [[Splatsville]]. He's socially awkward and doesn't have any real talents, which made him a laughingstock among the local teens. He started avoiding splat battles and spent most of his time at home playing video games. One day, he came across [[Wade's Smallfry|a starving Smallfry]] and took it in, which started a chain of events ralated to the research of Alterna; this ultimately made him join the [[New Squidbeak Splatoon]] as the new Agent 3",
-                "He's timid but kind-hearted. He may hesitate when he sees someone in trouble, but he always ended up helping at the end. He can be pretty lazy and whiny sometimes, especially when things don't go his way. The only thing he seems to be good at is video games, and he occasionally livestreams on his channel, even though it doesn't have many subscribers.",
+                "The protagonist of the main story in Splatoon 3, who grew up in [[Splatsville]]. He's socially awkward and doesn't have any real talents, which made him a laughingstock among the local teens. He started avoiding splat battles and spent most of his time at home playing video games. One day, he came across [[Wade's Smallfry|a starving Smallfry]] and took it in, which started a chain of events related to the research of Alterna. This ultimately made him join the [[New Squidbeak Splatoon]] as the new Agent 3.",
+                "He's timid but kind-hearted. He may hesitate when he sees someone in trouble, but he always ends up helping in the end. He can be pretty lazy and whiny sometimes, especially when things don't go his way. The only thing he seems to be good at is video games, and he occasionally livestreams on his channel, even though it doesn't have many subscribers.",
                 "-- Wade's bio is currently WIP, more details coming soon --"
             ],
             notes: [
@@ -526,26 +526,24 @@ const SPLAT_CHARA_DATA_EN = {
         "Susie" : { 
             name: "Susie",
             summary: [
-                "三代主線中登場，跟偉德一起被捲進各種跟古代有關的調查事件中。",
-                "年紀小小就大有展望，似乎每周都排滿了各種戶外活動跟義工活動。是個傑出的童子軍小隊長，一直非常積極參與海林童子軍團的活動。因此體能很好，有極佳的野外臨機應變跟求生能力，多次在魷魚滾行障礙小學組錦標賽中拿下冠軍。",
-                "個性勇敢樂觀、活潑熱心，思考正向又充滿志氣，會積極幫助他人。在面對難題時毫不畏縮，一點都不怕那些塊頭比自己大的人或動物。對動物很友善，跟偉德的寵物小鮭魚是特別要好的朋友。她非常致力於生態環境保護跟動物保護，經常會給別人科普生態相關資訊。",
-                "——三代設定還沒安排完，以上待補——"
+                "First appeared in the main story of Splatoon 3. She got caught up in a chain of events related to the research of Alterna along with Wade. Young as she is, Susie is a real go-getter, and her calendar is packed with outdoor activities and volunteer work every single week. As a star patrol leader in the Seagrove Scouts, she's very active and has no problem staying in the wild alone. She has also won the Squid Roll obstacle course championship more than once.",
+                "She is brave, cheerful and full of energy, and she's always eager to help others. She never backs down from a challenge and isn't afraid of people or animals much bigger than her. She loves any creature and is especially close with [[Wade's Smallfry|Wade's pet Smallfry]]. She cares a lot about protecting nature and wildlife, and she often shares nature facts with the people around her.",
+                "-- Susie's bio is currently WIP, more details coming soon --"
             ],
             notes: [
-                "她代表的按鈕是▼鍵（南）",
-                "身上帶的鮭魚飾品是海林童子軍團主辦的義賣會裡販賣的手工飾品，並非熊老闆的商品！（蘇西本人極力反對任何可以給熊老闆達到營收的行為！)",
-                "蘇西的辮子是普通的三股辮，但其中一個最大的觸手在尾端的部分稍微分裂成了兩端。變成了像是魚尾一樣的形狀"
+                "She represents the ▼ button, and her name is derived from \"South\".",
+                "The salmon accessory she wears is a handmade item from a charity sale hosted by the Seagrove Scouts. NOT A GRIZZCO MERCH!! Susie adviced everyone to standup against companies like Grizzco and never give them a single penny!"
             ],
             relationships: [
-                {Wade: "因為小鮭魚而相遇，對他充滿好奇，看對方有點笨手笨腳的所以很積極幫忙。關係似乎很不錯。"},
-                {Scott: "親哥哥，很尊敬，有時候認為他太死板，但關係很不錯。" },
-                {Zoelle: "在童子軍團中認識，視對方為勁敵。兩人經常透過童軍活動來競爭。"}
+                { Wade: "They met because of his [[Wade's Smallfry|Smallfry]]. She's very curious about him, and since he can be a bit clumsy, she's always eager to help him out. They seem to get along pretty well." },
+                { Scott: "Her older brother. She looks up to him a lot, though she sometimes thinks he's too uptight. They still get along well." },
+                { Zoelle: "They met in the Seagrove Scouts, and Susie sees her as her biggest rival. They're always trying to outdo each other in scout activities." }
             ],
-            variant:[
-                {casual: "日常"},
-                {agent3: "特工服"},
-                {scout: "海林童子軍服"}
-            ]                                    
+            variant: [
+                { casual: "Casual" },
+                { agent3: "Agent 3" },
+                { scout: "Scout" }
+            ]                                
         },
         "Scott" : { 
             name: "Scott",
