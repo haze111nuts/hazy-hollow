@@ -89,7 +89,7 @@ const SPLAT_CHARA_DATA_EN = {
             "Conceptually, he is Latino."
         ],
         relationships: [
-            { Blade: "They met during the main story in Splatoon 1. Yoni thought the new kid needed some fun, so he showed him around Inkopolis City. Ever since they became friends, he tags along with Blade everywhere." },
+            { Blade: "They met during the main story in Splatoon 1. Yoni thought the new kid needed some fun, so he showed him around [[Inkopolis|Inkopolis City]]. Ever since they became friends, he tags along with Blade everywhere." },
             { Lance: "His older brother, who always looked out for him growing up. They seemed close, but something later came between them." },
             { Paul: "They met during an incident at Bar\"N\"Arcades. They're both money-hungry dudes, so they get along great. Yoni loves hanging out at his pawnshop." }
         ]
@@ -126,10 +126,10 @@ const SPLAT_CHARA_DATA_EN = {
                 "He's about 18 y/o at the start of the Splatoon 2 main story (ME2017)."
             ],
             relationships: [
-                { Minerva: "His twin sister. They have opposite views and beliefs, but they got along fine back in the Army. A chain of events later left Edd with a lot of resentment toward her. There seems to be a misunderstanding between them that has yet to be cleared up." },
+                { Minerva: "His twin sister. They have opposite views and beliefs, but they got along fine back in the [[Octarian Army|Army]]. A chain of events later left Edd with a lot of resentment toward her. There seems to be a misunderstanding between them that has yet to be cleared up." },
                 { Blade: "Back in the Army, Edd was aware of Agent 3's infiltration and was skeptical of his skills and motives. During the events in the Deepsea Metro, Edd's memory loss caused more conflict between them, but they made peace in the end. He isn't very friendly to Blade but he does stick around with Blade's team and help him out from time to time." },
                 { Axel: "Their personalities clash, so they butt heads a lot. Edd thinks Axel is a naive Inkling brat who's never experienced hardships." },
-                { Dorothy: "They met because of OCTA. Edd think she is a brilliant woman, and she is particularly caring for him." },
+                { Dorothy: "They met because of [[OCTA]]. Edd think she is a brilliant woman, and she is particularly caring for him." },
                 { Marina: "They met during the events in the Deepsea Metro. Both are former Octarians with an engineering background, so they get along fairly well. He's grateful for all the help she offered him, but he really doesn't want to keep owing her favors." }
             ],
             variant: [
@@ -148,8 +148,8 @@ const SPLAT_CHARA_DATA_EN = {
                 "He represents the ◀ button, and his name is derived from \"West\"."
             ],
             relationships: [
-                { Blade: "They met because of the New Squidbeak Splatoon. Wade thinks he is a capable and experienced agent and looks up to him." },
-                { Susie: "They met because of his Smallfry. He thinks of her as a strong-willed, dependable little girl who is good at everything. He finds her annoying sometimes, but they actually get along pretty well." }
+                { Blade: "They met because of the [[New Squidbeak Splatoon]]. Wade thinks he is a capable and experienced agent and looks up to him." },
+                { Susie: "They met because of his [[Wade's Smallfry|Smallfry]]. He thinks of her as a strong-willed, dependable little girl who is good at everything. He finds her annoying sometimes, but they actually get along pretty well." }
             ],
             variant: [
                 { casual: "Casual" },
@@ -171,7 +171,7 @@ const SPLAT_CHARA_DATA_EN = {
                 "Her name was originally going to be something like Homura (ホムラ) to match the HOME button, but the idea was dropped."
             ],
             relationships: [
-                { Lance: "They've known each other for a long time and often teamed up in pair League Battles before Royal Flush was formed. Their conversations are usually short, but she trusts him a lot. There's an unspoken understanding between them." },
+                { Lance: "They've known each other for a long time and often teamed up in pair League Battles before [[Royal Flush]] was formed. Their conversations are usually short, but she trusts him a lot. There's an unspoken understanding between them." },
                 { Minerva: "They met during Hannah's one and only agent mission. Hannah thought she was a fair opponent and acknowledged her skills. After Minerva joined Royal Flush, they became teammates and friends, and they're also roommates." },
                 { Amy: "She sees Amy as a wimpy manager and a fangirl. She isn't too mean to her, but she does tend to dump all the team-related chores on her." },                
                 { Roy: "To Hannah he is someone Lance and Amy picked for the team. She has no problem with his skills, but she finds him difficult to work with, and never knows what to do with him. She will not talk to him unless she has to." },
@@ -198,7 +198,7 @@ const SPLAT_CHARA_DATA_EN = {
             relationships: [
                 { Yoni: "His younger brother. Yoni was always full of energy as a kid, so Lance often had to keep an eye on him. He has always cared about Yoni, and they seemed close, but something later came between them." },
                 { Hannah: "They've known each other for a long time and often teamed up in pair League Battles. There's an unspoken understanding between them." },
-                { Amy: "They met when Royal Flush was formed, and she's the team's manager. Something about her keeps catching his attention, whether it's small details that don't quite add up or the way she always seems to be working hard all by herself. He tends to look out for her more than anyone else." },
+                { Amy: "They met when [[Royal Flush]] was formed, and she's the team's manager. Something about her keeps catching his attention, whether it's small details that don't quite add up or the way she always seems to be working hard all by herself. He tends to look out for her more than anyone else." },
                 { Roy: "They met when Royal Flush was formed. He isn't sure why Roy keeps picking on him, but he still sees him as a teammate and a friend. He's often the one who has to hold Roy back when he gets too worked up." },
                 { Minerva: "They met when Royal Flush was formed, and they work really well together in battle. Late in the story, they became fellow police officers." }
             ],
@@ -219,12 +219,12 @@ const SPLAT_CHARA_DATA_EN = {
                 "In Royal Flush, she represents the Queen."
             ],
             relationships: [
-                { Edd: "Her twin brother. They have opposite views and beliefs, but they got along fine back in the Army. She was shocked when he suddenly started lashing out at her and pushing her away. There seems to be a misunderstanding between them that has yet to be cleared up." },
+                { Edd: "Her twin brother. They have opposite views and beliefs, but they got along fine back in the [[Octarian Army|Army]]. She was shocked when he suddenly started lashing out at her and pushing her away. There seems to be a misunderstanding between them that has yet to be cleared up." },
                 { Hannah: "They met when Hannah infiltrated the Army as Agent 3. Losing to her stuck with Minerva for a long time, so after leaving the underground, she challenged Hannah to a rematch. They later became teammates, friends, and even roommates. She cares about Hannah a lot and always looks after her." },
-                { Amy: "They met when Royal Flush was formed, and Amy is the team's manager. Minerva thinks she's very sweet, and can't help going into snuggly mode when Amy is around." },
+                { Amy: "They met when [[Royal Flush]] was formed, and Amy is the team's manager. Minerva thinks she's very sweet, and can't help going into snuggly mode when Amy is around." },
                 { Lance: "They met as teammates in Royal Flush and work really well together in battle. She admires him and wants to be friends, but she always struggles to find something to talk about. Late in the story, they became fellow police officers." },
                 { Roy: "They met as teammates in Royal Flush. Despite struggling to get along with him, she continues to try to understand him and become his friend. So far, her efforts haven't gotten her very far." },
-                { Dorothy: "They met because of OCTA, and Dorothy takes good care of her. Minerva really enjoys her company and always ends up spending a lot of time with her whenever she visits the OCTA HQ." }
+                { Dorothy: "They met because of [[OCTA]], and Dorothy takes good care of her. Minerva really enjoys her company and always ends up spending a lot of time with her whenever she visits the OCTA HQ." }
             ],
             variant: [
                 { casual: "Casual" },
