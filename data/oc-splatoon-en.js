@@ -244,8 +244,8 @@ const SPLAT_CHARA_DATA_EN = {
                 "The white patches on his skin are caused by vitiligo."
             ],
             relationships: [
-                { Amy: "They didn't seem to know each other before Royal Flush was formed. For some reason, he won't stop making snide remarks about her, and yet he will do whatever she says without putting up much of a fight." },
-                { Lance: "Picking a fight with Lance is how Roy ended up in Royal Flush. He's always messing with Lance, turning everything into a competition between them, and he seems to be enjoying it a little too much."},
+                { Amy: "They didn't seem to know each other before [[Royal Flush]] was formed. For some reason, he won't stop making snide remarks about her, and yet he will do whatever she says without putting up much of a fight." },
+                { Lance: "Picking a fight with Lance is how Roy ended up in [[Royal Flush]]. He's always messing with Lance, turning everything into a competition between them, and he seems to be enjoying it a little too much."},
                 { Paul: "The owner of the pawnshop and his boss. Roy mostly just does whatever Paul asks, but he finds it annoying when Paul acts all buddy-buddy with him like ruffling his hair every time he comes in to work." }
             ],
             variant:[
@@ -270,7 +270,7 @@ const SPLAT_CHARA_DATA_EN = {
                 { Hannah: "Amy knows her strength very well and seems to be a big fan of hers. She doesn't really mind being bossed around by Hannah." },
                 { Lance: "Amy knows his strength very well and seems to be a big fan of his. She's never quite sure what to make of all the attention he pays to her." },
                 { Minerva: "She sees Minerva as a reliable teammate and doesn't mind her snuggles." },
-                { Roy: "They didn't seem to know each other before Royal Flush was formed. She finds his constant snide remarks a bit troublesome." }
+                { Roy: "They didn't seem to know each other before [[Royal Flush]] was formed. She finds his constant snide remarks a bit troublesome." }
             ],
             variant:[
                 {casual: "Casual"},
