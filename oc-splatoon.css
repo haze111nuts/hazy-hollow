@@ -870,7 +870,8 @@ button.splat-rel-swatch:focus-visible {
    Tweak: marker strength (32% / 24% in --mk / --mk-mid), marker height
    (55%), underline thickness (1.5px), sweep speed (0.4s). */
 .splat-lore-link {
-  --a: var(--chara, var(--lore));
+  /* --link: set on relationship cards (the other person's colour) */
+  --a: var(--link, var(--chara, var(--lore)));
   --mk:     color-mix(in srgb, var(--a) 26%, transparent);
   --mk-mid: color-mix(in srgb, var(--a) 19%, transparent);
   --ul:     color-mix(in srgb, var(--a) 55%, var(--ink));   /* darker, so it shows on light colors */

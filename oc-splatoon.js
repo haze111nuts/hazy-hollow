@@ -433,8 +433,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const swatch = other
       ? `<button type="button" class="splat-rel-swatch" style="--rel:${other.color}" data-goto="${escapeHtml(rel.who)}" aria-label="${escapeHtml(siteText("modal.open", { name }))}">${escapeHtml(name[0])}</button>`
       : `<span class="splat-rel-swatch">${escapeHtml(name[0])}</span>`;
+    // --link: lore links in this card use the other person's colour
     return `
-      <div class="splat-rel">
+      <div class="splat-rel"${other ? ` style="--link:${other.color}"` : ""}>
         ${swatch}
         <div>
           <span class="splat-rel-who">${escapeHtml(name)}</span>

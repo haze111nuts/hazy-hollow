@@ -222,9 +222,11 @@ const SPLAT_LORE_COMMON_DATA = {
     "Splatsville"                     : { color: "#d3e01f" },
     "Octo Valley"                     : { color: "#6b4fa0" },
     "Octo Canyon"                     : { color: "#c2552d" },
+    "Deepsea Metro"                   : { color: "#226464" },    
     "Splat Battle"                    : { color: "#00b4cc" },
     "Humanoid Cephalopod"             : { color: "#a4e2d3" },
-    "Elite Octoling Soldier"          : { color: "#c23b6e" },
+    "Octarians"                       : { color: "#c23b6e" },    
+    "Elite Octoling Soldier"          : { color: "#7e2b4b" },
     "Deepsea Metro Testing Procedure" : { color: "#18b989" },
     "Project Lapis Lazuli"            : { color: "#180f91" }
 };

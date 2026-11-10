@@ -955,6 +955,11 @@ const SPLAT_LORE_DATA_ZHTW = {
         type: "Location",
         summary: []
     },
+    "Deepsea Metro" : { //dont apply this into bio yet because we may want one for th event in octo expansion??
+        title: "深海地鐵",
+        type: "Location",
+        summary : []
+    },      
     "Splat Battle": {
         title: "漆彈比賽",
         subtitle: "Splat Battle",
@@ -973,12 +978,18 @@ const SPLAT_LORE_DATA_ZHTW = {
             "魷魚和章魚的通稱。這兩個種族在演化出了獨特的身體構造－他們的身體構造大部分是以墨水組成。他們的身體在沾上太多不同顏色的墨水或是過量的水時，就會因為身體無法保持形狀而溶解身亡。（待補）"
         ]
     },
+    "Octarians" : {
+        title: "地下章魚",
+        subtitle: "Octarians",
+        type: "Notes",
+        summary : []
+    },    
     "Elite Octoling Soldier" : {
         title: "菁英章魚兵",
         subtitle: "Elite Octoling Soldier",
         type: "Notes",
         summary : []
-    },
+    },  
     "Deepsea Metro Testing Procedure" : {
         title: "深海地鐵測驗程序",
         subtitle: "Deepsea Metro Testing Procedure",

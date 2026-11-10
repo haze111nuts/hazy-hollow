@@ -43,7 +43,7 @@ const SPLAT_CHARA_DATA_EN = {
             { Xiu: "They met because of Axel. At first Blade wasn't used to how outgoing Xiu was, but they later became close friends. He often helps Xiu and Axel patch things up." },
             { Hannah: "His older sister. Since they lived apart for many years, he doesn't know her very well, and she seems to despise him for various reasons. He's never really known how to get along with her." },
             { Lance: "They met once when Lance came over to see Hannah, but didn't interact much. After seeing Lance play in matches, Blade came to really look up to him, and gets so nervous around him that he can't talk normally." },
-            { Noir: "A boy he met while helping Octarians escape from underground. Seeing that Noir was very wary and had nowhere to go, Blade took him in and helped him adjust to life on the surface. They became good friends and are like family now, though Blade sometimes accidentally treats him like a pet." },
+            { Noir: "A boy he met while helping [[Octarians]] escape from underground. Seeing that Noir was very wary and had nowhere to go, Blade took him in and helped him adjust to life on the surface. They became good friends and are like family now, though Blade sometimes accidentally treats him like a pet." },
             { "Captain Cuttlefish": "At first Blade thought he was a weird old geezer with strange behavior, but after a few years of agent work, he slowly realized the Captain had been helping him grow the whole time. He cares about him a lot and sees him as family." }
         ],
         variant: [
@@ -67,9 +67,9 @@ const SPLAT_CHARA_DATA_EN = {
             { Blade: "They met during the events in Splatoon 2, where a misunderstanding made them rivals for a while. They made up in the end and quickly became close friends. Axel often calls him 'B'." },
             { Xiu: "One of the bad friends who led Axel down the wrong path. Xiu has apologized, but Axel has never fully forgiven him, so things between them are still a bit awkward." },
             { Edd: "Axel barely counts him as a friend. Their personalities clash, so they butt heads a lot, and Axel especially hates how rude Edd is to Blade." },
-            { Viper: "They met as enemies during the events in Splatoon 2. Both are stubborn and hate losing, so they argue nonstop whenever they run into each other. Axel thinks Viper is just a loudmouthed Octarian who needs his ass kicked." },
+            { Viper: "They met as enemies during the events in Splatoon 2. Both are stubborn and hate losing, so they argue nonstop whenever they run into each other. Axel thinks Viper is just a loudmouthed [[Octarians|Octarian]] who needs his ass kicked." },
             { Elise: "His younger sister. They grew up together and bicker all the time. She's always nagging him and smacking him on the head but they care about each other a lot." },
-            { Marie: "They met during the events in Splatoon 2. He found her naggy and annoying, but they slowly became friends. He often calls her \"granny\" and has taken plenty of hits from her wagasa parasol for it." }
+            { Marie: "They met during the events in Splatoon 2. He found her bossy, naggy and annoying, but they slowly became friends. He often calls her \"granny\" and has taken plenty of hits from her wagasa parasol for it." }
         ],
         variant: [
             { casual: "Casual" },
@@ -91,7 +91,7 @@ const SPLAT_CHARA_DATA_EN = {
         relationships: [
             { Blade: "They met during the main story in Splatoon 1. Yoni thought the new kid needed some fun, so he showed him around [[Inkopolis|Inkopolis City]]. Ever since they became friends, he tags along with Blade everywhere." },
             { Lance: "His older brother, who always looked out for him growing up. They seemed close, but something later came between them." },
-            { Paul: "They met during an incident at Bar\"N\"Arcades. They're both money-hungry dudes, so they get along great. Yoni loves hanging out at his pawnshop." }
+            { Paul: "They met during an incident at [[Bar‘N’Arcades]]. They're both money-hungry dudes, so they get along great. Yoni loves hanging out at his pawnshop." }
         ]
     },
         "Xiu" : { 
@@ -129,8 +129,8 @@ const SPLAT_CHARA_DATA_EN = {
                 { Minerva: "His twin sister. They have opposite views and beliefs, but they got along fine back in the [[Octarian Army|Army]]. A chain of events later left Edd with a lot of resentment toward her. There seems to be a misunderstanding between them that has yet to be cleared up." },
                 { Blade: "Back in the Army, Edd was aware of Agent 3's infiltration and was skeptical of his skills and motives. During the events in the Deepsea Metro, Edd's memory loss caused more conflict between them, but they made peace in the end. He isn't very friendly to Blade but he does stick around with Blade's team and help him out from time to time." },
                 { Axel: "Their personalities clash, so they butt heads a lot. Edd thinks Axel is a naive Inkling brat who's never experienced hardships." },
-                { Dorothy: "They met because of [[OCTA]]. Edd think she is a brilliant woman, and she is particularly caring for him." },
-                { Marina: "They met during the events in the Deepsea Metro. Both are former Octarians with an engineering background, so they get along fairly well. He's grateful for all the help she offered him, but he really doesn't want to keep owing her favors." }
+                { Dorothy: "They met because of [[OCTA]]. Edd thinks she is a brilliant woman, and she is particularly caring for him." },
+                { Marina: "They met during the events in the Deepsea Metro. Both are former [[Octarians]] with an engineering background, so they get along fairly well. He's grateful for all the help she offered him, but he really doesn't want to keep owing her favors." }
             ],
             variant: [
                 { agent8: "Agent 8" },
@@ -140,7 +140,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Wade" : { 
             name: "Wade",
             summary: [
-                "The protagonist of the main story in Splatoon 3, who grew up in [[Splatsville]]. He's socially awkward and doesn't have any real talents, which made him a laughingstock among the local teens. He started avoiding splat battles and spent most of his time at home playing video games. One day, he came across [[Wade's Smallfry|a starving Smallfry]] and took it in, which started a chain of events ralated to the research of Alterna; This ultimately made him join the New Squidbeak Splatoon as the new Agent 3",
+                "The protagonist of the main story in Splatoon 3, who grew up in [[Splatsville]]. He's socially awkward and doesn't have any real talents, which made him a laughingstock among the local teens. He started avoiding splat battles and spent most of his time at home playing video games. One day, he came across [[Wade's Smallfry|a starving Smallfry]] and took it in, which started a chain of events ralated to the research of Alterna; this ultimately made him join the [[New Squidbeak Splatoon]] as the new Agent 3",
                 "He's timid but kind-hearted. He may hesitate when he sees someone in trouble, but he always ended up helping at the end. He can be pretty lazy and whiny sometimes, especially when things don't go his way. The only thing he seems to be good at is video games, and he occasionally livestreams on his channel, even though it doesn't have many subscribers.",
                 "-- Wade's bio is currently WIP, more details coming soon --"
             ],
@@ -159,7 +159,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Hannah" : { 
             name: "Hannah",
             summary: [
-                "Soon after [[Inkopolis Tower]] opened for [[Splat Battle|splat battles]], she became a well-known top-ranked player with a violent close-range playstyle. She was then scouted by a shady duo to fight against the Octarians, she carried out one mission for them then quit right after to focus on competitive games. As ordinary battles eventually stopped being enough for her, she later accepted a fan's offer to help her put [[Royal Flush|a team]] together. This allowed her to play in many official tournaments, crushing opponents one after another with her team. Late in the story, she went missing, apparently fighting in some kind of illegal underground matches.",
+                "Soon after [[Inkopolis Tower]] opened for [[Splat Battle|splat battles]], she became a well-known top-ranked player with a violent close-range playstyle. She was then scouted by a shady duo to fight against the [[Octarians]], she carried out one mission for them then quit right after to focus on competitive games. As ordinary battles eventually stopped being enough for her, she later accepted a fan's offer to help her put [[Royal Flush|a team]] together. This allowed her to play in many official tournaments, crushing opponents one after another with her team. Late in the story, she went missing, apparently fighting in some kind of illegal underground matches.",
                 "She is a tough, grumpy and aggressive individual who has a harsh attitude toward everything. She always looks unimpressed and annoyed. The only thing that will get her fired up or make her feel any sort of enjoyment is splat battles. She has a sharp tongue and a mean mouth. She is never friendly to anyone and she especially cannot stand wimps or anything remotely sentimental. She also seems to have trouble saying simple things like \"thanks\".",
                 "She chugs down several cans of energy drinks on a daily basis."
             ],
@@ -210,7 +210,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Minerva" : { 
             name: "Minerva",
             summary: [
-                "Edd's twin sister, and once an [[Elite Octoling Soldier]] in the [[Octarian Army]]. She was the top of her class and a classic model student, loyal to the Army and hoping to serve for life. When Hannah infiltrated the Army while briefly acting as Agent 3, she defeated Minerva and told her she was \"wasting talent in a shitty place\". Minerva did not take the loss well, and with her brother's influence, she finally decided to join the wave of Octarians leaving the Army after DJ Octavio was defeated. After moving to the surface, she tracked down Hannah for a rematch, and later joined [[Royal Flush|her team]].",
+                "Edd's twin sister, and once an [[Elite Octoling Soldier]] in the [[Octarian Army]]. She was the top of her class and a classic model student, loyal to the Army and hoping to serve for life. When Hannah infiltrated the Army while briefly acting as Agent 3, she defeated Minerva and told her she was \"wasting talent in a shitty place\". Minerva did not take the loss well, and with her brother's influence, she finally decided to join the wave of [[Octarians]] leaving the Army after DJ Octavio was defeated. After moving to the surface, she tracked down Hannah for a rematch, and later joined [[Royal Flush|her team]].",
                 "She is a hardworking, disciplined and very by-the-book girl. She is not very outspoken and tends to keep complaints to herself. She thinks about life in the Army a lot, but the surface still amazes her, and every now and then her girly, starry-eyed side comes out, especially when she sees something cute or dashing. She has great focus, and once she gets in the zone on the battlefield, she's very hard to defeat.", 
                 "She is very fond of sparkling drinks."
             ],
@@ -280,7 +280,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Elise" : { 
             name: "Elise",
             summary: [
-                "Axel's younger sister. They grew up together, and she's very close with her family. She got into [[Splat Battle|splat battles]] because everyone around her was playing, and she loves taking part in Splatfests. She has always been a little jealous that her brother has a [[BBB|regular team]] to hang out with. One day, she accidentally found out that Axel was working for [[New Squidbeak Splatoon]] and ended up getting involved too. Now she sometimes fills in for him as Agent 4.  Her family runs a Hawaiian-style restaurant, and she can often be found helping out there.",
+                "Axel's younger sister. They grew up together, and she's very close with her family. She got into [[Splat Battle|splat battles]] because everyone around her was playing, and she loves taking part in Splatfests. She has always been a little jealous that her brother has a regular [[BBB|team]] to hang out with. One day, she accidentally found out that Axel was working for [[New Squidbeak Splatoon]] and ended up getting involved too. Now she sometimes fills in for him as Agent 4.  Her family runs a Hawaiian-style restaurant, and she can often be found helping out there.",
                 "She's a cheerful, energetic tomboy who gets along with just about anyone. She's attentive to her friends and never hesitates to speak up when something isn't right. Like Axel, she's very loyal to people she cares about. She's also a bit nosy and loves a good piece of gossip, so she's not the best person to tell a secret to."
             ],
             notes: [
@@ -290,7 +290,7 @@ const SPLAT_CHARA_DATA_EN = {
             ],
             relationships: [
                 { Axel: "Her older brother. They grew up playing together and bicker all the time, and she's always nagging him and smacking him on the head. Still, they're very close. She worries about him a lot and gets anxious whenever she can't reach him." },
-                { Xiu: "They've known each other for a while and are good friends. They text each other a lot, usually talking about Axel." },
+                { Xiu: "She met Xiu while he was hanging out with Axel, they became good friends and they would text each other often, usually talking about Axel.." },
                 { Blade: "They met after Axel formed [[BBB]]. She thinks he's a great guy. She looks up to him and will get a little nervous whenever they get to hang out together." }
             ],
             variant: [
@@ -764,7 +764,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Captain Cuttlefish" : { 
             name: "Captain Cuttlefish",
             summary: [
-                "The captain of the [[New Squidbeak Splatoon]]. As a veteran of the Great Turf War, he has been keeping a close eye on what the [[Octarian Army]] is up to. As soon as he caught wind of their new scheme, he formed the New Squidbeak Splatoon with his two granddaughters, hoping to stop the Octarians before they could cause any trouble. He comes across as a twitchy, rather suspicious old man, and it seems that most people don't take him seriously, his granddaughters included.",
+                "The captain of the [[New Squidbeak Splatoon]]. As a veteran of the Great Turf War, he has been keeping a close eye on what the [[Octarian Army]] is up to. As soon as he caught wind of their new scheme, he formed the New Squidbeak Splatoon with his [[Squid Sisters|two granddaughters]], hoping to stop the [[Octarians]] before they could cause any trouble. He comes across as a twitchy, rather suspicious old man, and it seems that most people don't take him seriously, his granddaughters included.",
                 "Around the time of Splatoon 1, he saw potential in Blade and decided to train him as Agent 3. Later, he got trapped in the Deepsea Metro along with Edd, but they managed to escape with the others in the end. Around the time of Splatoon 3, he retired and handed his role as captain over to Blade, but he is still closely involved with the New Squidbeak Splatoon."
             ]
         },
@@ -929,6 +929,11 @@ const SPLAT_LORE_DATA_EN = {
         type: "Location",
         summary: []
     },
+    "Deepsea Metro" : {
+        title: "Deepsea Metro",
+        type: "Location",
+        summary : []
+    },
     "Splat Battle": {
         title: "Splat Battle",
         type: "Notes",
@@ -945,6 +950,11 @@ const SPLAT_LORE_DATA_EN = {
             "魷魚和章魚的通稱。這兩個種族在演化出了獨特的身體構造－他們的身體構造大部分是以墨水組成。他們的身體在沾上太多不同顏色的墨水或是過量的水時，就會因為身體無法保持形狀而溶解身亡。（待補）"
         ]
     },
+    "Octarians" : {
+        title: "Octarians",
+        type: "Notes",
+        summary : []
+    },    
     "Elite Octoling Soldier" : {
         title: "Elite Octoling Soldier",
         type: "Notes",
