@@ -116,7 +116,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Edd" : { 
             name: "Edd",
             summary: [
-                "The protagonist of the Deepsea Metro side story. He used to be a member of the [[Octarian Army]]. Growing up there gave him a solid background in mechanical engineering, and he specialized in vehicle-related technology. He never aligned with the Army's ideals, and while at the Octarian Army Academy, he secretly worked with a group of students who wanted change. Just before he could leave the underground, he got caught up in the [[Deepsea Metro Testing Procedure]] and lost his memory. In the end, he  remembered his past and escaped to the surface. To repay the [[New Squidbeak Splatoon]] for their help, he joined them as Agent 8.",
+                "The protagonist of the story in Octo Expansion. He used to be a member of the [[Octarian Army]]. Growing up there gave him a solid background in mechanical engineering, and he specialized in vehicle-related technology. He never aligned with the Army's ideals, and while at the Octarian Army Academy, he secretly worked with a group of students who wanted change. Just before he could leave the underground, he got caught up in the [[Deepsea Metro Testing Procedure]] and lost his memory. In the end, he  remembered his past and escaped to the surface. To repay the [[New Squidbeak Splatoon]] for their help, he joined them as Agent 8.",
                 "He is a proud, edgy loner who always looks unfriendly and skeptical. He's stubborn and never shows how he really feels. Even when he wants to help, he won't say it out loud, which makes him hard to get along with. He seems to have some trust issue and tends to keep his distance from others, but his old comrades from the Army say that \"he wasn't always like this\".",
                 "He seems to like the scenery on the surface."
             ],
@@ -142,7 +142,7 @@ const SPLAT_CHARA_DATA_EN = {
             summary: [
                 "The protagonist of the main story in Splatoon 3, who grew up in [[Splatsville]]. He's socially awkward and doesn't have any real talents, which made him a laughingstock among the local teens. He started avoiding splat battles and spent most of his time at home playing video games. One day, he came across [[Wade's Smallfry|a starving Smallfry]] and took it in, which started a chain of events related to the research of Alterna. This ultimately made him join the [[New Squidbeak Splatoon]] as the new Agent 3.",
                 "He's timid but kind-hearted. He may hesitate when he sees someone in trouble, but he always ends up helping in the end. He can be pretty lazy and whiny sometimes, especially when things don't go his way. The only thing he seems to be good at is video games, and he occasionally livestreams on his channel, even though it doesn't have many subscribers.",
-                "-- Wade's bio is currently WIP, more details coming soon --"
+                "-- Wade's bio is currently WIP, more changes are on the way --"
             ],
             notes: [
                 "He represents the ◀ button, and his name is derived from \"West\"."
@@ -527,7 +527,7 @@ const SPLAT_CHARA_DATA_EN = {
             summary: [
                 "First appeared in the main story of Splatoon 3. She got caught up in a chain of events related to the research of Alterna along with Wade. Young as she is, Susie is a real go-getter, and her calendar is packed with outdoor activities and volunteer work every single week. As a star patrol leader in the Seagrove Scouts, she's very active and has no problem staying in the wild alone. She has also won the Squid Roll obstacle course championship more than once.",
                 "She is brave, cheerful and full of energy, and she's always eager to help others. She never backs down from a challenge and isn't afraid of people or animals much bigger than her. She loves any creature and is especially close with [[Wade's Smallfry|Wade's pet Smallfry]]. She cares a lot about protecting nature and wildlife, and she often shares nature facts with the people around her.",
-                "-- Susie's bio is currently WIP, more details coming soon --"
+                "-- Susie's bio is currently WIP, more changes are on the way --"
             ],
             notes: [
                 "She represents the ▼ button, and her name is derived from \"South\".",
