@@ -67,7 +67,7 @@ const SPLAT_CHARA_DATA_EN = {
             { Blade: "They met during the events in Splatoon 2, where a misunderstanding made them rivals for a while. They made up in the end and quickly became close friends. Axel often calls him 'B'." },
             { Xiu: "One of the bad friends who led Axel down the wrong path. Xiu has apologized, but Axel has never fully forgiven him, so things between them are still a bit awkward." },
             { Edd: "Axel barely counts him as a friend. Their personalities clash, so they butt heads a lot, and Axel especially hates how rude Edd is to Blade." },
-            { Viper: "They met as enemies during the events in Splatoon 2. Both are stubborn and hate losing, so they argue nonstop whenever they run into each other. Axel thinks Viper is just a loudmouthed [[Octarians|Octarian]] who needs his ass kicked." },
+            { Viper: "They met as enemies during the events in Splatoon 2. Both are stubborn and hate losing, so they argue nonstop whenever they run into each other. Axel thinks Viper is just a loudmouthed [[Octarian Army|Octarian]] who needs his ass kicked." },
             { Elise: "His younger sister. They grew up together and bicker all the time. She's always nagging him and smacking him on the head but they care about each other a lot." },
             { Marie: "They met during the events in Splatoon 2. He found her bossy, naggy and annoying, but they slowly became friends. He often calls her \"granny\" and has taken plenty of hits from her wagasa parasol for it." }
         ],
@@ -300,23 +300,23 @@ const SPLAT_CHARA_DATA_EN = {
         "Viper" : { 
             name: "Viper",
             summary: [
-                "一二代主線中的常駐敵人。在章魚軍團出生，有著非凡高超的機器人工程知識和技術，年紀小小就會自製無人機，後來成為DJ將軍的專屬工程師，很多章魚兵使用的兵器都是他設計的。上級甚至給他一間研究室用來讓他研發機械兵器。一代跟二代主線中他一直都在前線拿自己的各種兵器干擾主角。在軍團瓦解後跟幾個軍團研究員一起轉移到V8科研中心工作，是機械工程部門的首席開發員。",
-                "是個充滿野心的狂妄傢伙，對自己做的機器人跟兵器非常自豪，最愛狂吹自己的作品。總是自己行動，平日也待在個人研究室不出來，也幾乎不和其他軍團成員合作，更喜歡跟機器人互動。個性固執像蟑螂一樣，就算計畫失敗也不會輕易放棄，堅信世上沒有自己打不倒的英雄跟自己修不好的BUG。"
+                "A recurring enemy in the main stories of Splatoon 1 and 2. Born and raised in the [[Octarian Army]], he was a robotics prodigy who was already building his own drones as a kid. He later became DJ Octavio's personal engineer and designed many of the weapons specifically for him. He was even given his own lab to develop his machinery. In the main stories, he kept showing up with his latest creations to get in the heroes' way. After the Army fell apart, he got to join [[Vector 8 Research Institute]] with a few other engineers and researchers in the Army, and he is now the lead developer of the Mechanical Engineering Department.",
+                "He is a cocky, arrogant octoling who is extremely proud of his robots and weapons, and he loves to brag about them. He likes to work alone and rarely leaves his personal lab. He almost never teams up with anyone, since he'd much rather spend his time with his robots. He's also incredibly stubborn and never knows when to quit. When his plans fail, he always comes back with more. He is convinced that there's no hero he can't beat and no bug he can't fix."
             ],
             notes: [
-                "他代表的按鈕是音量+鍵，名字中的V對應volume（音量），p對應plus（加）",
-                "他跟小布同齡",
-                "這個角色的氣質參考了《決戰少林》的截使者﹑《飛哥與小佛》的杜芬舒斯﹑還有《音速小子》系列的蛋頭博士"
+                "He represents the volume up button. The V in his name stands for volume, and the p stands for plus.",
+                "He's the same age as Blade.",
+                "His personality was inspired by Jack Spicer from Xiaolin Showdown, Dr. Doofenshmirtz from Phineas and Ferb, and Dr. Eggman from the Sonic series."
             ],
             relationships: [
-                {"DJ Octavio": "自己的上司跟事業生活的榜樣，從小就對對方非常崇拜，會毫不遲疑的遵從他的命令。在成為將軍的專屬工程師後更是一直想要在他面前表現自己。" },
-                {Blade: "一代主線時作為敵人相遇，感覺對方不強卻總是打不贏而感到很不爽，視對方為自己一生的勁敵。後來因為實在交手多次而產生一種另類的友誼。"},
-                {Axel: "二代主線時作為敵人相遇，因為都很固執又不認輸，每次遇到時兩人總是會吵的沒完沒了。認為對方是３號的低配版。" },
-                {Tighe: "在軍團時期就認識，後來成為V8不同部門的同事，經常會在部門合作時一起開會。或許是因為同為菁英工程師，兩人意外的還挺和的來。"}
+                { "DJ Octavio": "His boss and his role model in both work and life. Viper has idolized him since he was a kid and follows his orders without a second thought. Ever since becoming his personal engineer, he's always trying to impress him." },
+                { Blade: "They met as enemies during the main story in Splatoon 1. Blade never seemed that strong, yet Viper could never beat him, feeling salty about this, he declared Blade his lifelong rival. After facing each other so many times, they've developed an odd kind of friendship, though Viper would never admit to it." },
+                { Axel: "They met as enemies during the main story in Splatoon 2. Both are stubborn and hate losing, so they argue nonstop whenever they run into each other. Viper thinks of him as a cheap knockoff of Agent 3." },
+                { Tighe: "They've known each other since their [[Octarian Army|Army]] days and now work in different departments at [[Vector 8 Research Institute|V8]], so they often end up in the same meetings. Maybe it's because they're both elite engineers, they get along surprisingly well." }
             ],
-            variant:[
-                {v8: "V8工作服"},
-                {octarian: "章魚軍團"}                
+            variant: [
+                { v8: "V8 Uniform" },
+                { octarian: "Octarian" }
             ]
         },
         "Tighe" : { 
