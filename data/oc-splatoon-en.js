@@ -19,6 +19,16 @@
 // Relationship and variant ids stay the same in every language —
 // only the text after the colon changes.
 //
+// LORE LINKS — [[title]] or [[title|shown text]] (see the
+// lore helpers in oc-splatoon.js). How often to link:
+//   - summary / notes: link the FIRST mention of each lore
+//     entry in the whole section; later mentions stay plain.
+//   - relationships: every relationship is its own paragraph,
+//     so link the first mention IN EACH ONE, even if the same
+//     word was already linked in another relationship.
+//     Short forms count too: [[章魚軍團|軍團]], [[V8科研中心|V8]],
+//     [[皇家同花順|RF]], [[Octarian Army|Army]].
+//
 // FALLBACK: any field (or whole character) left out here is
 // shown from data/oc-splatoon-zhtw.js instead.
 // ===========================================================
@@ -38,7 +48,7 @@ const SPLAT_CHARA_DATA_EN = {
         ],
         relationships: [
             { Axel: "They met during the events in Splatoon 2, where a misunderstanding made them rivals for a while. They made up in the end and quickly became close friends." },
-            { Edd: "They met during the conflict in the Deepsea Metro. Edd has never been very friendly and is hard to talk to, but they still help each other out, and Blade has always seen him as a friend." },
+            { Edd: "They met during the conflict in the [[Deepsea Metro]]. Edd has never been very friendly and is hard to talk to, but they still help each other out, and Blade has always seen him as a friend." },
             { Yoni: "One of the few good friends he made around the time of Splatoon 1. Unlike most kids back then, Yoni never made fun of him. They get along really well and often hang out together." },
             { Xiu: "They met because of Axel. At first Blade wasn't used to how outgoing Xiu was, but they later became close friends. He often helps Xiu and Axel patch things up." },
             { Hannah: "His older sister. Since they lived apart for many years, he doesn't know her very well, and she seems to despise him for various reasons. He's never really known how to get along with her." },
@@ -127,10 +137,10 @@ const SPLAT_CHARA_DATA_EN = {
             ],
             relationships: [
                 { Minerva: "His twin sister. They have opposite views and beliefs, but they got along fine back in the [[Octarian Army|Army]]. A chain of events later left Edd with a lot of resentment toward her. There seems to be a misunderstanding between them that has yet to be cleared up." },
-                { Blade: "Back in the Army, Edd was aware of Agent 3's infiltration and was skeptical of his skills and motives. During the events in the Deepsea Metro, Edd's memory loss caused more conflict between them, but they made peace in the end. He isn't very friendly to Blade but he does stick around with Blade's team and help him out from time to time." },
+                { Blade: "Back in the [[Octarian Army|Army]], Edd was aware of Agent 3's infiltration and was skeptical of his skills and motives. During the events in the [[Deepsea Metro]], Edd's memory loss caused more conflict between them, but they made peace in the end. He isn't very friendly to Blade but he does stick around with Blade's team and help him out from time to time." },
                 { Axel: "Their personalities clash, so they butt heads a lot. Edd thinks Axel is a naive Inkling brat who's never experienced hardships." },
                 { Dorothy: "They met because of [[OCTA]]. Edd thinks she is a brilliant woman, and she is particularly caring for him." },
-                { Marina: "They met during the events in the Deepsea Metro. Both are former [[Octarians]] with an engineering background, so they get along fairly well. He's grateful for all the help she offered him, but he really doesn't want to keep owing her favors." }
+                { Marina: "They met during the events in the [[Deepsea Metro]]. Both are former [[Octarians]] with an engineering background, so they get along fairly well. He's grateful for all the help she offered him, but he really doesn't want to keep owing her favors." }
             ],
             variant: [
                 { agent8: "Agent 8" },
@@ -172,7 +182,7 @@ const SPLAT_CHARA_DATA_EN = {
             ],
             relationships: [
                 { Lance: "They've known each other for a long time and often teamed up in pair League Battles before [[Royal Flush]] was formed. Their conversations are usually short, but she trusts him a lot. There's an unspoken understanding between them." },
-                { Minerva: "They met during Hannah's one and only agent mission. Hannah thought she was a fair opponent and acknowledged her skills. After Minerva joined Royal Flush, they became teammates and friends, and they're also roommates." },
+                { Minerva: "They met during Hannah's one and only agent mission. Hannah thought she was a fair opponent and acknowledged her skills. After Minerva joined [[Royal Flush]], they became teammates and friends, and they're also roommates." },
                 { Amy: "She sees Amy as a wimpy manager and a fangirl. She isn't too mean to her, but she does tend to dump all the team-related chores on her." },                
                 { Roy: "To Hannah he is someone Lance and Amy picked for the team. She has no problem with his skills, but she finds him difficult to work with, and never knows what to do with him. She will not talk to him unless she has to." },
                 { Blade: "Her younger brother. They lived apart for many years, and because of their personalities and family reasons, she despises him. She has no interest in getting along with him and can't stand being in the same room with him." }
@@ -199,8 +209,8 @@ const SPLAT_CHARA_DATA_EN = {
                 { Yoni: "His younger brother. Yoni was always full of energy as a kid, so Lance often had to keep an eye on him. He has always cared about Yoni, and they seemed close, but something later came between them." },
                 { Hannah: "They've known each other for a long time and often teamed up in pair League Battles. There's an unspoken understanding between them." },
                 { Amy: "They met when [[Royal Flush]] was formed, and she's the team's manager. Something about her keeps catching his attention, whether it's small details that don't quite add up or the way she always seems to be working hard all by herself. He tends to look out for her more than anyone else." },
-                { Roy: "They met when Royal Flush was formed. He isn't sure why Roy keeps picking on him, but he still sees him as a teammate and a friend. He's often the one who has to hold Roy back when he gets too worked up." },
-                { Minerva: "They met when Royal Flush was formed, and they work really well together in battle. Late in the story, they became fellow police officers." }
+                { Roy: "They met when [[Royal Flush]] was formed. He isn't sure why Roy keeps picking on him, but he still sees him as a teammate and a friend. He's often the one who has to hold Roy back when he gets too worked up." },
+                { Minerva: "They met when [[Royal Flush]] was formed, and they work really well together in battle. Late in the story, they became fellow police officers." }
             ],
             variant: [
                 { casual: "Casual" },
@@ -220,10 +230,10 @@ const SPLAT_CHARA_DATA_EN = {
             ],
             relationships: [
                 { Edd: "Her twin brother. They have opposite views and beliefs, but they got along fine back in the [[Octarian Army|Army]]. She was shocked when he suddenly started lashing out at her and pushing her away. There seems to be a misunderstanding between them that has yet to be cleared up." },
-                { Hannah: "They met when Hannah infiltrated the Army as Agent 3. Losing to her stuck with Minerva for a long time, so after leaving the underground, she challenged Hannah to a rematch. They later became teammates, friends, and even roommates. She cares about Hannah a lot and always looks after her." },
+                { Hannah: "They met when Hannah infiltrated the [[Octarian Army|Army]] as Agent 3. Losing to her stuck with Minerva for a long time, so after leaving the underground, she challenged Hannah to a rematch. They later became teammates, friends, and even roommates. She cares about Hannah a lot and always looks after her." },
                 { Amy: "They met when [[Royal Flush]] was formed, and Amy is the team's manager. Minerva thinks she's very sweet, and can't help going into snuggly mode when Amy is around." },
-                { Lance: "They met as teammates in Royal Flush and work really well together in battle. She admires him and wants to be friends, but she always struggles to find something to talk about. Late in the story, they became fellow police officers." },
-                { Roy: "They met as teammates in Royal Flush. Despite struggling to get along with him, she continues to try to understand him and become his friend. So far, her efforts haven't gotten her very far." },
+                { Lance: "They met as teammates in [[Royal Flush]] and work really well together in battle. She admires him and wants to be friends, but she always struggles to find something to talk about. Late in the story, they became fellow police officers." },
+                { Roy: "They met as teammates in [[Royal Flush]]. Despite struggling to get along with him, she continues to try to understand him and become his friend. So far, her efforts haven't gotten her very far." },
                 { Dorothy: "They met because of [[OCTA]], and Dorothy takes good care of her. Minerva really enjoys her company and always ends up spending a lot of time with her whenever she visits the OCTA HQ." }
             ],
             variant: [
@@ -333,9 +343,9 @@ const SPLAT_CHARA_DATA_EN = {
             ],
             relationships: [
                 { Maxwell: "They met a couple times back in the [[Octarian Army|Army]], and later became coworkers in different departments at [[Vector 8 Research Institute|V8]]. They're close friends and often have lunch together at work. Tighe is always telling him to relax more and often asks him to hang out on weekends." },
-                { Viper: "They've known each other since their Army days and now work in different departments at V8, so they often end up in the same meetings. Maybe it's because they're both elite engineers, but they get along surprisingly well." },
-                { Candice: "They met at V8. He finds her easy to get along with, and they've become friends over time. Every now and then, he invites her to join him and Maxwell for lunch." },
-                { "Dr. Lapis": "They've known each other since his Army days, and she has been something of a mentor to him, always believing in his talent. They later founded V8 together. She often teases him like family, but he just laughs it off and still has a lot of respect for her." }
+                { Viper: "They've known each other since their [[Octarian Army|Army]] days and now work in different departments at [[Vector 8 Research Institute|V8]], so they often end up in the same meetings. Maybe it's because they're both elite engineers, but they get along surprisingly well." },
+                { Candice: "They met at [[Vector 8 Research Institute|V8]]. He finds her easy to get along with, and they've become friends over time. Every now and then, he invites her to join him and Maxwell for lunch." },
+                { "Dr. Lapis": "They've known each other since his [[Octarian Army|Army]] days, and she has been something of a mentor to him, always believing in his talent. They later founded [[Vector 8 Research Institute|V8]] together. She often teases him like family, but he just laughs it off and still has a lot of respect for her." }
             ],
             variant: [
                 { v8: "V8 Uniform" },
@@ -353,10 +363,10 @@ const SPLAT_CHARA_DATA_EN = {
                 "名字參考card跟cartridge，來自任天堂Swtich使用的卡帶"
             ],
             relationships: [
-                {Edd: "在軍團時期就認識，曾經是同學，覺得他做的事情很偉大，會稱呼他「師傅」或「師兄」，很愛黏在他後面。後來因深海地鐵事件和他失聯，再度見面時發現被他討厭了很錯愕。"},
+                {Edd: "在[[章魚軍團|軍團]]時期就認識，曾經是同學，覺得他做的事情很偉大，會稱呼他「師傅」或「師兄」，很愛黏在他後面。後來因[[深海地鐵]]事件和他失聯，再度見面時發現被他討厭了很錯愕。"},
                 {Viper: "知道他是DJ將軍的專屬工程師，對他很是欽佩，經常想跟他討論機器人，但總是被對方拒之門外，即使如此還是持續嘗試。自己的遺願清單有一項是跟他合作出一款遊戲。"},
-                {Maxwell: "軍團時期有看過對方但交集不多，後來成為V8不同部門的同事，覺得他負責的工作很厲害所以想當朋友，經常去搭話跟打招呼。稱呼他為「阿麥」。"},
-                {Tighe: "在軍團時期聽過他，到V8工作後才認識，在部門落成後變成朋友，經常參與他和麥克斯的談話或是聯誼。認為他是公司最強章魚。"}
+                {Maxwell: "[[章魚軍團|軍團]]時期有看過對方但交集不多，後來成為[[V8科研中心|V8]]不同部門的同事，覺得他負責的工作很厲害所以想當朋友，經常去搭話跟打招呼。稱呼他為「阿麥」。"},
+                {Tighe: "在[[章魚軍團|軍團]]時期聽過他，到[[V8科研中心|V8]]工作後才認識，在部門落成後變成朋友，經常參與他和麥克斯的談話或是聯誼。認為他是公司最強章魚。"}
             ],
             variant:[
                 {v8: "V8工作服"},
@@ -374,8 +384,8 @@ const SPLAT_CHARA_DATA_EN = {
                 "名字來自任天堂Swtich圖形處理器核心Maxwell微架構"
             ],
             relationships: [
-                {Tighe: "在軍團時期就認識，後來成為V8不同部門的同事，常在公司一起吃午飯。很重視這個朋友，有他的支持生活才沒那麼沉重。"},
-                {Candice: "軍團時期有看過對方但交集不多，後來成為V8不同部門的同事。經常被對方搭話，每次都很好奇她的活力都是從哪裡來的。"},
+                {Tighe: "在[[章魚軍團|軍團]]時期就認識，後來成為[[V8科研中心|V8]]不同部門的同事，常在公司一起吃午飯。很重視這個朋友，有他的支持生活才沒那麼沉重。"},
+                {Candice: "[[章魚軍團|軍團]]時期有看過對方但交集不多，後來成為[[V8科研中心|V8]]不同部門的同事。經常被對方搭話，每次都很好奇她的活力都是從哪裡來的。"},
                 {"Dr. Lapis": "曾是師生關係，在研讀化學跟醫療知識時看了很多她的書和研究報告，也受了她很多指導跟幫助，對她非常尊敬與感謝。"}
             ]      
         },
@@ -390,13 +400,13 @@ const SPLAT_CHARA_DATA_EN = {
                 "名字來自任天堂Swtich內的記憶體LPDDR4。可以重組成DRLP（Dr. Lapis）跟4D（四宮黛芬）並且對應她研究記憶的職業"
             ],
             relationships: [
-                {Betty: "在軍團時期就同樣是研究員，兩人互相熟識很久，是感情非常深厚的好姊妹，經常在公司的走廊或茶水間閒話家常。"},
-                {Tighe: "在軍團時期就很看好這個年輕人的才華跟想法，想盡辦法給他資源跟機會讓他能好好發展，後來拉上他創立了V8科研中心。"},
-                {Maxwell: "在軍團後期接觸的學生，看對方很認真想學習醫學知識就撥了很多時間專門指導他，認為對方是很勤奮的好孩子。"},
-                {Ollie: "直到V8工作後才熟絡起來，雖然都只是跟工作無關的閒聊但兩人說話彷彿沒有年齡差距，有點像閨密一樣，總是在互相發牢騷或是討人情。"},
+                {Betty: "在[[章魚軍團|軍團]]時期就同樣是研究員，兩人互相熟識很久，是感情非常深厚的好姊妹，經常在公司的走廊或茶水間閒話家常。"},
+                {Tighe: "在[[章魚軍團|軍團]]時期就很看好這個年輕人的才華跟想法，想盡辦法給他資源跟機會讓他能好好發展，後來拉上他創立了[[V8科研中心]]。"},
+                {Maxwell: "在[[章魚軍團|軍團]]後期接觸的學生，看對方很認真想學習醫學知識就撥了很多時間專門指導他，認為對方是很勤奮的好孩子。"},
+                {Ollie: "直到[[V8科研中心|V8]]工作後才熟絡起來，雖然都只是跟工作無關的閒聊但兩人說話彷彿沒有年齡差距，有點像閨密一樣，總是在互相發牢騷或是討人情。"},
                 {Marina: "自己提拔的學生之一，很支持對方的音樂事業。兩人電波很和，就算是跟工作無關的話題也可以聊很久，每次通電話都會講上好幾個小時。"},
-                {Mei: "V8成立後招募到的實習生，看出了她的學習潛力所以後來將她調到身邊當助手，對她很是寵愛，也不忘記對她各種捉弄。"},
-                {"Father Chelon": "因為對方是V8科研中心的最大投資人所以會戲稱他為金主爸爸。對他很歡迎，交情似乎不錯，會互相邀請參加GALA。"}
+                {Mei: "[[V8科研中心|V8]]成立後招募到的實習生，看出了她的學習潛力所以後來將她調到身邊當助手，對她很是寵愛，也不忘記對她各種捉弄。"},
+                {"Father Chelon": "因為對方是[[V8科研中心]]的最大投資人所以會戲稱他為金主爸爸。對他很歡迎，交情似乎不錯，會互相邀請參加GALA。"}
             ]      
         },
         "Betty" : { 
@@ -410,9 +420,9 @@ const SPLAT_CHARA_DATA_EN = {
                 "名字來自電池（Battery），也是任天堂Switch的內部零件之一"
             ],
             relationships: [
-                {"Dr. Lapis": "在軍團時期就同樣是研究員，兩人互相熟識很久，是感情非常深厚的好姊妹，經常在公司的走廊或茶水間閒話家常。"},
+                {"Dr. Lapis": "在[[章魚軍團|軍團]]時期就同樣是研究員，兩人互相熟識很久，是感情非常深厚的好姊妹，經常在公司的走廊或茶水間閒話家常。"},
                 {Zoelle: "一次協助考古部門出任務時認識，看見對方的上進心後對她很是欽佩，在聽到她的家境有些困難時決定收容她讓她跟自己一起住。把他當成親女兒一樣照料。"},
-                {Ollie: "在V8工作而認識，還挺喜歡和他聊天，有種和兒子談心的感覺，偶爾路過聽到他在談八卦總是會不小心聽的很入神。"}
+                {Ollie: "在[[V8科研中心|V8]]工作而認識，還挺喜歡和他聊天，有種和兒子談心的感覺，偶爾路過聽到他在談八卦總是會不小心聽的很入神。"}
             ]
         },
         "Ollie" : { 
@@ -427,8 +437,8 @@ const SPLAT_CHARA_DATA_EN = {
                 "這個角色的氣質參考了《荒唐分局》的吉娜"
             ],
             relationships: [
-                {"Dr. Lapis": "直到V8工作後才熟絡起來，雖然都只是跟工作無關的閒聊但兩人說話彷彿沒有年齡差距，有點像閨密一樣，總是在互相發牢騷或是討人情。"},
-                {Betty: "在V8工作而認識，看她想聊就會一直聊，把對方當成像自己家阿姨一樣的存在。"}
+                {"Dr. Lapis": "直到[[V8科研中心|V8]]工作後才熟絡起來，雖然都只是跟工作無關的閒聊但兩人說話彷彿沒有年齡差距，有點像閨密一樣，總是在互相發牢騷或是討人情。"},
+                {Betty: "在[[V8科研中心|V8]]工作而認識，看她想聊就會一直聊，把對方當成像自己家阿姨一樣的存在。"}
             ]
         },
         "Angelica" : { 
@@ -472,7 +482,7 @@ const SPLAT_CHARA_DATA_EN = {
                 {Angelica: "在一起任務衝突中相遇，差點互相置對方於死地。最後被安排到同隊，是自己的上司。經常不停地用言語戲弄對方，但又會很忠心的遵守所有吩咐。"},/*對她的能力很欣賞，會忠心的遵守所有吩咐。經常不停地用言語戲弄對方，可見對她很是喜愛。稱呼她為「大小姐」或「我的小姐」*/
                 {"Father Chelon": "上司的上司，算是利益關係，認為他是很有趣的大人物。不知道是被他的控權的能力還是談判的技術所吸引，總之很樂意為他效勞。"},/*路西恩是少數敢和對方開玩笑跟回嘴的人。*/
                 {RJ: "教父先生安排給自己的伙伴之一。認為跟對方合作起來很輕鬆。看他跟安潔關係親近而更想多多認識。有時會追著他問各種問題，差點沒把對方給煩死。"},
-                {Damian: "教父先生安排給自己的伙伴之一。早在以前在軍團時就一直因為工作需要而觀察對方，所以比大部分的人都還瞭解他。也是路西恩經常調戲的對象之一。"}
+                {Damian: "教父先生安排給自己的伙伴之一。早在以前在[[章魚軍團|軍團]]時就一直因為工作需要而觀察對方，所以比大部分的人都還瞭解他。也是路西恩經常調戲的對象之一。"}
             ],
             variant:[
                 {work: "常駐工作裝"}
@@ -513,7 +523,7 @@ const SPLAT_CHARA_DATA_EN = {
             ],
             relationships: [
                 {Angelica: "是上司，會聽從她的命令跟指導。每次都可以被她的身手跟表現震驚到。"},
-                {Lucian: "手下同事，有認出他是軍團裡的人。感覺他有點討人厭。"},
+                {Lucian: "手下同事，有認出他是[[章魚軍團|軍團]]裡的人。感覺他有點討人厭。"},
                 {RJ: "手下同事，並沒有很和的來，除了工作需要以外不會互動。"},
                 {"Father Chelon": "為了調查才協助，除此以外沒有並沒有想要替他賣命的意願。寧願替安潔工作也不想替他工作。"},
             ],
@@ -575,7 +585,7 @@ const SPLAT_CHARA_DATA_EN = {
             relationships: [
                 {Susie: "在童子軍團中認識，認為對方是個很有實力的人，兩人經常透過童軍活動來競爭。"},
                 {Zarah: "親姐姐，知道對方很辛苦但還是不喜歡她的生活選擇，就算擔心她也不知道要怎麼表達。" },
-                {Betty: "是幫助自己並提供住所的好心女士，多虧他才能進入V8鑽研考古，一直很感謝她，願意為她做所有的家事。"},
+                {Betty: "是幫助自己並提供住所的好心女士，多虧他才能進入[[V8科研中心|V8]]鑽研考古，一直很感謝她，願意為她做所有的家事。"},
             ],
             variant:[
                 {v8: "V8工作服"},
@@ -626,7 +636,7 @@ const SPLAT_CHARA_DATA_EN = {
             relationships: [
                 {Paul: "去當鋪當東西的時候認識，不知道是不是因為都很愛錢所以兩人熟的很快，每次對話都在瘋狂挖苦對方互相打嘴炮。"},
                 {Angelica: "因工作需要，偶爾得在賭場與她會面。可以看穿她的心思，一直在想辦法讓她放鬆或讓她開心點。對待她特別用心，會稱呼她為「大小姐」「我的小姐」或「我的女神」"},
-                {Dorothy: "在章魚軍團學院時期被對方照料過，一次偶然被對方認出來，後來一直保持聯絡，兩人似乎很和的來。某種程度上是啟發自己的人。"}
+                {Dorothy: "在[[章魚軍團]]學院時期被對方照料過，一次偶然被對方認出來，後來一直保持聯絡，兩人似乎很和的來。某種程度上是啟發自己的人。"}
             ],            
         },        
         "Alan" : { 
@@ -653,11 +663,11 @@ const SPLAT_CHARA_DATA_EN = {
             ],
             relationships: [
                 {Moyer: "自己的養子，在被放逐到章魚平民農村時撿到。當成親兒子照顧，對他很珍愛也常為他操心，是心上的一塊肉。"},
-                {Ada: "是好朋友也是OCTA的同事，看她很努力卻總是看不起自己所以很心疼他。各方面都會拉上她一把，還傳授她很多育兒的知識。"},
-                {Minerva: "因為對方來協助OCTA而相識，對她很是喜歡。知道她勤奮又表現優良也很以此為傲。似乎特別關注她的生活近況。"},
-                {Edd: "因為對方來協助OCTA而相識，對他很是喜歡。可以看出對方孤高的外表下有顆堅強正直的心。似乎特別關注他的生活近況。"},
-                {Blade: "間接促成了OCTA的成立的孩子，認為對方是個閃耀著光輝的小英雄，很感謝他一直以來的幫忙，會默默的守望他。"},
-                {Leon: "認出對方是自己年輕時在軍團裡照料過的孩子，從以前就對他特別喜愛，兩人似乎很和的來。"}
+                {Ada: "是好朋友也是[[OCTA]]的同事，看她很努力卻總是看不起自己所以很心疼他。各方面都會拉上她一把，還傳授她很多育兒的知識。"},
+                {Minerva: "因為對方來協助[[OCTA]]而相識，對她很是喜歡。知道她勤奮又表現優良也很以此為傲。似乎特別關注她的生活近況。"},
+                {Edd: "因為對方來協助[[OCTA]]而相識，對他很是喜歡。可以看出對方孤高的外表下有顆堅強正直的心。似乎特別關注他的生活近況。"},
+                {Blade: "間接促成了[[OCTA]]的成立的孩子，認為對方是個閃耀著光輝的小英雄，很感謝他一直以來的幫忙，會默默的守望他。"},
+                {Leon: "認出對方是自己年輕時在[[章魚軍團|軍團]]裡照料過的孩子，從以前就對他特別喜愛，兩人似乎很和的來。"}
             ],
             variant:[
                 {octa: "日常"},
@@ -678,7 +688,7 @@ const SPLAT_CHARA_DATA_EN = {
             relationships: [
                 {Mei: "摯友的女兒也是自己的養女，發誓一定要給她最好的生活。看到她笑就覺得一切都值得了，希望她可以平安又永遠開開心心的。"},
                 {Freya: "摯友的女兒也是自己的養女，雖然比較晚相認但一樣把對方當親女兒對待，希望她可以永平安又遠開開心心的。因為長的很像自己失去的摯友所以有時看到她會不禁就感傷起來。"},
-                {Dorothy: "是朋友也是OCTA的同事，像是師姐一樣的存在，總是被她的勇敢跟堅強打動，一直把她當成榜樣。生活跟心理方面都收到對方的各種支持，很多育兒知識也是從她那裡學的，是少數敢談心的對象。"}
+                {Dorothy: "是朋友也是[[OCTA]]的同事，像是師姐一樣的存在，總是被她的勇敢跟堅強打動，一直把她當成榜樣。生活跟心理方面都收到對方的各種支持，很多育兒知識也是從她那裡學的，是少數敢談心的對象。"}
             ],
             variant:[
                 {teacher: "幼教老師"},
@@ -729,7 +739,7 @@ const SPLAT_CHARA_DATA_EN = {
             relationships: [
                 {Ada: "養母，被撫養長大並帶到陸地上。起初因爲不太熟悉所以有些距離感，但是在長時間的相處之後發現愛妲是真的關心自己。之後也敞開心胸叫她媽媽。"},
                 {Freya: "在陸地上生活一段時間後才相認的姐姐。經常被她拉出門外逛街玩耍，是藍莓的第一個好朋友。 "},
-                {"Dr. Lapis":"在V8科研中心實習的上司。雖然會偶爾對自己惡作劇稍微有點困擾，但是從她身上確實學到了許多知識。還是會希望她不要把太多雜務交給自己做（？）"}
+                {"Dr. Lapis":"在[[V8科研中心]]實習的上司。雖然會偶爾對自己惡作劇稍微有點困擾，但是從她身上確實學到了許多知識。還是會希望她不要把太多雜務交給自己做（？）"}
             ] 
         },
         "Freya" : { 
