@@ -322,24 +322,24 @@ const SPLAT_CHARA_DATA_EN = {
         "Tighe" : { 
             name: "Tighe",
             summary: [
-                "在秩序計畫支線中登場的角色。於章魚軍團出生所以從小接受軍團的教育與訓練，在數據與工程方面表現非常傑出，後來被提拔進委員會，是委員會中最年輕的一員，比起其他人似乎對於新的事物跟觀念抱持著比較開放的態度。在軍團瓦解後跟幾個軍團研究員一起建立V8科研中心，他原本是琉璃博士領導的團隊的組員之一，在人工智能與數據建模部門設立後被指派到該部門作為首席開發員與顧問。另外，他也密切參與了秩序計畫虛擬宇宙的開發。",
-                "是個精明可靠的軟體工程師，精通各種新舊世代的程式語言，工作俐落，除錯迅速，解決問題的能力極佳，是邏輯天才。他的口齒清晰且表達能力很好，講話很有魅力，是那種總是可以輕易說服投資者的類型。是個不太謙虛的人，有點太過崇尚資本主義。很有紳士風度，總是面帶微笑。"
+                "First appeared in the Side Order story. Born and raised in the [[Octarian Army]], he showed outstanding skills in data science and software engineering, which later earned him a seat on the Army Committee as its youngest member. Compared to the others, he seemed much more open to new things and ideas. As the Army fell apart, he founded the [[Vector 8 Research Institute]] with a few other major researchers in the Army. He was originally part of Dr. Lapis's team, but when the AI & Data Modeling department was set up, he was appointed as its lead developer and advisor. He was also closely involved in the development the Memverse Project.",
+                "He is a brilliant software engineer and a logic genius who can code in just about any language. He works fast, rarely makes mistakes and can untangle almost any problem thrown at him. He has a way with words, which makes him great at winning over investors. He's not exactly modest, and his faith in capitalism can go a little too far sometimes. Still, he's always friendly and gentlemanly, and he's hardly ever seen without his polite smile."
             ],
             notes: [
-                "名字參考Tegra，來自任天堂Swtich內部處理器的單晶片系統Nvidia Tegra X1",
-                "他戴的眼鏡是藍光眼鏡",
-                "設定中有稍微加入類似矽谷科技企業家的概念",
-                "他的名字還有另一個彩蛋"
+                "His name is roughly based on 'Tegra' from Nvidia Tegra X1, the chip inside the Nintendo Switch.",
+                "There's also another Easter egg in his name.",
+                "Some people call him Ty for short.",
+                "He wears blue-light glasses."
             ],
             relationships: [
-                {Maxwell: "在軍團時期就認識，後來成為V8不同部門的同事，是很熟絡的朋友，在公司經常一起吃午飯，經常勸他多放鬆，週末會找他出去。"},
-                {Viper: "在軍團時期就認識，後來成為V8不同部門的同事，經常會在部門合作時一起開會。或許是因為同為菁英工程師，兩人意外的還挺和的來。"},
-                {Candice: "因在V8工作而認識，覺得對方很好相處，算是朋友，偶爾會拉上他跟麥克斯一起吃午飯。"},
-                {"Dr. Lapis": "在軍團時期就認識，算是恩師的存在，很被對方看好才華。後來一起建立V8。雖然平常總被她像親戚一樣調侃但還是很敬重對方。"}
+                { Maxwell: "They met a couple times back in the [[Octarian Army|Army]], and later became coworkers in different departments at [[Vector 8 Research Institute|V8]]. They're close friends and often have lunch together at work. Tighe is always telling him to relax more and often asks him to hang out on weekends." },
+                { Viper: "They've known each other since their Army days and now work in different departments at V8, so they often end up in the same meetings. Maybe it's because they're both elite engineers, but they get along surprisingly well." },
+                { Candice: "They met at V8. He finds her easy to get along with, and they've become friends over time. Every now and then, he invites her to join him and Maxwell for lunch." },
+                { "Dr. Lapis": "They've known each other since his Army days, and she has been something of a mentor to him, always believing in his talent. They later founded V8 together. She often teases him like family, but he just laughs it off and still has a lot of respect for her." }
             ],
-            variant:[
-                {v8: "V8工作服"},
-                {committee: "軍團委員會"}
+            variant: [
+                { v8: "V8 Uniform" },
+                { committee: "Army Committee" }
             ]
         },
         "Candice" : { 
