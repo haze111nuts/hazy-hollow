@@ -277,7 +277,7 @@ const SPLAT_CHARA_DATA_EN = {
             ],
             relationships: [
                 { Hannah: "Amy knows her strength very well and seems to be a big fan of hers. She doesn't really mind being bossed around by Hannah." },
-                { Lance: "Amy knows his strength very well and seems to be a big fan of his. She's never quite sure what to make of all the attention he pays to her." },
+                { Lance: "Amy knows his strength very well and seems to be a big fan of his. She's never quite sure what to make of all the attention he gives her." },
                 { Minerva: "She sees Minerva as a reliable teammate and doesn't mind her snuggles." },
                 { Roy: "They didn't seem to know each other before [[Royal Flush]] was formed. She finds his constant snide remarks a bit troublesome." }
             ],
