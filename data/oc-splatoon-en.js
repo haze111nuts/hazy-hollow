@@ -355,22 +355,22 @@ const SPLAT_CHARA_DATA_EN = {
         "Candice" : { 
             name: "Candice",
             summary: [
-                "在一代主線以及秩序計畫支線中登場的角色。於章魚軍團出生所以從小接受軍團的教育與訓練，因為覺得軍團很無趣，在學生時期跟一夥人一起進行跟改革有關的秘密活動。她作為女兵的戰力水準普普，但對軟體工程很興趣，尤其是對古代人類遺留在章魚基地中的娛樂電子器材特別熱衷。在軍團瓦解之後她轉移到了V8科研中心工作，是虛擬實境和數位娛樂部門的首席開發員，致力於開發遊戲還有研發虛擬實境技術。密切參與了秩序計畫虛擬宇宙的開發。",
-                "個性明亮﹑開朗外向﹑講話率直毫無顧忌，有點古怪又亂來。她的精力很旺盛總是蹦蹦跳跳，給人一種野丫頭的感覺。是電子遊戲萬事通，言為舉止總會參雜各種遊戲迷因。她常常會忘了把身上動作捕捉用的x marker拿下來就跑去開會。"
+                "First appeared in the main story of Splatoon 1 and the Side Order story. Born and raised in the [[Octarian Army]], she found Army life boring, and while at the Octarian Army Academy, she secretly joined a group of students who wanted change. She was never much of a soldier. What she really loved were the old electronic games and gadgets humans left behind in Octarian bases, and they're what got her into software engineering. After the Army fell apart, she landed a job at the [[Vector 8 Research Institute]], and she has now became one of the lead developer in the VR & Digital Entertainment department, working on games and VR technology. She was also closely involved in developing the Memverse.",
+                "She is a bright, quirky and outgoing girl, she is kind of chaotic and always says exactly what's on her mind. She has endless energy and is always bouncing around. She's a huge video game buff and she loves dropping gaming memes into conversations. She often forgets to take off her motion-capture markers before rushing into meetings."
             ],
             notes: [
-                "名字寫成中文是坎蒂絲，糖糖（Candy）則是小名",
-                "名字參考card跟cartridge，來自任天堂Swtich使用的卡帶"
+                "Her nickname is Candy.",
+                "Her name comes from \"card\" and \"cartridge\", after the game cards used by the Nintendo Switch."
             ],
             relationships: [
-                {Edd: "在[[章魚軍團|軍團]]時期就認識，曾經是同學，覺得他做的事情很偉大，會稱呼他「師傅」或「師兄」，很愛黏在他後面。後來因[[深海地鐵]]事件和他失聯，再度見面時發現被他討厭了很錯愕。"},
-                {Viper: "知道他是DJ將軍的專屬工程師，對他很是欽佩，經常想跟他討論機器人，但總是被對方拒之門外，即使如此還是持續嘗試。自己的遺願清單有一項是跟他合作出一款遊戲。"},
-                {Maxwell: "[[章魚軍團|軍團]]時期有看過對方但交集不多，後來成為[[V8科研中心|V8]]不同部門的同事，覺得他負責的工作很厲害所以想當朋友，經常去搭話跟打招呼。稱呼他為「阿麥」。"},
-                {Tighe: "在[[章魚軍團|軍團]]時期聽過他，到[[V8科研中心|V8]]工作後才認識，在部門落成後變成朋友，經常參與他和麥克斯的談話或是聯誼。認為他是公司最強章魚。"}
+                { Edd: "They were classmates back in the [[Octarian Army|Army]]. She thought what he was doing was amazing, so she followed him everywhere and called him 'senpai'. They lost contact after the events in the Deepsea Metro, and when they finally met again, she was shocked to find that he wanted nothing to do with her." },
+                { Viper: "She knows he was DJ Octavio's personal engineer and really admires him. She keeps trying to talk robots with him, but he always shuts her out. Though that doesn't stop her from trying. One of the things on her bucket list is developing a video game with him." },
+                { Maxwell: "She had seen him around back in the [[Octarian Army|Army]], but they never really talked. They later became coworkers in different departments at [[Vector 8 Research Institute|V8]]. She thinks his work is really impressive and wants to be friends, so she's always coming up to him to chat and say hi. She calls him \"Maxie\"." },
+                { Tighe: "She had heard of him back in the [[Octarian Army|Army]], but they didn't actually meet until she started working at [[Vector 8 Research Institute|V8]]. They became friends after her department was set up, and she often joins in on his hangouts with Maxwell. She thinks Tighe is the MVP of V8." }
             ],
-            variant:[
-                {v8: "V8工作服"},
-                {octarian: "軍團時期"}
+            variant: [
+                { v8: "V8 Uniform" },
+                { octarian: "Octarian" }
             ]
         },
         "Maxwell" : { 
