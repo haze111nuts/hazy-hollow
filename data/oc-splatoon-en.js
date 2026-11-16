@@ -783,7 +783,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Marina" : { 
             name: "Marina",
             summary: [
-                "A former [[Elite Octoling Soldier]] of the [[Octarian Army]], and one of the many Octarians who left the Army after DJ Octavio was defeated by Agent 3. Upon arriving at the surface, she met Pearl, and the two became friends and ultimately formed the idol duo [[Off the Hook]]. She has been actively helping Octarians who moved to the surface settle into stable lives, and she loves taking part in volunteer events for [[OCTA]]. In the Octo Expansion story, she helped Agent 8 fight against the threat. She also works as a special advisor for the [[Vector 8 Research Institute]]. The Memverse Project started as her idea, and she teamed up with V8 to develop and run it, working closely with several of its departments."
+                "A former [[Elite Octoling Soldier]] of the [[Octarian Army]], and one of the many Octarians who left the Army after DJ Octavio was defeated by Agent 3. Upon arriving at the surface, she met Pearl, and the two became friends and ultimately formed the idol duo [[Off the Hook]]. She has been actively helping Octarians who moved to the surface settle into stable lives, and she loves taking part in volunteer events for [[OCTA]]. In the Octo Expansion story, she helped Agent 8 fight against the threat. The Memverse Project was originally her concept, which she later brought to the [[Vector 8 Research Institute]] as a joint research initiative. As the project's key stakeholder and V8's special advisor, she works closely with several of its departments."
             ]
         },
         "Pearl" : { 
