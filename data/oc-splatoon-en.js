@@ -783,13 +783,13 @@ const SPLAT_CHARA_DATA_EN = {
         "Marina" : { 
             name: "Marina",
             summary: [
-                "A former [[Elite Octoling Soldier]] of the [[Octarian Army]], and one of the many Octarians who left the Army after DJ Octavio was defeated by Agent 3. Upon arriving at the surface, she met Pearl and they became friends, and then ultimately formed the idol duo [[Off the Hook]] with her. She has been actively helping Octarians who moved to the surface settle into stable lives, and she loves taking part in [[OCTA]]'s volunteer events. In the Octo Expansion story, she helped Agent 8, Edd, fight the threat. She is also a special advisor to the [[Vector 8 Research Institute]]. The Memverse Project started as her idea, and she later teamed up with V8 to develop and run it, working closely with several of its departments."
+                "A former [[Elite Octoling Soldier]] of the [[Octarian Army]], and one of the many Octarians who left the Army after DJ Octavio was defeated by Agent 3. Upon arriving at the surface, she met Pearl, and the two became friends and ultimately formed the idol duo [[Off the Hook]]. She has been actively helping Octarians who moved to the surface settle into stable lives, and she loves taking part in volunteer events for [[OCTA]]. In the Octo Expansion story, she helped Agent 8 fight the threat. She is also a special advisor to the [[Vector 8 Research Institute]]. The Memverse Project started as her idea, and she later teamed up with V8 to develop and run it, working closely with several of its departments."
             ]
         },
         "Pearl" : { 
             name: "Pearl",
             summary: [
-                "The daughter of a wealthy family in [[Inkadia|Greater Inkopolis]]. She met Marina and formed the idol duo [[Off the Hook]] with her. She found out about [[OCTA]] while practicing her vocals at [[Mount Nantai]] and has been a huge fan ever since. In her own words during a press, \"OCTA's the real deal, yo!\" She seems to support them with money and supplies quite often, and even her offhand donations come in such huge piles which made everyone in OCTA speechless. In the Octo Expansion story, she helped Agent 8, Edd, fight the threat. Later, in the Side Order story, she joined Edd in helping the [[Vector 8 Research Institute]] investigate anomalies inside the Memverse."
+                "The daughter of a wealthy family in [[Inkadia|Greater Inkopolis]]. She met Marina and formed the idol duo [[Off the Hook]] with her. She found out about [[OCTA]] while practicing her vocals at [[Mount Nantai]] and has been a huge fan ever since. In her own words to the press, \"OCTA's the real deal, yo!\" She seems to support them with money and supplies quite often, and even her offhand donations come in such huge piles that they leave everyone in OCTA speechless. In the Octo Expansion story, she helped Agent 8 fight the threat. Later, in the Side Order story, she joined Edd in helping the [[Vector 8 Research Institute]] investigate anomalies inside the Memverse."
             ]
         }
     };
