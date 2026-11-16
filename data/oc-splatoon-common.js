@@ -31,7 +31,7 @@ const SPLAT_CHARA_COMMON_DATA = {
     "Tighe"              : { color: "#10be53" },
     "Candice"            : { color: "#9d73b6" },
     "Maxwell"            : { color: "#96233f" },
-    "Dr. Lapis"          : { color: "#180f91" },
+    "Dr. Lapis"          : { color: "#0626b4" },
     "Betty"              : { color: "#f0d043" },
     "Ollie"              : { color: "#d384c2" },
     "Angelica"           : { color: "#6ec579" },

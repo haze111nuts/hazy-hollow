@@ -392,22 +392,22 @@ const SPLAT_CHARA_DATA_EN = {
         "Dr. Lapis" : { 
             name: "Dr. Lapis",
             summary: [
-                "在秩序計畫支線中登場，V8科研中心創辦人之一。全名四宮黛芬。於章魚軍團出生所以從小接受軍團的教育與訓練，因為理科成績每項都非常傑出所以沒有像其他女孩一樣被分去當女兵，她特別精通生物、化學跟醫學相關領域。她在畢業後一邊進行研究一邊任職軍團理科教師，軍團裡不少課本跟教科書是她寫的。在軍團瓦解的那段時間領著幾個人創立了V8，是神經心理學與記憶處理部門的首席研究員，在練魚公司瓦解後她領導過一個名為『[[瑠璃企劃]]』研究項目，此項目的成功讓她在公司內小有名氣，有些員工開始暱稱她為琉璃博士，她本人似乎也挺喜歡這個叫法。她也密切參與了秩序計畫虛擬宇宙的開發。",
-                "看上去是個知性淑女，行為舉止卻時常流露出調皮跟童趣，愛說笑還常常搞一些莫名其妙的小花招捉弄同事，跟人聊天起來像個路邊的太太。個性很爽朗，會熱心的指導學生，且總是可以讓談話氣氛變得很輕鬆，是個親切的女子。"
+                "First appeared in the Side Order story. She is one of the founders of the [[Vector 8 Research Institute]], and her full name is Delphine Shinomiya. Born and raised in the [[Octarian Army]], she excelled in every science subject, so unlike most girls, she was never assigned to be a soldier. She specializes in biology, chemistry and medicine. After graduating, she taught science in the Army while continuing her research. As the Army was falling apart, she led a small group in founding V8, and she is now the lead researcher of the Neuropsychology & Memory Processing department. After Kamabo Co. collapsed, she led a research project called [[Project Lapis Lazuli]]. Its success made her something of a name around the company, and some employees started calling her \"Dr. Lapis\", a nickname she seems to quite like. She was also closely involved in developing the Memverse.",
+                "She looks like a refined, intellectual lady, but she often shows a playful, childlike side. She loves to joke around and mess with her coworkers, and when she chats, she gossips like a neighborhood mom. She is cheerful and easygoing, and she is always happy to guide her students. She can make any conversation feel relaxed, and she has a way of putting everyone at ease."
             ],
             notes: [
-                "全名的拼法是Shinomiya Delphine，日文寫作シノミヤ＝デルフィーヌ，跟飯田和水田類似",
-                "名字來自任天堂Swtich內的記憶體LPDDR4。可以重組成DRLP（Dr. Lapis）跟4D（四宮黛芬）並且對應她研究記憶的職業"
+                "Her full name is written as シノミヤ＝デルフィーヌ in Japanese, in the same style as Marina's and Acht's Japanese names.",
+                "Her name comes from the LPDDR4 memory in the Nintendo Switch. The letters can be rearranged into \"DRLP\" (Dr. Lapis) and \"4D\" (the 4 for the 四 in 四宮 Shinomiya, the D for Delphine), which fits her work on memories."
             ],
             relationships: [
-                {Betty: "在[[章魚軍團|軍團]]時期就同樣是研究員，兩人互相熟識很久，是感情非常深厚的好姊妹，經常在公司的走廊或茶水間閒話家常。"},
-                {Tighe: "在[[章魚軍團|軍團]]時期就很看好這個年輕人的才華跟想法，想盡辦法給他資源跟機會讓他能好好發展，後來拉上他創立了[[V8科研中心]]。"},
-                {Maxwell: "在[[章魚軍團|軍團]]後期接觸的學生，看對方很認真想學習醫學知識就撥了很多時間專門指導他，認為對方是很勤奮的好孩子。"},
-                {Ollie: "直到[[V8科研中心|V8]]工作後才熟絡起來，雖然都只是跟工作無關的閒聊但兩人說話彷彿沒有年齡差距，有點像閨密一樣，總是在互相發牢騷或是討人情。"},
-                {Marina: "自己提拔的學生之一，很支持對方的音樂事業。兩人電波很和，就算是跟工作無關的話題也可以聊很久，每次通電話都會講上好幾個小時。"},
-                {Mei: "[[V8科研中心|V8]]成立後招募到的實習生，看出了她的學習潛力所以後來將她調到身邊當助手，對她很是寵愛，也不忘記對她各種捉弄。"},
-                {"Father Chelon": "因為對方是[[V8科研中心]]的最大投資人所以會戲稱他為金主爸爸。對他很歡迎，交情似乎不錯，會互相邀請參加GALA。"}
-            ]      
+                { Betty: "They've been fellow researchers since their [[Octarian Army|Army]] days and have known each other for a long time. They're very close, like sisters, and are often seen chatting in the hallways or the break room at [[Vector 8 Research Institute|V8]]." },
+                { Tighe: "Back in the [[Octarian Army|Army]], she saw great promise in his talent and ideas, and did everything she could to give him the resources and opportunities to grow. She later brought him on board to found the [[Vector 8 Research Institute]]." },
+                { Maxwell: "A student she met during the later days of the [[Octarian Army|Army]]. Seeing how eager he was to learn about medicine, she set aside a lot of her time to tutor him personally. She thinks of him as a hardworking, good kid." },
+                { Ollie: "They only became close after working together at [[Vector 8 Research Institute|V8]]. They mostly chat about things that have nothing to do with work, and they talk as if there's no age gap between them. They're often complaining to each other or asking each other for favors." },
+                { Marina: "One of the students she took under her wing. She's very supportive of Marina's music career. The two are totally on the same wavelength and can talk for ages, even about things unrelated to work. Their phone calls always last for hours." },
+                { Mei: "An intern who joined after [[Vector 8 Research Institute|V8]] was founded. Seeing her potential, Dr. Lapis later made Mei her assistant. She dotes on her a lot, but never misses a chance to tease her." },
+                { "Father Chelon": "Since he's the biggest investor in [[Vector 8 Research Institute|V8]], she jokingly calls him \"our big spender\". She's always happy to see him, and they seem to get along well, often inviting each other to galas." }
+            ]  
         },
         "Betty" : { 
             name: "Betty",
