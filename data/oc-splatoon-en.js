@@ -783,13 +783,13 @@ const SPLAT_CHARA_DATA_EN = {
         "Marina" : { 
             name: "Marina",
             summary: [
-                "曾是章魚軍團的菁英章魚女兵，是在３號擊敗將軍後出走的眾多章魚之一。在陸上遇到小姬後與其組成偶像團體觸手酷妹，一直都在積極的協助上陸的章魚讓他們能有安穩的生活，很熱衷參與OCTA的各種義工活動。在深海地鐵支線中曾經協助過8號對抗威脅。另外她也是V8科研中心的特殊顧問，她與V8的多個部門一起密切參與了秩序計畫虛擬宇宙的開發。"
+                "A former [[Elite Octoling Soldier]] of the [[Octarian Army]], and one of the many Octarians who left the Army after DJ Octavio was defeated by Agent 3. Upon arriving at the surface, she met Pearl and they became friends, and then ultimately formed the idol duo [[Off the Hook]] with her. She has been actively helping Octarians who moved to the surface settle into stable lives, and she loves taking part in [[OCTA]]'s volunteer events. In the Octo Expansion story, she helped Agent 8, Edd, fight the threat. She is also a special advisor to the [[Vector 8 Research Institute]]. The Memverse Project started as her idea, and she later teamed up with V8 to develop and run it, working closely with several of its departments."
             ]
         },
         "Pearl" : { 
             name: "Pearl",
             summary: [
-                "高領地區有錢人家的千金。遇到飯田後與其組成偶像團體觸手酷妹。因為常常去軟體山練聲而得知OCTA的存在，曾向媒體表示「OCTA真是有夠讚！」，似乎經常給他們提供金錢或物資上的援助，每次隨手捐贈都是一山的東西，搞的大家很傻眼。在深海地鐵支線中曾經協助過8號對抗威脅。後來在秩序計畫支線中跟著8號一起協助V8科研公司調查遊戲中的異常。"
+                "The daughter of a wealthy family in [[Inkadia|Greater Inkopolis]]. She met Marina and formed the idol duo [[Off the Hook]] with her. She found out about [[OCTA]] while practicing her vocals at [[Mount Nantai]] and has been a huge fan ever since. In her own words during a press, \"OCTA's the real deal, yo!\" She seems to support them with money and supplies quite often, and even her offhand donations come in such huge piles which made everyone in OCTA speechless. In the Octo Expansion story, she helped Agent 8, Edd, fight the threat. Later, in the Side Order story, she joined Edd in helping the [[Vector 8 Research Institute]] investigate anomalies inside the Memverse."
             ]
         }
     };
@@ -868,8 +868,18 @@ const SPLAT_LORE_DATA_EN = {
             "後來的秩序計畫虛擬宇宙正是由他們與飯田聯合開發。"
         ]
     },
+    "Kamabo Co.": {
+        title: "Kamabo Co.",
+        type: "Organization",
+        summary: []
+    },
     "Squid Sisters": {
         title: "Squid Sisters",
+        type: "Idol Group",
+        summary: []
+    },
+    "Off the Hook": {
+        title: "Off the Hook",
         type: "Idol Group",
         summary: []
     },
@@ -932,6 +942,11 @@ const SPLAT_LORE_DATA_EN = {
     },
     "Octo Canyon": {
         title: "Octo Canyon",
+        type: "Location",
+        summary: []
+    },
+    "Mount Nantai": {
+        title: "Mount Nantai",
         type: "Location",
         summary: []
     },

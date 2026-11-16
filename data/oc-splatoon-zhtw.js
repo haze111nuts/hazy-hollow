@@ -890,9 +890,21 @@ const SPLAT_LORE_DATA_ZHTW = {
             "後來的憶界宇宙虛擬實境平台正是由他們與飯田聯合開發。"
         ]
     },
+    "Kamabo Co.": {
+        title: "練魚公司",
+        subtitle: "Kamabo Co.",
+        type: "Organization",
+        summary: []
+    },
     "Squid Sisters": {
         title: "潮色姊妹",
         subtitle: "Squid Sisters",
+        type: "Idol Group",
+        summary: []
+    },
+    "Off the Hook": {
+        title: "觸手酷妹",
+        subtitle: "Off the Hook",
         type: "Idol Group",
         summary: []
     },
@@ -970,6 +982,12 @@ const SPLAT_LORE_DATA_ZHTW = {
         subtitle: "Octo Canyon",
         type: "Location",
         summary: ["章魚軍團的另一塊區域。在這個地方的章魚兵們受到３號的影響較少，所以在章魚出走潮開始後，這裡變成守舊派的主要活動地點。（待補）"]
+    },
+    "Mount Nantai": {
+        title: "軟體山",
+        subtitle: "Mount Nantai",
+        type: "Location",
+        summary: []
     },
     "Deepsea Metro" : { //dont apply this into bio yet because we may want one for th event in octo expansion??
         title: "深海地鐵",
