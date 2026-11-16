@@ -928,7 +928,7 @@ const SPLAT_LORE_DATA_ZHTW = {
     },
     "Inkadia" : {
         title: "高領地區",
-        subtitle: "Greater Inkopolis",
+        subtitle: "Inkadia",
         type: "Location",
         summary : [
             "跟蠻殼地區和鹽辛地區比起來相對比較現代化的地區。高領市以外，軟體山和章魚軍團管轄的山谷都在高領地區的範疇以內，在水下也有深海村鎮。"
