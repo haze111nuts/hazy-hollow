@@ -573,25 +573,24 @@ const SPLAT_CHARA_DATA_EN = {
         "Zoelle" : { 
             name: "Zoelle",
             summary: [
-                "三代主線中登場。在[[蠻殼鎮]]長大，是蘇西在海林童子軍團中的勁敵，跟蘇西一樣是個非常傑出的童子軍小隊長。對於考古學抱有熱情，喜歡收集各種人類相關的歷史文物。在三代主線附近的時間點遇到了V8科研中心的研究員貝蒂並被其收容，後來她被招進了V8科研中心，在考古學與人類科技修復部門實習。",
-                "個性沉穩、自立、堅忍不拔，話不多，習慣自己一個人默默學習。專注力很強。總是把情緒藏在內心深處。",
-                "她似乎是裁判貓的忠實粉絲。",
-                "——三代設定還沒安排完，以上待補——"
+                "First appeared in the main story of Splatoon 3. She grew up in [[Splatsville]] and is Susie's rival in the Seagrove Scouts, where she is an outstanding patrol leader just like Susie. She is passionate about archaeology and loves collecting all kinds of artifacts from the human era. Around the time of Splatoon 3, she was taken in by Betty, a researcher at the [[Vector 8 Research Institute]]. She was later recruited by V8 and began her internship in the Archaeology & Human Technology Restoration department.",
+                "She is calm, independent and quietly determined. She doesn't talk much and tends to work and study everything on her own. She has great focus, and she rarely complains, even when things are hard.",
+                "-- Zoelle's bio is currently WIP, more details coming soon --"
             ],
             notes: [
-                "她的完整名字翻成中文是佐薇爾，佐伊則是小名（英文寫作Zoey）",
-                "她代表的按鈕是ZL鍵，所以名字中含有這兩個字母"
+                "Her nickname is Zoey.",
+                "She represents the ZL button, which is why her name contains those two letters."
             ],
             relationships: [
-                {Susie: "在童子軍團中認識，認為對方是個很有實力的人，兩人經常透過童軍活動來競爭。"},
-                {Zarah: "親姐姐，知道對方很辛苦但還是不喜歡她的生活選擇，就算擔心她也不知道要怎麼表達。" },
-                {Betty: "是幫助自己並提供住所的好心女士，多虧他才能進入[[V8科研中心|V8]]鑽研考古，一直很感謝她，願意為她做所有的家事。"},
+                { Susie: "They met in the Seagrove Scouts. She thinks Susie is really capable, and the two are always trying to outdo each other in scout activities." },
+                { Zarah: "Her older sister. She knows Zarah has a rough life, but she still doesn't like the way she chooses to live. Even when she's worried about her, she doesn't know how to show it." },
+                { Betty: "The kind lady who helped her and gave her a place to stay. Thanks to Betty, she was able to join [[Vector 8 Research Institute|V8]] and study archaeology. She's always grateful to her and is happy to do all the housework for her." }
             ],
-            variant:[
-                {v8: "V8工作服"},
-                {casual: "日常"},
-                {scout: "海林童子軍服"},
-            ]    
+            variant: [
+                { v8: "V8 Uniform" },
+                { casual: "Casual" },
+                { scout: "Scout" }
+            ]
         },
         "Zarah" : { 
             name: "Zarah",
