@@ -377,16 +377,16 @@ const SPLAT_CHARA_DATA_EN = {
             name: "Maxwell",
             summary: [
                 "First appeared in the Side Order story. Born and raised in the [[Octarian Army]], he didn't stand out in technical subjects, so he was assigned to security work. Later, some of the people he once knew were sanitized and killed in the [[Deepsea Metro Testing Procedure]]. Seeing what happened to them left a mark on him. Determined to find a way to treat them, he began studying chemistry and medicine. After the Army fell apart, he went on to continue his work at the [[Vector 8 Research Institute]], where he became one of the lead researchers of the Clinical Care & Chemical Treatment Research department. He has been leading the department in cleaning up the damage left behind by Kamabo Corporation.",
-                "He is a calm, serious and quiet man. He's extremely dedicated to his work and always does it thoroughly. He's very organized and a bit of a neat freak, so both his room and his office are always spotless. He also a workaholic tendencies and often stays late at work without being asked to. However, he isn't good at expressing his feelings or socializing, and he tends to look a little lost at social gatherings."
+                "He is a calm, serious and quiet man. He's extremely dedicated to his work and always does it thoroughly. He's very organized and a bit of a neat freak, so both his room and his office are always spotless. He's also a workaholic and often stays late at work without being asked to. However, he isn't good at expressing his feelings or socializing, and he tends to look a little lost at social gatherings."
             ],
             notes: [
                 "Most people call him Max.",
                 "His name comes from Nvidia's Maxwell architecture, used in the graphics chip of the Nintendo Switch."
             ],
             relationships: [
-                { Tighe: "They had crossed paths back in the [[Octarian Army|Army]], and later became coworkers in different departments at [[Vector 8 Research Institute|V8]]. They often have lunch together at work. He values their friendship a lot, and Tighe's support does lift his spirit up." },
-                { Candice: "He had seen each her around back in the [[Octarian Army|Army]], but never really talked. They later became coworkers in different departments at [[Vector 8 Research Institute|V8]]. She's always coming up to him to chat, and he can't help wondering where all her energy comes from." },
-                { "Dr. Lapis": "She used to be his teacher. While studying chemistry and medicine, he read many of her books and research papers, and she gave him a lot of guidance and help along on his academic endeavor. He deeply respects her and is very grateful to her." }
+                { Tighe: "They had crossed paths back in the [[Octarian Army|Army]], and later became coworkers in different departments at [[Vector 8 Research Institute|V8]]. They often have lunch together at work. He values their friendship a lot, and Tighe’s support helps take some of the weight off his shoulders." },
+                { Candice: "He had seen her around back in the [[Octarian Army|Army]], but never really talked. They later became coworkers in different departments at [[Vector 8 Research Institute|V8]]. She's always coming up to him to chat, and he can't help wondering where all her energy comes from." },
+                { "Dr. Lapis": "She used to be his teacher. While studying chemistry and medicine, he read many of her books and research papers, and she gave him a lot of guidance and help with his academic endeavors. He deeply respects her and is very grateful to her." }
             ]   
         },
         "Dr. Lapis" : { 
