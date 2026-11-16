@@ -397,7 +397,7 @@ const SPLAT_CHARA_DATA_EN = {
             ],
             notes: [
                 "Her full name is written as シノミヤ＝デルフィーヌ in Japanese, in the same style as Marina's and Acht's Japanese names.",
-                "Her name comes from the LPDDR4 memory in the Nintendo Switch. The letters can be rearranged into \"DRLP\" (Dr. Lapis) and \"4D\" (the 4 for the 四 in 四宮 Shinomiya, the D for Delphine), which fits her work on memories."
+                "Her name comes from the LPDDR4 memory in the Nintendo Switch, a fitting source for someone who researches memories. The letters can be rearranged into \"DRLP\" (Dr. Lapis) and \"4D\" (the 4 for the 四 in 四宮 Shinomiya, the D for Delphine)"
             ],
             relationships: [
                 { Betty: "They've been fellow researchers since their [[Octarian Army|Army]] days and have known each other for a long time. They're very close, like sisters, and are often seen chatting in the hallways or the break room at [[Vector 8 Research Institute|V8]]." },
@@ -783,7 +783,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Marina" : { 
             name: "Marina",
             summary: [
-                "A former [[Elite Octoling Soldier]] of the [[Octarian Army]], and one of the many Octarians who left the Army after DJ Octavio was defeated by Agent 3. Upon arriving at the surface, she met Pearl, and the two became friends and ultimately formed the idol duo [[Off the Hook]]. She has been actively helping Octarians who moved to the surface settle into stable lives, and she loves taking part in volunteer events for [[OCTA]]. In the Octo Expansion story, she helped Agent 8 fight against the threat. The Memverse Project was originally her concept, which she later brought to the [[Vector 8 Research Institute]] as a joint research initiative. As the project's key stakeholder and V8's special advisor, she works closely with several of its departments."
+                "A former [[Elite Octoling Soldier]] of the [[Octarian Army]], and one of the many Octarians who left the Army after DJ Octavio was defeated by Agent 3. Upon arriving at the surface, she met Pearl, and the two became friends and ultimately formed the idol duo [[Off the Hook]]. She has been actively helping Octarians who moved to the surface settle into stable lives, and she loves taking part in volunteer events for [[OCTA]]. In the Octo Expansion story, she helped Agent 8 fight against the threat. In the Side Order story, she appears as a special advisor to the [[Vector 8 Research Institute]] and the key stakeholder of the [[Memverse Project]]. The project was originally her concept, which she brought to V8 as a joint research initiative, and she works closely with several of its departments on the platform’s research and development."
             ]
         },
         "Pearl" : { 
@@ -993,5 +993,11 @@ const SPLAT_LORE_DATA_EN = {
         summary : [
             "由來自軍團的研究員主導，將練魚公司廢棄倉庫中找到的「已經互相汙染」的記憶魚板進行分解與數據化等逆向工程。企劃名稱的由來是因為主導企畫的研究員四宮黛芬認為這些被污染的記憶魚板類似變質岩。"
         ]
+    },
+    "Memverse Project" : {
+        title: "Memverse Project",
+        subtitle: "Vector 8 Research Institute",
+        type: "Notes",
+        summary : []
     }
 };

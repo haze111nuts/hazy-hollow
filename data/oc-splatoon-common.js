@@ -231,5 +231,6 @@ const SPLAT_LORE_COMMON_DATA = {
     "Octarians"                       : { color: "#c23b6e" },    
     "Elite Octoling Soldier"          : { color: "#7e2b4b" },
     "Deepsea Metro Testing Procedure" : { color: "#18b989" },
-    "Project Lapis Lazuli"            : { color: "#180f91" }
+    "Project Lapis Lazuli"            : { color: "#180f91" },
+    "Memverse Project"                : { color: "#7b4fc9" }
 };
