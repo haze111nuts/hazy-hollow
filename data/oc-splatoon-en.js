@@ -376,18 +376,18 @@ const SPLAT_CHARA_DATA_EN = {
         "Maxwell" : { 
             name: "Maxwell",
             summary: [
-                "在秩序計畫支線中登場的角色。於章魚軍團出生所以從小接受軍團的教育與訓練，科技技能成績普通所以被安排到保安類職，後來看到曾經認識的人被深海地鐵測驗程序消毒跟滅殺的慘狀而受到一些打擊，之後便下定決心要找出治療這些人的辦法而開始專攻化學醫療方面的知識，在軍團瓦解後轉移到V8科研中心繼續學業事業，成為了護理與化學治療研究部門的首席研究員，一直帶領著部門在處理深海地鐵程序殘留下的環境影響。",
-                "個性冷靜嚴肅，是個沉默的人，不善表達情感，但心地善良很有道德意識，也對工作非常認真負責，有點工作狂傾向，經常主動加班到很晚。"
+                "First appeared in the Side Order story. Born and raised in the [[Octarian Army]], he didn't stand out in technical subjects, so he was assigned to security work. Later, some of the people he once knew were sanitized and killed in the [[Deepsea Metro Testing Procedure]]. Seeing what happened to them left a mark on him. Determined to find a way to treat them, he began studying chemistry and medicine. After the Army fell apart, he went on to continue his work at the [[Vector 8 Research Institute]], where he became one of the lead researchers of the Clinical Care & Chemical Treatment Research department. He has been leading the department in cleaning up the damage left behind by Kamabo Corporation.",
+                "He is a calm, serious and quiet man. He's extremely dedicated to his work and always does it thoroughly. He's very organized and a bit of a neat freak, so both his room and his office are always spotless. He also a workaholic tendencies and often stays late at work without being asked to. However, he isn't good at expressing his feelings or socializing, and he tends to look a little lost at social gatherings."
             ],
             notes: [
-                "他的完整名字翻成中文是麥克斯威爾，麥克斯則是小名（英文寫作Max）",
-                "名字來自任天堂Swtich圖形處理器核心Maxwell微架構"
+                "Most people call him Max.",
+                "His name comes from Nvidia's Maxwell architecture, used in the graphics chip of the Nintendo Switch."
             ],
             relationships: [
-                {Tighe: "在[[章魚軍團|軍團]]時期就認識，後來成為[[V8科研中心|V8]]不同部門的同事，常在公司一起吃午飯。很重視這個朋友，有他的支持生活才沒那麼沉重。"},
-                {Candice: "[[章魚軍團|軍團]]時期有看過對方但交集不多，後來成為[[V8科研中心|V8]]不同部門的同事。經常被對方搭話，每次都很好奇她的活力都是從哪裡來的。"},
-                {"Dr. Lapis": "曾是師生關係，在研讀化學跟醫療知識時看了很多她的書和研究報告，也受了她很多指導跟幫助，對她非常尊敬與感謝。"}
-            ]      
+                { Tighe: "They had crossed paths back in the [[Octarian Army|Army]], and later became coworkers in different departments at [[Vector 8 Research Institute|V8]]. They often have lunch together at work. He values their friendship a lot, and Tighe's support does lift his spirit up." },
+                { Candice: "He had seen each her around back in the [[Octarian Army|Army]], but never really talked. They later became coworkers in different departments at [[Vector 8 Research Institute|V8]]. She's always coming up to him to chat, and he can't help wondering where all her energy comes from." },
+                { "Dr. Lapis": "She used to be his teacher. While studying chemistry and medicine, he read many of her books and research papers, and she gave him a lot of guidance and help along on his academic endeavor. He deeply respects her and is very grateful to her." }
+            ]   
         },
         "Dr. Lapis" : { 
             name: "Dr. Lapis",
