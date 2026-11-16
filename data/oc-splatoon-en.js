@@ -392,7 +392,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Dr. Lapis" : { 
             name: "Dr. Lapis",
             summary: [
-                "First appeared in the Side Order story. She is one of the founders of the [[Vector 8 Research Institute]], and her full name is Delphine Shinomiya. Born and raised in the [[Octarian Army]], she excelled in every science subject, so unlike most girls, she was never assigned to be a soldier. She specializes in biology, chemistry and medicine. After graduating, she taught science in the Army while continuing her research. As the Army was falling apart, she led a small group in founding V8, and she is now the lead researcher of the Neuropsychology & Memory Processing department. After Kamabo Co. collapsed, she led a research project called [[Project Lapis Lazuli]]. Its success made her something of a name around the company, and some employees started calling her \"Dr. Lapis\", a nickname she seems to quite like. She was also closely involved in developing the Memverse.",
+                "First appeared in the Side Order story. She is one of the founders of the [[Vector 8 Research Institute]], and her full name is Delphine Shinomiya. Born and raised in the [[Octarian Army]], she excelled in every science subject, so unlike most girls, she was never assigned to be a soldier. She specializes in biology, chemistry and medicine. After graduating, she taught science in the Army while continuing her research. As the Army was falling apart, she led a small group in founding V8, and she is now the lead researcher of the Neuropsychology & Memory Processing department. After Kamabo Co. collapsed, she led a research project called [[Project Lapis Lazuli]]. Its success made her a name around the company, and some employees started calling her \"Dr. Lapis\", a nickname she seems to quite like. She was also closely involved in developing the Memverse.",
                 "She looks like a refined, intellectual lady, but she often shows a playful, childlike side. She loves to joke around and mess with her coworkers, and when she chats, she gossips like a neighborhood mom. She is cheerful and easygoing, and she is always happy to guide her students. She can make any conversation feel relaxed, and she has a way of putting everyone at ease."
             ],
             notes: [
@@ -412,17 +412,17 @@ const SPLAT_CHARA_DATA_EN = {
         "Betty" : { 
             name: "Betty",
             summary: [
-                "三代主線中登場，V8科研中心的創辦人兼首席研究員之一。於章魚軍團出生所以從小接受軍團的教育與訓練，從以前就專攻軍團的能量科技領域，幫忙研究、設計以及管理章魚軍團中能量相關的設施跟裝置，在軍團瓦解的那段時間跟好友和其他幾個人創立了V8科研中心，隸屬於能源發展部門，她常常會徒手抓會放電生物，搞的下屬們很緊張。",
-                "個性隨和，溫柔，和藹可親。有種鄰家媽媽的感覺，是那種經常會說「唉呀呀～」的女士。雖然很友好但她也很注重秩序，進入她的部門就得遵守她列的規則，違規的人會被她叨念一番。很喜歡向日葵，辦公室跟家裡都可以看到各種向日葵花樣的物品。",
-                "——三代設定還沒安排完，以上待補——"
+                "First appeared in the main story of Splatoon 3. She is one of the founders and lead researchers of the [[Vector 8 Research Institute]]. Born and raised in the [[Octarian Army]], she has long specialized in the Army's energy technology, helping research, design and manage its energy-related facilities and devices. As the Army fell apart, she helped found V8 with her best friend, Dr. Lapis, and a few others. She now works in the Energy Source Development department. She has a habit of grabbing electric creatures with her bare hands, which often made her team on edge.",
+                "She is an easygoing, gentle and approachable woman with a warm, motherly aura. She never loses her composure. No matter how chaotic things get, she just smiles and says, \"My, my~\". Although she's very friendly, she also values order. Anyone who enters her department has to follow her rules, and anyone who breaks them will get a gentle but long earful. She loves sunflowers, and sunflower-themed items can be found all over her office and home.",
+                "-- Betty's bio is currently WIP, more details coming soon --"
             ],
             notes: [
-                "名字來自電池（Battery），也是任天堂Switch的內部零件之一"
+                "Her name comes from \"battery\", one of the Nintendo Switch's internal parts."
             ],
             relationships: [
-                {"Dr. Lapis": "在[[章魚軍團|軍團]]時期就同樣是研究員，兩人互相熟識很久，是感情非常深厚的好姊妹，經常在公司的走廊或茶水間閒話家常。"},
-                {Zoelle: "一次協助考古部門出任務時認識，看見對方的上進心後對她很是欽佩，在聽到她的家境有些困難時決定收容她讓她跟自己一起住。把他當成親女兒一樣照料。"},
-                {Ollie: "在[[V8科研中心|V8]]工作而認識，還挺喜歡和他聊天，有種和兒子談心的感覺，偶爾路過聽到他在談八卦總是會不小心聽的很入神。"}
+                { "Dr. Lapis": "They've been fellow researchers since their [[Octarian Army|Army]] days and have known each other for a long time. They're very close, like sisters, and are often seen chatting in the hallways or the break room at [[Vector 8 Research Institute|V8]]." },
+                { Zoelle: "They met when Betty was helping the Archaeology department on a mission. She was impressed by how driven Zoelle was, and when she heard Zoelle was going through a hard time at home, she decided to take her in. They still live together and she cares for Zoelle like her own daughter." },
+                { Ollie: "They met while working at [[Vector 8 Research Institute|V8]]. She enjoys chatting with him, and it feels a bit like having a heart-to-heart with her own son. Whenever she walks by while he's gossiping, she can't help getting caught up in listening." }
             ]
         },
         "Ollie" : { 
