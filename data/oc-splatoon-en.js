@@ -428,17 +428,17 @@ const SPLAT_CHARA_DATA_EN = {
         "Ollie" : { 
             name: "Ollie",
             summary: [
-                "V8科研中心的一員。於章魚軍團出生所以從小接受軍團的教育與訓練，但他沒有運動神經也不喜歡鑽研知識，會盡量花最少的能量做最少的工作。後來進入V8科研中心的資源管理部門，專門處理人事相關的事務。經常可以在V8大樓的前門櫃臺看到他生無可戀的接電話跟打電話。雖然工作態度毫無熱情但他似乎完全不怕自己會丟工作，因為他知道這個部門很缺人。",
-                "個性超隨便，態度散漫，總是一臉無聊的樣子，講話還很毒舌。只有聽到八卦時會很有幹勁。對人有驚人的洞察力，不知何時已經對科研中心裡每個人的感情狀態瞭如指掌，可以說是一個行走的人際關係電話簿。講話方式有點像女高中生。"
+                "A member of the [[Vector 8 Research Institute]]. Despite being born and raised in the [[Octarian Army]], he was never athletic and had no interest in studying, and he always tried to do the bare minimum with as little effort as possible. He later joined V8's Resource Management department, where he handles HR-related work. He can often be seen at the front desk of the V8 building, answering and making calls looking dead inside. He shows zero passion for his job, but he doesn't seem worried about getting fired at all, since he knows that this department is very short-staffed.",
+                "He is a very laid-back person with a \"whatever\" attitude, always looks bored, and has no problem saying what everyone else is only thinking. The only time he gets excited is when there's gossip. He's surprisingly perceptive about people, and somehow he always knows everyone's relationship status at V8. He's basically a walking social map in the company. He also has a bit of a chatty, girly way of talking."
             ],
             notes: [
-                "名字來自OLED版任天堂Swtich的OLED螢幕",
-                "原本打算給他的名字是Oleander，可以配合到OLED四個英文字，也有夾竹桃的意思，但這個名字實在太彆扭了最後還是採用簡短版",
-                "這個角色的氣質參考了《荒唐分局》的吉娜"
+                "His name comes from the OLED screen of the Nintendo Switch OLED model.",
+                "His name was originally going to be Oleander, which fits the letters O-L-E-D and is also the name of a flower, but it felt too clunky a name so the shorter version stayed.",
+                "His personality was inspired by Gina Linetti from Brooklyn Nine-Nine."
             ],
             relationships: [
-                {"Dr. Lapis": "直到[[V8科研中心|V8]]工作後才熟絡起來，雖然都只是跟工作無關的閒聊但兩人說話彷彿沒有年齡差距，有點像閨密一樣，總是在互相發牢騷或是討人情。"},
-                {Betty: "在[[V8科研中心|V8]]工作而認識，看她想聊就會一直聊，把對方當成像自己家阿姨一樣的存在。"}
+                { "Dr. Lapis": "They only became close after he started working at [[Vector 8 Research Institute|V8]]. They mostly chat about things that have nothing to do with work, but they talk like there's no age gap at all, almost like best friends, always complaining to each other or asking each other for favors." },
+                { Betty: "They met while working at [[Vector 8 Research Institute|V8]]. Whenever she wants to chat, he's happy to keep the conversation going, and he sees her as kind of like his own auntie." }
             ]
         },
         "Angelica" : { 
