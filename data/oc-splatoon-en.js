@@ -653,25 +653,25 @@ const SPLAT_CHARA_DATA_EN = {
         "Dorothy" : { 
             name: "Dorothy",
             summary: [
-                "OCTA的創辦人之一。於章魚軍團出生所以從小接受軍團的教育與訓練並變成章魚女兵。因為無法接受軍團的某條命令進行了反抗，這個行為讓她被放逐到章魚平民農村，她在那裡撿到一隻被當地幫派衝突波及的年幼章魚，也在那結交到不少其他對軍團抱有不滿的居民，他們一直私下互相幫助，一直在等待能從軍團的嚴苛社會中脫逃的機會。在３號擊敗將軍之後趁著騷動一起和同夥離開了[[蛸壺山谷]]，在軟體山上拓荒紮營，正式和同伴們組成了OCTA—章魚自助協會，給其他想離開軍團的章魚開拓了一條上岸的路。之後一直致力於OCTA的指揮與經營，她成功的在軟體山上成立了一家旅館作為OCTA的大本營，之後一直都在那活動。",
-                "個性豪爽﹑勇敢又熱心，勤勞又樂觀向上，可以把悲憤化為動力，是個固執不輕易退縮的人，還很會幫人討公道。經常在鼓勵與幫助身邊的人。特別照顧與關注所有從軍團逃出的年輕人，總會特別留意其中幾個。"
+                "One of the founders of [[OCTA]]. Born and raised in the [[Octarian Army]], she became an Octoling soldier, but after refusing to follow a certain order from the Army, she was exiled to the outer settlements. There, she took in a young Octarian boy who had been caught up in a local gang fight, and she befriended many other villagers who were unhappy with the Army. They quietly helped each other out while waiting for a chance to escape the Army's harsh society. After DJ Octavio was defeated by Agent 3, she took advantage of the chaos and left [[Octo Valley]] with her friends. They set up camp on [[Mount Nantai]] and officially founded OCTA, opening up a path to the surface for other Octarians who wanted to leave the Army. Since then, she has dedicated herself to leading and running OCTA. She turned an abandoned Army camp on Mount Nantai into a lodge that serves as OCTA's headquarters, and she has been based there ever since.",
+                "She is bold, brave and big-hearted, as well as hardworking and optimistic. She knows how to turn grief and anger into motivation, and once she's set on something, she won't back down. She's always the first to stand up for someone who's been treated unfairly, and she never stops encouraging and helping the people around her. She looks out for all the young Octarians who have escaped the Army, keeping an especially close eye on a few of them."
             ],
             notes: [
-                "她的名字來自Dock，任天堂Switch的底座",
-                "她的名字也參考了非裔女科學家Dorothy Vaughan"
+                "Her name comes from the dock of the Nintendo Switch.",
+                "Her name is also a nod to Dorothy Vaughan, the African American mathematician."
             ],
             relationships: [
-                {Moyer: "自己的養子，在被放逐到章魚平民農村時撿到。當成親兒子照顧，對他很珍愛也常為他操心，是心上的一塊肉。"},
-                {Ada: "是好朋友也是[[OCTA]]的同事，看她很努力卻總是看不起自己所以很心疼他。各方面都會拉上她一把，還傳授她很多育兒的知識。"},
-                {Minerva: "因為對方來協助[[OCTA]]而相識，對她很是喜歡。知道她勤奮又表現優良也很以此為傲。似乎特別關注她的生活近況。"},
-                {Edd: "因為對方來協助[[OCTA]]而相識，對他很是喜歡。可以看出對方孤高的外表下有顆堅強正直的心。似乎特別關注他的生活近況。"},
-                {Blade: "間接促成了[[OCTA]]的成立的孩子，認為對方是個閃耀著光輝的小英雄，很感謝他一直以來的幫忙，會默默的守望他。"},
-                {Leon: "認出對方是自己年輕時在[[章魚軍團|軍團]]裡照料過的孩子，從以前就對他特別喜愛，兩人似乎很和的來。"}
+                { Moyer: "Her adopted son, whom she took in while she was exiled to the outer settlements. She raises him as her own, loves him dearly and often worries about him. He means the world to her." },
+                { Ada: "A good friend and coworker at [[OCTA]]. It breaks her heart to see Ada work so hard yet always look down on herself, so she helps her out however she can. She has also taught her a lot about raising kids." },
+                { Minerva: "They met when Minerva came to help out at [[OCTA]], and Dorothy took a real liking to her. She knows how hardworking Minerva is and how well she does, and she's very proud of her. She seems to pay special attention to how Minerva is doing." },
+                { Edd: "They met when Edd came to help out at [[OCTA]], and she took a real liking to him. She can tell that behind his aloof exterior is a strong, upright heart. She seems to pay special attention to how he's doing." },
+                { Blade: "The boy who indirectly made the founding of [[OCTA]] possible. She sees him as a shining little hero, is grateful for all his help, and quietly watches over him." },
+                // { Leon: "She recognized him as a kid she once looked after in the [[Octarian Army|Army]] when she was young, and she has always been fond of him. The two seem to get along really well." }
             ],
-            variant:[
-                {octa: "日常"},
-                {farm: "軍團時期"}
-            ]                                 
+            variant: [
+                { octa: "Casual" },
+                { farm: "Octarian" }
+            ]                       
         },
         "Ada" : { 
             name: "Ada",
