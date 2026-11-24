@@ -450,21 +450,21 @@ const SPLAT_CHARA_DATA_EN = {
                 "有很多個身分，這些身分的背景跟衣裝都是她自己一手設計的。"
             ],
             notes: [
-                "她代表的按鈕是音量-鍵，將名字的A顛倒可拆成V（對應volume）跟-",
-                "她的完整名字翻成中文是安潔莉卡，安潔則是小名（英文寫作Angel）",
-                "她跟蘭斯同齡"
+                "She represents the volume down button. The A in her name can be flipped upside down to become a V (for volume) and a '-'.",
+                "Her nickname is Angel.",
+                "She's the same age as Lance."
             ],
             relationships: [
-                {"Father Chelon": "讓自己能獲得人生的人物，發誓永遠效忠對方，對他很欣賞也很尊敬，想要獲得他的認可。有時會對他露出撒嬌的一面。稱呼他為「父親大人」或「爸爸」"},
-                {Lucian: "在一起任務衝突中相遇，差點互相置對方於死地。最後被安排到同隊，是手下也是伙伴。經常被對方用言語戲弄，會罕見的被他挑起一點情緒。"},                
-                {RJ: "從小就跟對方一起在教父先生的提拔下長大，對他的所有事情瞭若指掌，是手下是伙伴也是某種程度上的家人。"},
-                {Lance: "一直猜測對方是否知曉自己身分，也知道他會成為自己的敵人而一直對他很警戒，也因為臥底時的相處對他產生了會心軟的情愫而感到很困擾。"},
-                {Damian: "教父先生安排給自己的新人，一直盡力指導他，確保他不會搞砸。是手下也是伙伴，有時還是不由自主地替他操心。"},
-                {Leon: "因工作需要，偶爾得在賭場與他會面。起初覺得這個人很討厭，相處久了發現對方是少數能談心的對象，有時會對他露出自己比較脆弱的一面。兩人之間總是話中有話。"},
+                { "Father Chelon": "The man who gave her a life. She has sworn eternal loyalty to him. She admires and respects him deeply. Sometimes she shows him a sweeter, more affectionate side. She calls him \"Father\" or \"Papa\"." },
+                { Lucian: "They met during a clash on a mission and nearly killed each other. They were later put on the same team, where he is both her subordinate and her partner. He's always teasing her, and he's one of the rare people who can get a reaction out of her." },
+                { RJ: "They grew up together under the Godfather's care, and she knows everything about him. He is her subordinate, her partner and somewhat of a family." },
+                { Lance: "She always stays on guard around him, wondering whether he has seen through her disguises, She knows very well that he will one day become her enemy. But somewhere during her time undercover, she began to feel something for him, and that troubles her more than she'd like to admit." },
+                { Damian: "A newcomer the Godfather assigned to her. She does her best to guide him and make sure he doesn't mess up. He's her subordinate and partner, and sometimes she can't help worrying about him." },
+                { Leon: "Her work sometimes requires her to meet him at the casino. At first she found him annoying, but over time she realized he's one of the few people she can open up to, and she sometimes lets him see her more vulnerable side. There's always more to their conversations than what's said out loud." }
             ],
-            variant:[
-                {work: "常駐工作裝"}
-            ]            
+            variant: [
+                { work: "Work" }
+            ]
         },
         "Lucian" : { 
             name: "Lucian",
