@@ -676,22 +676,22 @@ const SPLAT_CHARA_DATA_EN = {
         "Ada" : { 
             name: "Ada",
             summary: [
-                "全名是淺井愛妲，於章魚軍團出生所以從小接受軍團的教育與訓練，在部隊中工作時認識了一個女孩並和她變成一生的摯友，之後卻在一場章魚軍團的實驗室悲劇中失去了對方。她後來找到對方在這個意外中留下的孩子，致力於要給她更好的生活而自願被調派到平民區，積極參加那時的秘密逃脫組織，在同夥的協助下最後終於成功到了陸上展開新生活，參與了OCTA組織的建成，後來在那邊的收容所長期任職育幼員。",
-                "個性悲觀，內向又膽小，還很優柔寡斷，總是把事情往最壞的方向想，在軍隊中也是因為能力在水平以下而總是戰戰兢兢的，是在摯友的陪伴下才終於初次感覺到幸福。在失去摯友之後可能是打擊太大經常會失神或是精神渙散，在養女的多年的陪伴下才逐漸恢復元氣。是個工作勤勞的人，但經常因為態度不夠強硬而被收容所的小章魚們淹沒。"
+                "Her full name is Ada Asai. Born and raised in the [[Octarian Army]], she met a girl while serving as a soldier, and the two became lifelong best friends. Sadly, Ada later lost her in a accident at one of the Army's labs. Afterward, she found her late friend's child, and determined to give the child a better life, she volunteered to be transferred to one of the outer settlements. There, she joined a secret group planning to escape, and with their help, she finally made it to the surface and started a new life. She was part of the group that founded [[OCTA]], and has worked as a caretaker at its shelter for young Octarians ever since.",
+                "She is pessimistic, introverted and timid, and she has a hard time making decisions. She always expects the worst, and back in the Army, she was constantly on edge because her skills were below average. It was only with her best friend by her side that she felt happy for the first time. The loss traumatized her for a long time and she would often space out. She slowly recovered over the years with her adopted daughter. She is hardworking but not firm enough, so the shelter kids often overwhelm her."
             ],
             notes: [
-                "全名的拼法是Asai Ada，日文寫作アサイ＝エイダ，跟飯田和水田類似",
-                "名字Ada來自於Switch的充電器（Adapter）",
-                "姓氏的由來是巴西莓（Açaí berry）"
+                "Her name is written アサイ＝エイダ in Japanese, in the same style as Marina's and Acht's Japanese names.",
+                "Her name comes from the Nintendo Switch's charger (adapter).",
+                "Her surname comes from the açaí berry."
             ],
             relationships: [
-                {Mei: "摯友的女兒也是自己的養女，發誓一定要給她最好的生活。看到她笑就覺得一切都值得了，希望她可以平安又永遠開開心心的。"},
-                {Freya: "摯友的女兒也是自己的養女，雖然比較晚相認但一樣把對方當親女兒對待，希望她可以永平安又遠開開心心的。因為長的很像自己失去的摯友所以有時看到她會不禁就感傷起來。"},
-                {Dorothy: "是朋友也是[[OCTA]]的同事，像是師姐一樣的存在，總是被她的勇敢跟堅強打動，一直把她當成榜樣。生活跟心理方面都收到對方的各種支持，很多育兒知識也是從她那裡學的，是少數敢談心的對象。"}
+                { Mei: "Her best friend's daughter and her own adopted daughter. Ada swore she would give Mei the best life possible. Just seeing her smile makes everything feel worth it, and she hopes Mei can always stay safe and happy." },
+                { Freya: "Her best friend's daughter and her adopted daughter. Even though they found each other later, she still treats Freya as her own and hopes she can always stay safe and happy. Because Freya looks so much like the friend she lost, seeing her sometimes makes Ada a little sad." },
+                { Dorothy: "A friend and coworker at [[OCTA]], Dorothy is like an older sister to her. Ada has always been moved by her courage and strength, and has looked up to her. Dorothy has supported her in many ways, both in everyday life and emotionally, and taught her a lot about raising kids. She's one of the few people Ada can truly open up to." }
             ],
-            variant:[
-                {teacher: "幼教老師"},
-                {octarian: "軍團時期"}
+            variant: [
+                { teacher: "Caretaker" },
+                { octarian: "Octarian" }
             ]
         },
         "Father Chelon" : { 
