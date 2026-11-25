@@ -444,10 +444,9 @@ const SPLAT_CHARA_DATA_EN = {
         "Angelica" : { 
             name: "Angelica",
             summary: [
-                "教父先生的親信手下之一，在高領地區活動。出生於深海地區某宗教族群中，在鎮內發生一場慘劇後被教父先生撿走並提拔與訓練多年。認為自己的命運有幸被改寫所以很重視新的生活跟職責。後來她終於被教父先生任命為隊長，領著其他幾個手下幫他控管他在高領地區的勢力。",
-                "經常使用的武器從針筒、復古針筒、手術刀、飛刀到鋼絲都有，也曾經用過古代刑具。擅長化學與調製藥劑，組織裡的製毒擔當，擅長用毒液體、毒墨水跟溶劑進行任務。",
-                "是個看起來有點陰鬱的少女，除了皺眉以外沒有太多其他的表情。舉止俐落有氣質，心思精明，有著過人的機智。她的計畫力跟領導力也很出眾，還非常注重效率。上面不管派什麼任務都難不倒她，可以看出她對自己的工作技能有十足的自信。",
-                "有很多個身分，這些身分的背景跟衣裝都是她自己一手設計的。"
+                "One of the Godfather's Acolytes and his most trusted subordinates. She was born into a religious community in the deep sea district, and after a horrific incident in her town, the Godfather took her in, raised her and trained her for years. Feeling that her fate had been rewritten for the better, she takes her new life and duties very seriously. The Godfather eventually appointed her as a leader, and she now leads a small team that oversees his operations in [[Inkadia]].",
+                "Her signature weapon is an antique syringe, but she also uses needles, blades and even ancient torture devices. Her knowledge of chemistry makes her the organization's poison specialist, and she often carries out missions with poisoned ink and solvents.",
+                "She comes across as a gloomy and mysterious lady. She rarely shows any expression other than a frown, but she always carries herself with elegance and good manners. She is very intelligent and quick to read a situation, which makes her a reliable leader for her subordinates. She plans every mission carefully and takes great pride in her work. Going undercover is one of her specialties. She has created several identities along with their backstories and outfits."
             ],
             notes: [
                 "She represents the volume down button. The A in her name can be flipped upside down to become a V (for volume) and a '-'.",
@@ -455,12 +454,12 @@ const SPLAT_CHARA_DATA_EN = {
                 "She's the same age as Lance."
             ],
             relationships: [
-                { "Father Chelon": "The man who gave her a life. She has sworn eternal loyalty to him. She admires and respects him deeply. Sometimes she shows him a sweeter, more affectionate side. She calls him \"Father\" or \"Papa\"." },
+                { "Father Chelon": "The man who gave her a life. She has sworn eternal loyalty to him. She admires and respects him deeply. Sometimes she shows a sweeter side when she is with him. She calls him \"Father\" or \"Papa\"."},
                 { Lucian: "They met during a clash on a mission and nearly killed each other. They were later put on the same team, where he is both her subordinate and her partner. He's always teasing her, and he's one of the rare people who can get a reaction out of her." },
                 { RJ: "They grew up together under the Godfather's care, and she knows everything about him. He is her subordinate, her partner and somewhat of a family." },
-                { Lance: "She always stays on guard around him, wondering whether he has seen through her disguises, She knows very well that he will one day become her enemy. But somewhere during her time undercover, she began to feel something for him, and that troubles her more than she'd like to admit." },
+                { Lance: "She is always wondering whether he has seen through her disguises or not. She knows very well that he will one day become her enemy, yet during her time undercover, she has grown a soft spot for him. This man seems to stir up feelings she'd rather not have."},
                 { Damian: "A newcomer the Godfather assigned to her. She does her best to guide him and make sure he doesn't mess up. He's her subordinate and partner, and sometimes she can't help worrying about him." },
-                { Leon: "Her work sometimes requires her to meet him at the casino. At first she found him annoying, but over time she realized he's one of the few people she can open up to, and she sometimes lets him see her more vulnerable side. There's always more to their conversations than what's said out loud." }
+                // { Leon: "Her work sometimes requires her to meet him at the casino. At first she found him annoying, but over time she realized he's one of the few people she can open up to, and she sometimes lets him see her more vulnerable side. There's always more to their conversations than what's said out loud." }
             ],
             variant: [
                 { work: "Work" }
