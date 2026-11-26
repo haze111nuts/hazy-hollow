@@ -454,7 +454,7 @@ const SPLAT_CHARA_DATA_EN = {
                 "She's the same age as Lance."
             ],
             relationships: [
-                { "Father Chelon": "The man who gave her a life. She has sworn eternal loyalty to him. She admires and respects him deeply. Sometimes she shows a sweeter side when she is with him. She calls him \"Father\" or \"Papa\"."},
+                { "Father Chelon": "The man who gave her a new life. She has sworn eternal loyalty to him. She admires and respects him deeply. Sometimes she shows a sweeter side when she is with him. She calls him \"Father\" or \"Papa\"."},
                 { Lucian: "They met during a clash on a mission and nearly killed each other. They were later put on the same team, where he is both her subordinate and her partner. He's always teasing her, and he's one of the rare people who can get a reaction out of her." },
                 { RJ: "They grew up together under the Godfather's care, and she knows everything about him. He is her subordinate, her partner and somewhat of a family." },
                 { Lance: "She is always wondering whether he has seen through her disguises or not. She knows very well that he will one day become her enemy, yet during her time undercover, she has grown a soft spot for him. This man seems to stir up feelings she'd rather not have."},
