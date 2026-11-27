@@ -490,24 +490,23 @@ const SPLAT_CHARA_DATA_EN = {
         "RJ" : { 
             name: "RJ",
             summary: [
-                "教父先生的親信手下之一，在高領地區活動。在貧民窟出生，被教父先生撿走並提拔長大。生活沒什麼其他目標所以對執行任務跟跑業務以外的事基本無感。擅長遠距離狙擊，準度嚇死人，是總是潛伏在陰影中的類型。說話完全不看場面經常讓談判往無法控制的方向發展所以通常只被安排需要勞力的任務，是收拾善後專家，可以說是組織裡的最強清潔工兼工具人。是安潔的伙伴，後來變成其下屬之一。",
-                "常用的武器除了組織改造過的古董真槍以及嵌入墨水的特製子彈以外還有剷子、榔頭跟美工刀之類的普通工具。擅長器械管理跟修復，對各種古董槍械的構造很熟悉。",
-                "冷血獵犬系，話不多而且表情超少，做事果斷俐落，沒什麼同理心。直言不諱，不管對誰講話都很不客氣，有點沒耐心，似乎也不太擅長抑制衝動，談判力0。"
+                "A sniper working for the Godfather as one of his Acolytes. He grew up in the slums before the Godfather took him in, and the job is pretty much all he lives for. He rarely misses a shot and prefers to stay out of sight, but he's terrible at negotiating, so he's usually sent to do works that are moe hands-on. He specializes in cleaning up after jobs and is known as the best cleaner in the organization. He grew up training alongside Angel under the Godfather, and he is now one of her subordinates.",
+                "Along with modified antique guns and ink-filled custom bullets. He keeps all his gear in good shape himself and knows antique guns inside and out.",
+                "He comes across as cold and quiet, and he rarely shows any expression. He gets straight to the point in everything he does, whether it's a job or a conversation, which makes him efficient but also very rude. With little patience, little empathy and not much self-control, he's the last person anyone would send to negotiate."
             ],
             notes: [
-                "他代表的按鈕是R鍵，因此以R作為名字開頭",
-                "他比安潔小兩歲",
-                "他的皮膚紋路是由白蝕症造成的"
+                "He represents the R button, which is why his name starts with R.",
+                "He's two years younger than Angelica.",
+                "The white patches on his skin are caused by vitiligo."
             ],
             relationships: [
-                {"Father Chelon": "讓自己能獲得人生的人物，非常效忠對方。會全力完成他吩咐的事項。"},
-                {Angelica: "從小就跟對方一起在教父先生的提拔下長大，是伙伴也是某種程度上的家人。後來被安排成其下屬。即便一副不耐煩的樣子還是會聽命一切吩咐。"},                
-                {Lucian: "突然就被安排到同組一起工作，知道他很有本事但實在沒有很喜歡，有時候真想扁下去。"},
-                {Damian: "不靠譜的新人，感覺不適合作這一行。認為要配合他很麻煩。"}
+                { "Father Chelon": "The man who gave him a new life. RJ is extremely loyal to him and will do everything he can to complete any task from this man" },
+                { Angelica: "They grew up together under the Godfather's care. She is his partner and, in a way, family. He was later made one of her subordinates, and even though he often looks annoyed, he still follows all of her orders." },
+                { Lucian: "They were suddenly put on the same team. He knows Lucian is very capable, but he doesn't really like him, and sometimes he just wants to punch him." },
+                { Damian: "An unreliable newcomer who doesn't seem cut out for this line of work. He finds working with him a hassle." }
             ],
-            variant:[
-                {work: "常駐工作裝"},
-                {knight: "工作裝2"}
+            variant: [
+                { work: "Work" }
             ]
         },
         "Damian" : { 

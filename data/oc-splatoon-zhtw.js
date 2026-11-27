@@ -519,8 +519,7 @@ const SPLAT_CHARA_DATA_ZHTW = {
                 {Damian: "不靠譜的新人，感覺不適合作這一行。認為要配合他很麻煩。"}
             ],
             variant:[
-                {work: "常駐工作裝"},
-                {knight: "工作裝2"}
+                {work: "常駐工作裝"}
             ]
         },
         "Damian" : { 
