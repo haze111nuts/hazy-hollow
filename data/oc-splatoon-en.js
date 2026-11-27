@@ -457,7 +457,7 @@ const SPLAT_CHARA_DATA_EN = {
                 { "Father Chelon": "The man who gave her a new life. She has sworn eternal loyalty to him. She admires and respects him deeply. Sometimes she shows a sweeter side when she is with him. She calls him \"Father\" or \"Papa\"."},
                 { Lucian: "They met during a clash on a mission and nearly killed each other. They were later put on the same team, where he is both her subordinate and her partner. He's always teasing her, and he's one of the rare people who can get a reaction out of her." },
                 { RJ: "They've known each other since their school days in the deep sea district, and both were later trained by the Godfather in his line of work. Over the years, he's become something close to family, and she knows him better than anyone. He currently operates as her subordinate." },
-                { Lance: "She is always wondering whether he has seen through her disguises or not. She knows very well that he will one day become her enemy, yet during her time undercover, she has grown a soft spot for him. This man seems to stir up feelings she'd rather not have."},
+                { Lance: "She is always wondering whether he has seen through her disguises. She knows very well that he will one day become her enemy, yet during her time undercover, she has grown a soft spot for him. This man seems to stir up feelings she'd rather not have."},
                 { Damian: "A newcomer the Godfather assigned to her. She does her best to guide him and make sure he doesn't mess up. He's her subordinate and partner, and sometimes she can't help worrying about him." },
                 // { Leon: "Her work sometimes requires her to meet him at the casino. At first she found him annoying, but over time she realized he's one of the few people she can open up to, and she sometimes lets him see her more vulnerable side. There's always more to their conversations than what's said out loud." }
             ],
@@ -490,17 +490,17 @@ const SPLAT_CHARA_DATA_EN = {
         "RJ" : { 
             name: "RJ",
             summary: [
-                "A sniper working for the Godfather as one of his Acolytes. He grew up in the slums before the Godfather took him in, and the job is pretty much all he lives for. He rarely misses a shot and prefers to stay out of sight, but he's terrible at negotiating, so he's usually sent to do works that are moe hands-on. He specializes in cleaning up after jobs and is known as the best cleaner in the organization. He grew up training alongside Angel under the Godfather, and he is now one of her subordinates.",
+                "A sniper working for the Godfather as one of his Acolytes. He was born in the slums, where the Godfather found him and took him in. The job is pretty much all he lives for. He rarely misses a shot and prefers to stay out of sight, but he's terrible at negotiating, so he's usually sent to do work that is more hands-on. He specializes in cleaning up after jobs and is known as the best cleaner in the organization. He trained alongside Angel under the Godfather, and he is now one of her subordinates.",
                 "He regularly uses modified antique guns with ink-filled custom bullets. He keeps all his gear in good shape himself and knows antique guns inside and out.",
                 "He comes across as cold and quiet, and he rarely shows any expression. He gets straight to the point in everything he does, whether it's a job or a conversation, which makes him efficient but also very rude. With little patience, little empathy and not much self-control, he's the last person anyone would send to negotiate."
             ],
             notes: [
                 "He represents the R button, which is why his name starts with R.",
-                "He's two years younger than Angelica.",
+                "He's two years younger than Angel.",
                 "The white patches on his skin are caused by vitiligo."
             ],
             relationships: [
-                { "Father Chelon": "The man who gave him a new life. RJ is extremely loyal to him and will do everything he can to complete any task from this man." },
+                { "Father Chelon": "The man who gave him a new life. RJ is extremely loyal to him and will do everything he can to complete any task he's given." },
                 { Angelica: "They've known each other since their school days in the deep sea district, and both were later trained by the Godfather in his line of work. She is now his superior. No matter how annoyed he looks, he still does whatever she asks." },
                 { Lucian: "They were suddenly put on the same team. He knows Lucian is very capable, but he doesn't really like him, and sometimes he just wants to punch him." },
                 { Damian: "An unreliable newcomer who doesn't seem cut out for this line of work. He finds working with him a hassle." }
