@@ -500,7 +500,7 @@ const SPLAT_CHARA_DATA_EN = {
                 "The white patches on his skin are caused by vitiligo."
             ],
             relationships: [
-                { "Father Chelon": "The man who gave him a new life. RJ is extremely loyal to him and will do everything he can to complete any task from this man" },
+                { "Father Chelon": "The man who gave him a new life. RJ is extremely loyal to him and will do everything he can to complete any task from this man." },
                 { Angelica: "They've known each other since their school days in the deep sea district, and both were later trained by the Godfather in his line of work. She is now his superior. No matter how annoyed he looks, he still does whatever she asks." },
                 { Lucian: "They were suddenly put on the same team. He knows Lucian is very capable, but he doesn't really like him, and sometimes he just wants to punch him." },
                 { Damian: "An unreliable newcomer who doesn't seem cut out for this line of work. He finds working with him a hassle." }
