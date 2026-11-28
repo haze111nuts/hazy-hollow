@@ -458,7 +458,7 @@ const SPLAT_CHARA_DATA_EN = {
                 { Lucian: "They met on a job where they were working against each other. They nearly killed each other before the Godfather called it off. Later, the two were put on the same team, where he became her subordinate. He's always teasing her, and he's one of the rare people who can get a reaction out of her." },
                 { RJ: "They've known each other since their school days in the deep sea district, and both were later trained by the Godfather in his line of work. Over the years, he's become something close to family, and she knows him better than anyone. He currently operates as her subordinate." },
                 { Lance: "She is always wondering whether he has seen through her disguises. She knows very well that he will one day become her enemy, yet during her time undercover, she has grown a soft spot for him. This man seems to stir up feelings she'd rather not have."},
-                { Damian: "A newcomer the Godfather assigned to her. She does her best to guide him and make sure he doesn't mess up. He's her subordinate and partner, and sometimes she can't help worrying about him." },
+                { Damian: "A newcomer the Godfather assigned to her. She does her best to guide him and make sure he doesn't mess up. He's on her team, and sometimes she can't help worrying about him." },
                 // { Leon: "Her work sometimes requires her to meet him at the casino. At first she found him annoying, but over time she realized he's one of the few people she can open up to, and she sometimes lets him see her more vulnerable side. There's always more to their conversations than what's said out loud." }
             ],
             variant: [
@@ -480,7 +480,7 @@ const SPLAT_CHARA_DATA_EN = {
             relationships: [
                 { Angelica: "They met on a job where they were working against each other. They nearly killed each other before the Godfather called it off. Later, the two were put on the same team, with her as his boss. He never stops teasing her, but he faithfully follows every order she gives." },
                 { "Father Chelon": "The man Lucian ultimately answers to. Their relationship is mostly a deal that pays off for both of them, but Lucian has also come to admire him, and he finds working for him far more interesting than serving the [[Octarian Army|Army]] ever was. He's more than happy to do whatever the Godfather asks." },
-                { RJ: "A fellow Acolyte the Godfather assigned to work with him. He finds RJ easy to work with. Seeing how close RJ is to Angel only makes him more curious about them. He requiently follows him around asking all sorts of questions, nearly driving him up the wall." },
+                { RJ: "A fellow Acolyte the Godfather assigned to work with him. He finds RJ easy to work with. Seeing how close RJ is to Angel only makes him more curious about them. He frequently follows him around asking all sorts of questions, nearly driving him up the wall." },
                 { Damian: "A fellow Acolyte the Godfather assigned to work with him. Back in the [[Octarian Army|Army]], Lucian had to keep an eye on him for work, so he knows him better than most people do. He apparently also loves to tease him." },
             ],
             variant: [
@@ -512,23 +512,23 @@ const SPLAT_CHARA_DATA_EN = {
         "Damian" : { 
             name: "Damian",
             summary: [
-                "因為某起涉及家人的案件而被嚴重影響原本的生活，無路可走的狀態下只能投靠教父先生的勢力，正式變成他親信手下團的成員之一。是組內的新人，還在花時間習慣工作內容。他脫離了原本的朋友圈並住在一個房車中，有一台重型機車。似乎一直都還在獨自調查那起案件。",
-                "孤狼一匹，個性固執又孤僻，總是眼神兇惡一臉不滿的樣子，老是在想著調查的事情。"
+                "His life was turned upside down by an incident involving his family. With nowhere else to go, he took the help offered by the Godfather and officially became one of his Acolytes. He has been trying to get to the bottom of the case ever since. He cut ties with his old friends and now lives in an RV, he's also got a black motorcycle.",
+                "He comes across as an edgy, stubborn loner. He's almost always glaring, looks annoyed at everything, and rarely thinks about anything other than the investigation.",
             ],
             notes: [
-                "他的名字是安潔給的",
-                "他比安潔小兩歲",
+                "His name was given to him by Angel.",
+                "He's two years younger than Angel.",
             ],
             relationships: [
-                {Angelica: "是上司，會聽從她的命令跟指導。每次都可以被她的身手跟表現震驚到。"},
-                {Lucian: "手下同事，有認出他是[[章魚軍團|軍團]]裡的人。感覺他有點討人厭。"},
-                {RJ: "手下同事，並沒有很和的來，除了工作需要以外不會互動。"},
-                {"Father Chelon": "為了調查才協助，除此以外沒有並沒有想要替他賣命的意願。寧願替安潔工作也不想替他工作。"},
+                { Angelica: "His boss. He follows her orders and guidance, and he's amazed every time he sees her in action." },
+                { Lucian: "A fellow Acolyte. Damian recognized him as someone from the [[Octarian Army|Army]] and finds him a little annoying." },
+                { RJ: "A fellow Acolyte. They don't really get along and only interact when work requires it." },
+                { "Father Chelon": "He only helps the Godfather for the sake of his investigation and has no intention of risking his life for him. He'd much rather take orders from Angel than from the Godfather himself." },
             ],
-            variant:[
-                {work: "常駐工作裝"},
-                {rider: "重機騎士"}
-            ]
+            variant: [
+                { work: "Work" },
+                { rider: "Biker" },
+            ],
         },
         "Susie" : { 
             name: "Susie",
