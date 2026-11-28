@@ -468,24 +468,24 @@ const SPLAT_CHARA_DATA_EN = {
         "Lucian" : { 
             name: "Lucian",
             summary: [
-                "教父先生的親信手下之一，在高領地區活動。於章魚軍團出生所以從小接受軍團的教育與訓練，因各項能力出眾成為了軍團中少數的男性高級幹部，特別擅長通訊網路相關的工程領域。透過一通電話認識教父先生，一番交涉後變成他在軍團中的線人，秘密替對方蒐集情報跟佈設局面。在練魚公司被摧毀之後被對方接到陸上並安排到手下小隊中，至此之後在陸上活動。後來變成安潔的下屬之一。",
-                "經常使用的武器從一次性手機、遙控器、原子筆、打火機到電線都有。擅長通訊設備相關的破解改造和劫持，除了探查以外還經常負責遠程遙控敵人電子設備，如關閉重生點、改寫跳躍定位或竄改監控等。戰力程度不明，但可以知道的是他曾為了讓安潔當上隊長故意放水。",
-                "舉止斯文有禮貌，總是西裝筆挺，做什麼都輕鬆不費力的樣子。表情不明顯但言行舉止經常透露出一點調皮跟好奇的天性。經常用言語調戲同事，特別是對他的上司。"
+                "One of the Godfather's Acolytes, operating in [[Inkadia]]. Born and raised in the [[Octarian Army]], he excelled in every area and became one of the Army's few male high-ranking officers, specializing in communications and network engineering. He first got to know the Godfather through a phone call, and after some negotiating, he became the Godfather's informant inside the Army, secretly gathering intel and steering events in his favor. After [[Kamabo Co.]] was destroyed, the Godfather brought him to the surface to work for him directly. He later became one of Angel's subordinates.",
+                "His weapons range from burner phones and remote controls to ballpoint pens, lighters and wires. He is skilled at hacking, modifying and hijacking communication devices. Besides scouting, he is often in charge of taking over enemy electronics remotely, like shutting down spawners, changing Super Jump destinations or tampering with surveillance cameras. No one knows how strong he really is in a fight, but he once held back on purpose so that Angel could become leader.",
+                "He comes across as a polite, well-mannered gentleman who is always dressed in a sharp suit. He makes every job look effortless. He keeps a fairly straight face, but anyone who spends some time with him will notice his playful, curious side. He enjoys teasing his coworkers, and his boss, Angel, is his favorite target.",
             ],
             notes: [
-                "他代表的按鈕是Switch2的C鍵，故名字中有c並且對應他的通訊相關專長",
-                "設計初期的代號是「電話男」，因為所有他相關的橋段他都在跟教父講電話",
-                "設定上有加入英國人的概念，而且有蘇格蘭口音，但不確定要怎麼合理解釋所以先當作隱藏設定…"
+                "He represents the Game Chat button on the Nintendo Switch 2, which fits his skill with communications,  with a C in his name",
+                "He was called \"Phone Guy\" during early design stage because he was on the phone with the Godfather in every scene he appeared in.",
+                "Conceptually, he is British, with a Scottish accent.",
             ],
             relationships: [
-                {Angelica: "在一起任務衝突中相遇，差點互相置對方於死地。最後被安排到同隊，是自己的上司。經常不停地用言語戲弄對方，但又會很忠心的遵守所有吩咐。"},/*對她的能力很欣賞，會忠心的遵守所有吩咐。經常不停地用言語戲弄對方，可見對她很是喜愛。稱呼她為「大小姐」或「我的小姐」*/
-                {"Father Chelon": "上司的上司，算是利益關係，認為他是很有趣的大人物。不知道是被他的控權的能力還是談判的技術所吸引，總之很樂意為他效勞。"},/*路西恩是少數敢和對方開玩笑跟回嘴的人。*/
-                {RJ: "教父先生安排給自己的伙伴之一。認為跟對方合作起來很輕鬆。看他跟安潔關係親近而更想多多認識。有時會追著他問各種問題，差點沒把對方給煩死。"},
-                {Damian: "教父先生安排給自己的伙伴之一。早在以前在[[章魚軍團|軍團]]時就一直因為工作需要而觀察對方，所以比大部分的人都還瞭解他。也是路西恩經常調戲的對象之一。"}
+                { Angelica: "They met during a clash on a mission and nearly killed each other. They were later put on the same team, with her as his boss. He never stops teasing her, but he faithfully follows every order she gives." },
+                { "Father Chelon": "The man at the top of the organization. Their relationship is mostly a deal that pays off for both of them. Still, Lucian genuinely admires him, and he finds working for him far more interesting than serving the [[Octarian Army|Army]] ever was. He's more than happy to do whatever the Godfather asks." },
+                { RJ: "A fellow Acolyte the Godfather assigned to work with him. He finds RJ easy to work with. Seeing how close RJ is to Angel only makes him more curious about them. He requiently follows him around asking all sorts of questions, nearly driving him up the wall." },
+                { Damian: "A fellow Acolyte the Godfather assigned to work with him. Back in the [[Octarian Army|Army]], Lucian had to keep an eye on him for work, so he knows him better than most people do. He apparently also loves to tease him." },
             ],
-            variant:[
-                {work: "常駐工作裝"}
-            ]            
+            variant: [
+                { work: "Work" },
+            ],      
         },        
         "RJ" : { 
             name: "RJ",
