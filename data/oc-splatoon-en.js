@@ -244,7 +244,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Roy" : { 
             name: "Roy",
             summary: [
-                "A boy who occasionally showed up on the [[Inkopolis Tower]] leaderboard. One day, he appeared on the street and started harassing Amy, which led to a clash between him and Lance. The two agreed to settle it with a few rounds of splat battles, and Roy's skills shown in the games earned him a spot in [[Royal Flush]]. As the team's long-range player, he has an aim so cold and precise that it can be a little unsettling to watch. He often skips practice without telling anyone.",
+                "A boy who occasionally showed up on the [[Inkopolis Tower]] leaderboard. One day, he started harassing Amy on the street until Lance stepped in. The two agreed to settle it with a few rounds of splat battles, and Roy's skills shown in the games earned him a spot in [[Royal Flush]]. As the team's long-range player, he has an aim so cold and precise that it can be a little unsettling to watch. He often skips practice without telling anyone.",
                 "He barely talks or shows any expression, and he always looks uninterested at team get-togethers. Whenever he does speak, it's usually something very rude and offensive. Other people's feelings mean very little to him, and he constantly looks like he is going to throw a punch or draw a knife at anyone who attempts to mess with him. Apparently, he has a sweet tooth and is often seen snacking or drinking something sugary. He seems to work part-time at a pawnshop in [[Inkopolis|Inkopolis City]], where he helps with repairs in the used weapons section."
             ],
             notes: [
@@ -455,7 +455,7 @@ const SPLAT_CHARA_DATA_EN = {
             ],
             relationships: [
                 { "Father Chelon": "The man who gave her a new life. She has sworn eternal loyalty to him. She admires and respects him deeply. Sometimes she shows a sweeter side when she is with him. She calls him \"Father\" or \"Papa\"."},
-                { Lucian: "They met during a clash on a mission and nearly killed each other. They were later put on the same team, where he is both her subordinate and her partner. He's always teasing her, and he's one of the rare people who can get a reaction out of her." },
+                { Lucian: "They met on a job where they were working against each other. They nearly killed each other before the Godfather called it off. Later, the two were put on the same team, where he became her subordinate. He's always teasing her, and he's one of the rare people who can get a reaction out of her." },
                 { RJ: "They've known each other since their school days in the deep sea district, and both were later trained by the Godfather in his line of work. Over the years, he's become something close to family, and she knows him better than anyone. He currently operates as her subordinate." },
                 { Lance: "She is always wondering whether he has seen through her disguises. She knows very well that he will one day become her enemy, yet during her time undercover, she has grown a soft spot for him. This man seems to stir up feelings she'd rather not have."},
                 { Damian: "A newcomer the Godfather assigned to her. She does her best to guide him and make sure he doesn't mess up. He's her subordinate and partner, and sometimes she can't help worrying about him." },
@@ -478,7 +478,7 @@ const SPLAT_CHARA_DATA_EN = {
                 "Conceptually, he is British, with a Scottish accent.",
             ],
             relationships: [
-                { Angelica: "They met during a clash on a mission and nearly killed each other. They were later put on the same team, with her as his boss. He never stops teasing her, but he faithfully follows every order she gives." },
+                { Angelica: "They met on a job where they were working against each other. They nearly killed each other before the Godfather called it off. Later, the two were put on the same team, with her as his boss. He never stops teasing her, but he faithfully follows every order she gives." },
                 { "Father Chelon": "The man at the top of the organization. Their relationship is mostly a deal that pays off for both of them. Still, Lucian genuinely admires him, and he finds working for him far more interesting than serving the [[Octarian Army|Army]] ever was. He's more than happy to do whatever the Godfather asks." },
                 { RJ: "A fellow Acolyte the Godfather assigned to work with him. He finds RJ easy to work with. Seeing how close RJ is to Angel only makes him more curious about them. He requiently follows him around asking all sorts of questions, nearly driving him up the wall." },
                 { Damian: "A fellow Acolyte the Godfather assigned to work with him. Back in the [[Octarian Army|Army]], Lucian had to keep an eye on him for work, so he knows him better than most people do. He apparently also loves to tease him." },
