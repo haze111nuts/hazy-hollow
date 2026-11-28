@@ -512,7 +512,7 @@ const SPLAT_CHARA_DATA_EN = {
         "Damian" : { 
             name: "Damian",
             summary: [
-                "His life was turned upside down by an incident involving his family. With nowhere else to go, he took the help offered by the Godfather and officially became one of his Acolytes. He has been trying to get to the bottom of the case ever since. He cut ties with his old friends and now lives in an RV, he's also got a black motorcycle.",
+                "His life was turned upside down by an incident involving his family. With nowhere else to go, he took the help offered by the Godfather and officially became one of his Acolytes. He has been trying to get to the bottom of the incident ever since. He cut ties with his old friends and now lives in an RV, and he's also got a black motorcycle.",
                 "He comes across as an edgy, stubborn loner. He's almost always glaring, looks annoyed at everything, and rarely thinks about anything other than the investigation.",
             ],
             notes: [
@@ -555,18 +555,18 @@ const SPLAT_CHARA_DATA_EN = {
         "Scott" : { 
             name: "Scott",
             summary: [
-                "三代主線中登場，蘇西的哥哥，協助了蘇西和偉德參與的古代調查事件。",
-                "是個頭腦清晰、思考縝密的人。對人態度輕蔑，言行舉止總是有種在嫌棄別人或嘲笑別人的味道，經常話中有話。偶爾可以從他身上察覺到一點貴族的氣質。",
-                "似乎在一家電視台做著記者的工作。",
-                "——三代設定還沒安排完，以上待補——"
+                "First appeared in the main story of Splatoon 3. He is Susie's older brother, and he helped Susie and Wade when they got caught up in a chain of events related to the research of Alterna.",
+                "He's sharp and clear-headed, but also quite condescending. He's sarcastic with just about everyone. His manners and taste seem a little too polished for an ordinary guy.",
+                "He seems to work as a reporter at a TV station.",
+                "-- More will be added once his story is worked out. --",
             ],
             notes: [
-                "他代表的按鈕是截圖鍵，因此以Sc作為名字開頭（對應Sreen Capture）"
+                "He represents the Capture button, which is why his name starts with Sc (for Screen Capture).",
             ],
             relationships: [
-                {Susie: "親妹妹，雖然不常對她直接表達關心，但互動中透露出一種寵愛，會放任她到處跑也會默默守護。平時也少不了酸她幾句。" },                
-                {Wade: "在調查事件中認識，平時幾乎都在挖苦對方，但在對方需要幫忙時還是會出手相助。知道對方家庭的秘密，一直在默默觀察他。"}
-            ]            
+                { Susie: "His little sister. He can seem strict and is often snarky with her, but he actually cares about her a lot. He lets her go off on her adventures while quietly keeping an eye on her." },
+                { Wade: "They met during the investigation on Alterna. He spends most of his time making sarcastic remarks at Wade, but he still steps in whenever Wade needs help. He knows a secret about Wade's family and has been quietly keeping an eye on him." },
+            ],   
         },        
         "Zoelle" : { 
             name: "Zoelle",
@@ -577,7 +577,7 @@ const SPLAT_CHARA_DATA_EN = {
             ],
             notes: [
                 "Her nickname is Zoey.",
-                "She represents the ZL button, which is why her name contains those two letters."
+                "She represents the ZL button, which is why her name contains these two letters."
             ],
             relationships: [
                 { Susie: "They met in the Seagrove Scouts. She thinks Susie is really capable, and the two are always trying to outdo each other in scout activities." },
@@ -593,17 +593,17 @@ const SPLAT_CHARA_DATA_EN = {
         "Zarah" : { 
             name: "Zarah",
             summary: [
-                "佐伊的姐姐，在[[蠻殼鎮]]長大。因為母親生活方式很糟糕，加上家裡很窮，從小就經常被晾在一邊。對生活一直很不滿意，獲得自由後經常用招搖撞騙的方式獲取錢財，擅長編織謊言，詐騙技術高超。她後來替教父先生工作。",
-                "個性叛逆，自私利己，有點厭世，覺得自己都管不好自己了實在懶得管別人。是個想幹嘛就幹嘛而且一點都不後悔的人。會用光鮮亮麗的物質生活彌補心理的空缺。",
-                "——相關的設定還沒有安排完，以上待補——"
+                "Zoelle's older sister. She grew up in [[Splatsville]] with a mother who lived an irresponsible life, and since the family was also poor, she was often left on her own as a kid. She's never been happy with how her life turned out. Once she was old enough to live on her own, she started making money by conning people, and she's very good at it. She later went to work for the Godfather.",
+                "She comes across as a rebellious, self-centered young woman who's a little jaded. Since she can hardly take care of herself, she doesn't see why she should bother with anyone else. She does whatever she feels like and doesn't regret a thing. She makes up for the emptiness inside with expensive things and a glamorous lifestyle.",
+                " -- More will be added here once her story is worked out. --",
             ],
-            notes:[
-                "她代表的按鈕是ZR鍵，所以名字中含有這兩個字母"
+            notes: [
+                "She represents the ZR button, which is why her name contains these two letters.",
             ],
             relationships: [
-                {"Father Chelon": "上司，給了自己工作。"},
-                {Zoelle: "年紀相差很多的妹妹，有想好好照顧她的念頭，可惜對方看起來並不領情。"}
-            ]            
+                { "Father Chelon": "Her boss. He's the one who gave her a job." },
+                { Zoelle: "Her much younger sister. Zarah wants to take good care of her, but Zoelle doesn't seem to appreciate it." },
+            ],
         },
         "Paul" : { 
             name: "Paul",
@@ -695,8 +695,8 @@ const SPLAT_CHARA_DATA_EN = {
         "Father Chelon" : { 
             name: "Father Chelon",
             summary: [
-                "安潔、路西恩、RJ的最高級上司，也是給他們分配任務跟下指令的人。他的權力跟影響似乎早在章魚軍團開始活動前就已經滲透到各處。",
-                "真實身分不明，總是透過一個海龜雕像外觀的對講機系統給他的手下們傳達訊息。"
+                "The man behind the Acolytes and the Splatter Club, known to some as the Godfather. He is the one who gives them their jobs and orders. His influence seems to have spread everywhere even before the [[Octarian Army]] made its first move.",
+                "No one knows who he really is. He always passes messages to his people through a turtle statue with a built-in intercom.",
             ]
         },
         "Noir" : { 
