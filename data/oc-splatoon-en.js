@@ -445,7 +445,7 @@ const SPLAT_CHARA_DATA_EN = {
             name: "Angelica",
             summary: [
                 "One of the Godfather's Acolytes and his most trusted subordinates. She was born into a religious community in the deep sea district, where she was said to be able to speak with God and was treated as a chosen child. After a horrific incident at the town's church school, the Godfather took her in, raised her and trained her for years. Feeling that her fate had been rewritten for the better, she takes her new life and duties very seriously. The Godfather eventually appointed her as a leader, and she now leads a small team that oversees his operations in [[Inkadia]].",
-                "Her signature weapon is an antique syringe, but she also uses needles, blades and even ancient torture devices. Her knowledge of chemistry makes her the lead poison specialist and chemist in the Family, and she often carries out missions with poisoned ink and solvents.",
+                "Her signature weapon is an antique syringe, but she also uses needles, blades and even ancient torture devices. Her knowledge of chemistry makes her an expert with poisons and drugs, and the Godfather relies on her whenever a job involves them. She often carries out missions with poisoned ink and solvents.",
                 "She comes across as a gloomy and mysterious lady. She rarely shows any expression other than a frown, but she always carries herself with elegance and good manners. She is very intelligent and quick to read a situation, which makes her a reliable leader for her subordinates. She plans every mission carefully and takes great pride in her work. Going undercover is one of her specialties. She has created several identities along with their backstories and outfits."
             ],
             notes: [
@@ -479,7 +479,7 @@ const SPLAT_CHARA_DATA_EN = {
             ],
             relationships: [
                 { Angelica: "They met on a job where they were working against each other. They nearly killed each other before the Godfather called it off. Later, the two were put on the same team, with her as his boss. He never stops teasing her, but he faithfully follows every order she gives." },
-                { "Father Chelon": "The man at the top of the organization. Their relationship is mostly a deal that pays off for both of them. Still, Lucian genuinely admires him, and he finds working for him far more interesting than serving the [[Octarian Army|Army]] ever was. He's more than happy to do whatever the Godfather asks." },
+                { "Father Chelon": "The man Lucian ultimately answers to. Their relationship is mostly a deal that pays off for both of them. Still, Lucian genuinely admires him, and he finds working for him far more interesting than serving the [[Octarian Army|Army]] ever was. He's more than happy to do whatever the Godfather asks." },
                 { RJ: "A fellow Acolyte the Godfather assigned to work with him. He finds RJ easy to work with. Seeing how close RJ is to Angel only makes him more curious about them. He requiently follows him around asking all sorts of questions, nearly driving him up the wall." },
                 { Damian: "A fellow Acolyte the Godfather assigned to work with him. Back in the [[Octarian Army|Army]], Lucian had to keep an eye on him for work, so he knows him better than most people do. He apparently also loves to tease him." },
             ],
@@ -490,7 +490,7 @@ const SPLAT_CHARA_DATA_EN = {
         "RJ" : { 
             name: "RJ",
             summary: [
-                "A sniper working for the Godfather as one of his Acolytes. The Godfather found him in the slums when he was little and took him in. He grew up attending a church school in the deep sea district, and later started operating in [[Inkadia]]. The job is pretty much all he lives for. He rarely misses a shot and prefers to stay out of sight. Since he's terrible at negotiating, he's usually sent to do work that is more hands-on. He specializes in cleaning up after jobs and is known as the best cleaner in the organization. He trained alongside Angel under the Godfather, and he is now one of her subordinates.",
+                "A sniper working for the Godfather as one of his Acolytes. The Godfather found him in the slums when he was little and took him in. He grew up attending a church school in the deep sea district, and later started operating in [[Inkadia]]. The job is pretty much all he lives for. He rarely misses a shot and prefers to stay out of sight. Since he's terrible at negotiating, he's usually sent to do work that is more hands-on. He specializes in cleaning up after jobs and is known as the best cleaner the Godfather has. He trained alongside Angel under the Godfather, and he is now one of her subordinates.",
                 "He regularly uses modified antique guns with ink-filled custom bullets. He keeps all his gear in good shape himself and knows antique guns inside and out.",
                 "He comes across as cold and quiet, and he rarely shows any expression. He gets straight to the point in everything he does, whether it's a job or a conversation, which makes him efficient but also very rude. With little patience, little empathy and not much self-control, he's the last person anyone would send to negotiate."
             ],
